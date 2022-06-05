@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  zuzu:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    container_name: zuzu-server
+    ports: 
+      - "3000:3000"
+    volumes:
+      - ./:/app
+    restart: always
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "run", "start:dev"]
