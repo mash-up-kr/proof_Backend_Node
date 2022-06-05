@@ -89,11 +89,11 @@ docker-compose -f docker-compose.dev.yml up
 
 ## Nestjs on Docker for Development
 
-`.Dockerfile` is Production Dockerfile allows to build a production Docker image of the NestJS application.
-Amazon ECS uses this Docker image in task definitions to launch containers.
+`.Dockerfile` is Production Dockerfile allows to build a production Docker image of the NestJS application.  
+Amazon ECS uses this Docker image in task definitions to launch containers.  
 DO NOT use for development usages, it may have dependencies with AWS services(ex. RDS).
 
-But when you needed to check this out,
+But when you need to check this out,
 
 1. Make sure all necessary services are available.
 2. Git clone this repo and cd into the directory.
