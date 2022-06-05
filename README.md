@@ -58,15 +58,66 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+# How to run
+
+Make sure node.js 16 is installed
+
+## Run the application in local
+
+1. Git clone this repo and cd into the directory.
+2. Install dependencies.
+
+```bash
+npm install
+```
+
+3. Run.
+
+```bash
+npm run start:dev
+```
+
+## Nestjs on Docker for Development
+
+1. Make sure postgres is running if this app needs it.
+2. Git clone this repo and cd into the directory.
+3. Run with `docker-compose`. docker-compose.dev.yml is intended for development environments.
+
+```bash
+docker-compose -f docker-compose.dev.yml up
+```
+
+## Nestjs on Docker for Development
+
+`.Dockerfile` is Production Dockerfile allows to build a production Docker image of the NestJS application.
+Amazon ECS uses this Docker image in task definitions to launch containers.
+DO NOT use for development usages, it may have dependencies with AWS services(ex. RDS).
+
+But when you needed to check this out,
+
+1. Make sure all necessary services are available.
+2. Git clone this repo and cd into the directory.
+3. Build image
+
+```bash
+docker build --tag zuzu-prod-server .
+```
+
+4. Run the container
+
+```bash
+docker run -p 3000:3000 -v $(pwd):/app zuzu-prod-server
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+-   Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+-   Website - [https://nestjs.com](https://nestjs.com/)
+-   Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
