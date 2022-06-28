@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Header, HttpCode, Redirect, UseGuards } from '@nestjs/common';
+import { Controller, Get, Header, HttpCode, Redirect, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 import { UserKakaoDto } from './dto/user.kakao.dto';
@@ -17,10 +17,10 @@ export class AuthController {
 		return true;
 	}
 
+	@UseGuards(AuthGuard('kakao'))
 	@Get('/kakao/redirect')
 	@HttpCode(200)
-	@UseGuards(AuthGuard('kakao'))
-	async kakaoLoginCallback(@Body() userData): Promise<boolean> {
+	async kakaoLoginCallback(@Req() userData): Promise<boolean> {
 		// (userData.user as UserKakaoDto)에 사용자 정보
 		return true;
 	}
