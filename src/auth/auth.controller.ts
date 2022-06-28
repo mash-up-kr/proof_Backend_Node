@@ -1,4 +1,4 @@
-import { Controller, Get, HttpCode, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Header, HttpCode, Redirect, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 import { UserKakaoDto } from './dto/user.kakao.dto';
@@ -7,11 +7,21 @@ import { UserKakaoDto } from './dto/user.kakao.dto';
 export class AuthController {
 	constructor(private readonly authService: AuthService) {}
 
+	@Get('kakaoLogin')
+	@Header('Content-Type', 'text/html')
+	@Redirect(
+		`https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${process.env.KAKAO_CLIENT_ID}&redirect_uri=${process.env.KAKAO_REDIRECT_URL}`,
+		301,
+	)
+	getKakaoLoginPage(): boolean {
+		return true;
+	}
+
 	@Get('/kakao/redirect')
 	@HttpCode(200)
 	@UseGuards(AuthGuard('kakao'))
-	async kakaoLoginCallback(@Req() req): Promise<boolean> {
-		console.log(req.user as UserKakaoDto);
+	async kakaoLoginCallback(@Body() userData): Promise<boolean> {
+		// (userData.user as UserKakaoDto)에 사용자 정보
 		return true;
 	}
 }
