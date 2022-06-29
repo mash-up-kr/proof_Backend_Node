@@ -106,7 +106,7 @@ docker build --tag zuzu-prod-server .
 4. Run the container
 
 ```bash
-docker run -p 3000:3000 -v $(pwd):/app zuzu-prod-server
+docker run -p 3000:3000 -v $(pwd):/app --env-file=./.env.prod zuzu-prod-server
 ```
 
 ## Support

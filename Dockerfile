@@ -19,8 +19,6 @@ RUN pnpm run build && pnpm prune --production
 
 FROM node:16.5-alpine
 
-ENV NODE_ENV production
-
 WORKDIR /app
 COPY --from=builder --chown=node:node /app/package.json ./
 COPY --from=builder /app/node_modules ./node_modules
