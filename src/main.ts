@@ -1,7 +1,7 @@
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { AppConfig } from './config/configuration';
+import { AppConfig } from './config/config.constant';
 import { setupSwagger } from './swagger';
 
 declare const module: any;
