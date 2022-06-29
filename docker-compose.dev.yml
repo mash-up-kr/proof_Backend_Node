@@ -1,16 +1,30 @@
 version: '3.9'
 
 services:
-  zuzu:
-    build:
-      context: .
-      dockerfile: ./Dockerfile.dev
-    container_name: zuzu-server
-    ports: 
-      - "3000:3000"
-    volumes:
-      - ./:/app
-    restart: always
-    env_file:
-      - ./.env.dev
-    command: ["npm", "run", "start:dev"]
+    db:
+        image: postgres:9.6.23 # TODO: change postgres version
+        restart: always
+        container_name: postgres-dev
+        ports:
+            - '5432:5432'
+        volumes:
+            # - ./data/seeds/init.sql:/docker-entrypoint-initdb.d/init.sql
+            # - ./data/seeds/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+            - ./db_data:/var/lib/postgres/data
+        env_file:
+            - ./.env.dev
+    zuzu:
+        build:
+            context: .
+            dockerfile: ./Dockerfile.dev
+        container_name: zuzu-server
+        ports:
+            - '3000:3000'
+        volumes:
+            - ./:/app
+        restart: always
+        env_file:
+            - ./.env.dev
+        command: ['npm', 'run', 'start:dev']
+        depends_on:
+            - db
