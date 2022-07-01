@@ -3,7 +3,7 @@
 
 import { Exclude } from 'class-transformer';
 import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
-import { CommonEntity } from 'src/common/entities/common.entity';
+import { CommonEntity } from '../common/entities/common.entity';
 import { Column, Entity } from 'typeorm';
 
 @Entity()
