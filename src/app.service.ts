@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { AppConfig, DatabaseConfig } from './config/configuration';
+import { AppConfig, DatabaseConfig } from './config/config.constant';
 
 @Injectable()
 export class AppService {
@@ -9,6 +9,6 @@ export class AppService {
 	dbConfig = this.configService.get<DatabaseConfig>('databaseConfig');
 
 	getHello(): string {
-		return `Hello ZuZu! node env: ${this.appConfig.env} , db_name: ${this.dbConfig.name}`;
+		return `Hello ZuZu! node env: ${this.appConfig.env} , db_name: ${this.dbConfig.dbname}`;
 	}
 }
