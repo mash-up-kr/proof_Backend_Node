@@ -1,25 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
+import { mockUser, MockUsersRepository } from '../../test/mock/user.repository.mock';
 import { User } from './user.entity';
 import { UsersService } from './users.service';
-
-// XXX: This is just sample code. Plz delete later.
-const mockUser = {
-	id: '40118a2e-dc89-46de-bbb0-46b8ac0c6846',
-	createdAt: '2022-07-01T01:43:24.252Z',
-	updatedAt: '2022-07-01T01:43:24.252Z',
-	deletedAt: null,
-	email: 'testtest@email.com',
-	name: 'test chung',
-	password: '12345',
-};
-class MockUsersRepository {
-	save = jest.fn().mockResolvedValue(mockUser);
-
-	async find() {
-		return mockUser;
-	}
-}
 
 describe('UsersService', () => {
 	let usersService: UsersService;
