@@ -2,13 +2,13 @@ import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
-import { AppConfig, DatabaseConfig } from 'src/config/configuration';
+import { AppConfig, DatabaseConfig } from 'src/config/config.constant';
 
 @Module({
 	imports: [
 		TypeOrmModule.forRootAsync({
 			useFactory: async (configService: ConfigService): Promise<TypeOrmModuleOptions> => {
-				const dbConfig = configService.get<DatabaseConfig>('databaseCofig');
+				const dbConfig = configService.get<DatabaseConfig>('databaseConfig');
 				const appConfig = configService.get<AppConfig>('appConfig');
 				return {
 					type: 'postgres',
@@ -16,8 +16,7 @@ import { AppConfig, DatabaseConfig } from 'src/config/configuration';
 					port: dbConfig.port,
 					username: dbConfig.username,
 					password: dbConfig.password,
-					database: dbConfig.name,
-					// entities: [User],
+					database: dbConfig.dbname,
 					namingStrategy: new SnakeNamingStrategy(),
 					synchronize: appConfig.env !== 'prod',
 					logging: appConfig.env !== 'prod',
