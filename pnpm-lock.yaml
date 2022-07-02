@@ -8,7 +8,7 @@ specifiers:
   '@nestjs/platform-express': ^8.0.0
   '@nestjs/schematics': ^8.0.0
   '@nestjs/swagger': ^5.2.1
-  '@nestjs/testing': ^7.5.5
+  '@nestjs/testing': 8.0.6
   '@types/express': ^4.17.13
   '@types/jest': 27.4.1
   '@types/node': ^16.0.0
@@ -52,7 +52,7 @@ dependencies:
 devDependencies:
   '@nestjs/cli': 8.2.8
   '@nestjs/schematics': 8.0.11_nobats3jkocaued6l3papcxri4
-  '@nestjs/testing': 7.6.18_yg656aic4dli3q2c2sx4xyqza4
+  '@nestjs/testing': 8.0.6_yg656aic4dli3q2c2sx4xyqza4
   '@types/express': 4.17.13
   '@types/jest': 27.4.1
   '@types/node': 16.11.41
@@ -981,13 +981,13 @@ packages:
       - class-validator
     dev: false
 
-  /@nestjs/testing/7.6.18_yg656aic4dli3q2c2sx4xyqza4:
-    resolution: {integrity: sha512-1AVk9vWZlPpx4CmzY6z9z0DHFgGCadfr01QdisGFAN740JwKqZWEqz12cVd+nsXDlYQPFRkp2ICBIS/6k1qZGQ==}
+  /@nestjs/testing/8.0.6_yg656aic4dli3q2c2sx4xyqza4:
+    resolution: {integrity: sha512-HRXGM5RlGa+o+kxWI9DQCALndSvL3Remjg1cZVFp2w2s5eXRPpiFMo9puXtu9DSc4tz78xYcQGmEaeYNTB7gvg==}
     peerDependencies:
-      '@nestjs/common': ^7.0.0
-      '@nestjs/core': ^7.0.0
-      '@nestjs/microservices': ^7.0.0
-      '@nestjs/platform-express': ^7.0.0
+      '@nestjs/common': ^8.0.0
+      '@nestjs/core': ^8.0.0
+      '@nestjs/microservices': ^8.0.0
+      '@nestjs/platform-express': ^8.0.0
     peerDependenciesMeta:
       '@nestjs/microservices':
         optional: true
@@ -998,7 +998,7 @@ packages:
       '@nestjs/common': 8.4.7_47vcjb2de6lyibr6g4enoa5lyu
       '@nestjs/core': 8.4.7_fkqgj3xrohk2pflugljc4sz7ea
       '@nestjs/platform-express': 8.4.7_7tsmhnugyerf5okgqzer2mfqme
-      tslib: 2.2.0
+      tslib: 2.3.0
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -4992,8 +4992,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tslib/2.2.0:
-    resolution: {integrity: sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==}
+  /tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
     dev: true
 
   /tslib/2.4.0:
