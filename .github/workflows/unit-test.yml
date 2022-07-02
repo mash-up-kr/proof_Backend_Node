@@ -27,19 +27,19 @@ jobs:
               run: |
                   touch .env.test
                   echo NODE_ENV=${{ secrets.NODE_ENV }} >> .env.test
-                  echo PORT=${{secret.PORT}} >> .env.test
-                  echo DATABASE_USER=${{secret.DATABASE_USER}} >> .env.test
-                  echo DATABASE_PASSWORD=${{secret.DATABASE_PASSWORD}} >> .env.test
-                  echo DATABASE_HOST=${{secret.DATABASE_HOST}} >> .env.test
-                  echo DATABASE_PORT=${{secret.DATABASE_PORT}} >> .env.test
-                  echo DATABASE_DB=${{secret.DATABASE_DB}} >> .env.test
-                  echo POSTGRES_HOST=${{secret.POSTGRES_HOST}} >> .env.test
-                  echo POSTGRES_PORT=${{secret.POSTGRES_PORT}} >> .env.test
-                  echo POSTGRES_USER=${{secret.POSTGRES_USER}} >> .env.test
-                  echo POSTGRES_PASSWORD=${{secret.POSTGRES_PASSWORD}} >> .env.test
-                  echo POSTGRES_DB=${{secret.POSTGRES_DB}} >> .env.test
-                  echo KAKAO_CLIENT_ID=${{secret.KAKAO_CLIENT_ID}} >> .env.test
-                  echo KAKAO_REDIRECT_URL=${{secret.KAKAO_REDIRECT_URL}} >> .env.test
+                  echo PORT=${{secrets.PORT}} >> .env.test
+                  echo DATABASE_USER=${{secrets.DATABASE_USER}} >> .env.test
+                  echo DATABASE_PASSWORD=${{secrets.DATABASE_PASSWORD}} >> .env.test
+                  echo DATABASE_HOST=${{secrets.DATABASE_HOST}} >> .env.test
+                  echo DATABASE_PORT=${{secrets.DATABASE_PORT}} >> .env.test
+                  echo DATABASE_DB=${{secrets.DATABASE_DB}} >> .env.test
+                  echo POSTGRES_HOST=${{secrets.POSTGRES_HOST}} >> .env.test
+                  echo POSTGRES_PORT=${{secrets.POSTGRES_PORT}} >> .env.test
+                  echo POSTGRES_USER=${{secrets.POSTGRES_USER}} >> .env.test
+                  echo POSTGRES_PASSWORD=${{secrets.POSTGRES_PASSWORD}} >> .env.test
+                  echo POSTGRES_DB=${{secrets.POSTGRES_DB}} >> .env.test
+                  echo KAKAO_CLIENT_ID=${{secrets.KAKAO_CLIENT_ID}} >> .env.test
+                  echo KAKAO_REDIRECT_URL=${{secrets.KAKAO_REDIRECT_URL}} >> .env.test
             - name: Install packages
               run: pnpm install --frozen-lockfile
             - name: Run unit test
