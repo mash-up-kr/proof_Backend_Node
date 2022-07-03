@@ -1,12 +1,17 @@
+import { ConfigService } from '@nestjs/config';
+import { Injectable } from '@nestjs/common';
+import { OauthConfig } from 'src/config/config.constant';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy } from 'passport-kakao';
-import { UserKakaoDto } from './dto/user.kakao.dto';
+import { UserKakaoDto } from './dtos/user.kakao.dto';
 
+@Injectable()
 export class KakaoStrategy extends PassportStrategy(Strategy) {
-	constructor() {
+	constructor(private readonly configService: ConfigService) {
+		const oauthConfig = configService.get<OauthConfig>('oauthConfig').kakao;
 		super({
-			clientID: process.env.KAKAO_CLIENT_ID,
-			callbackURL: process.env.KAKAO_REDIRECT_URL,
+			clientID: oauthConfig.clientId,
+			callbackURL: oauthConfig.redirectUrl,
 		});
 	}
 

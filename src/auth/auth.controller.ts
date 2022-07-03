@@ -1,7 +1,7 @@
 import { Controller, Get, Header, HttpCode, Redirect, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
-import { UserKakaoDto } from './dto/user.kakao.dto';
+import { UserKakaoDto } from './dtos/user.kakao.dto';
 
 @Controller('auth')
 export class AuthController {
