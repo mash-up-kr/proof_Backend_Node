@@ -11,7 +11,7 @@ export class KakaoStrategy extends PassportStrategy(Strategy) {
 		const oauthConfig = configService.get<OauthConfig>('oauthConfig').kakao;
 		super({
 			clientID: oauthConfig.clientId,
-			callbackURL: oauthConfig.redirectUrl,
+			callbackURL: oauthConfig.callbackUrl,
 		});
 	}
 

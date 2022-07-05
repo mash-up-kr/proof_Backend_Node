@@ -16,7 +16,7 @@ export type DatabaseConfig = {
 export type OauthConfig = {
 	kakao: {
 		clientId: string;
-		redirectUrl: string;
+		callbackUrl: string;
 	};
 };
 
@@ -41,7 +41,7 @@ export const oauthConfig = (): { oauthConfig: OauthConfig } => ({
 	oauthConfig: {
 		kakao: {
 			clientId: process.env.KAKAO_CLIENT_ID,
-			redirectUrl: process.env.KAKAO_REDIRECT_URL,
+			callbackUrl: process.env.KAKAO_CALLBACK_URL,
 		},
 	},
 });

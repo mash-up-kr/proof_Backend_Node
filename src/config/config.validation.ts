@@ -9,5 +9,5 @@ export const configValidationSchema = Joi.object({
 	DATABASE_PORT: Joi.number().required(),
 	DATABASE_DB: Joi.string().required(),
 	KAKAO_CLIENT_ID: Joi.string().required(),
-	KAKAO_REDIRECT_URL: Joi.string().required(),
+	KAKAO_CALLBACK_URL: Joi.string().required(),
 });
