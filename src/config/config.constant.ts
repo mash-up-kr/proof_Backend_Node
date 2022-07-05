@@ -1,4 +1,4 @@
-export type NodeEnv = 'dev' | 'test' | 'prod';
+export type NodeEnv = 'dev' | 'integ' | 'test' | 'prod';
 
 export type AppConfig = {
 	env: NodeEnv;
@@ -29,11 +29,11 @@ export const appConfig = (): { appConfig: AppConfig } => ({
 
 export const databaseConfig = (): { databaseConfig: DatabaseConfig } => ({
 	databaseConfig: {
-		username: process.env.POSTGRES_USER,
-		password: process.env.POSTGRES_PASSWORD,
-		host: process.env.POSTGRES_HOST,
-		port: +process.env.POSTGRES_PORT,
-		dbname: process.env.POSTGRES_DB,
+		username: process.env.DATABASE_USER,
+		password: process.env.DATABASE_PASSWORD,
+		host: process.env.DATABASE_HOST,
+		port: +process.env.DATABASE_PORT,
+		dbname: process.env.DATABASE_DB,
 	},
 });
 

@@ -71,7 +71,13 @@ Make sure node.js 16 is installed
 pnpm install
 ```
 
-3. Run.
+3. Make sure postgres is running if this app needs it. If not, start postgres container.
+
+```bash
+docker run --name postgres-dev -p 5432:5432 --env-file .env.dev -d postgres:13.7
+```
+
+4. Run.
 
 ```bash
 pnpm run start:dev
@@ -79,12 +85,11 @@ pnpm run start:dev
 
 ## Nestjs on Docker for Development
 
-1. Make sure postgres is running if this app needs it.
-2. Git clone this repo and cd into the directory.
-3. Run with `docker-compose`. docker-compose.dev.yml is intended for development environments.
+1. Git clone this repo and cd into the directory.
+2. Run with `docker-compose`. docker-compose.integ.yml is intended for development environments.
 
 ```bash
-docker-compose -f docker-compose.dev.yml up
+docker-compose -f docker-compose.integ.yml up
 ```
 
 ## Nestjs on Docker for Production
