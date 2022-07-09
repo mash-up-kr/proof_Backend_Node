@@ -1,19 +1,18 @@
-import { Controller, Get, Header, HttpCode, Redirect, Req, Res, UseGuards } from '@nestjs/common';
+import { Controller, Get, Header, HttpCode, Redirect, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
-import { UserKakaoDto } from './dtos/user.kakao.dto';
 
 @Controller('auth')
 export class AuthController {
 	constructor(private readonly authService: AuthService) {}
-	appConfig = this.authService.appConfig;
 
-	@Get('kakaoLogin')
+	@Get('/kakao/login')
 	@Header('Content-Type', 'text/html')
 	@Redirect()
 	getKakaoLoginPage() {
+		const kakaoCallbackUrl: string = this.authService.getKakaoLoginPage();
 		return {
-			url: `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${this.appConfig.clientId}&redirect_uri=${this.appConfig.callbackUrl}`,
+			url: kakaoCallbackUrl,
 		};
 	}
 

@@ -5,5 +5,9 @@ import { OauthConfig } from 'src/config/config.constant';
 @Injectable()
 export class AuthService {
 	constructor(private readonly configService: ConfigService) {}
-	appConfig = this.configService.get<OauthConfig>('oauthConfig').kakao;
+	oauthConfig = this.configService.get<OauthConfig>('oauthConfig').kakao;
+
+	public getKakaoLoginPage(): string {
+		return `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${this.oauthConfig.clientId}&redirect_uri=${this.oauthConfig.callbackUrl}`;
+	}
 }
