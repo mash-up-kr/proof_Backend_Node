@@ -83,16 +83,19 @@ docker run --name postgres-dev -p 5432:5432 --env-file .env.dev -d postgres:13.7
 pnpm run start:dev
 ```
 
-5. Seed data if you need
+or
+
+Seed data if you need
 
 ```bash
-pnpm run seed:run
+STAGE=dev pnpm run seed:run && pnpm run start:dev
 ```
 
 ## Nestjs on Docker for Development
 
 1. Git clone this repo and cd into the directory.
 2. Run with `docker-compose`. docker-compose.integ.yml is intended for development environments.
+   It contains command to seed data.
 
 ```bash
 docker-compose -f docker-compose.integ.yml up

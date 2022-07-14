@@ -8,9 +8,6 @@ services:
         ports:
             - '5432:5432'
         volumes:
-            # TODO: Add init, seed query
-            # - ./data/seeds/init.sql:/docker-entrypoint-initdb.d/init.sql
-            # - ./data/seeds/seed.sql:/docker-entrypoint-initdb.d/seed.sql
             - ./data/dev:/var/lib/postgres/data
         env_file:
             - ./.env.integ
@@ -26,6 +23,6 @@ services:
         restart: on-failure
         env_file:
             - ./.env.integ
-        command: sh -c "pnpm run start:dev && pnpm run seed:run"
+        command: sh -c "STAGE=integ pnpm run seed:run && pnpm run start:integ"
         depends_on:
             - db
