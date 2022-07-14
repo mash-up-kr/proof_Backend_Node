@@ -83,6 +83,12 @@ docker run --name postgres-dev -p 5432:5432 --env-file .env.dev -d postgres:13.7
 pnpm run start:dev
 ```
 
+5. Seed data if you need
+
+```bash
+pnpm run seed:run
+```
+
 ## Nestjs on Docker for Development
 
 1. Git clone this repo and cd into the directory.

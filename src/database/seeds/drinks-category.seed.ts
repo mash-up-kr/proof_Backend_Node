@@ -1,4 +1,4 @@
-import { DrinksCategory } from '../../src/drinks-category/drinks-category.entity';
+import { DrinksCategory } from '../../drinks-category/drinks-category.entity';
 import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
 
@@ -37,15 +37,3 @@ export default class DrinksCategorySeed implements Seeder {
 			.execute();
 	}
 }
-
-// import { DrinksCategory } from '../../src/drinks-category/drinks-category.entity';
-// import { Connection } from 'typeorm';
-// import { Factory, Seeder } from 'typeorm-seeding';
-
-// export default class CreateData implements Seeder {
-// 	public async run(factory: Factory, connection: Connection): Promise<any> {
-// 		console.log('!!###############!');
-// 		await factory(DrinksCategory)().createMany(6);
-// 		console.log('!-----------------!');
-// 	}
-// }
