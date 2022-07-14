@@ -26,6 +26,6 @@ services:
         restart: on-failure
         env_file:
             - ./.env.integ
-        command: ['pnpm', 'run', 'start:integ']
+        command: sh -c "pnpm run start:dev && pnpm run seed:run"
         depends_on:
             - db

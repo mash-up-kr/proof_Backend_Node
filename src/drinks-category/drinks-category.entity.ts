@@ -13,7 +13,7 @@ export class DrinksCategory extends CommonEntity {
 	})
 	@IsString()
 	@IsNotEmpty()
-	@Column({ type: 'varchar', unique: true, nullable: false })
+	@Column({ type: 'enum', enum: Category, unique: true, nullable: false })
 	name: string;
 
 	@ApiProperty({
@@ -24,4 +24,5 @@ export class DrinksCategory extends CommonEntity {
 	@IsNotEmpty()
 	@Column({ type: 'varchar', nullable: false })
 	image_url: string;
+	static Beer: any;
 }
