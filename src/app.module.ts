@@ -1,3 +1,4 @@
+import { AuthModule } from './auth/auth.module';
 import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
@@ -8,7 +9,7 @@ import { UsersModule } from './users/users.module';
 import { DrinksCategoryModule } from './drinks-category/drinks-category.module';
 
 @Module({
-	imports: [ConfigModule, DatabaseModule, UsersModule, DrinksCategoryModule],
+	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule],
 	controllers: [AppController],
 	providers: [AppService],
 })
