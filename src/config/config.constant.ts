@@ -1,3 +1,7 @@
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: `.env.${process.env.STAGE}` });
+
 export type NodeEnv = 'dev' | 'integ' | 'test' | 'prod';
 
 export type AppConfig = {
