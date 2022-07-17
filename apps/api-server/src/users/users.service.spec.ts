@@ -1,8 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { getRepositoryToken } from '@nestjs/typeorm';
-import { mockUser, MockUsersRepository } from '../../test/mock/user.repository.mock';
-import { User } from './user.entity';
+
+import { ConfigService } from '@nestjs/config';
+import { MockUsersRepository } from '../../test/mock/user.repository.mock';
+import { User } from '../auth/entities/users.entity';
 import { UsersService } from './users.service';
+import { getRepositoryToken } from '@nestjs/typeorm';
 
 describe('UsersService', () => {
 	let usersService: UsersService;
@@ -16,6 +18,17 @@ describe('UsersService', () => {
 					provide: getRepositoryToken(User),
 					useClass: MockUsersRepository,
 				},
+				{
+					provide: ConfigService,
+					useValue: {
+						get: jest.fn((key: string) => {
+							if (key === 'oauthConfig') {
+								return 1;
+							}
+							return null;
+						}),
+					},
+				},
 			],
 		}).compile();
 
@@ -27,15 +40,15 @@ describe('UsersService', () => {
 		expect(usersService).toBeDefined();
 	});
 
-	// XXX: This is just sample code. Plz delete later.
-	describe('getUsers function', () => {
-		it('should be defined', () => {
-			expect(usersService.getUsers).toBeDefined();
-			expect(usersRepository.find).toBeDefined();
-		});
+	// // XXX: This is just sample code. Plz delete later.
+	// describe('getUsers function', () => {
+	// 	it('should be defined', () => {
+	// 		expect(usersService.getUsers).toBeDefined();
+	// 		expect(usersRepository.find).toBeDefined();
+	// 	});
 
-		it('get all users data', async () => {
-			await expect(usersService.getUsers()).resolves.toEqual(mockUser);
-		});
-	});
+	// 	it('get all users data', async () => {
+	// 		await expect(usersService.getUsers()).resolves.toEqual(mockUser);
+	// 	});
+	// });
 });

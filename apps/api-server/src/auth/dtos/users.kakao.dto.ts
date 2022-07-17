@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumberString, IsOptional, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class UserKakaoDto {
 	@IsNotEmpty()
@@ -6,11 +6,10 @@ export class UserKakaoDto {
 	readonly name: string;
 
 	@IsNotEmpty()
-	@IsNumberString()
+	@IsNumber()
 	readonly kakaoId: number;
 
 	@IsNotEmpty()
-	@IsOptional()
 	@IsString()
 	readonly email: string;
 }
