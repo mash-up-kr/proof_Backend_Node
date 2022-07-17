@@ -21,7 +21,6 @@ const config = {
 	synchronize: process.env.NODE_ENV !== 'prod',
 	logging: process.env.NODE_ENV !== 'prod',
 	dropSchema: process.env.NODE_ENV === 'test',
-	autoLoadEntities: true,
 };
 
 export = config;
