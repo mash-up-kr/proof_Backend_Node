@@ -4,6 +4,7 @@ import { User } from '../users/user.entity';
 import { DrinksCategory } from '../drinks-category/drinks-category.entity';
 
 import { databaseConfig } from '../config/config.constant';
+import { Drink } from '../drinks/drink.entity';
 
 const dbConfig = databaseConfig().databaseConfig;
 
@@ -15,7 +16,7 @@ const config = {
 	username: dbConfig.username,
 	password: dbConfig.password,
 	database: dbConfig.dbname,
-	entities: [User, DrinksCategory],
+	entities: [User, DrinksCategory, Drink],
 	seeds: ['apps/api-server/src/database/seeds/*.seed.ts'],
 	namingStrategy: new SnakeNamingStrategy(),
 	synchronize: process.env.NODE_ENV !== 'prod',
