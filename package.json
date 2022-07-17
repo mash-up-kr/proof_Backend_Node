@@ -8,7 +8,7 @@
 	"scripts": {
 		"prebuild": "rimraf dist",
 		"build": "nest build",
-		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+		"format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
 		"start": "cross-env STAGE=dev nest start",
 		"start:dev": "cross-env STAGE=dev nest build --webpack --webpackPath webpack-hmr.config.js --watch",
 		"start:integ": "cross-env STAGE=integ nest build --webpack --webpackPath webpack-hmr.config.js --watch",
@@ -19,17 +19,20 @@
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage",
 		"test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-		"test:e2e": "jest --config ./test/jest-e2e.json",
-		"typeorm": "cross-env STAGE=dev node --require ts-node/register ./node_modules/typeorm/cli.js -f src/database/database.config.ts",
-		"seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config -n src/database/database.config.ts",
-		"seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed -n src/database/database.config.ts"
+		"test:e2e": "jest --config ./apps/api-server/test/jest-e2e.json",
+		"typeorm": "cross-env STAGE=dev node --require ts-node/register ./node_modules/typeorm/cli.js -f apps/api-server/src/database/database.config.ts",
+		"seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config -n apps/api-server/src/database/database.config.ts",
+		"seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed -n apps/api-server/src/database/database.config.ts"
 	},
 	"dependencies": {
 		"@nestjs/common": "^8.0.0",
 		"@nestjs/config": "^2.1.0",
 		"@nestjs/core": "^8.0.0",
+		"@nestjs/passport": "^8.2.2",
 		"@nestjs/platform-express": "^8.0.0",
 		"@nestjs/swagger": "^5.2.1",
+		"passport": "^0.6.0",
+		"passport-kakao": "^1.0.1",
 		"@nestjs/typeorm": "^8.1.4",
 		"class-transformer": "^0.5.1",
 		"class-validator": "^0.13.2",
@@ -52,6 +55,7 @@
 		"@types/faker": "^6.6.9",
 		"@types/jest": "27.4.1",
 		"@types/node": "^16.0.0",
+		"@types/passport-kakao": "^0.2.1",
 		"@types/supertest": "^2.0.11",
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
 		"@typescript-eslint/parser": "^5.0.0",
@@ -78,7 +82,7 @@
 			"json",
 			"ts"
 		],
-		"rootDir": "src",
+		"rootDir": ".",
 		"testRegex": ".*\\.spec\\.ts$",
 		"transform": {
 			"^.+\\.(t|j)s$": "ts-jest"
@@ -86,7 +90,10 @@
 		"collectCoverageFrom": [
 			"**/*.(t|j)s"
 		],
-		"coverageDirectory": "../coverage",
-		"testEnvironment": "node"
+		"coverageDirectory": "./coverage",
+		"testEnvironment": "node",
+		"roots": [
+			"<rootDir>/apps/"
+		]
 	}
 }
