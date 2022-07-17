@@ -10,7 +10,7 @@ export class DrinksCategoryService {
 		private readonly drinksCategoryRepository: Repository<DrinksCategory>,
 	) {}
 
-	async getDrinksCategorys(): Promise<DrinksCategory[]> {
+	async findAll(): Promise<DrinksCategory[]> {
 		try {
 			const drinksCategorys = await this.drinksCategoryRepository.find();
 			return drinksCategorys;
