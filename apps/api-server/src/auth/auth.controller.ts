@@ -9,7 +9,7 @@ import { JwtRefreshGuard } from './guards/jwt-refresh-auth.guard';
 export class AuthController {
 	constructor(private readonly authService: AuthService) {}
 
-	@Get('/kakao/login')
+	@Get('/kakao-login')
 	@Header('Content-Type', 'text/html')
 	@Redirect()
 	getKakaoLoginPage() {
@@ -20,7 +20,7 @@ export class AuthController {
 	}
 
 	@UseGuards(AuthGuard('kakao'))
-	@Get('/kakao/callback')
+	@Get('/kakao-callback')
 	@HttpCode(200)
 	async kakaoLoginCallback(@Req() userData) {
 		// (userData.user as UserKakaoDto)에 사용자 정보
