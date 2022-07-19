@@ -4,11 +4,11 @@ import { JwtConfig, OauthConfig } from '@src/config/config.constant';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
-import { TokenSchema } from '@src/interfaces/auth.interface';
 import { User } from './entities/users.entity';
 import { UserKakaoDto } from './dtos/users.kakao.dto';
 import { hash } from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
+import { TokenDto } from './dtos/auth.token.dto';
 
 @Injectable()
 export class AuthService {
@@ -50,7 +50,7 @@ export class AuthService {
 		}
 	}
 
-	async login(user: User): Promise<TokenSchema> {
+	async login(user: User): Promise<TokenDto> {
 		const payload = { id: user.id };
 		const accessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
