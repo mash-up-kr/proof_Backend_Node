@@ -16,6 +16,7 @@ specifiers:
   '@types/express': ^4.17.13
   '@types/faker': ^6.6.9
   '@types/jest': 27.4.1
+  '@types/jsonwebtoken': ^8.5.8
   '@types/node': ^16.0.0
   '@types/passport-jwt': ^3.0.6
   '@types/passport-kakao': ^0.2.1
@@ -32,6 +33,7 @@ specifiers:
   eslint-plugin-prettier: ^3.4.0
   jest: ^27.2.5
   joi: ^17.6.0
+  jsonwebtoken: ^8.5.1
   passport: ^0.6.0
   passport-jwt: ^4.0.0
   passport-kakao: ^1.0.1
@@ -64,11 +66,13 @@ dependencies:
   '@nestjs/platform-express': 8.4.7_7tsmhnugyerf5okgqzer2mfqme
   '@nestjs/swagger': 5.2.1_22mmkdqibyufqwcxfa6zn2qjnu
   '@nestjs/typeorm': 8.1.4_yieplrfifnpd2adyzvulnrztri
+  '@types/jsonwebtoken': 8.5.8
   bcrypt: 5.0.1
   class-transformer: 0.5.1
   class-validator: 0.13.2
   dotenv: 16.0.1
   joi: 17.6.0
+  jsonwebtoken: 8.5.1
   passport: 0.6.0
   passport-jwt: 4.0.0
   passport-kakao: 1.0.1

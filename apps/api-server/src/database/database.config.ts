@@ -1,8 +1,8 @@
 import * as dotenv from 'dotenv';
-import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
-import { User } from '../users/user.entity';
-import { DrinksCategory } from '../drinks-category/drinks-category.entity';
 
+import { DrinksCategory } from '../drinks-category/drinks-category.entity';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
+import { User } from '@src/auth/entities/users.entity';
 import { databaseConfig } from '../config/config.constant';
 
 const dbConfig = databaseConfig().databaseConfig;

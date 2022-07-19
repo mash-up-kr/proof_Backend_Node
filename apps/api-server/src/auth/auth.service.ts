@@ -18,11 +18,13 @@ export class AuthService {
 		private readonly configService: ConfigService,
 		private readonly jwtService: JwtService,
 	) {}
-	oauthConfig = this.configService.get<OauthConfig>('oauthConfig').kakao;
-	jwtConfig = this.configService.get<JwtConfig>('jwtConfig');
+	#oauthConfig = this.configService.get<OauthConfig>('oauthConfig').kakao;
+	#jwtConfig = this.configService.get<JwtConfig>('jwtConfig');
 
 	getKakaoLoginPage(): string {
-		return `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${this.oauthConfig.clientId}&redirect_uri=${this.oauthConfig.callbackUrl}`;
+		return `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${
+			this.#oauthConfig.clientId
+		}&redirect_uri=${this.#oauthConfig.callbackUrl}`;
 	}
 
 	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<User> {
@@ -49,33 +51,29 @@ export class AuthService {
 	}
 
 	async login(user: User): Promise<TokenSchema> {
-		const payload = { userId: user.id };
+		const payload = { id: user.id };
 		const accessToken = this.jwtService.sign(payload, {
-			secret: this.jwtConfig.jwtAccessTokenSecret,
-			expiresIn: this.jwtConfig.jwtAccessTokenExpire,
+			secret: this.#jwtConfig.jwtAccessTokenSecret,
+			expiresIn: this.#jwtConfig.jwtAccessTokenExpire,
 		});
 		const refreshToken = this.jwtService.sign(payload, {
-			secret: this.jwtConfig.jwtRefreshTokenSecret,
-			expiresIn: this.jwtConfig.jwtRefreshTokenExpire,
+			secret: this.#jwtConfig.jwtRefreshTokenSecret,
+			expiresIn: this.#jwtConfig.jwtRefreshTokenExpire,
 		});
 
 		await this.setRefreshToken(refreshToken, user.id);
 
-		const resultUser: User = await this.usersRepository.findOne({
-			where: { id: user.id },
-		});
-
 		return {
 			accessToken: accessToken,
 			refreshToken: refreshToken,
-			user: resultUser,
+			user: user,
 		};
 	}
 
 	async refresh(payload: any) {
 		const newAccessToken = this.jwtService.sign(payload, {
-			secret: this.jwtConfig.jwtAccessTokenSecret,
-			expiresIn: this.jwtConfig.jwtAccessTokenExpire,
+			secret: this.#jwtConfig.jwtAccessTokenSecret,
+			expiresIn: this.#jwtConfig.jwtAccessTokenExpire,
 		});
 		return { accessToken: newAccessToken };
 	}
@@ -90,13 +88,13 @@ export class AuthService {
 		await this.usersRepository.save(user);
 	}
 
-	async getUserIfRefreshTokenMatches(id: string) {
+	async getUser(id: string) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
 		});
 
 		if (user) {
-			return { userId: user.id };
+			return { id: user.id };
 		} else throw new UnauthorizedException();
 	}
 

@@ -25,15 +25,12 @@ export class AuthController {
 	async kakaoLoginCallback(@Req() userData) {
 		// (userData.user as UserKakaoDto)에 사용자 정보
 		const user: User = await this.authService.createKakaoUser(userData.user as UserKakaoDto);
-		console.log(user);
-
 		return this.authService.login(user);
 	}
 
 	@UseGuards(JwtRefreshGuard)
 	@Post('token-refresh')
 	async refreshToken(@Req() userData) {
-		console.log(userData.user);
 		return await this.authService.refresh(userData.user);
 	}
 }
