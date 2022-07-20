@@ -1,8 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString } from 'class-validator';
 import { CommonEntity } from '../common/entities/common.entity';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { Category } from './drinks-category.types';
+import { Drink } from '../drinks/drink.entity';
 
 @Entity()
 export class DrinksCategory extends CommonEntity {
@@ -25,4 +26,11 @@ export class DrinksCategory extends CommonEntity {
 	@Column({ type: 'varchar', nullable: false })
 	image_url: string;
 	static Beer: any;
+
+	@ApiProperty({
+		type: () => [Drink],
+		description: 'Specific Drinks in the category',
+	})
+	@OneToMany(() => Drink, (drink) => drink.category)
+	drinks: Drink[];
 }

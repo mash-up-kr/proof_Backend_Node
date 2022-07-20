@@ -1,6 +1,7 @@
 import { CommonEntity } from '../common/entities/common.entity'; // '@src/common/entities/common.entity';
-import { DrinksCategory } from '@src/drinks-category/drinks-category.entity';
+import { DrinksCategory } from '../drinks-category/drinks-category.entity';
 import { Column, Entity, ManyToOne } from 'typeorm';
+import { ApiProperty } from '@nestjs/swagger';
 
 @Entity()
 export class Drink extends CommonEntity {
@@ -22,10 +23,10 @@ export class Drink extends CommonEntity {
 	}) // TODO: Change default img url to the real one after DES team give the real img.
 	image_url: string;
 
-	// TODO: One to Many relation with drinks category
-	// REFERENCE: https://typeorm.io/many-to-one-one-to-many-relations
-	// // Photo - User === Drink - DrinksCategory
-	// @ManyToOne(() => DrinksCategory, (drinkCategory) => drinkCategory.drinks)
-	@Column({ type: 'varchar', nullable: false })
-	category: string;
+	@ApiProperty({
+		type: () => DrinksCategory,
+		description: 'Category of the drink such as beer, wine, etc.',
+	})
+	@ManyToOne(() => DrinksCategory, (drinkCategory) => drinkCategory.drinks)
+	category: DrinksCategory;
 }

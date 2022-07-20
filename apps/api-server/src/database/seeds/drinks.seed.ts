@@ -5,6 +5,7 @@ import * as path from 'path';
 import * as fastcsv from 'fast-csv';
 
 import { Drink } from '../../drinks/drink.entity';
+import { DrinksCategory } from '../../drinks-category/drinks-category.entity';
 
 interface DrinkData {
 	name: string;
@@ -17,12 +18,15 @@ interface DrinkData {
 
 export default class DrinkSeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {
-		const drink: DrinkData[] = await readCsv(path.resolve('apps/api-server/src/database/data', 'beer.csv'));
+		const drink: DrinkData[] = await readCsv(path.resolve('apps/api-server/src/database/data', 'drinks.csv'));
 
 		const currentDrinks = await connection.getRepository(Drink).createQueryBuilder().select().getMany();
 
 		for (const data of drink) {
 			const isDrinkExist = currentDrinks.find((drink) => drink.name === data.name);
+			const drinksCategory = await connection.getRepository(DrinksCategory).findOne({
+				where: { name: data.category },
+			});
 
 			if (isDrinkExist) {
 				await connection.getRepository(Drink).update(
@@ -33,7 +37,7 @@ export default class DrinkSeed implements Seeder {
 						origin: data.origin,
 						description: data.description,
 						image_url: data.image_url,
-						category: data.category,
+						category: drinksCategory,
 					},
 				);
 			} else {
@@ -43,7 +47,7 @@ export default class DrinkSeed implements Seeder {
 					origin: data.origin,
 					description: data.description,
 					image_url: data.image_url,
-					category: data.category,
+					category: drinksCategory,
 				});
 			}
 		}

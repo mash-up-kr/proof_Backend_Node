@@ -4,6 +4,8 @@ import { Factory, Seeder } from 'typeorm-seeding';
 
 export class CreateInitialUserData implements Seeder {
 	public async run(factory: Factory, connection: Connection): Promise<any> {
+		await connection.createQueryBuilder().delete().from(User).execute();
+
 		await connection
 			.createQueryBuilder()
 			.insert()
