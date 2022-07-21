@@ -1,9 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Drink } from './drink.entity';
-import { CreateDrinkDto } from './dtos/create-drink.dto';
-import { UpdateDrinkDto } from './dtos/update-drink.dto';
+import { DrinkInfo } from './drinks.interface';
+import { CreateDrinkDto } from './dtos/drink.dto';
 
 @Injectable()
 export class DrinksService {
@@ -12,28 +12,54 @@ export class DrinksService {
 		private readonly drinkRepository: Repository<Drink>,
 	) {}
 
+	// TODO
 	create(createDrinkDto: CreateDrinkDto) {
 		return 'This action adds a new drink';
 	}
 
-	findAll() {
+	public async findAll(): Promise<Drink[]> {
 		try {
-			const drinks = this.drinkRepository.find();
-			return drinks;
+			return await this.drinkRepository.find();
 		} catch (error) {
-			throw new Error();
+			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	findOne(id: number) {
-		return `This action returns a #${id} drink`;
+	public async findById(id: string): Promise<DrinkInfo> {
+		try {
+			const drinkInfo = await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select([
+					'drink.id',
+					'drink.name',
+					'drink.abv',
+					'drink.origin',
+					'drink.description',
+					'drink.image_url',
+					'category.name',
+				])
+				.leftJoin('drink.category', 'category')
+				.where('drink.id = :id', { id })
+				.getOne();
+
+			if (!drinkInfo) {
+				throw new NotFoundException();
+			}
+			return drinkInfo;
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
 	}
 
-	update(id: number, updateDrinkDto: UpdateDrinkDto) {
-		return `This action updates a #${id} drink`;
-	}
-
-	remove(id: number) {
-		return `This action removes a #${id} drink`;
+	public async findByCategory(category: string): Promise<Drink[]> {
+		try {
+			return await this.drinkRepository
+				.createQueryBuilder('drink')
+				.leftJoin('drink.category', 'category')
+				.where('category.name = :category', { category })
+				.getMany();
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
 	}
 }
