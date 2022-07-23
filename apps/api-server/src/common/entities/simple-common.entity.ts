@@ -8,10 +8,10 @@ export abstract class SimpleCommonEntity {
 	@CreateDateColumn({
 		type: 'timestamptz' /* timestamp with time zone. */,
 	})
-	createdAt: Date;
+	createdAt?: Date;
 
 	@UpdateDateColumn({ type: 'timestamptz' })
-	updatedAt: Date;
+	updatedAt?: Date;
 
 	// Soft Delete (기존에는 null, 삭제시에 timestamp를 찍는다.)
 	// XXX: Need to discuss delete policy.

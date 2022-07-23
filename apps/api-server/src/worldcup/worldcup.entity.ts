@@ -2,6 +2,7 @@ import { CommonEntity } from '@src/common/entities/common.entity';
 import { SimpleCommonEntity } from '@src/common/entities/simple-common.entity';
 import { IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { WorldcupRoundDto } from './dtos/worldcup-round.dto';
 
 @Entity()
 export class Worldcup extends SimpleCommonEntity {
@@ -29,10 +30,5 @@ export class Worldcup extends SimpleCommonEntity {
 	situatoinContent: string;
 
 	@Column({ type: 'jsonb' })
-	round?: Round[];
-}
-
-class Round {
-	title: string;
-	count: number;
+	round: WorldcupRoundDto[];
 }
