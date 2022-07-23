@@ -11,4 +11,11 @@ export class WolrdCupService {
 		const worldcups = await this.worldcupRepository.find();
 		return worldcups;
 	}
+
+	async getWolrdcupById(id): Promise<Worldcup> {
+		console.log('id : ', id);
+		const worldcup = await this.worldcupRepository.findOneBy({ id });
+		console.log(worldcup);
+		return worldcup;
+	}
 }
