@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, HttpException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { WorldcupReseponseDto } from './dtos/worldcup-response.dto';
@@ -15,6 +15,10 @@ export class WolrdCupService {
 
 	async getWolrdcupById(id): Promise<WorldcupReseponseDto> {
 		const worldcup = await this.worldcupRepository.findOneBy({ id });
+		if (!worldcup) {
+			throw new BadRequestException('존재하지 않는 월드컵입니다.');
+		}
+
 		return WorldcupReseponseDto.from(worldcup);
 	}
 }

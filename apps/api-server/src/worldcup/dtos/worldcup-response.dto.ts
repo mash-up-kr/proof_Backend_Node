@@ -1,11 +1,11 @@
 import { Worldcup } from '../worldcup.entity';
-import { WorldcupRoundDto } from './worldcup-round.dto';
+import { WorldcupCondition, WorldcupRound } from '../worldcup.type';
 
 export class WorldcupReseponseDto {
 	id: number;
-	withWho: object;
-	situatoin: object;
-	round: WorldcupRoundDto[];
+	withWho: WorldcupCondition;
+	situation: WorldcupCondition;
+	round: WorldcupRound[];
 
 	static from(worldcup: Worldcup) {
 		const worldcupResponse = new WorldcupReseponseDto();
@@ -17,7 +17,7 @@ export class WorldcupReseponseDto {
 			title: worldcup.withWhoTitle,
 			content: worldcup.withWhoContent,
 		};
-		worldcupResponse.situatoin = {
+		worldcupResponse.situation = {
 			code: worldcup.situatoinCode,
 			title: worldcup.situatoinTitle,
 			content: worldcup.situatoinContent,
