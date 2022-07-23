@@ -18,16 +18,16 @@ export class Worldcup extends SimpleCommonEntity {
 	@Column({ name: 'with_who_content', type: 'varchar', nullable: false })
 	withWhoContent: string;
 	@IsString()
-	@Column({ name: 'situatoin_code', type: 'varchar', nullable: false })
-	situatoinCode: string;
+	@Column({ name: 'situation_code', type: 'varchar', nullable: false })
+	situationCode: string;
 
 	@IsString()
-	@Column({ name: 'situatoin_title', type: 'varchar', nullable: false })
-	situatoinTitle: string;
+	@Column({ name: 'situation_title', type: 'varchar', nullable: false })
+	situationTitle: string;
 
 	@IsString()
-	@Column({ name: 'situatoin_content', type: 'varchar', nullable: false })
-	situatoinContent: string;
+	@Column({ name: 'situation_content', type: 'varchar', nullable: false })
+	situationContent: string;
 
 	@Column({ type: 'jsonb' })
 	round: WorldcupRound[];

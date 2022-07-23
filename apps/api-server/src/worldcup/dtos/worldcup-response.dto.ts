@@ -18,9 +18,9 @@ export class WorldcupReseponseDto {
 			content: worldcup.withWhoContent,
 		};
 		worldcupResponse.situation = {
-			code: worldcup.situatoinCode,
-			title: worldcup.situatoinTitle,
-			content: worldcup.situatoinContent,
+			code: worldcup.situationCode,
+			title: worldcup.situationTitle,
+			content: worldcup.situationContent,
 		};
 
 		return worldcupResponse;
