@@ -1,9 +1,10 @@
 import { CommonEntity } from '@src/common/entities/common.entity';
+import { SimpleCommonEntity } from '@src/common/entities/simple-common.entity';
 import { IsString } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class WorldCup extends CommonEntity {
+export class WorldCup extends SimpleCommonEntity {
 	@IsString()
 	@Column({ name: 'with_who_code', type: 'varchar', nullable: false })
 	withWhoCode: string;
@@ -26,4 +27,12 @@ export class WorldCup extends CommonEntity {
 	@IsString()
 	@Column({ name: 'situatoin_content', type: 'varchar', nullable: false })
 	situatoinContent: string;
+
+	@Column({ type: 'jsonb' })
+	round?: Round[];
+}
+
+class Round {
+	title: string;
+	count: number;
 }
