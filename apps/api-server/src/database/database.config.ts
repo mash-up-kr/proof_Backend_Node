@@ -4,7 +4,7 @@ import { DrinksCategory } from '../drinks-category/drinks-category.entity';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { User } from '@src/auth/entities/users.entity';
 import { databaseConfig } from '../config/config.constant';
-import { WorldCup } from '@src/worldcup/worldcup.entity';
+import { Worldcup } from '@src/worldcup/worldcup.entity';
 
 const dbConfig = databaseConfig().databaseConfig;
 
@@ -16,7 +16,7 @@ const config = {
 	username: dbConfig.username,
 	password: `${dbConfig.password}`,
 	database: dbConfig.dbname,
-	entities: [User, DrinksCategory, WorldCup],
+	entities: [User, DrinksCategory, Worldcup],
 	seeds: ['apps/api-server/src/database/seeds/*.seed.ts'],
 	namingStrategy: new SnakeNamingStrategy(),
 	synchronize: process.env.NODE_ENV !== 'prod',

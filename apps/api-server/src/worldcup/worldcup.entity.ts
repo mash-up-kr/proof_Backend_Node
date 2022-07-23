@@ -4,7 +4,7 @@ import { IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class WorldCup extends SimpleCommonEntity {
+export class Worldcup extends SimpleCommonEntity {
 	@IsString()
 	@Column({ name: 'with_who_code', type: 'varchar', nullable: false })
 	withWhoCode: string;

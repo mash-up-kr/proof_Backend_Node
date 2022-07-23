@@ -7,10 +7,10 @@ import { ConfigModule } from './config/config.module';
 import { DatabaseModule } from './database/database.module';
 import { UsersModule } from './users/users.module';
 import { DrinksCategoryModule } from './drinks-category/drinks-category.module';
-import { WorldCupModule } from './worldcup/worldcup.module';
+import { WorldcupModule } from './worldcup/worldcup.module';
 
 @Module({
-	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule, WorldCupModule],
+	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule, WorldcupModule],
 	controllers: [AppController],
 	providers: [AppService],
 })

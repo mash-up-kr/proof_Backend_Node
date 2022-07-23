@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { WorldCupController } from './worldcup.controller';
-import { WorldCup } from './worldcup.entity';
+import { WorldcupController } from './worldcup.controller';
+import { Worldcup } from './worldcup.entity';
 import { WolrdCupService } from './worldcup.service';
 
 @Module({
-	imports: [TypeOrmModule.forFeature([WorldCup])],
-	controllers: [WorldCupController],
+	imports: [TypeOrmModule.forFeature([Worldcup])],
+	controllers: [WorldcupController],
 	providers: [WolrdCupService],
 })
-export class WorldCupModule {}
+export class WorldcupModule {}

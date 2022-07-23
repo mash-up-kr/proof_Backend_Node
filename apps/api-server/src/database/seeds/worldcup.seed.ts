@@ -1,6 +1,6 @@
 import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
-import { WorldCup } from '@src/worldcup/worldcup.entity';
+import { Worldcup } from '@src/worldcup/worldcup.entity';
 
 export default class DrinksCategorySeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {
@@ -359,6 +359,6 @@ export default class DrinksCategorySeed implements Seeder {
 			},
 		];
 
-		await connection.createQueryBuilder().insert().into(WorldCup).values(insertValues).execute();
+		await connection.createQueryBuilder().insert().into(Worldcup).values(insertValues).execute();
 	}
 }
