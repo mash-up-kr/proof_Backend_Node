@@ -1,6 +1,7 @@
-import { User } from '../../users/user.entity'; //'src/users/user.entity';
-import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
+
+import { Connection } from 'typeorm';
+import { User } from '@src/auth/entities/users.entity';
 
 export class CreateInitialUserData implements Seeder {
 	public async run(factory: Factory, connection: Connection): Promise<any> {
@@ -10,7 +11,7 @@ export class CreateInitialUserData implements Seeder {
 			.createQueryBuilder()
 			.insert()
 			.into(User)
-			.values([{ email: 'testtest@email.com', name: 'test chung', password: '12345' }])
+			.values([{ email: 'testtest@email.com', name: 'test chung' }])
 			.execute();
 	}
 }

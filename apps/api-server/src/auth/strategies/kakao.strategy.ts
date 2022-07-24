@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { OauthConfig } from '@src/config/config.constant';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy } from 'passport-kakao';
-import { UserKakaoDto } from './dtos/user.kakao.dto';
+import { UserKakaoDto } from '../dtos/users.kakao.dto';
 
 @Injectable()
 export class KakaoStrategy extends PassportStrategy(Strategy) {
@@ -18,11 +18,12 @@ export class KakaoStrategy extends PassportStrategy(Strategy) {
 	async validate(accessToken, refreshToken, profile, done) {
 		const profileJson = profile._json;
 		const kakaoAccount = profileJson.kakao_account;
-		const payload: UserKakaoDto = {
+
+		const kakaoUserData: UserKakaoDto = {
 			name: kakaoAccount.profile.nickname,
 			kakaoId: profileJson.id,
 			email: kakaoAccount.has_email && !kakaoAccount.email_needs_agreement ? kakaoAccount.email : null,
 		};
-		done(null, payload);
+		return kakaoUserData;
 	}
 }

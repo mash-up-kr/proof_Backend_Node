@@ -1,9 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { getRepositoryToken } from '@nestjs/typeorm';
+
+import { ConfigService } from '@nestjs/config';
 import { MockUsersRepository } from '../../test/mock/user.repository.mock';
-import { User } from './user.entity';
+import { User } from '../auth/entities/users.entity';
 import { UsersController } from './users.controller';
 import { UsersService } from './users.service';
+import { getRepositoryToken } from '@nestjs/typeorm';
 
 describe('UsersController', () => {
 	let controller: UsersController;
@@ -16,6 +18,17 @@ describe('UsersController', () => {
 				{
 					provide: getRepositoryToken(User),
 					useClass: MockUsersRepository,
+				},
+				{
+					provide: ConfigService,
+					useValue: {
+						get: jest.fn((key: string) => {
+							if (key === 'oauthConfig') {
+								return 1;
+							}
+							return null;
+						}),
+					},
 				},
 			],
 		}).compile();
