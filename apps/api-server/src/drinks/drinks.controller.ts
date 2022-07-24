@@ -1,6 +1,6 @@
-import { Controller, Get, Post, Body, Param, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, BadRequestException, Query } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Category } from '@src/drinks-category/drinks-category.types';
+import { Category } from '../drinks-category/drinks-category.types';
 import { DrinksService } from './drinks.service';
 import { CreateDrinkDto } from './dtos/drink.dto';
 
@@ -21,11 +21,16 @@ export class DrinksController {
 	}
 
 	@Get()
-	public async findByCategory(@Query('category') category: Category) {
-		if (!category) {
-			return await this.drinksService.findAll();
+	public async findAll() {
+		return await this.drinksService.findAll();
+	}
+
+	@Get('/category')
+	public async findByCategory(@Query('name') name: Category) {
+		if (!name) {
+			throw new BadRequestException();
 		}
-		return await this.drinksService.findByCategory(category);
+		return await this.drinksService.findByCategory(name);
 	}
 
 	@Get(':id')

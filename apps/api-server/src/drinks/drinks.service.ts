@@ -1,4 +1,4 @@
-import { Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Drink } from './drink.entity';
@@ -41,9 +41,8 @@ export class DrinksService {
 				.leftJoin('drink.category', 'category')
 				.where('drink.id = :id', { id })
 				.getOne();
-
 			if (!drinkInfo) {
-				throw new NotFoundException();
+				throw new BadRequestException();
 			}
 			return drinkInfo;
 		} catch (error) {
@@ -53,11 +52,12 @@ export class DrinksService {
 
 	public async findByCategory(category: string): Promise<Drink[]> {
 		try {
-			return await this.drinkRepository
+			const drinksInfoByCategory = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.leftJoin('drink.category', 'category')
 				.where('category.name = :category', { category })
 				.getMany();
+			return drinksInfoByCategory;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
