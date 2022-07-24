@@ -1,4 +1,4 @@
-import { CommonEntity } from '../common/entities/common.entity'; // '@src/common/entities/common.entity';
+import { CommonEntity } from '../common/entities/common.entity';
 import { DrinksCategory } from '../drinks-category/drinks-category.entity';
 import { Column, Entity, ManyToOne } from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
