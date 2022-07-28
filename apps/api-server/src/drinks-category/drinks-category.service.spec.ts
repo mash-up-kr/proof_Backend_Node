@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { mockDrinksCategory, MockDrinksCategoryRepository } from '../../test/mock/drinks-category.mock';
-import { DrinksCategory } from './drinks-category.entity';
+import { DrinksCategory } from '../entities/drinks-category.entity';
 import { DrinksCategoryService } from './drinks-category.service';
 
 describe('DrinksCategoryService', () => {

@@ -1,4 +1,4 @@
-import { User } from '@src/auth/entities/users.entity';
+import { User } from '@src/entities/users.entity';
 
 export class TokenDto {
 	readonly accessToken: string;

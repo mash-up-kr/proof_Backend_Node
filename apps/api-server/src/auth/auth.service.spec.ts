@@ -4,7 +4,7 @@ import { AuthService } from './auth.service';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { MockUsersRepository } from '../../test/mock/user.repository.mock';
-import { User } from './entities/users.entity';
+import { User } from '../entities/users.entity';
 import { getRepositoryToken } from '@nestjs/typeorm';
 
 describe('AuthService', () => {

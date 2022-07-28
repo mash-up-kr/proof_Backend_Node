@@ -1,6 +1,6 @@
 import { Controller, Get, Header, HttpCode, Post, Redirect, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
-import { User } from '@src/auth/entities/users.entity';
+import { User } from '@src/entities/users.entity';
 import { AuthService } from './auth.service';
 import { UserKakaoDto } from './dtos/users.kakao.dto';
 import { JwtRefreshGuard } from './guards/jwt-refresh-auth.guard';

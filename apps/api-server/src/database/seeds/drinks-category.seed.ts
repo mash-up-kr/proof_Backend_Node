@@ -1,4 +1,4 @@
-import { DrinksCategory } from '../../drinks-category/drinks-category.entity';
+import { DrinksCategory } from '../../entities/drinks-category.entity';
 import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
 

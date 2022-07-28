@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DrinksCategory } from './drinks-category.entity';
+import { DrinksCategory } from '../entities/drinks-category.entity';
 import { DrinksCategoryService } from './drinks-category.service';
 import { DrinksCategoryController } from './drinks-category.controller';
 

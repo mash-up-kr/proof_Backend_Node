@@ -1,7 +1,7 @@
 import { Column, Entity } from 'typeorm';
 import { IsEmail, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
-import { CommonEntity } from '../../common/entities/common.entity';
+import { CommonEntity } from './common.entity';
 
 @Entity()
 export class User extends CommonEntity {
