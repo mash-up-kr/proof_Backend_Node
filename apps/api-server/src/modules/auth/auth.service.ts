@@ -5,10 +5,10 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
 import { User } from '../../entities/users.entity';
-import { UserKakaoDto } from './dtos/users.kakao.dto';
+import { UserKakaoDto } from './dto/users.kakao.dto';
 import { hash } from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { TokenDto } from './dtos/auth.token.dto';
+import { TokenDto } from './dto/auth.token.dto';
 
 @Injectable()
 export class AuthService {
