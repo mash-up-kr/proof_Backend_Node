@@ -1,23 +1,20 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { AuthController } from './auth.controller';
-import { AuthService } from './auth.service';
 import { ConfigService } from '@nestjs/config';
-import { JwtService } from '@nestjs/jwt';
-import { MockUsersRepository } from '../../test/mock/user.repository.mock';
-import { User } from '../entities/users.entity';
+import { MockUsersRepository } from '../../../test/mock/user.repository.mock';
+import { User } from '../../entities/users.entity';
+import { UsersController } from './users.controller';
+import { UsersService } from './users.service';
 import { getRepositoryToken } from '@nestjs/typeorm';
 
-describe('AuthController', () => {
-	let controller: AuthController;
-	let usersRepository: MockUsersRepository;
+describe('UsersController', () => {
+	let controller: UsersController;
 
 	beforeEach(async () => {
 		const module: TestingModule = await Test.createTestingModule({
-			controllers: [AuthController],
+			controllers: [UsersController],
 			providers: [
-				AuthService,
-				JwtService,
+				UsersService,
 				{
 					provide: getRepositoryToken(User),
 					useClass: MockUsersRepository,
@@ -26,7 +23,7 @@ describe('AuthController', () => {
 					provide: ConfigService,
 					useValue: {
 						get: jest.fn((key: string) => {
-							if (key === 'oauthConfig' || key === 'jwtConfig') {
+							if (key === 'oauthConfig') {
 								return 1;
 							}
 							return null;
@@ -36,8 +33,7 @@ describe('AuthController', () => {
 			],
 		}).compile();
 
-		controller = module.get<AuthController>(AuthController);
-		usersRepository = module.get(getRepositoryToken(User));
+		controller = module.get<UsersController>(UsersController);
 	});
 
 	it('should be defined', () => {

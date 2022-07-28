@@ -6,7 +6,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
 import { KakaoStrategy } from './strategies/kakao.strategy';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from '../entities/users.entity';
+import { User } from '../../entities/users.entity';
 
 @Module({
 	imports: [
