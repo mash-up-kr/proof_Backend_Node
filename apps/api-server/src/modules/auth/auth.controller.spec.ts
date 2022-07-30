@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { ConfigService } from '@nestjs/config';
+import { JwtService } from '@nestjs/jwt';
+import { getRepositoryToken } from '@nestjs/typeorm';
 
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
-import { ConfigService } from '@nestjs/config';
-import { JwtService } from '@nestjs/jwt';
 import { MockUsersRepository } from '../../../test/mock/users.mock';
-import { User } from '../../entities/users.entity';
-import { getRepositoryToken } from '@nestjs/typeorm';
+import { User } from '@src/entities/users.entity';
 
 describe('AuthController', () => {
 	let controller: AuthController;

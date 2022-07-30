@@ -101,6 +101,9 @@
 		"testEnvironment": "node",
 		"roots": [
 			"<rootDir>/apps/"
-		]
+		],
+		"moduleNameMapper": {
+			"@src/(.*)": "<rootDir>/apps/api-server/src/$1"
+		}
 	}
 }

@@ -1,8 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsString } from 'class-validator';
-import { CommonEntity } from './common.entity';
 import { Column, Entity } from 'typeorm';
+import { IsNotEmpty, IsString } from 'class-validator';
+
+import { CommonEntity } from './common.entity';
 import { Category } from '../types/drinks-category.types';
+
 @Entity()
 export class DrinksCategory extends CommonEntity {
 	@ApiProperty({
