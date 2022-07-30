@@ -1,4 +1,4 @@
-name: zuzu nestjs unit test
+name: zuzu nestjs api-server unit test
 
 on:
     pull_request:
@@ -39,7 +39,7 @@ jobs:
                   echo POSTGRES_PASSWORD=${{secrets.POSTGRES_PASSWORD}} >> .env.test
                   echo POSTGRES_DB=${{secrets.POSTGRES_DB}} >> .env.test
                   echo KAKAO_CLIENT_ID=${{secrets.KAKAO_CLIENT_ID}} >> .env.test
-                  echo KAKAO_REDIRECT_URL=${{secrets.KAKAO_REDIRECT_URL}} >> .env.test
+                  echo KAKAO_CALLBACK_URL=${{secrets.KAKAO_CALLBACK_URL}} >> .env.test
             - name: Install packages
               run: pnpm install --frozen-lockfile
             - name: Run unit test
