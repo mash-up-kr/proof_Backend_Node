@@ -1,28 +1,32 @@
+import { ApiProperty } from '@nestjs/swagger';
 import { Worldcup } from '../worldcup.entity';
 import { WorldcupCondition, WorldcupRound } from '../worldcup.type';
 
 export class WorldcupReseponseDto {
+	@ApiProperty({ description: '월드컵 id' })
 	id: number;
+
+	@ApiProperty({ description: '월드컵 - 누구와 함께 술을 마시는지' })
 	withWho: WorldcupCondition;
+
+	@ApiProperty({ description: '월드컵 - 술을 마신 상황' })
 	situation: WorldcupCondition;
-	round: WorldcupRound[];
 
-	static from(worldcup: Worldcup) {
-		const worldcupResponse = new WorldcupReseponseDto();
+	@ApiProperty({ description: '몇 강으로 진행할지', type: [WorldcupRound] })
+	round: WorldcupRound;
 
-		worldcupResponse.id = worldcup.id;
-		worldcupResponse.round = worldcup.round;
-		worldcupResponse.withWho = {
+	constructor(worldcup) {
+		this.id = worldcup.id;
+		this.withWho = {
 			code: worldcup.withWhoCode,
-			title: worldcup.withWhoTitle,
 			content: worldcup.withWhoContent,
+			title: worldcup.withWhoTitle,
 		};
-		worldcupResponse.situation = {
+		this.situation = {
 			code: worldcup.situationCode,
-			title: worldcup.situationTitle,
 			content: worldcup.situationContent,
+			title: worldcup.situationTitle,
 		};
-
-		return worldcupResponse;
+		this.round = worldcup.round;
 	}
 }

@@ -10,7 +10,7 @@ export class WolrdCupService {
 
 	async getWorldcups(): Promise<WorldcupReseponseDto[]> {
 		const worldcups = await this.worldcupRepository.find();
-		return worldcups.map((worldcup) => WorldcupReseponseDto.from(worldcup));
+		return worldcups.map((worldcup) => new WorldcupReseponseDto(worldcup));
 	}
 
 	async getWolrdcupById(id): Promise<WorldcupReseponseDto> {
@@ -19,6 +19,6 @@ export class WolrdCupService {
 			throw new BadRequestException('존재하지 않는 월드컵입니다.');
 		}
 
-		return WorldcupReseponseDto.from(worldcup);
+		return new WorldcupReseponseDto(worldcup);
 	}
 }
