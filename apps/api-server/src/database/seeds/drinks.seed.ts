@@ -13,12 +13,15 @@ export default class DrinkSeed implements Seeder {
 		const drink: DrinkData[] = await readCsv(path.resolve('apps/api-server/src/database/data', 'drinks.csv'));
 
 		const currentDrinks = await connection.getRepository(Drink).createQueryBuilder().select().getMany();
+		const drinksCategory = await connection.getRepository(DrinksCategory).createQueryBuilder().select().getMany();
+
+		const category = drinksCategory.reduce((result, category) => {
+			result[category.name] = category;
+			return result;
+		}, {});
 
 		for (const data of drink) {
 			const isDrinkExist = currentDrinks.find((drink) => drink.name === data.name);
-			const drinksCategory = await connection.getRepository(DrinksCategory).findOne({
-				where: { name: data.category },
-			});
 
 			if (isDrinkExist) {
 				await connection.getRepository(Drink).update(
@@ -29,7 +32,7 @@ export default class DrinkSeed implements Seeder {
 						origin: data.origin,
 						description: data.description,
 						image_url: data.image_url,
-						category: drinksCategory,
+						category: category[data.category],
 					},
 				);
 			} else {
@@ -39,7 +42,7 @@ export default class DrinkSeed implements Seeder {
 					origin: data.origin,
 					description: data.description,
 					image_url: data.image_url,
-					category: drinksCategory,
+					category: category[data.category],
 				});
 			}
 		}
