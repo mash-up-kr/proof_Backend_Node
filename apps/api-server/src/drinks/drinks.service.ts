@@ -2,8 +2,8 @@ import { BadRequestException, Injectable, InternalServerErrorException } from '@
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Drink } from './drink.entity';
-import { DrinkInfo } from './drinks.interface';
-import { CreateDrinkDto } from './dtos/drink.dto';
+import { CreateDrinkDto } from './dto/create-drink.dto';
+import { GetDrinkInfoDto } from './dto/get-drink-info.dto';
 
 @Injectable()
 export class DrinksService {
@@ -25,7 +25,7 @@ export class DrinksService {
 		}
 	}
 
-	public async findById(id: string): Promise<DrinkInfo> {
+	public async findById(id: string): Promise<GetDrinkInfoDto> {
 		try {
 			const drinkInfo = await this.drinkRepository
 				.createQueryBuilder('drink')

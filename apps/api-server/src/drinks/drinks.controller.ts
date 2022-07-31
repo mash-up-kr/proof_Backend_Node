@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Param, BadRequestException, Query } from '
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { Category } from '../drinks-category/drinks-category.types';
 import { DrinksService } from './drinks.service';
-import { CreateDrinkDto } from './dtos/drink.dto';
+import { CreateDrinkDto } from './dto/create-drink.dto';
 
 @ApiTags('drinks - 술 상세 정보')
 @Controller('drinks')
