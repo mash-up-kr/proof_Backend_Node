@@ -6,15 +6,7 @@ import * as fastcsv from 'fast-csv';
 
 import { Drink } from '../../drinks/drink.entity';
 import { DrinksCategory } from '../../drinks-category/drinks-category.entity';
-
-interface DrinkData {
-	name: string;
-	abv: string;
-	origin: string;
-	description: string;
-	image_url: string;
-	category: string;
-}
+import { DrinkData } from '@src/drinks/drinks.types';
 
 export default class DrinkSeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {
