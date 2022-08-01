@@ -6,7 +6,7 @@ import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
 import { User } from './entities/users.entity';
 import { UserKakaoDto } from './dtos/users.kakao.dto';
-import { hash } from 'bcrypt';
+import { hash } from 'bcryptjs';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TokenDto } from './dtos/auth.token.dto';
 
