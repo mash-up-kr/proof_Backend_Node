@@ -19,7 +19,7 @@
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage",
 		"test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-		"test:e2e": "jest --config ./apps/api-server/test/jest-e2e.json",
+		"test:e2e": "cross-env STAGE=test jest --config ./apps/api-server/test/jest-e2e.json",
 		"typeorm": "cross-env STAGE=dev node --require ts-node/register ./node_modules/typeorm/cli.js -f apps/api-server/src/database/database.config.ts",
 		"seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config -n apps/api-server/src/database/database.config.ts",
 		"seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed -n apps/api-server/src/database/database.config.ts"
@@ -40,8 +40,8 @@
 		"dotenv": "^16.0.1",
 		"fast-csv": "^4.3.6",
 		"joi": "^17.6.0",
-		"lodash": "^4.17.21",
 		"jsonwebtoken": "^8.5.1",
+		"lodash": "^4.17.21",
 		"passport": "^0.6.0",
 		"passport-jwt": "^4.0.0",
 		"passport-kakao": "^1.0.1",
@@ -49,6 +49,7 @@
 		"reflect-metadata": "^0.1.13",
 		"rimraf": "^3.0.2",
 		"rxjs": "^7.2.0",
+		"supertest": "^6.2.4",
 		"swagger-ui-express": "^4.4.0",
 		"typeorm": "^0.3.6",
 		"typeorm-naming-strategies": "^4.1.0",
@@ -102,6 +103,9 @@
 		"testEnvironment": "node",
 		"roots": [
 			"<rootDir>/apps/"
-		]
+		],
+		"moduleNameMapper": {
+			"@src/(.*)": "<rootDir>/apps/api-server/src/$1"
+		}
 	}
 }

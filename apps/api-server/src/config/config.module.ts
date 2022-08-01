@@ -1,7 +1,7 @@
-import { appConfig, databaseConfig, jwtConfig, oauthConfig } from './config.constant';
-
 import { Module } from '@nestjs/common';
 import { ConfigModule as NestConfigModule } from '@nestjs/config';
+
+import { appConfig, databaseConfig, jwtConfig, oauthConfig } from './config.constant';
 import { configValidationSchema } from './config.validation';
 
 @Module({
