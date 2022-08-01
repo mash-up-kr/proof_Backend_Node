@@ -1,17 +1,29 @@
 import { Factory, Seeder } from 'typeorm-seeding';
 
 import { Connection } from 'typeorm';
-import { User } from '../../entities/users.entity';
+import { Review } from '../../entities/reviews.entity';
 
-export class CreateInitialUserData implements Seeder {
+export class CreateInitialReviewData implements Seeder {
 	public async run(factory: Factory, connection: Connection): Promise<any> {
 		await connection
 			.createQueryBuilder()
 			.insert()
-			.into(User)
+			.into(Review)
 			.values([
 				{
-					name: 'test user',
+					weather: 'Rainy',
+					time: 'Evening',
+					companion: 'Alone',
+					mood: 'Funny',
+					spot: 1,
+					light: 1,
+					sweet: 1,
+					mild: 1,
+					smooth: 1,
+					taste: 'Fruity',
+					place: 'test place',
+					pairing: ['Grilled', 'Fried']
+					
 					nickname: 'test nickname',
 					email: 'testtest@email.com',
 					social_id: 1,
