@@ -34,4 +34,18 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiBearerAuth('Authorization'),
 		);
 	},
+	getWorldcupItems(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description: '월드컵의 선택지들 가져오기',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: WorldcupReseponseDto,
+			}),
+			ApiBearerAuth('Authorization'),
+		);
+	},
 };

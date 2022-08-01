@@ -21,4 +21,8 @@ export class WorldcupController {
 		const worldcup = await this.worldcupService.getWolrdcupById(id);
 		return worldcup;
 	}
+
+	@Get('/:id/item')
+	@ApiDocs.getWorldcupItems('월드컵 선택지 가져오기')
+	async getWorldcupItems() {}
 }
