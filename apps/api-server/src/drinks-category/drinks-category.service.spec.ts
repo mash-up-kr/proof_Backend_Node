@@ -27,14 +27,14 @@ describe('DrinksCategoryService', () => {
 		expect(drinksCategoryService).toBeDefined();
 	});
 
-	describe('getDrinksCategorys function', () => {
+	describe('findAdd function', () => {
 		it('should be defined', () => {
-			expect(drinksCategoryService.getDrinksCategorys).toBeDefined();
+			expect(drinksCategoryService.findAll).toBeDefined();
 			expect(drinksCategoryRepository.find).toBeDefined();
 		});
 
 		it('get all drinksCategory data', async () => {
-			await expect(drinksCategoryService.getDrinksCategorys()).resolves.toEqual(mockDrinksCategory);
+			await expect(drinksCategoryService.findAll()).resolves.toEqual(mockDrinksCategory);
 		});
 	});
 });

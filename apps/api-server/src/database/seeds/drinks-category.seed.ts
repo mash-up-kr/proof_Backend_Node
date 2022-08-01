@@ -4,6 +4,8 @@ import { Factory, Seeder } from 'typeorm-seeding';
 
 export default class DrinksCategorySeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {
+		await connection.createQueryBuilder().delete().from(DrinksCategory).execute();
+
 		await connection
 			.createQueryBuilder()
 			.insert()
