@@ -7,9 +7,10 @@ import { ConfigModule } from './config/config.module';
 import { DatabaseModule } from './database/database.module';
 import { UsersModule } from './modules/users/users.module';
 import { DrinksCategoryModule } from './modules/drinks-category/drinks-category.module';
+import { DrinksModule } from './modules/drinks/drinks.module';
 
 @Module({
-	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule],
+	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule, DrinksModule],
 	controllers: [AppController],
 	providers: [AppService],
 })
