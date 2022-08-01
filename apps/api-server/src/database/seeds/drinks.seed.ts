@@ -4,9 +4,9 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as fastcsv from 'fast-csv';
 
-import { Drink } from '../../drinks/drink.entity';
-import { DrinksCategory } from '../../drinks-category/drinks-category.entity';
-import { DrinkData } from '@src/drinks/drinks.types';
+import { Drink } from '../../entities/drinks.entity';
+import { DrinksCategory } from '../../entities/drinks-category.entity';
+import { DrinkData } from '@src/modules/drinks/drinks.types';
 
 export default class DrinkSeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {

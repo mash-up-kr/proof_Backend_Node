@@ -1,9 +1,11 @@
-import { AppConfig } from './config/config.constant';
-import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
+
 import { setupSwagger } from './swagger';
+
+import { AppConfig } from './config/config.constant';
+import { AppModule } from './app.module';
 
 declare const module: any;
 

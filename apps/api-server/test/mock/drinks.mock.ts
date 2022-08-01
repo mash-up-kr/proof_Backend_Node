@@ -1,6 +1,8 @@
 import { BadRequestException } from '@nestjs/common';
-import { Category } from '../../src/drinks-category/drinks-category.types';
+
 import { omit } from 'lodash';
+
+import { Category } from '@src/types/drinks-category.types';
 
 export const mockDrinks = [
 	{
