@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { ApiDocs } from './worldcup.docs';
 import { WolrdCupService } from './worldcup.service';
@@ -24,5 +24,8 @@ export class WorldcupController {
 
 	@Get('/:id/item')
 	@ApiDocs.getWorldcupItems('월드컵 선택지 가져오기')
-	async getWorldcupItems() {}
+	async getWorldcupItems(@Param('id') id: number, @Query('roundCount') roundCount: number) {
+		const worldcupItem = await this.worldcupService.getWorldcupItemById(id, roundCount);
+		return worldcupItem;
+	}
 }

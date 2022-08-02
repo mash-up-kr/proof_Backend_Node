@@ -1,12 +1,17 @@
 import { BadRequestException, HttpException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Drink } from '@src/entities/drinks.entity';
 import { Repository } from 'typeorm';
-import { WorldcupReseponseDto } from './dtos/worldcup-response.dto';
+import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
+import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
 import { Worldcup } from './worldcup.entity';
 
 @Injectable()
 export class WolrdCupService {
-	constructor(@InjectRepository(Worldcup) private readonly worldcupRepository: Repository<Worldcup>) {}
+	constructor(
+		@InjectRepository(Worldcup) private readonly worldcupRepository: Repository<Worldcup>,
+		@InjectRepository(Drink) private readonly drinkRepository: Repository<Drink>,
+	) {}
 
 	async getWorldcups(): Promise<WorldcupReseponseDto[]> {
 		const worldcups = await this.worldcupRepository.find();
@@ -20,5 +25,10 @@ export class WolrdCupService {
 		}
 
 		return new WorldcupReseponseDto(worldcup);
+	}
+
+	async getWorldcupItemById(id: number, roundCount: number): Promise<any> {
+		const drinks = await this.drinkRepository.find({ relations: ['category'], take: roundCount });
+		return drinks.map((drink) => new WorldcupItemReseponseDto(drink));
 	}
 }

@@ -18,7 +18,7 @@ const config = {
 	password: `${dbConfig.password}`,
 	database: dbConfig.dbname,
 	entities: [User, DrinksCategory, Drink, Worldcup],
-	// seeds: ['apps/api-server/src/database/seeds/*.seed.ts'],
+	seeds: ['apps/api-server/src/database/seeds/*.seed.ts'],
 	namingStrategy: new SnakeNamingStrategy(),
 	synchronize: process.env.NODE_ENV !== 'prod',
 	logging: process.env.NODE_ENV !== 'prod',

@@ -1,7 +1,7 @@
 import { SimpleCommonEntity } from '@src/entities/simple-common.entity';
 import { IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { WorldcupRound } from './worldcup.type';
+import { WorldcupRoundDto } from './dto/worldcup.dto';
 
 @Entity()
 export class Worldcup extends SimpleCommonEntity {
@@ -29,5 +29,5 @@ export class Worldcup extends SimpleCommonEntity {
 	situationContent: string;
 
 	@Column({ type: 'jsonb' })
-	round: WorldcupRound[];
+	round: WorldcupRoundDto[];
 }

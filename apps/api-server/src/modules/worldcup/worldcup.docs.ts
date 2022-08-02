@@ -1,8 +1,8 @@
 import { applyDecorators } from '@nestjs/common';
-import { ApiBearerAuth, ApiBody, ApiOperation, ApiParam, ApiResponse } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiOperation, ApiParam, ApiQuery, ApiResponse } from '@nestjs/swagger';
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { number } from 'joi';
-import { WorldcupReseponseDto } from './dtos/worldcup-response.dto';
+import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
 import { WorldcupController } from './worldcup.controller';
 
 export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
@@ -39,6 +39,10 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiOperation({
 				summary,
 				description: '월드컵의 선택지들 가져오기',
+			}),
+			ApiQuery({
+				name: 'roundCount',
+				type: 'number',
 			}),
 			ApiResponse({
 				status: 200,
