@@ -2,10 +2,8 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-
 import { Repository } from 'typeorm';
-import { hash } from 'bcrypt';
-
+import { hash } from 'bcryptjs';
 import { JwtConfig, OauthConfig } from '@src/config/config.constant';
 import { User } from '@src/entities/users.entity';
 import { UserKakaoDto } from './dto/users.kakao.dto';

@@ -1,24 +1,30 @@
 import { Factory, Seeder } from 'typeorm-seeding';
-
 import { Connection } from 'typeorm';
+
 import { User } from '../../entities/users.entity';
+
+const seedUserData = {
+	name: 'test martin',
+	nickname: 'test nickname',
+	email: 'testtest@email.com',
+	social_id: 123456789,
+	type: 'test',
+	reviews: [], // TODO: Add reviews id
+};
 
 export class CreateInitialUserData implements Seeder {
 	public async run(factory: Factory, connection: Connection): Promise<any> {
-		await connection
-			.createQueryBuilder()
-			.insert()
-			.into(User)
-			.values([
-				{
-					name: 'test user',
-					nickname: 'test nickname',
-					email: 'testtest@email.com',
-					social_id: 1,
-					type: 'test type',
-					reviews: [], // TODO: Add reviews id
-				},
-			])
-			.execute();
+		const isTestUserExist = await connection
+			.getRepository(User)
+			.createQueryBuilder('user')
+			.select()
+			.where('user.email = :email', { email: seedUserData.email })
+			.getOne();
+
+		if (isTestUserExist) {
+			await connection.getRepository(User).update({ email: seedUserData.email }, seedUserData);
+		} else {
+			await connection.getRepository(User).save(seedUserData);
+		}
 	}
 }

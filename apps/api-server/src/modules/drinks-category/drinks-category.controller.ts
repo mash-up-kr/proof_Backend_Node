@@ -7,7 +7,7 @@ export class DrinksCategoryController {
 	constructor(private readonly drinksCategoryService: DrinksCategoryService) {}
 
 	@Get()
-	async getDrinksCategorys() {
-		return await this.drinksCategoryService.getDrinksCategorys();
+	async findAll() {
+		return await this.drinksCategoryService.findAll();
 	}
 }

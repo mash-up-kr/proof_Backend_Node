@@ -7,10 +7,11 @@ import { ConfigModule } from './config/config.module';
 import { DatabaseModule } from './database/database.module';
 import { UsersModule } from './modules/users/users.module';
 import { DrinksCategoryModule } from './modules/drinks-category/drinks-category.module';
+import { DrinksModule } from './modules/drinks/drinks.module';
 import { ReviewsModule } from './modules/reviews/reviews.module';
 
 @Module({
-	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule, ReviewsModule],
+	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule, DrinksModule, ReviewsModule],
 	controllers: [AppController],
 	providers: [AppService],
 })
