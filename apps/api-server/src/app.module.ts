@@ -8,9 +8,18 @@ import { DatabaseModule } from './database/database.module';
 import { UsersModule } from './modules/users/users.module';
 import { DrinksCategoryModule } from './modules/drinks-category/drinks-category.module';
 import { DrinksModule } from './modules/drinks/drinks.module';
+import { WorldcupModule } from './worldcup/worldcup.module';
 
 @Module({
-	imports: [ConfigModule, DatabaseModule, UsersModule, AuthModule, DrinksCategoryModule, DrinksModule],
+	imports: [
+		ConfigModule,
+		DatabaseModule,
+		UsersModule,
+		AuthModule,
+		DrinksCategoryModule,
+		DrinksModule,
+		WorldcupModule,
+	],
 	controllers: [AppController],
 	providers: [AppService],
 })
