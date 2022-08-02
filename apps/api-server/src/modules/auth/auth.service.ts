@@ -2,12 +2,13 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { hash } from 'bcryptjs';
 import { JwtConfig, OauthConfig } from '@src/config/config.constant';
 import { User } from '@src/entities/users.entity';
-import { UserKakaoDto } from './dto/users.kakao.dto';
+import { hash } from 'bcryptjs';
+import { Repository } from 'typeorm';
+
 import { TokenDto } from './dto/auth.token.dto';
+import { UserKakaoDto } from './dto/users.kakao.dto';
 
 @Injectable()
 export class AuthService {
@@ -77,7 +78,6 @@ export class AuthService {
 		return { accessToken: newAccessToken };
 	}
 
-	// user refresh token update
 	async setRefreshToken(refreshToken: string, id: string) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
@@ -103,5 +103,9 @@ export class AuthService {
 		});
 		user.refreshToken = null;
 		return this.usersRepository.save(user);
+	}
+
+	async deleteUser(id: string) {
+		await this.usersRepository.delete({ id });
 	}
 }
