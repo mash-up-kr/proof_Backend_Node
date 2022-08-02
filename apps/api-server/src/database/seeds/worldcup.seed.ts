@@ -1,6 +1,6 @@
+import { Worldcup } from '@src/modules/worldcup/worldcup.entity';
 import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
-import { Worldcup } from '@src/worldcup/worldcup.entity';
 
 export default class DrinksCategorySeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {
