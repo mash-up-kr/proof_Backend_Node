@@ -105,6 +105,10 @@ export class AuthService {
 		return this.usersRepository.save(user);
 	}
 
+	async logout(id: string) {
+		return 'Logout user';
+	}
+
 	async deleteUser(id: string) {
 		await this.usersRepository.delete({ id });
 	}
