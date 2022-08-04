@@ -34,8 +34,4 @@ export class User extends CommonEntity {
 	@IsNotEmpty()
 	@Column({ type: 'varchar', nullable: false, default: 'aa' })
 	profile_emoji: string;
-
-	@IsString()
-	@Column({ type: 'varchar', nullable: true })
-	refreshToken?: string;
 }

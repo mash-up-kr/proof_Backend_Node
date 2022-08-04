@@ -4,7 +4,6 @@ import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { JwtConfig, OauthConfig } from '@src/config/config.constant';
 import { User } from '@src/entities/users.entity';
-import { hash } from 'bcryptjs';
 import { Repository } from 'typeorm';
 
 import { TokenDto } from './dto/auth.token.dto';
@@ -61,8 +60,6 @@ export class AuthService {
 			expiresIn: this.#jwtConfig.jwtRefreshTokenExpire,
 		});
 
-		await this.setRefreshToken(refreshToken, user.id);
-
 		return {
 			accessToken: accessToken,
 			refreshToken: refreshToken,
@@ -78,15 +75,6 @@ export class AuthService {
 		return { accessToken: newAccessToken };
 	}
 
-	async setRefreshToken(refreshToken: string, id: string) {
-		const user = await this.usersRepository.findOne({
-			where: { id },
-		});
-		const currentHashedRefreshToken = await hash(refreshToken, 10);
-		user.refreshToken = currentHashedRefreshToken;
-		await this.usersRepository.save(user);
-	}
-
 	async getUser(id: string) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
@@ -95,14 +83,6 @@ export class AuthService {
 		if (user) {
 			return { id: user.id };
 		} else throw new UnauthorizedException();
-	}
-
-	async removeRefreshToken(id: string) {
-		const user = await this.usersRepository.findOne({
-			where: { id },
-		});
-		user.refreshToken = null;
-		return this.usersRepository.save(user);
 	}
 
 	async logout(id: string) {
