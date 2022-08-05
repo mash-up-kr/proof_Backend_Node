@@ -5,28 +5,36 @@ import { DrinksCategory } from '../../entities/drinks-category.entity';
 
 const categoriesData = [
 	{
-		name: '맥주',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
+		name: 'All',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_all.png',
 	},
 	{
-		name: '위스키',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
+		name: 'Beer',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png',
 	},
 	{
-		name: '와인',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
+		name: 'Whisky',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_whisky.png',
 	},
 	{
-		name: '칵테일',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
+		name: 'Wine',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_wine.png',
 	},
 	{
-		name: '전통주',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
+		name: 'Cocktail',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_cocktail.png',
 	},
 	{
-		name: '소주',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
+		name: 'Traditional',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_trad.png',
+	},
+	{
+		name: 'Soju',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_soju.png',
+	},
+	{
+		name: 'Etc',
+		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png',
 	},
 ];
 export default class DrinksCategorySeed implements Seeder {

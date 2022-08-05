@@ -81,7 +81,7 @@ describe('DrinksController', () => {
 					description: 'description test1',
 					image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 					category: {
-						name: '맥주',
+						name: 'Beer',
 					},
 				},
 			]);

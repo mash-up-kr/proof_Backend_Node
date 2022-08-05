@@ -16,7 +16,7 @@ export const mockDrinks = [
 		description: 'description test1',
 		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 		category: {
-			name: '맥주',
+			name: 'Beer',
 		},
 	},
 	{
@@ -30,7 +30,7 @@ export const mockDrinks = [
 		description: 'soju test1',
 		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 		category: {
-			name: '소주',
+			name: 'Soju',
 		},
 	},
 ];
@@ -54,9 +54,9 @@ export const MockDrinksService = {
 	}),
 	findByCategory: jest.fn((name) => {
 		if (Object.values(Category).includes(name as Category)) {
-			if (name === '맥주') {
+			if (name === 'Beer') {
 				return [omit(mockDrinks[0], 'category')];
-			} else if (name === '소주') {
+			} else if (name === 'Soju') {
 				return [omit(mockDrinks[1], 'category')];
 			}
 		} else {
