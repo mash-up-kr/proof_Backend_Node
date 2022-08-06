@@ -1,7 +1,8 @@
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, ManyToOne } from 'typeorm';
 import { IsEmail, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 import { CommonEntity } from './common.entity';
+import { UsersProfile } from './users-profile.entity';
 
 @Entity()
 export class User extends CommonEntity {
@@ -30,8 +31,6 @@ export class User extends CommonEntity {
 	@Column({ type: 'varchar', nullable: false })
 	type: string;
 
-	@IsString()
-	@IsNotEmpty()
-	@Column({ type: 'varchar', nullable: false, default: 'aa' })
-	profile_emoji: string;
+	@ManyToOne(() => UsersProfile, (userProfile) => userProfile.users, { nullable: false })
+	profile: UsersProfile;
 }

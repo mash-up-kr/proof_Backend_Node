@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { JwtConfig, OauthConfig } from '@src/config/config.constant';
+import { UsersProfile } from '@src/entities/users-profile.entity';
 import { User } from '@src/entities/users.entity';
 import { Repository } from 'typeorm';
 
@@ -14,6 +15,8 @@ export class AuthService {
 	constructor(
 		@InjectRepository(User)
 		private readonly usersRepository: Repository<User>,
+		@InjectRepository(UsersProfile)
+		private readonly usersProfileRepository: Repository<UsersProfile>,
 		private readonly configService: ConfigService,
 		private readonly jwtService: JwtService,
 	) {}
@@ -33,15 +36,21 @@ export class AuthService {
 
 		if (!kakaoUser) {
 			// 신규 유저
-			const newKakaoUser = this.usersRepository.create({
+			const defaultUserProfileUrl =
+				'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png';
+
+			const defaultUserProfile = await this.usersProfileRepository.findOne({
+				where: { image_url: defaultUserProfileUrl },
+			});
+			kakaoUser = await this.usersRepository.save({
 				name: kakaoUserData.name,
 				nickname: kakaoUserData.name,
 				email: kakaoUserData.email,
 				social_id: kakaoUserData.kakaoId,
 				type: 'kakao',
+				profile: defaultUserProfile,
 			});
 
-			kakaoUser = await this.usersRepository.save(newKakaoUser); // db에 만들어진 객체를 저장
 			return kakaoUser;
 		} else {
 			// 기존 유저

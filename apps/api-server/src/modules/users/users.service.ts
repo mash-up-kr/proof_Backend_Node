@@ -20,6 +20,7 @@ export class UsersService {
 	async test(id: string) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
+			relations: ['profile'],
 		});
 
 		return user;

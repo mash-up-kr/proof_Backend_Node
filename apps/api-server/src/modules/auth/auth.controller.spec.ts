@@ -7,6 +7,8 @@ import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { MockUsersRepository } from '../../../test/mock/users.mock';
 import { User } from '@src/entities/users.entity';
+import { UsersProfile } from '@src/entities/users-profile.entity';
+import { MockUsersProfileRepository } from '../../../test/mock/users-profile.mock';
 
 describe('AuthController', () => {
 	let controller: AuthController;
@@ -21,6 +23,10 @@ describe('AuthController', () => {
 				{
 					provide: getRepositoryToken(User),
 					useClass: MockUsersRepository,
+				},
+				{
+					provide: getRepositoryToken(UsersProfile),
+					useClass: MockUsersProfileRepository,
 				},
 				{
 					provide: ConfigService,
