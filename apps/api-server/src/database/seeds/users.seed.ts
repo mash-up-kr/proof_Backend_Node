@@ -9,7 +9,8 @@ const seedUserData = {
 	email: 'testtest@email.com',
 	social_id: 123456789,
 	type: 'test',
-	reviews: [], // TODO: Add reviews id
+	profile_emoji: 'test',
+	refreshToken: 'test',
 };
 
 export class CreateInitialUserData implements Seeder {

@@ -5,7 +5,7 @@ import { DrinksCategory } from '@src/entities/drinks-category.entity';
 
 export class GetDrinkInfoDto {
 	@IsUUID()
-	readonly id: string;
+	readonly id: number;
 
 	@IsString()
 	readonly name: string;

@@ -3,12 +3,12 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Column, Entity, OneToMany } from 'typeorm';
 import { IsNotEmpty, IsString } from 'class-validator';
 
-import { CommonEntity } from './common.entity';
 import { Drink } from './drinks.entity';
 import { Category } from '../types/drinks-category.types';
+import { SimpleCommonEntity } from './simple-common.entity';
 
 @Entity()
-export class DrinksCategory extends CommonEntity {
+export class DrinksCategory extends SimpleCommonEntity {
 	@ApiProperty({
 		enum: Category,
 		example: Category.Beer,

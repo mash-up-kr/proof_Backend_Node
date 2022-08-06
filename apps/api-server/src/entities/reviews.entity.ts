@@ -1,12 +1,14 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Mood, Pairing, Weather, Time, Companion, Taste } from '@src/types/reviews.types';
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
-import { Column, Entity, ManyToOne } from 'typeorm';
-import { CommonEntity } from './common.entity';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+
+import { SimpleCommonEntity } from './simple-common.entity';
+import { Drink } from './drinks.entity';
 import { User } from './users.entity';
 
 @Entity()
-export class Review extends CommonEntity {
+export class Review extends SimpleCommonEntity {
 	@ApiProperty({
 		enum: Weather,
 		example: Weather.Rainy,
@@ -121,20 +123,51 @@ export class Review extends CommonEntity {
 	@Column({ type: 'text', array: true, nullable: true }) // https://stackoverflow.com/questions/57611633/typeorm-array-is-not-supported-in-postgres
 	pairing: Pairing[];
 
-	// TODO: drink_id: drinks 테이블과 1:n (한 개의 drink당 여러 리뷰 가능)
+	// Relation
+	@ApiProperty({ example: 1 })
+	@IsNumber()
+	@IsNotEmpty()
+	@Column()
+	reviewer_id: number;
+
+	// TODO: user_id: users 테이블과 1:n (한 개의 user당 여러 리뷰 가능)
 	// 참고: drink 와 drinks-category (한 개의 category당 여러 drink 가능)
 	@ApiProperty({
 		type: () => User,
 		description: 'The user who wrote this review',
 	})
-	@ManyToOne(() => User, (user) => user.reviews)
-	user: User;
+	@ManyToOne(() => User, (reviewer: User) => reviewer.reviews, {
+		onDelete: 'CASCADE', // if user(reviewer) is deleted, delete all reviews
+	})
+	@JoinColumn([
+		//	foreignKey 정보들
+		{
+			name: 'reviewer_id', // db에 저장되는 field name
+			referencedColumnName: 'id', // User의 id
+		},
+	])
+	reviewer: User;
 
-	// TODO: user_id: users 테이블과 1:n (한 개의 user당 여러 리뷰 가능) after merging drink PR
-	// @ApiProperty({
-	//   type: () => Drink,
-	//   description: 'The drink this review is about',
-	// })
-	// @ManyToOne(() => Drink, drink => drink.reviews))
-	// drink: Drink;
+	// TODO: drink_id: drinks 테이블과 1:n (한 개의 drink당 여러 리뷰 가능)
+	@ApiProperty({ example: 1 })
+	@IsNumber()
+	@IsNotEmpty()
+	@Column()
+	reviewed_drink_id: number;
+
+	@ApiProperty({
+		type: () => Drink,
+		description: 'The drink this review is about',
+	})
+	@ManyToOne(() => Drink, (reviewed_drink: Drink) => reviewed_drink.reviews, {
+		onDelete: 'CASCADE', // if drink(reviewed_drink) is deleted, delete all reviews
+	})
+	@JoinColumn([
+		//	foreignKey 정보들
+		{
+			name: 'reviewed_drink_id', // db에 저장되는 field name
+			referencedColumnName: 'id', // Drink의 id
+		},
+	])
+	reviewed_drink: Drink;
 }
