@@ -1,10 +1,10 @@
-import { SimpleCommonEntity } from '@src/entities/simple-common.entity';
 import { IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { WorldcupRoundDto } from '../modules/worldcup/dto/worldcup.dto';
+import { CommonEntity } from './common.entity';
 
 @Entity()
-export class Worldcup extends SimpleCommonEntity {
+export class Worldcup extends CommonEntity {
 	@IsString()
 	@Column({ name: 'with_who_code', type: 'varchar', nullable: false })
 	withWhoCode: string;

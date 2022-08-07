@@ -2,7 +2,7 @@ import { Worldcup } from '@src/entities/worldcup.entity';
 import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
 
-export default class DrinksCategorySeed implements Seeder {
+export default class WorldcupSeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {
 		const insertValues = [
 			{
