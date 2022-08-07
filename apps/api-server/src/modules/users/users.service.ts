@@ -14,7 +14,15 @@ export class UsersService {
 	) {}
 
 	async updateUser(id: string, updateUserDto: UpdateUserDto) {
-		return await this.usersRepository.update({ id }, updateUserDto);
+		return await this.usersRepository.update(
+			{ id },
+			{
+				nickname: updateUserDto.nickname,
+				profile: {
+					id: updateUserDto.profile_id,
+				},
+			},
+		);
 	}
 
 	async test(id: string) {

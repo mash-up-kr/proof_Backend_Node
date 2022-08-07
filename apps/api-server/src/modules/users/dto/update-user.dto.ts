@@ -7,5 +7,5 @@ export class UpdateUserDto {
 
 	@IsNotEmpty()
 	@IsString()
-	readonly profile_emoji: string;
+	readonly profile_id: string;
 }
