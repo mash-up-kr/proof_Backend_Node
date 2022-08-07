@@ -1,11 +1,11 @@
-import { IsEnum, IsNumber, IsString, IsUUID } from 'class-validator';
+import { IsEnum, IsNumber, IsString } from 'class-validator';
 
 import { Category } from '@src/types/drinks-category.types';
 import { DrinksCategory } from '@src/entities/drinks-category.entity';
 
 export class GetDrinkInfoDto {
-	@IsUUID()
-	readonly id: string;
+	@IsNumber()
+	readonly id: number;
 
 	@IsString()
 	readonly name: string;

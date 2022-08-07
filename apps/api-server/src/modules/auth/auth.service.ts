@@ -78,7 +78,7 @@ export class AuthService {
 	}
 
 	// user refresh token update
-	async setRefreshToken(refreshToken: string, id: string) {
+	async setRefreshToken(refreshToken: string, id: number) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
 		});
@@ -87,7 +87,7 @@ export class AuthService {
 		await this.usersRepository.save(user);
 	}
 
-	async getUser(id: string) {
+	async getUser(id: number) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
 		});
@@ -97,7 +97,7 @@ export class AuthService {
 		} else throw new UnauthorizedException();
 	}
 
-	async removeRefreshToken(id: string) {
+	async removeRefreshToken(id: number) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
 		});

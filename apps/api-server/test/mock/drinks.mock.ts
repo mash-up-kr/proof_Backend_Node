@@ -6,7 +6,7 @@ import { Category } from '@src/types/drinks-category.types';
 
 export const mockDrinks = [
 	{
-		id: '64f4a1d5-e59d-4590-86dc-c0c8a0aac459',
+		id: 1,
 		createdAt: '2022-07-20T17:09:06.034Z',
 		updatedAt: '2022-07-20T17:09:06.034Z',
 		deletedAt: null,
@@ -20,7 +20,7 @@ export const mockDrinks = [
 		},
 	},
 	{
-		id: '64f4a1d5-e59d-4590-86dc-c0c8a0aac460',
+		id: 2,
 		createdAt: '2022-07-20T17:09:06.034Z',
 		updatedAt: '2022-07-20T17:09:06.034Z',
 		deletedAt: null,
@@ -46,9 +46,9 @@ export class MockDrinksRepository {
 export const MockDrinksService = {
 	findAll: jest.fn(() => mockDrinks),
 	findById: jest.fn((id) => {
-		if (id === 'abcdefabcdefabcdefabcdefabcdefab') {
+		if (id === 99999) {
 			throw new BadRequestException();
-		} else if (id === '64f4a1d5-e59d-4590-86dc-c0c8a0aac459') {
+		} else if (id === 1) {
 			return [mockDrinks[0]];
 		}
 	}),
