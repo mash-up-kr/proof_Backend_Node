@@ -1,4 +1,4 @@
-import { Worldcup } from '@src/modules/worldcup/worldcup.entity';
+import { Worldcup } from '@src/entities/worldcup.entity';
 import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
 

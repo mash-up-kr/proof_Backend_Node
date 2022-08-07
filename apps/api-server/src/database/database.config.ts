@@ -5,7 +5,7 @@ import { databaseConfig } from '../config/config.constant';
 import { DrinksCategory } from '../entities/drinks-category.entity';
 import { User } from '../entities/users.entity';
 import { Drink } from '../entities/drinks.entity';
-import { Worldcup } from '@src/modules/worldcup/worldcup.entity';
+import { Worldcup } from '../entities/worldcup.entity';
 
 const dbConfig = databaseConfig().databaseConfig;
 

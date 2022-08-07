@@ -1,5 +1,4 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Worldcup } from '../worldcup.entity';
 import { WorldcupConditionDto, WorldcupRoundDto } from './worldcup.dto';
 
 export class WorldcupReseponseDto {

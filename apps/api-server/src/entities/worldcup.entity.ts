@@ -1,7 +1,7 @@
 import { SimpleCommonEntity } from '@src/entities/simple-common.entity';
 import { IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { WorldcupRoundDto } from './dto/worldcup.dto';
+import { WorldcupRoundDto } from '../modules/worldcup/dto/worldcup.dto';
 
 @Entity()
 export class Worldcup extends SimpleCommonEntity {

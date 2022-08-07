@@ -4,7 +4,7 @@ import { Drink } from '@src/entities/drinks.entity';
 import { Repository } from 'typeorm';
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
-import { Worldcup } from './worldcup.entity';
+import { Worldcup } from '../../entities/worldcup.entity';
 
 @Injectable()
 export class WolrdCupService {
@@ -27,6 +27,7 @@ export class WolrdCupService {
 		return new WorldcupReseponseDto(worldcup);
 	}
 
+	//@TODO: 추후 조건에 맞게 다른 술을 가져오도록 로직 추가 및 변경
 	async getWorldcupItemById(id: number, roundCount: number): Promise<any> {
 		const drinks = await this.drinkRepository.find({ relations: ['category'], take: roundCount });
 		return drinks.map((drink) => new WorldcupItemReseponseDto(drink));
