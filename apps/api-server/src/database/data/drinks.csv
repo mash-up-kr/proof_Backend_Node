@@ -1,53 +1,53 @@
-name,en_name,category,origin,beer_category,abv,description,image_url
-버번카운티 브랜드 스타우트 2019,Bourbon County Brand Stout 2019,맥주,🇺🇸,Stout,15.2%,"맛을 보는 순간 꼭 소장하고 싶은 2019년 에디션 BCS.
+name,en_name,category,origin,abv,description,image_url
+버번카운티 브랜드 스타우트 2019,Bourbon County Brand Stout 2019,Beer,미국,15.2%,"맛을 보는 순간 꼭 소장하고 싶은 2019년 에디션 BCS.
 코코아, 퍼지, 바닐라, 카라멜, 아몬드, 레더 그리고 타바코 향이 한 모금 마실 때 마다 더 깊은 향을 선사합니다.
 
 구스아일랜드가 업계 최초로 배럴에이징을 시도하고 센세이션을 일으킨 맥주입니다.
 임페리얼 스타우트를 양조한 후, 버번카운티 배럴에서 12개월동안 다시 숙성 시켰습니다.
 무더운 여름과 혹독한 겨울로 유명한 시카고의 날씨에서 버번배럴이 수축과 팽창을 거듭하며 임페리얼 스타우트에 버번카운티 위스키와 오크배럴의 풍미를 입혔습니다.
 1년에 단 한번, 블랙프라이데이에만 출시되는 한정판 제품으로 병입 발효가 진행되어 출시 연도에 따라 각기 다른 풍미를 즐길 수 있는 희소한 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/bourbon-county-2019.png
-버번카운티 브랜드 스타우트 2018,Bourbon County Brand Stout 2018,맥주,🇺🇸,Stout,15.2%,"20년 전 처음으로 만든 BCS에 견줄만큼 맛과 향의 완성도가 높은 2018년 에디션 코코아, 바닐라, 캐러멜, 아몬드, 체리의 복합적인 향이 스며든 맛.
+버번카운티 브랜드 스타우트 2018,Bourbon County Brand Stout 2018,Beer,미국,15.2%,"20년 전 처음으로 만든 BCS에 견줄만큼 맛과 향의 완성도가 높은 2018년 에디션 코코아, 바닐라, 캐러멜, 아몬드, 체리의 복합적인 향이 스며든 맛.
 묵직한 레더와 시가향까지 맥주에 스며들어 한 모금, 한 모금이 다른 여운을 남깁니다.
 
 구스아일랜드가 업계 최초로 배럴에이징을 시도하고 센세이션을 일으킨 맥주입니다.
 임페리얼 스타우트를 양조한 후, 버번카운티 배럴에서 12개월동안 다시 숙성 시켰습니다.
 무더운 여름과 혹독한 겨울로 유명한 시카고의 날씨에서 버번배럴이 수축과 팽창을 거듭하며 임페리얼 스타우트에 버번카운티 위스키와 오크배럴의 풍미를 입혔습니다.
 1년에 단 한번, 블랙프라이데이에만 출시되는 한정판 제품으로 병입 발효가 진행되어 출시 연도에 따라 각기 다른 풍미를 즐길 수 있는 희소한 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/bourbon-county-2018.png
-펑크 아이피에이,PUNK IPA,맥주,🇬🇧,India Pale Ale,5.6%,"브루독의 가장 대표적인 품목으로 미국계 홉에 풍부한 자몽, 파인애플, 리치 등의 열대 과일 향과 쌉싸름하고 강렬한 피니쉬가 특징",https://beer-api-prod.idkulab.com/media/drinks/brewdong-punk-ipa.png
-구스아일랜드 아이피에이,Goose IPA,맥주,🇺🇸,India Pale Ale,5.9%,"Great American Beer Festival에서 6차례 수상한 맥주.
+펑크 아이피에이,PUNK IPA,Beer,영국,5.6%,"브루독의 가장 대표적인 품목으로 미국계 홉에 풍부한 자몽, 파인애플, 리치 등의 열대 과일 향과 쌉싸름하고 강렬한 피니쉬가 특징",https://beer-api-prod.idkulab.com/media/drinks/brewdong-punk-ipa.png
+구스아일랜드 아이피에이,Goose IPA,Beer,미국,5.9%,"Great American Beer Festival에서 6차례 수상한 맥주.
 영국식 IPA로 적당한 홉 향과 함께 오렌지 향 또한 느낄 수 있습니다.
 단 맛이 부드럽고 은은하게 느껴지며, 어떠한 음식과도 조화를 잘 이루는 균형 잡힌 IPA 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/goose-ipa.png
-구스아일랜드 312 얼반위트,Goose 312 Urban Wheat Ale,맥주,🇺🇸,Wheat Beer,4.2%,"312라는 이 맥주의 이름은 구스 아일랜드 양조장이 위치한 시카고의 지역 번호에서 유래되었고, 현재 시카고를 대표하는 맥주가 되었습니다.
+구스아일랜드 312 얼반위트,Goose 312 Urban Wheat Ale,Beer,미국,4.2%,"312라는 이 맥주의 이름은 구스 아일랜드 양조장이 위치한 시카고의 지역 번호에서 유래되었고, 현재 시카고를 대표하는 맥주가 되었습니다.
 케스케이드 홉의 스파이시한 향과 함께 상쾌한 과일 향을 느낄 수 있는 부드러운 밀맥주 입니다.",https://beer-api-prod.idkulab.com/media/drinks/goose-312.png
-어반래빗 바이젠,Urban Rabbit Weizen,맥주,🇰🇷,Wheat Beer - South German-Style Kristal Weizen,5%,효모가 만들어낸 달콤한 바나나 향과 은은한 클로브 향이 인상적인 밀맥주,https://beer-api-prod.idkulab.com/media/drinks/urban-rabbit-weizen.png
-어반래빗 라거,Urban Rabbit Larger,맥주,🇰🇷,Pale Lager - Munich Helles,5%,"꿀과 같은 풍미, 은은한 과일향 깔끔한 피니시의 라거",https://beer-api-prod.idkulab.com/media/drinks/urban-rabbit-lager.png
-구미호 피치에일,Kumiho Peach Ale,맥주,🇰🇷,Specialty Beer,4.5%,부드러운 밀맥주 베이스에 천연 복숭아 원액을 더해 언제든 마시기 편한 에일 맥주,https://beer-api-prod.idkulab.com/media/drinks/gumiho-peach-ale.png
-핸드앤몰트 상상 페일 에일,Hand and Malt Sangsang Pale Ale,맥주,🇰🇷,Pale Ale,5.1%,"달콤한 페일에일, 상상해 봤어? 네 가지 홉과 국내산 꿀, 허니몰트로 페일에일은 쓰다는 편견을 바꿀 핸드앤몰트의 달콤한 상상!",https://beer-api-prod.idkulab.com/media/drinks/hand-and-malt-pale-ale.png
-강서 마일드 에일,GANGSEO MILD ALE,맥주,🇰🇷,Pale Ale - Mild Ale,4.6%,아메리칸 페일에일을 한국식으로 재해석하여 많은 양의 홉을 사용해 열대과일과 꽃향기가 특징인 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/gangseo.png
-세븐브로이 곰표 밀맥주,GOMPYO WHEAT BEER,맥주,🇰🇷,Wheat Beer,4.5%,달콤하고 향긋한 열대과일향을 풍부하게 느낄 수 있으며 부드러운 거품과 개운한 끝 맛이 특징인 밀맥주입니다.,/beer-default.png
-한강 에일,HANGANG ALE,맥주,🇰🇷,Wheat Beer,5.2%,밀맥아를 베이스로 하여 부드럽고 조밀한 거품이 특징으로 맥아의 단맛과 오렌지 껍질의 상큼함이 청량감을 높여 편하게 마실 수 있는 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/hangang.png
-서울 에일,SEOUL SOUL ALE,맥주,🇰🇷,Pale Ale - Pale Ale,5%,"홉의 깔끔한 쓴맛과 프리미엄 맥아의 은은한 단맛이 조화를 이루며, 입안과 코 끝에 남는 홉 향기가 특징인 맥주입니다.",/beer-default.png
-양평 에일,YANGPYEONG ALE,맥주,🇰🇷,Pale Ale - Saison,4.5%,"청량감이 높고, 마신 후 은은하게 퍼지는 상쾌한 과일 향과 알싸한 후추 향이 조화를 이루는 에일 맥주입니다.",/beer-default.png
-독립 에일,INDEPENDENCE 1909,맥주,🇰🇷,Etc,6%,"풍부한 탄산감과 깔끔한 뒷맛으로 가볍고 산뜻하게 마실 수 있으며, 상쾌한 과일향과 스파이시함이 조화를 이뤄 기분 좋게 마실 수 있는 맥주",/beer-default.png
-코리아 페일 에일,KPA,맥주,🇰🇷,Pale Ale - American Pale Ale,4.6%,"아메리칸 스타일인 페일 에일을 재해석한 맥주로 맥아 특유의 달콤함이 느껴지며, 마신 후 강렬한 과일향과 은은한 버터감이 여운을 남기는 맥주입니다.",/beer-default.png
-서초,SEOCHO WHEAT,맥주,🇰🇷,Wheat Beer,4.2%,가장 편하게 마실 수 있는 밀맥주로 밀맥주 특유의 바나나의 풍미를 느낄 수 있는 맥주이다.,/beer-default.png
-맥아더,"MAC A, THE",맥주,🇰🇷,Pale Ale - Amber Ale,4.7%,캐러멜 몰트 맥아의 단맛과 꽃향기를 가지고 있으며 비스킷과 같은 단맛과 고소한 맛이 나는 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/mac-a-the.png
-흥청망청,HEUNG-CHUNG MANG-CHUNG,맥주,🇰🇷,Dark Lager - Vienna Lager,5%,깔끔한 맛으로 자몽 향과 시트러스 향이 나며 맥아에서 오는 캐러멜 맛이 나는 진한 호박색의 라거 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/heung-chung-mang-chung.png
-레오,LEO,맥주,🇹🇭,Pale Lager,5%,"태국 3대 맥주. 더운 태국의 기후에 알맞는 페일 라거
+어반래빗 바이젠,Urban Rabbit Weizen,Beer,한국,5%,효모가 만들어낸 달콤한 바나나 향과 은은한 클로브 향이 인상적인 밀맥주,https://beer-api-prod.idkulab.com/media/drinks/urban-rabbit-weizen.png
+어반래빗 라거,Urban Rabbit Larger,Beer,한국,5%,"꿀과 같은 풍미, 은은한 과일향 깔끔한 피니시의 라거",https://beer-api-prod.idkulab.com/media/drinks/urban-rabbit-lager.png
+구미호 피치에일,Kumiho Peach Ale,Beer,한국,4.5%,부드러운 밀맥주 베이스에 천연 복숭아 원액을 더해 언제든 마시기 편한 에일 맥주,https://beer-api-prod.idkulab.com/media/drinks/gumiho-peach-ale.png
+핸드앤몰트 상상 페일 에일,Hand and Malt Sangsang Pale Ale,Beer,한국,5.1%,"달콤한 페일에일, 상상해 봤어? 네 가지 홉과 국내산 꿀, 허니몰트로 페일에일은 쓰다는 편견을 바꿀 핸드앤몰트의 달콤한 상상!",https://beer-api-prod.idkulab.com/media/drinks/hand-and-malt-pale-ale.png
+강서 마일드 에일,GANGSEO MILD ALE,Beer,한국,4.6%,아메리칸 페일에일을 한국식으로 재해석하여 많은 양의 홉을 사용해 열대과일과 꽃향기가 특징인 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/gangseo.png
+세븐브로이 곰표 밀맥주,GOMPYO WHEAT BEER,Beer,한국,4.5%,달콤하고 향긋한 열대과일향을 풍부하게 느낄 수 있으며 부드러운 거품과 개운한 끝 맛이 특징인 밀맥주입니다.,/beer-default.png
+한강 에일,HANGANG ALE,Beer,한국,5.2%,밀맥아를 베이스로 하여 부드럽고 조밀한 거품이 특징으로 맥아의 단맛과 오렌지 껍질의 상큼함이 청량감을 높여 편하게 마실 수 있는 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/hangang.png
+서울 에일,SEOUL SOUL ALE,Beer,한국,5%,"홉의 깔끔한 쓴맛과 프리미엄 맥아의 은은한 단맛이 조화를 이루며, 입안과 코 끝에 남는 홉 향기가 특징인 맥주입니다.",/beer-default.png
+양평 에일,YANGPYEONG ALE,Beer,한국,4.5%,"청량감이 높고, 마신 후 은은하게 퍼지는 상쾌한 과일 향과 알싸한 후추 향이 조화를 이루는 에일 맥주입니다.",/beer-default.png
+독립 에일,INDEPENDENCE 1909,Beer,한국,6%,"풍부한 탄산감과 깔끔한 뒷맛으로 가볍고 산뜻하게 마실 수 있으며, 상쾌한 과일향과 스파이시함이 조화를 이뤄 기분 좋게 마실 수 있는 맥주",/beer-default.png
+코리아 페일 에일,KPA,Beer,한국,4.6%,"아메리칸 스타일인 페일 에일을 재해석한 맥주로 맥아 특유의 달콤함이 느껴지며, 마신 후 강렬한 과일향과 은은한 버터감이 여운을 남기는 맥주입니다.",/beer-default.png
+서초,SEOCHO WHEAT,Beer,한국,4.2%,가장 편하게 마실 수 있는 밀맥주로 밀맥주 특유의 바나나의 풍미를 느낄 수 있는 맥주이다.,/beer-default.png
+맥아더,"MAC A, THE",Beer,한국,4.7%,캐러멜 몰트 맥아의 단맛과 꽃향기를 가지고 있으며 비스킷과 같은 단맛과 고소한 맛이 나는 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/mac-a-the.png
+흥청망청,HEUNG-CHUNG MANG-CHUNG,Beer,한국,5%,깔끔한 맛으로 자몽 향과 시트러스 향이 나며 맥아에서 오는 캐러멜 맛이 나는 진한 호박색의 라거 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/heung-chung-mang-chung.png
+레오,LEO,Beer,태국,5%,"태국 3대 맥주. 더운 태국의 기후에 알맞는 페일 라거
 
 Crafted with barley and a taste-enhancing blend of special Thai ingredients, LEO is smooth and easy to drink, with a flavor all its own. Today, it is the best-selling beer in Thailand.
 
 LEO reflects the contemporary Thai character – cool, creative and playful. Everywhere it goes, the brand’s easygoing personality helps it open doors and join the conversation.
 
 Now people in international markets are starting to discover LEO. It’s the perfect product to develop new channels from Asian fusion bars to concerts and sporting events.",https://beer-api-prod.idkulab.com/media/drinks/leo.png
-빅 드랍 밀크 스타우트,Big Drop Galactic Milk Stout,맥주,🇬🇧,Non-alcoholic,0.5%,"Alcohol-free Stout. Forget the notion this is a beer style that has had its day. Instead, think of it as honeycomb covered in chocolate, because that’s exactly what it tastes like: rich, unctuous and an absolutely decadent treat of a beer.",https://beer-api-prod.idkulab.com/media/drinks/big_drop_galactic_milk_stout.png
-가펠 패스브라우저 사과 나투르트륍,Gaffels fass brause apfel naturtrub,맥주,🇩🇪,Non-alcoholic,0%,천연 사과 스파클링 쥬스에 시트라홉을 첨가하여 홉사이더 느낌의 무알콜 음료.,https://beer-api-prod.idkulab.com/media/drinks/gaffel_frassbrause.png
-에스트렐라 갈리시아 오리지널,Estrella Galicia,맥주,🇪🇸,Non-alcoholic,0%,"에스트렐라 갈리시아 0.0은 미네랄 밸런스가 좋은 스페인 코루냐 지방의 깨끗한 물, 신선함과 청량감을 위한 필센 맥아와 옥수수, 자연방부제와 항산화 역할을 하는 프리미엄 품질의 홉으로 만들어져 높은 수준의 완성도와 풍미를 자랑합니다.
+빅 드랍 밀크 스타우트,Big Drop Galactic Milk Stout,Beer,영국,0.5%,"Alcohol-free Stout. Forget the notion this is a beer style that has had its day. Instead, think of it as honeycomb covered in chocolate, because that’s exactly what it tastes like: rich, unctuous and an absolutely decadent treat of a beer.",https://beer-api-prod.idkulab.com/media/drinks/big_drop_galactic_milk_stout.png
+가펠 패스브라우저 사과 나투르트륍,Gaffels fass brause apfel naturtrub,Beer,독일,0%,천연 사과 스파클링 쥬스에 시트라홉을 첨가하여 홉사이더 느낌의 무알콜 음료.,https://beer-api-prod.idkulab.com/media/drinks/gaffel_frassbrause.png
+에스트렐라 갈리시아 오리지널,Estrella Galicia,Beer,스페인,0%,"에스트렐라 갈리시아 0.0은 미네랄 밸런스가 좋은 스페인 코루냐 지방의 깨끗한 물, 신선함과 청량감을 위한 필센 맥아와 옥수수, 자연방부제와 항산화 역할을 하는 프리미엄 품질의 홉으로 만들어져 높은 수준의 완성도와 풍미를 자랑합니다.
 밝은 황금색의 라거로 구운 몰트 특유의 향이 나며 상쾌한 청량감과 함께 느낄 수 있는 깔끔한 첫 맛과 씁쓸한 끝맛의 조화가 특징이다.",https://beer-api-prod.idkulab.com/media/drinks/estrella_galicia.png
-에스트렐라 갈리시아 토스타다,Estrella Galicia Tostada,맥주,🇪🇸,Non-alcoholic,0%,"에스트렐라 갈리시아 0.0은 미네랄 밸런스가 좋은 스페인 코루냐 지방의 깨끗한 물, 신선함과 청량감을 위한 필센 맥아와 옥수수, 자연방부제와 항산화 역할을 하는 프리미엄 품질의 홉으로 만들어져 높은 수준의 완성도와 풍미를 자랑합니다.
+에스트렐라 갈리시아 토스타다,Estrella Galicia Tostada,Beer,스페인,0%,"에스트렐라 갈리시아 0.0은 미네랄 밸런스가 좋은 스페인 코루냐 지방의 깨끗한 물, 신선함과 청량감을 위한 필센 맥아와 옥수수, 자연방부제와 항산화 역할을 하는 프리미엄 품질의 홉으로 만들어져 높은 수준의 완성도와 풍미를 자랑합니다.
 어두운 오렌지색의 엠버 라거로 세가지 홉의 조합에서 느낄 수 있는 향긋한 꽃향기와 상큼한 오렌지향이 돋보이며 부드러운 단맛과 기분좋은 씁쓸한 맛이 매력적이다.",https://beer-api-prod.idkulab.com/media/drinks/estrella_galicia_tostada.png
-구미호 릴렉스 비어,Kumiho Relax Beer,맥주,🇰🇷,Specialty Beer - Fruit Beer,4.2%,가벼운 느낌의 아메리칸 위트 에일 베이스에 기분 좋은 레몬 그라스 향과 깔끔한 피니쉬로 누구나 쉽게 입문할 수 있는 데일리 비어,https://beer-api-prod.idkulab.com/media/drinks/kumiho_relax_beer.png
-슈퍼 아이피에이,Super IPA,맥주,🇰🇷,India Pale Ale - New England IPA,6.4%,"기존의 IPA와는 달리 쓰지 않고 부드러워 쭉쭉 마실 수 있는 새로운 스타일의 IPA
+구미호 릴렉스 비어,Kumiho Relax Beer,Beer,한국,4.2%,가벼운 느낌의 아메리칸 위트 에일 베이스에 기분 좋은 레몬 그라스 향과 깔끔한 피니쉬로 누구나 쉽게 입문할 수 있는 데일리 비어,https://beer-api-prod.idkulab.com/media/drinks/kumiho_relax_beer.png
+슈퍼 아이피에이,Super IPA,Beer,한국,6.4%,"기존의 IPA와는 달리 쓰지 않고 부드러워 쭉쭉 마실 수 있는 새로운 스타일의 IPA
 
 부드럽지만 단단한 마우스필을 뒷받침하는 몰트의 스윗함에 잘 익은 복숭아의 달콤함, 우리에게 익숙한 감귤향의 시트러스함과 크리미한 코코넛의 달달함이 잘 어우러지는 뉴잉글랜드 인디아 페일 에일입니다.
 잘 익은 과육의 짙은 풍미와 포근한 맥아의 질감이 기분 좋은 맥주입니다.
@@ -55,9 +55,9 @@ Now people in international markets are starting to discover LEO. It’s the per
 샐러드, 치킨, 각종 튀김, 구운 고기, 치즈류 또는 매운 음식과 함께 드시면 잘 어울립니다.
 
 수제 맥주의 신선함과 고유의 향과 맛을 위해 필터링을 하지 않았습니다. 캔 내의 침전물은 맥주를 발효시키는 효모 또는 맥주의 원료이므로 침전물까지 잘 흔들어 드시면 더욱 풍부한 맛과 향을 느끼실 수 있으며, 흔들지 않고 드시면 더 깔끔한 맥주의 맛을 즐기실 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/craftbros_super_ipa.png
-흑백 임페리얼 스타우트,흑백 임페리얼 스타우트,맥주,🇰🇷,Stout - Imperial Stout,10%,"플레이그라운드 브루어리의 100번째 양조를 기념해 탄생했던 흑백 임페리얼 스타우트가 2018년 겨울 다시 돌아왔습니다. 초콜릿 맥아의 묵직하고 진한 느낌이 입에 착 감기고, 살포시 퍼지는 건포도와 자두향이 기분 좋은 달콤함을 선사하는 흑백 임페리얼 스타우트.
+흑백 임페리얼 스타우트,흑백 임페리얼 스타우트,Beer,한국,10%,"플레이그라운드 브루어리의 100번째 양조를 기념해 탄생했던 흑백 임페리얼 스타우트가 2018년 겨울 다시 돌아왔습니다. 초콜릿 맥아의 묵직하고 진한 느낌이 입에 착 감기고, 살포시 퍼지는 건포도와 자두향이 기분 좋은 달콤함을 선사하는 흑백 임페리얼 스타우트.
 2018년에는 웨일즈빈의 스페셜티 커피도 더해 은은한 커피향까지 느낄 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/hukbaek_imperial_stout.png
-콩도 시나몬롤 임페리얼 스타우트,KONG-DO CINNAMON ROLL Barrel Aged Imperial Stout,맥주,🇰🇷,Stout - Imperial Stout,12%,"콩도 베럴에이지드 임페리얼 스타우트 시리즈'는 고릴라브루잉의 자부심인 임페리얼 스타우트를 흥미로운 재료와 함께 다양한 성격을 지닌 베럴에 숙성하여 출시하는 프로젝트입니다.
+콩도 시나몬롤 임페리얼 스타우트,KONG-DO CINNAMON ROLL Barrel Aged Imperial Stout,Beer,한국,12%,"콩도 베럴에이지드 임페리얼 스타우트 시리즈'는 고릴라브루잉의 자부심인 임페리얼 스타우트를 흥미로운 재료와 함께 다양한 성격을 지닌 베럴에 숙성하여 출시하는 프로젝트입니다.
 
 콩도 시나몬롤 버전은
 
@@ -67,214 +67,214 @@ Now people in international markets are starting to discover LEO. It’s the per
 
 무섭게 솔드아웃되었던 <콩도 바나나보트/감귤코코아>의 아쉬움은 잠시 뒤로하고, 이제는 <콩도 시나몬롤>입니다.
 겨울하면 떠오르는 계피와 임페리얼 스타우트의 환상의 발란스! 기대해주세요",https://beer-api-prod.idkulab.com/media/drinks/kong_island.png
-우리쌀 라거,Woori Ssal Lager,맥주,🇰🇷,Pale Lager - Rice Lager,5%,국내산 쌀로 은은한 단맛을 낸 트레비어의 한국식 라거,https://beer-api-prod.idkulab.com/media/drinks/woori_ssal_lager.png
-처용 IPL,CheoYong I.P.L,맥주,🇰🇷,Pale Lager - India Pale Lager,5%,에일처럼 향긋하면서도 탄산의 청량함과 깔끔함이 매력적인 라거,https://beer-api-prod.idkulab.com/media/drinks/cheoyong_ipl.png
-T-둔켈,T-Dunkel,맥주,🇰🇷,Dark Lager - Dunkel,4.5%,검붉은 빛깔과 고소한 견과류의 맛이 매력적인 독일 복부식 라거,https://beer-api-prod.idkulab.com/media/drinks/t_dunkel.png
-T-바이젠,T-Weizen,맥주,🇰🇷,Wheat Beer - Weizen,4.5%,"독일남부 스타일의 밀맥주로, 밀맥아의 부드러움과 효모의 풍성한 향이 좋습니다.",https://beer-api-prod.idkulab.com/media/drinks/t_weizen.png
-마오우 5 스타,Mahou 5 Star,맥주,🇪🇸,Pale Lager - Premium Lager,5.5%,"스페인에서 가장 많이 팔리는 프리미엄 라거 맥주입니다. 최고의 맥아와 홉, 효모들의 특징으로 우수한 균형감과 깔끔한 맛을 지닌 특징이 있습니ㅏㄷ.
+우리쌀 라거,Woori Ssal Lager,Beer,한국,5%,국내산 쌀로 은은한 단맛을 낸 트레비어의 한국식 라거,https://beer-api-prod.idkulab.com/media/drinks/woori_ssal_lager.png
+처용 IPL,CheoYong I.P.L,Beer,한국,5%,에일처럼 향긋하면서도 탄산의 청량함과 깔끔함이 매력적인 라거,https://beer-api-prod.idkulab.com/media/drinks/cheoyong_ipl.png
+T-둔켈,T-Dunkel,Beer,한국,4.5%,검붉은 빛깔과 고소한 견과류의 맛이 매력적인 독일 복부식 라거,https://beer-api-prod.idkulab.com/media/drinks/t_dunkel.png
+T-바이젠,T-Weizen,Beer,한국,4.5%,"독일남부 스타일의 밀맥주로, 밀맥아의 부드러움과 효모의 풍성한 향이 좋습니다.",https://beer-api-prod.idkulab.com/media/drinks/t_weizen.png
+마오우 5 스타,Mahou 5 Star,Beer,스페인,5.5%,"스페인에서 가장 많이 팔리는 프리미엄 라거 맥주입니다. 최고의 맥아와 홉, 효모들의 특징으로 우수한 균형감과 깔끔한 맛을 지닌 특징이 있습니ㅏㄷ.
 주 향은 부드러운 바나나와 신선한 사과 향으로 건조 효모의 향이 느껴지며 직접 마실 때는 풍미가 깊은 홉이 느껴집니다. 입안에서는 힘 있고 균형 잡힌 맛으로 중간 정도의 쓴맛과 약간의 신맛으로 균형이 잘 잡혀 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/mahou_5_star.png
-스톤 탠저린 익스프레스,Stone Tangerine express,맥주,🇺🇸,India Pale Ale - Hazy IPA,6.7%,탠저린과 파인애플 과즙을 투입하여 화려한 주시함과 시트러스 풍미는 열대지방 휴양지로 당신을 초대한다.,https://beer-api-prod.idkulab.com/media/drinks/stone_tangerine_express.png
-꿀꺽,Ggul Ggeok,맥주,🇰🇷,Pale Lager,4.6%,"""꿀꺽""은 크래프트 라거로 맥주의 많은 매력들 중 다가가기 쉽고 마시기 편한 장점을 가진 맥주입니다. 여기에 '홉'의 개성을 부드럽게 살려주고자 노력했습니다.
+스톤 탠저린 익스프레스,Stone Tangerine express,Beer,미국,6.7%,탠저린과 파인애플 과즙을 투입하여 화려한 주시함과 시트러스 풍미는 열대지방 휴양지로 당신을 초대한다.,https://beer-api-prod.idkulab.com/media/drinks/stone_tangerine_express.png
+꿀꺽,Ggul Ggeok,Beer,한국,4.6%,"""꿀꺽""은 크래프트 라거로 맥주의 많은 매력들 중 다가가기 쉽고 마시기 편한 장점을 가진 맥주입니다. 여기에 '홉'의 개성을 부드럽게 살려주고자 노력했습니다.
 편안하게 소비자에게 다가가며, 메인 스트림과 다른 크래프트 맥주의 매력을 보여주고 싶었습니다.
 크래프트 맥주를 좋아하는 사람들, 처음 접하게 될 사람들 간의 경계를 허물고 모두 즐길 수 있는 ""꿀꺽""이 되길 바랍니다.",https://beer-api-prod.idkulab.com/media/drinks/ggul_ggeok.png
-스밈,Smimm,맥주,🇰🇷,Pale Ale,5.5%,"'스밈'은 크래프트 에일로 호밀과 카라멜 몰트를 절제하여 사용해 뽑아낸 몰트 캐릭터와 은은한 효모 에스테르의 바탕 위에 팔코너스 플라이트, 심코 홉을 사용하여 레몬, 자몽의 시트러스한 느낌과 꽃향을 가진 홉 캐릭터가 주를 이루는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/smimm.png
-코코넛 레밍턴,Coconu Lamington,맥주,🇰🇷,Stout - Pastry Stout,10%,"코코넛 래밍턴'은 Pastry Stout 스타일의 맥주로 단맛과 진득한 질감, 여러 부재료의 캐릭터를 최대한 뽑아내 마치 디저트를 마시는 듯한 경험을 선사합니다.",https://beer-api-prod.idkulab.com/media/drinks/coconut_lamington.png
-마오우 클래시카,Mahou Classic,맥주,🇪🇸,Pale Lager - Premium Lager,4.8%,"100여 년 전에 만들어진 맥주로 조리법, 맛, 품질을 그대로 유지하고 있습니다. 향이 풍부하고 알코올과 산도의 균형이 잘 잡힌 약간의 과일 향이 나는 상쾌한 맥주입니다.
+스밈,Smimm,Beer,한국,5.5%,"'스밈'은 크래프트 에일로 호밀과 카라멜 몰트를 절제하여 사용해 뽑아낸 몰트 캐릭터와 은은한 효모 에스테르의 바탕 위에 팔코너스 플라이트, 심코 홉을 사용하여 레몬, 자몽의 시트러스한 느낌과 꽃향을 가진 홉 캐릭터가 주를 이루는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/smimm.png
+코코넛 레밍턴,Coconu Lamington,Beer,한국,10%,"코코넛 래밍턴'은 Pastry Stout 스타일의 맥주로 단맛과 진득한 질감, 여러 부재료의 캐릭터를 최대한 뽑아내 마치 디저트를 마시는 듯한 경험을 선사합니다.",https://beer-api-prod.idkulab.com/media/drinks/coconut_lamington.png
+마오우 클래시카,Mahou Classic,Beer,스페인,4.8%,"100여 년 전에 만들어진 맥주로 조리법, 맛, 품질을 그대로 유지하고 있습니다. 향이 풍부하고 알코올과 산도의 균형이 잘 잡힌 약간의 과일 향이 나는 상쾌한 맥주입니다.
 현재도 코르크 사용을 유지하고 있어 1890년의 오리지널 마오우를 맛볼 수 있습니다. 밝은 황금색으로 부드러운 바디감과 풍미, 균형 잡힌 맛으로 유명하며 꽃, 홉의 색조와 함께 가벼운 과일 향이 납니다.",/beer-default.png
-마오우 5 스타 세션 아이피에이,Mahou 5 Star Session IPA,맥주,🇪🇸,India Pale Ale - Session IPA,4.5%,"스페인 마오우와 미국 마스터 브루어스의 노하우가 결합되어 완성되었습니다. 아로마와 쓴맛 중에서 균형 잡힌 방식으로 홉을 사용하여 아로마와 향을 유지하지만 알코올은 적고 상쾌한 특성을 가졌습니다.
+마오우 5 스타 세션 아이피에이,Mahou 5 Star Session IPA,Beer,스페인,4.5%,"스페인 마오우와 미국 마스터 브루어스의 노하우가 결합되어 완성되었습니다. 아로마와 쓴맛 중에서 균형 잡힌 방식으로 홉을 사용하여 아로마와 향을 유지하지만 알코올은 적고 상쾌한 특성을 가졌습니다.
 Stone Fruit, 건포도, 감귤류 및 소나무 향이 조화있게 결합된 강렬한 향이 뛰어난 특징입니다. 귀리를 첨가하여 바디감을 제공하고 특별한 부드러운 맛을 느낄 수 있습니다.",/beer-default.png
-리겔 헤페바이스,Riegele Hefe weiss,맥주,🇩🇪,Wheat Beer,5%,"독일 남부의 대표적인 맥주 스타일인 밀맥주로서 효모를 필터링하지 않아 밀맥주 고유의 바나나향, 풍선껌과 같은 은은한 아로마와 부드러운 거품이 조화를 이루며 쓴맛이 전혀없는 상큼한 스타일의 밀맥주로서 누구나 편하게 즐길 수 있습니다",/beer-default.png
-녹투스 100,Noctus 100,맥주,🇩🇪,Stout - Imperial Stout,10%,세계 비어 소플리에 챔피언이자 리겔 브루어리의 사장인 세바스티앙 프릴러 리겔의 레서피로 탄생한 녹투스 100은 향기로운 커피와 초콜렛의 풍미를 느낄 수 있는 임페리얼 스타우트의 정석,https://beer-api-prod.idkulab.com/media/drinks/noctus100.png
-슈렝케를라 메르첸,Schlenkerla Marzen,맥주,🇩🇪,Specialty Beer - Smoked,5.1%,도시 전체가 유네스코 문화 유산으로 지정된 독일의 베니스 밤베르크의 전통 훈연맥주 슈렝케를라는 너도밤나무 연기로 맥아를 건조시켜 은은한 훈연향을 가진 최고급 맥아와 1387년부터 이어져온 전통적인 양조방식을 이용하여 만들어진 프리미엄 독일맥주입니다.,/beer-default.png
-소넨호펜,Gaffel Sonnenhofpen,맥주,🇩🇪,Pale Ale,4.9%,태양의 홉'이란 이름을 가진 소넨호펜은 시트라홉만을 사용하여 쓰지 않으면서도 향긋한 샴페인 같은 느낌과 귀여운 아기사슴을 레이블로 사용하여 '밤비맥주'라고 불리우며 특히 여성들에게 인기가 많은 페일에일,/beer-default.png
-가펠쾰쉬,Gaffel kolsch,맥주,🇩🇪,Pale Ale - Kolsch,4.8%,"독일 쾰른에서 생산된 밝은 황금빛의 맥주로 에일효모를 사용하지만 라거와 같이 낮은 온도에서 오랜기간 숙성하여 벌꿀향과 꽃향기, 부드러운 목넘김과 상쾌함을 동시에 느낄 수 있는 쾰른 판매 1위 맥주",https://beer-api-prod.idkulab.com/media/drinks/gaffel_kolsch.png
-가펠레몬,Gaffel Lemon,맥주,🇩🇪,Etc - Radler,2.4%,"가펠쾰쉬와 천연레몬쥬스를 5:5로 섞어 맥주의 짜릿함과 레몬의 상큼함을 동시에 느낄 수 있는 2.4%의 저알콜 레몬맥주.
+리겔 헤페바이스,Riegele Hefe weiss,Beer,독일,5%,"독일 남부의 대표적인 맥주 스타일인 밀맥주로서 효모를 필터링하지 않아 밀맥주 고유의 바나나향, 풍선껌과 같은 은은한 아로마와 부드러운 거품이 조화를 이루며 쓴맛이 전혀없는 상큼한 스타일의 밀맥주로서 누구나 편하게 즐길 수 있습니다",/beer-default.png
+녹투스 100,Noctus 100,Beer,독일,10%,세계 비어 소플리에 챔피언이자 리겔 브루어리의 사장인 세바스티앙 프릴러 리겔의 레서피로 탄생한 녹투스 100은 향기로운 커피와 초콜렛의 풍미를 느낄 수 있는 임페리얼 스타우트의 정석,https://beer-api-prod.idkulab.com/media/drinks/noctus100.png
+슈렝케를라 메르첸,Schlenkerla Marzen,Beer,독일,5.1%,도시 전체가 유네스코 문화 유산으로 지정된 독일의 베니스 밤베르크의 전통 훈연맥주 슈렝케를라는 너도밤나무 연기로 맥아를 건조시켜 은은한 훈연향을 가진 최고급 맥아와 1387년부터 이어져온 전통적인 양조방식을 이용하여 만들어진 프리미엄 독일맥주입니다.,/beer-default.png
+소넨호펜,Gaffel Sonnenhofpen,Beer,독일,4.9%,태양의 홉'이란 이름을 가진 소넨호펜은 시트라홉만을 사용하여 쓰지 않으면서도 향긋한 샴페인 같은 느낌과 귀여운 아기사슴을 레이블로 사용하여 '밤비맥주'라고 불리우며 특히 여성들에게 인기가 많은 페일에일,/beer-default.png
+가펠쾰쉬,Gaffel kolsch,Beer,독일,4.8%,"독일 쾰른에서 생산된 밝은 황금빛의 맥주로 에일효모를 사용하지만 라거와 같이 낮은 온도에서 오랜기간 숙성하여 벌꿀향과 꽃향기, 부드러운 목넘김과 상쾌함을 동시에 느낄 수 있는 쾰른 판매 1위 맥주",https://beer-api-prod.idkulab.com/media/drinks/gaffel_kolsch.png
+가펠레몬,Gaffel Lemon,Beer,독일,2.4%,"가펠쾰쉬와 천연레몬쥬스를 5:5로 섞어 맥주의 짜릿함과 레몬의 상큼함을 동시에 느낄 수 있는 2.4%의 저알콜 레몬맥주.
 산뜻한 과일맥주로 음료처럼 즈릭거나 고도수의 술과 믹스해도 좋습니다.",https://beer-api-prod.idkulab.com/media/drinks/gaffel_lemon.png
-마!,MA!,맥주,🇰🇷,Pale Lager,5%,"부드러우면서도 깔끔한 피니시를 가진 정통 독일식 라거로 상쾌하고 청량해 데일리 맥주로 최고!
+마!,MA!,Beer,한국,5%,"부드러우면서도 깔끔한 피니시를 가진 정통 독일식 라거로 상쾌하고 청량해 데일리 맥주로 최고!
 누구나 즐겨 마시기 좋은 부산 프라이드 브루어리의 대표 수제 맥주.
 꿀향과 같은 매력적인 몰트 아로마와 꽃향, 과일향의 환상적인 밸런스",https://beer-api-prod.idkulab.com/media/drinks/busan_ma.png
-골드 오-피치,Gold O-Peach,맥주,🇰🇷,Wheat Beer,4.7%,"오~ 달콤한 골드빛 오렌지와 복숭아향이 입 안 가득 부드럽게 퍼지내네 맥주 
+골드 오-피치,Gold O-Peach,Beer,한국,4.7%,"오~ 달콤한 골드빛 오렌지와 복숭아향이 입 안 가득 부드럽게 퍼지내네 맥주 
 정통 독일식 밀맥주를 베이스로 독창적인 향과 플레버를 입힌 밀맥주!
 착향이 아닌 오렌지와 복숭아의 천연향을 가득 담아 목넘김이 좋은 맥주.
 최상급 바이젠 전용 액상 효모를 사용하여 발효 과정에서 생성된 부드럽고 달콤한 아로마와 플레버가 매력적",https://beer-api-prod.idkulab.com/media/drinks/gold_o_peach.png
-에프터,After,맥주,🇰🇷,India Pale Ale,5.5%,"널 만난 후에...
+에프터,After,Beer,한국,5.5%,"널 만난 후에...
 맥주에 대한 기준은 After를 만나기 전과 후로 나뉜다!
 오래 머물지 않는 약간의 쓴 맛이 주는 경쾌하고 짜릿한 즐거움!
 다양한 열대과일의 풍미가 있는 프루티한 IPA로 붉은 빛이 매혹적인 맥주.
 망고, 파인, 감귤류 등 다양한 열대 과일과 핵과류의 풍미가 살아있는 프루티함",https://beer-api-prod.idkulab.com/media/drinks/busan_after_ipa.png
-마 흑맥주,MA STOUT,맥주,🇰🇷,Stout,5%,"아메리칸 스타우트를 베이스로 국내산 흑미를 21% 사용한 리얼 흑맥주!
+마 흑맥주,MA STOUT,Beer,한국,5%,"아메리칸 스타우트를 베이스로 국내산 흑미를 21% 사용한 리얼 흑맥주!
 검붉고 거친듯하지만 부드럽고 고소해서 마시기 편한 쌀맥주.
 초콜렛향과 커피의 풍미가 은은하게 느껴지는 국내산 흑미로 만든 고소한 우리쌀 맥주",https://beer-api-prod.idkulab.com/media/drinks/busan_ma_stout.png
-스윗마마,Sweet Mama,맥주,🇰🇷,Etc - Sweet Cider,5.5%,감미로운 사과의 달달함이 돋보이는 Sweet Cider,https://beer-api-prod.idkulab.com/media/drinks/sweet_mama.png
-댄싱파파,Dancing Papa,맥주,🇰🇷,Etc - Dry Cider,7%,사과의 풍미와 와인스러운 피니시로 애주가들이 선호하는 Dry Cider,https://beer-api-prod.idkulab.com/media/drinks/dancing_papa.png
-루드베리,Rude Berry,맥주,🇰🇷,Etc - Strawberry Cider,4.5%,로컬 딸기로 시작하여 상큼한 바질로 마무리되는 탄산 톡톡 스윗 사이더,https://beer-api-prod.idkulab.com/media/drinks/rude_berry.png
-요새로제,Yose Rose,맥주,🇰🇷,Etc - Rose Cider,6.4%,베리의 산뜻함을 고스란히 담은 로즈빛 프리미엄 애플사이더,https://beer-api-prod.idkulab.com/media/drinks/yose_rose.png
-산미구엘 세르베자 블랑카,San Miguel Cerveza Blanca,맥주,🇵🇭,Wheat Beer,5.4%,스파이시함과 스모키 그리고 풍부한 과일향의 완벽한 조화를 가진 산미구엘 세르베자 블랑카 밀맥주는 은은하게 피어나는 시트러스 향과 민트 향의 부드러움 뿐만 아니라 진한 골드 컬러 위의 크리미한 거품은 최고의 밀맥주 맛을 선사하는 산미구엘의 선물과도 같은 프리미엄 맥주 중 하나입니ㅏㄷ.,/beer-default.png
-라구니타스 IPA,Lagunitas IPA,맥주,🇺🇸,India Pale Ale,6.2%,"라구니타스는 1993년 미국 캘리포니아 내 작은 도시에서 출발하여, 전 세계적으로 맥덕들 사이에서 꾸준한 입소문을 타고 있습니다. 미국에서는 단연 No.1 IPA로 사랑받고 있습니다.
+스윗마마,Sweet Mama,Beer,한국,5.5%,감미로운 사과의 달달함이 돋보이는 Sweet Cider,https://beer-api-prod.idkulab.com/media/drinks/sweet_mama.png
+댄싱파파,Dancing Papa,Beer,한국,7%,사과의 풍미와 와인스러운 피니시로 애주가들이 선호하는 Dry Cider,https://beer-api-prod.idkulab.com/media/drinks/dancing_papa.png
+루드베리,Rude Berry,Beer,한국,4.5%,로컬 딸기로 시작하여 상큼한 바질로 마무리되는 탄산 톡톡 스윗 사이더,https://beer-api-prod.idkulab.com/media/drinks/rude_berry.png
+요새로제,Yose Rose,Beer,한국,6.4%,베리의 산뜻함을 고스란히 담은 로즈빛 프리미엄 애플사이더,https://beer-api-prod.idkulab.com/media/drinks/yose_rose.png
+산미구엘 세르베자 블랑카,San Miguel Cerveza Blanca,Beer,필리핀,5.4%,스파이시함과 스모키 그리고 풍부한 과일향의 완벽한 조화를 가진 산미구엘 세르베자 블랑카 밀맥주는 은은하게 피어나는 시트러스 향과 민트 향의 부드러움 뿐만 아니라 진한 골드 컬러 위의 크리미한 거품은 최고의 밀맥주 맛을 선사하는 산미구엘의 선물과도 같은 프리미엄 맥주 중 하나입니ㅏㄷ.,/beer-default.png
+라구니타스 IPA,Lagunitas IPA,Beer,미국,6.2%,"라구니타스는 1993년 미국 캘리포니아 내 작은 도시에서 출발하여, 전 세계적으로 맥덕들 사이에서 꾸준한 입소문을 타고 있습니다. 미국에서는 단연 No.1 IPA로 사랑받고 있습니다.
 살균처리 하지 않은 상당 수의 DRY HOPS를 넣어 고유의 독특한 맛과 향을 살린 점은 라구니타스의 고유 제조 공법입니다. 이러한 살균처리 하지 않은 본연의 홉은 쌉쌀한 맛과 달콤함의 밸런스를 잡아 완벽한 맥주를 만드는 역할을 합니다.",https://beer-api-prod.idkulab.com/media/drinks/lagunitas_ipa.png
-슈티글 시트론 라들러,Stiegl Radler Zitrone,맥주,🇦🇹,Etc - Radler,2%,"상큼한 레몬의 풍취가 첫 모금에서 생생하게 전해지며, Real Lemon 쥬스가 전하는 citrus하며 상쾌한 aroma가 가벼운 스파클링의 느낌과 함께 입안 가득 퍼지면서, 라들러의 스위티한 마무리가 오래도록 상큼함을 지니고 있음",/beer-default.png
-아리랑IPA,Aribeer Arirang IPA,맥주,🇰🇷,India Pale Ale,7.2%,"많은 맥아와 홉을 사용하여 알코올 농도가 높고 쓴맛이 강하며 오렌지 향이 매력적인 미국식 에일맥주
+슈티글 시트론 라들러,Stiegl Radler Zitrone,Beer,오스트리아,2%,"상큼한 레몬의 풍취가 첫 모금에서 생생하게 전해지며, Real Lemon 쥬스가 전하는 citrus하며 상쾌한 aroma가 가벼운 스파클링의 느낌과 함께 입안 가득 퍼지면서, 라들러의 스위티한 마무리가 오래도록 상큼함을 지니고 있음",/beer-default.png
+아리랑IPA,Aribeer Arirang IPA,Beer,한국,7.2%,"많은 맥아와 홉을 사용하여 알코올 농도가 높고 쓴맛이 강하며 오렌지 향이 매력적인 미국식 에일맥주
 홉에서 비롯된 쓴맛이 강하지만 재료의 비중이 높아 보리와 홉의 향이 잘 살아남. 쓴맛이 강한 편이라 맥주 초보자들이 접하기에 다소 난이도가 있으나 맥주 마니아들은 대부분 IPA에 열광함",https://beer-api-prod.idkulab.com/media/drinks/arirang_ipa.png
-동강에일,Aribeer Pale Ale,맥주,🇰🇷,Pale Ale,4.8%,다양한 몰트의 풍미와 시트러스한 홉의 풍미가 잘 어우러진 부드러운 정통 에일맥주,https://beer-api-prod.idkulab.com/media/drinks/aribeer_pale_ale.png
-곤드레필스너,Aribeer Pilsner,맥주,🇰🇷,Pale Lager - Pilsner,4.8%,밝고 투명하며 곤드레의 풍미와 더불어청량감이 살아있는 체코식 라거맥주,https://beer-api-prod.idkulab.com/media/drinks/aribeer_pilsner.png
-윤바이젠,Aribeer Weizen,맥주,🇰🇷,Wheat Beer - Weizen,5.5%,홉과 효모의 풍미와 부드러운 신맛이 강조된 독일식 밀맥주,/beer-default.png
-마인스타우트,Aribeer Stout,맥주,🇰🇷,Stout,5.2%,로스팅한 맥아의 그윽한 풍미와 묵직한 바디감이 살아있는 영국식 흑맥주,/beer-default.png
-아랏차IPA,Aribeer Aracha IPA,맥주,🇰🇷,India Pale Ale,5.2%,오렌지향과 드라이한 바디감으로 청량감이 뛰어난 IPA,https://beer-api-prod.idkulab.com/media/drinks/aribeer_aracha_ipa.png
-화수 바이젠,Whasoo Weizen,맥주,🇰🇷,Wheat Beer,5%,화수 브루어리의 대표적인 밀 맥주로서 헤페 바이젠 효모를 사용하여 이스트 아로마의 바나나 향과 부드러운 마우스 필을 입가에 담을 수 있는 맥주,/beer-default.png
-화수 아메리칸라거,Whasoo American Lager,맥주,🇰🇷,Pale Lager,5%,"로컬브루어리의 브루어의 자존심과 기본기를 바탕으로 가장 베이직한 스타일의 깔끔하고 신선한 아메리칸 라거
+동강에일,Aribeer Pale Ale,Beer,한국,4.8%,다양한 몰트의 풍미와 시트러스한 홉의 풍미가 잘 어우러진 부드러운 정통 에일맥주,https://beer-api-prod.idkulab.com/media/drinks/aribeer_pale_ale.png
+곤드레필스너,Aribeer Pilsner,Beer,한국,4.8%,밝고 투명하며 곤드레의 풍미와 더불어청량감이 살아있는 체코식 라거맥주,https://beer-api-prod.idkulab.com/media/drinks/aribeer_pilsner.png
+윤바이젠,Aribeer Weizen,Beer,한국,5.5%,홉과 효모의 풍미와 부드러운 신맛이 강조된 독일식 밀맥주,/beer-default.png
+마인스타우트,Aribeer Stout,Beer,한국,5.2%,로스팅한 맥아의 그윽한 풍미와 묵직한 바디감이 살아있는 영국식 흑맥주,/beer-default.png
+아랏차IPA,Aribeer Aracha IPA,Beer,한국,5.2%,오렌지향과 드라이한 바디감으로 청량감이 뛰어난 IPA,https://beer-api-prod.idkulab.com/media/drinks/aribeer_aracha_ipa.png
+화수 바이젠,Whasoo Weizen,Beer,한국,5%,화수 브루어리의 대표적인 밀 맥주로서 헤페 바이젠 효모를 사용하여 이스트 아로마의 바나나 향과 부드러운 마우스 필을 입가에 담을 수 있는 맥주,/beer-default.png
+화수 아메리칸라거,Whasoo American Lager,Beer,한국,5%,"로컬브루어리의 브루어의 자존심과 기본기를 바탕으로 가장 베이직한 스타일의 깔끔하고 신선한 아메리칸 라거
 2019년 주류대상 크래프트 맥주 라거 부문 대상 
 양조 공정 처음부터 끝까지 미국에서 생산된 신선한 몰트, 홉 그리고 효모를 사용하여 완성된 맥주입니다. 강한 탄산감으로 드라이한 피니시에 크리스피함이 두드러지며 홉의 향긋함을 느낄 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/american_lager_WRk5O5H.png
-화수 쾰쉬,Whasoo Kolsch,맥주,🇰🇷,Pale Ale - Kolsch,5%,"라거와 에일의 장점만을 담아 만들어낸 맥주, 라거의 깔끔한 맛과 에일의 향긋한 아로마가 느껴지며 어떤 음식과도 조화로운 맥주",/beer-default.png
-화수 알트비어,Whasoo Alt Bier,맥주,🇰🇷,Brown Ale - Altbier,5%,캐러멜 몰트를 사용하여 몰티함을 갖추고 오랜 시간의 저온 숙성 속에서 올드한 풍미를 갖춘 화수 브루어리의 오랜 맥주,https://beer-api-prod.idkulab.com/media/drinks/alt_beer_WoLkPSB.png
-화수 유자페일에일,Whasoo Yuza Pale Ale,맥주,🇰🇷,Pale Ale,5%,"홉의 아로마와 한국적인 유자의 향의 조화가 이뤄낸 페일 에일로써 시트러스 함의 절정을 만들어 준 화수 브루어리의 ""제2의 시그니처""맥주",https://beer-api-prod.idkulab.com/media/drinks/yuza_pale_ale.png
-화수 불멍,Whasoo Session IPA,맥주,🇰🇷,India Pale Ale - Session IPA,5%,"시트라 단일 홉을 사용하여 자몽, 시트럿, 망고의 풍미를 갖춘 음용성이 좋은 세션 아이피에이
+화수 쾰쉬,Whasoo Kolsch,Beer,한국,5%,"라거와 에일의 장점만을 담아 만들어낸 맥주, 라거의 깔끔한 맛과 에일의 향긋한 아로마가 느껴지며 어떤 음식과도 조화로운 맥주",/beer-default.png
+화수 알트비어,Whasoo Alt Bier,Beer,한국,5%,캐러멜 몰트를 사용하여 몰티함을 갖추고 오랜 시간의 저온 숙성 속에서 올드한 풍미를 갖춘 화수 브루어리의 오랜 맥주,https://beer-api-prod.idkulab.com/media/drinks/alt_beer_WoLkPSB.png
+화수 유자페일에일,Whasoo Yuza Pale Ale,Beer,한국,5%,"홉의 아로마와 한국적인 유자의 향의 조화가 이뤄낸 페일 에일로써 시트러스 함의 절정을 만들어 준 화수 브루어리의 ""제2의 시그니처""맥주",https://beer-api-prod.idkulab.com/media/drinks/yuza_pale_ale.png
+화수 불멍,Whasoo Session IPA,Beer,한국,5%,"시트라 단일 홉을 사용하여 자몽, 시트럿, 망고의 풍미를 갖춘 음용성이 좋은 세션 아이피에이
 2021년 주류대상 에일 부문 대상 
 Session I.P.A IPA의 쓴맛은 자제하면서 강렬한 홉향은 그대로 재현!
 IPA입문자에게 추천하는 맥주",https://beer-api-prod.idkulab.com/media/drinks/camp_fire_Vb5vSi1.png
-화수 레드IPA,Whasoo Red IPA,맥주,🇰🇷,India Pale Ale - Red IPA,6.3%,시트러스하고 스파이시한 종류의 홉을 사용하여 열대과일의 아로마를 느낄 수 있으며 완벽한 밸런스로 거친 느낌보다는 안정적인 음용성을 주는 IPA,https://beer-api-prod.idkulab.com/media/drinks/whasoo_red_ipa_Qvl408R.png
-사이공스페셜,Saigon Special,맥주,🇻🇳,Pale Lager,4.9%,"부드러운 목넘김 뒤에  남는 드라이함과 시큼한 향이 매력적입니다.
+화수 레드IPA,Whasoo Red IPA,Beer,한국,6.3%,시트러스하고 스파이시한 종류의 홉을 사용하여 열대과일의 아로마를 느낄 수 있으며 완벽한 밸런스로 거친 느낌보다는 안정적인 음용성을 주는 IPA,https://beer-api-prod.idkulab.com/media/drinks/whasoo_red_ipa_Qvl408R.png
+사이공스페셜,Saigon Special,Beer,베트남,4.9%,"부드러운 목넘김 뒤에  남는 드라이함과 시큼한 향이 매력적입니다.
 <사이공 스페셜> 가장 진보된 현대 기술 체인에서 생산되어 쌀 없이 몰트 100%가 함유된 맥주입니다. 최고의 기술력과 오랜 전통기술로 발효되어 안정적인 맛을 냅니다. 가볍고 라이트 한 바디감으로 젊고 스포티한 소비자층을 위해 탄생한 사베코사의 신제품입니다.",https://beer-api-prod.idkulab.com/media/drinks/bia_saigon_special.png
-바바바맥주,333 Export,맥주,🇻🇳,Pale Lager,5.3%,"베트남어로 바바바 맥주라고 부르는 <333맥주>는 100년이라는 시간동안 큰 사랑을 받아 온 베트남을 대표하는 국민 맥주입니다.
+바바바맥주,333 Export,Beer,베트남,5.3%,"베트남어로 바바바 맥주라고 부르는 <333맥주>는 100년이라는 시간동안 큰 사랑을 받아 온 베트남을 대표하는 국민 맥주입니다.
 쌀이 포함된 페일 라거로 맑고 투명한 청량감이 특징 그러나 끝맛은 홉향으로 은은한 고소함을 줍니다.",https://beer-api-prod.idkulab.com/media/drinks/333_beer.png
-하노이 프리미엄,Hanoi Premium,맥주,🇻🇳,Pale Lager,4.9%,"라거타입이지만 무게감 있는 맥주로 가벼운 목넘김과 함께 묵직하고 터프한 뒷맛이 오래 남습니다. 
+하노이 프리미엄,Hanoi Premium,Beer,베트남,4.9%,"라거타입이지만 무게감 있는 맥주로 가벼운 목넘김과 함께 묵직하고 터프한 뒷맛이 오래 남습니다. 
 
 지난 16년 오바마 전미 대통령이 베트남 내한 당시 서민 식당을 찾아 이른바 ‘분짜외교’로 화제를 모았습니다, 당시 분짜와 함께 마신 맥주가 바로 <하노이프리미엄> 대통령이 선택한 베트남의 유명맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/hanoi_beer.png
-앙코르맥주,Angkor,맥주,🇰🇭,Pale Lager,5%,"벨기에 “몽드 셀렉션” 2회 수상하며 품질과 맛이 보장된 캄보디아의 국민맥주 입니다.
+앙코르맥주,Angkor,Beer,캄보디아,5%,"벨기에 “몽드 셀렉션” 2회 수상하며 품질과 맛이 보장된 캄보디아의 국민맥주 입니다.
 풍부한 홉의 향과 밝은 골드칼라를 가지고 있으며 홉에 쌉쌉함이 풍부하게 느껴지며 부드러운 목넘김이 즐거움을 주는 맛을 가지고 있습니다. 링크라우 방식으로 개봉이 편리합니다.",https://beer-api-prod.idkulab.com/media/drinks/angkor.png
-제주 슬라이스,Jeju Slice,맥주,🇰🇷,Specialty Beer - Fruit Ale,4.1%,"제주 슬라이스는 패션 프루트를 넣어 과일의 상큼한 향과 맛이 풍부하며 부드럽고 가벼운 질감이 특징인 에일입니다.
+제주 슬라이스,Jeju Slice,Beer,한국,4.1%,"제주 슬라이스는 패션 프루트를 넣어 과일의 상큼한 향과 맛이 풍부하며 부드럽고 가벼운 질감이 특징인 에일입니다.
 기분 좋은 탄산감까지 더해져 언제나 경쾌하게 즐길 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/jeju_slice.png
-사무엘스미스 오가닉 아프리콧 프룻비어,Samuel Smith's Organic Apricot Fruit Beer,맥주,🇬🇧,Specialty Beer - Fruit Beer,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 아프리콧 프룻비어,Samuel Smith's Organic Apricot Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
 
 Ingredients • water, organic malted barley, organic malted wheat, organic cane sugar, organic apricot concentrate, organic apricot extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/organic_apricot.png
-사무엘스미스 오가닉 초콜렛 스타우트,Samuel Smith's Organic Chocolate Stout,맥주,🇬🇧,Stout - Chocolate Stout,5%,"Brewed with well water (the original well, sunk in 1758, is still in use with the hard water is drawn from 85 feet underground), the gently roasted organic chocolate malt and organic cocoa impart a delicious, smooth and creamy character, with inviting deep flavours and a delightful finish – this is the perfect marriage of satisfying stout and luxurious chocolate.
+사무엘스미스 오가닉 초콜렛 스타우트,Samuel Smith's Organic Chocolate Stout,Beer,영국,5%,"Brewed with well water (the original well, sunk in 1758, is still in use with the hard water is drawn from 85 feet underground), the gently roasted organic chocolate malt and organic cocoa impart a delicious, smooth and creamy character, with inviting deep flavours and a delightful finish – this is the perfect marriage of satisfying stout and luxurious chocolate.
 
 Ingredients; water, organic malted barley, organic cane sugar, yeast, organic hops, organic cocoa extract, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/organic_chocolate_stout.png
-사무엘스미스 임페리얼 스타우트,Samuel Smith's Imperial Stout,맥주,🇬🇧,Stout - Imperial Stout,7%,"This distinctive type of beer was originally brewed to withstand the abuses of shipping in foul weather to Imperial Russia. It was a favourite of Russian nobility whose taste for the finest food and drink was world famous.
+사무엘스미스 임페리얼 스타우트,Samuel Smith's Imperial Stout,Beer,영국,7%,"This distinctive type of beer was originally brewed to withstand the abuses of shipping in foul weather to Imperial Russia. It was a favourite of Russian nobility whose taste for the finest food and drink was world famous.
 A rich flavourful brew; deep chocolate in colour with a roasted barley nose and flavour that is a complexity of malt, hops, alcohol and yeast. Fermented in ‘stone Yorkshire squares’.
 
 Ingredients • Water, malted barley, roasted malt, cane sugar, yeast, hops.",https://beer-api-prod.idkulab.com/media/drinks/samuel_smith_imperial_stout.png
-콜센동크 애플 화이트,Corsendonk Apple White,맥주,🇧🇪,Wheat Beer,3.1%,"깊고 탁한 금빛, 신선한 맛과 향 부드러운 거품과 풍성한 과일향이 느껴지는 청량감이 아주 좋은 맥주.
+콜센동크 애플 화이트,Corsendonk Apple White,Beer,벨기에,3.1%,"깊고 탁한 금빛, 신선한 맛과 향 부드러운 거품과 풍성한 과일향이 느껴지는 청량감이 아주 좋은 맥주.
 알코올향이 느껴지지 않아 술을 잘 못 마시는 분들에게 좋은 맥주.
 아주 시원하게 마시면 더욱더 좋은 맥주",https://beer-api-prod.idkulab.com/media/drinks/corsendonk.png
-콜센동크 파터,Corsendonk Parter Dubbel,맥주,🇧🇪,Dark Ale - Dubbel,6.5%,"진한 몰트향, 부드럽고 매력적인 카라멜 향 진한 목넘김, 깊이 숙성된 세련된 맛.
+콜센동크 파터,Corsendonk Parter Dubbel,Beer,벨기에,6.5%,"진한 몰트향, 부드럽고 매력적인 카라멜 향 진한 목넘김, 깊이 숙성된 세련된 맛.
 듀벨과 같은 진한 에일 스타일에 익숙하지 않은 경우, 듀벨 스타일을 처음 경험하기에 아주 좋은 맥주",/beer-default.png
-제주 거멍 에일,Jeju Geomeong Ale,맥주,🇰🇷,Dark Ale,4.3%,거멍'은 '검다'라는 의미의 제주 방언입니다. 제주 흑보리와 초콜릿 밀을 사용하여 제주의 여름밤을 떠올리게 하는 경쾌한 흑맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/jeju_geomeong_ale.png
-제주 펠롱 에일,JEJU PELLONG ALE,맥주,🇰🇷,Pale Ale,5.5%,펠롱'은 '반짝'이라는 의미의 제주 방언입니다. 다양하고 개성있는 홉을 블렌딩하여 반짝이는 시트러스 향을 느낄 수 있는 제주스러운 페일 에일입니다.,https://beer-api-prod.idkulab.com/media/drinks/jeju_pellong_ale.png
-호가든 보타닉 레몬그라스 & 시트러스 제스트,Hoegaarden Botanic Lemongrass & Citrus Zest,맥주,🇰🇷,Wheat Beer,2.5%,"봄날의 휴식을 닮은 보타니컬 블랜드
+제주 거멍 에일,Jeju Geomeong Ale,Beer,한국,4.3%,거멍'은 '검다'라는 의미의 제주 방언입니다. 제주 흑보리와 초콜릿 밀을 사용하여 제주의 여름밤을 떠올리게 하는 경쾌한 흑맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/jeju_geomeong_ale.png
+제주 펠롱 에일,JEJU PELLONG ALE,Beer,한국,5.5%,펠롱'은 '반짝'이라는 의미의 제주 방언입니다. 다양하고 개성있는 홉을 블렌딩하여 반짝이는 시트러스 향을 느낄 수 있는 제주스러운 페일 에일입니다.,https://beer-api-prod.idkulab.com/media/drinks/jeju_pellong_ale.png
+호가든 보타닉 레몬그라스 & 시트러스 제스트,Hoegaarden Botanic Lemongrass & Citrus Zest,Beer,한국,2.5%,"봄날의 휴식을 닮은 보타니컬 블랜드
 봄날의 싱그러움을 전하고자 탄생한 호가든 보타닉 
 벨기에 정통 양조방식에 레몬그라스와 시트러스 제스트 천연 향료가 더해진 산뜻하고 깔끔한 맛의 조화로움을 느껴보세요",https://beer-api-prod.idkulab.com/media/drinks/hoegaarden_botanic.png
-볼파스엔젤맨 블랑,Volfas Engelman Blanc,맥주,🇱🇹,Wheat Beer - Wheat Ale,5%,은은한 단 맛과 열대과일향이 느껴지는 가볍고 싱그러운 벨기에식 밀맥주.,https://beer-api-prod.idkulab.com/media/drinks/volfas_engelman_blanc.png
-호기스 페어 헤븐 사이더,Hoggy's Pear Heaven Cider,맥주,🇪🇪,Etc - Cider,4.5%,"호기스 페어 헤븐 사이더는 순수한 배 즙에서 오는 신성한 향의 사이더 입니다.
+볼파스엔젤맨 블랑,Volfas Engelman Blanc,Beer,리투아니아,5%,은은한 단 맛과 열대과일향이 느껴지는 가볍고 싱그러운 벨기에식 밀맥주.,https://beer-api-prod.idkulab.com/media/drinks/volfas_engelman_blanc.png
+호기스 페어 헤븐 사이더,Hoggy's Pear Heaven Cider,Beer,에스토니아,4.5%,"호기스 페어 헤븐 사이더는 순수한 배 즙에서 오는 신성한 향의 사이더 입니다.
 
 Pleasantly sweet and fizzy, it is like a stroll through the greenest of gardens on a warm summer’s night when, if you’re lucky, you might just spy a shy little hedgehog going about its business.",https://beer-api-prod.idkulab.com/media/drinks/hoggys-pear-heaven.png
-호기스 애플 파라다이스 사이더,Hoggy's Apple Paradise Cider,맥주,🇪🇪,Etc - Cider,4.5%,"호기스 애플 파라다이스 사이더는 별도의 설탕을 넣지 않은 천연애플사이더입니다.
+호기스 애플 파라다이스 사이더,Hoggy's Apple Paradise Cider,Beer,에스토니아,4.5%,"호기스 애플 파라다이스 사이더는 별도의 설탕을 넣지 않은 천연애플사이더입니다.
 사워한 맛때문에 이름 붙여진 이 사이다는 설탕을 추가하지 않아 클래식한 느낌의 약간 드라이한 맛이 납니다.
 
 It will set your mind wandering to warm summer evenings when the garden is overflowing with juicy, ripe apples and a hedgehog scurries about in the bushes.",https://beer-api-prod.idkulab.com/media/drinks/hoggys-apple-paradise.png
-노르디스크 캠핑맥주,Nordisk Camping Beer,맥주,🇰🇷,Pale Lager,5.3%,"오랜 역사를 가진 덴마크 아웃도어 브랜드 Nordisk 
+노르디스크 캠핑맥주,Nordisk Camping Beer,Beer,한국,5.3%,"오랜 역사를 가진 덴마크 아웃도어 브랜드 Nordisk 
 삶의 질을 향상시킬 자연속에서의 시간 고귀한 자연을 누리세요.",https://beer-api-prod.idkulab.com/media/drinks/nordisk_camping_beer.png
-백양 BYC 비엔나 라거,Baekyang BYC Vienna Lager,맥주,🇰🇷,Dark Lager - Vienna Lager,5.2%,아버지의 순백 메리야스로 추억되는 백양 BYC가 오비맥주와 만나 양털같이 부드러운 거품과 고소한 향이 가득한 비엔라 라거로 탄생했습니다. 오늘저녁 나를 위한 '행복 한잔' 어떠세요?,https://beer-api-prod.idkulab.com/media/drinks/baekyang_byc_vienna_lager.png
-슈퍼스타즈 페일에일,SUPER STARS PALE ALE,맥주,🇰🇷,Pale Ale,4.7%,"슈퍼스타즈 쌉쌀함을 즐겨라 
+백양 BYC 비엔나 라거,Baekyang BYC Vienna Lager,Beer,한국,5.2%,아버지의 순백 메리야스로 추억되는 백양 BYC가 오비맥주와 만나 양털같이 부드러운 거품과 고소한 향이 가득한 비엔라 라거로 탄생했습니다. 오늘저녁 나를 위한 '행복 한잔' 어떠세요?,https://beer-api-prod.idkulab.com/media/drinks/baekyang_byc_vienna_lager.png
+슈퍼스타즈 페일에일,SUPER STARS PALE ALE,Beer,한국,4.7%,"슈퍼스타즈 쌉쌀함을 즐겨라 
 쓰디쓴 패배의 맛을 18번이나 보고도 다시 또 도전한 불굴의 레전드 슈퍼스타즈의 스피릿을 담아낸 맥주, 페일에일의 쌉쌀함과 오렌지 필의 향긋함으로 인생의 참 맛을 즐겨라",https://beer-api-prod.idkulab.com/media/drinks/super_stars_pale_ale.png
-SSG랜더스라거,SSG LANDERS LAGER,맥주,🇰🇷,Pale Lager,4.5%,"SSG랜더스 라거는 플레이그라운드 브루어리와 이마트24가 힘을 합쳐 프로 야구 클럽 SSG랜더스를 모티브로 재해석한 맥주입니다. ""짜릿하게 적셔버려"" 라는 문구처럼 라거 특유의 시원한 청량감에 홉이 선사하는 화사한 열대 과일향이 특징이며, 야구를 볼 때도 가볍게 마실 수 있는 도수로 제작된 맥주입니다. 페일 라거 타입으로 가볍지만, 짜릿하고 시원한 맛을 강조해서 언제 어디서든, 무엇과도 함께 할 수 있는 맥주로 탄생했습니다! 시원한 SSG랜더스 라거와 속시원한 야구 경기로 시원한 여름 나시길 기원합니다!",https://beer-api-prod.idkulab.com/media/drinks/ssg_landers_lager.png
-젠틀맨 라거,Gentleman Lager,맥주,🇰🇷,Pale Lager,7.6%,"젠틀맨 라거는 체코 필스너 스타일을 한국적으로 재해석한 맥주입니다.
+SSG랜더스라거,SSG LANDERS LAGER,Beer,한국,4.5%,"SSG랜더스 라거는 플레이그라운드 브루어리와 이마트24가 힘을 합쳐 프로 야구 클럽 SSG랜더스를 모티브로 재해석한 맥주입니다. ""짜릿하게 적셔버려"" 라는 문구처럼 라거 특유의 시원한 청량감에 홉이 선사하는 화사한 열대 과일향이 특징이며, 야구를 볼 때도 가볍게 마실 수 있는 도수로 제작된 맥주입니다. 페일 라거 타입으로 가볍지만, 짜릿하고 시원한 맛을 강조해서 언제 어디서든, 무엇과도 함께 할 수 있는 맥주로 탄생했습니다! 시원한 SSG랜더스 라거와 속시원한 야구 경기로 시원한 여름 나시길 기원합니다!",https://beer-api-prod.idkulab.com/media/drinks/ssg_landers_lager.png
+젠틀맨 라거,Gentleman Lager,Beer,한국,7.6%,"젠틀맨 라거는 체코 필스너 스타일을 한국적으로 재해석한 맥주입니다.
 깔끔한 맛과 부드러운 목넘김을 자랑하며 홉의 향과 맛의 깊이를 더했습니다.",https://beer-api-prod.idkulab.com/media/drinks/gentleman_lager.png
-에그슬럿 라거,Eggslut Lager,맥주,🇰🇷,Pale Lager,4.3%,에그슬럿 x 국맨브루어리의 특별 컬래버레이션! 에그슬럿 메뉴와 최상의 페어링을 이루는 언필터드 크래프트 페일 라거,https://beer-api-prod.idkulab.com/media/drinks/eggslut_lager.png
-진라거,JIN LAGER,맥주,🇰🇷,Pale Lager - Special Malt Lager,5.2%,"진라거는 독일산 스페셜 몰트의 진하고 달콤한 맛과 함께, 노블홉의 은은한 향이 조화로운 어메이징 x 오뚜기의 스페셜 몰트 라거
+에그슬럿 라거,Eggslut Lager,Beer,한국,4.3%,에그슬럿 x 국맨브루어리의 특별 컬래버레이션! 에그슬럿 메뉴와 최상의 페어링을 이루는 언필터드 크래프트 페일 라거,https://beer-api-prod.idkulab.com/media/drinks/eggslut_lager.png
+진라거,JIN LAGER,Beer,한국,5.2%,"진라거는 독일산 스페셜 몰트의 진하고 달콤한 맛과 함께, 노블홉의 은은한 향이 조화로운 어메이징 x 오뚜기의 스페셜 몰트 라거
 
 독일산 스페셜 몰트를 사용해 진한 몰트의 맛과 향을 살린 라거 맥주다. 착향료와 감미료를 사용하지 않아 순수하고 진한 맥주의 맛과 향이 난다. 독일산 스페셜 몰트의 카라멜, 빵과 같은 고소한 맛과 향이 나면서도 라거 특유의 라이트한 바디감으로 음용성이 좋다. 독일산 노블 홉의 은은한 꽃과 허브의 향을 느낄 수 있다.",https://beer-api-prod.idkulab.com/media/drinks/jin_lager_YgdSsqU.png
-치얼스,CHI-EERS!,맥주,🇰🇷,Pale Ale,4.3%,"지금까지 이런 치맥은 없었다-
+치얼스,CHI-EERS!,Beer,한국,4.3%,"지금까지 이런 치맥은 없었다-
 오진 치맥을 위해 탄생한 페어링 맥주. 치킨 먹을 때마다 생각난다는 마성의 맥주.
 
 가장 완벽한 치맥의 순간을 위해 치맥의 원조 BBQ와 제주맥주가 만났습니다. 열대 과일의 상큼한 맛이 치킨의 고소함과 어우러져 입안 가득 황홀한 순간을 선사하는 치얼스. 오늘도 수고한 나에게 치얼스로 완벽한 하루를 선물하세요.
 
 퇴근 후 소고한 나를 위해 치얼스!
 완벽한 치맥의 순간을 위해 치얼스!",https://beer-api-prod.idkulab.com/media/drinks/chi_eers.png
-말표 청포도 에일,Malpyo Green grape,맥주,🇰🇷,Specialty Beer - Fruit Beer,4%,입안 가득 퍼지는 산뜻한 청포도의 풍미가 시원하게 느껴지는 에일맥주,https://beer-api-prod.idkulab.com/media/drinks/malpyo_green_grape.png
-호가든 포멜로,Hoegaarden pomelo,맥주,🇧🇪,Specialty Beer - Fruit Beer,3%,"호가든 포멜로는 여름날의 여유로운 휴식을 꿈꾸며 시트러스 과일에 대한 사랑을 담아 만들어졌습니다.
+말표 청포도 에일,Malpyo Green grape,Beer,한국,4%,입안 가득 퍼지는 산뜻한 청포도의 풍미가 시원하게 느껴지는 에일맥주,https://beer-api-prod.idkulab.com/media/drinks/malpyo_green_grape.png
+호가든 포멜로,Hoegaarden pomelo,Beer,벨기에,3%,"호가든 포멜로는 여름날의 여유로운 휴식을 꿈꾸며 시트러스 과일에 대한 사랑을 담아 만들어졌습니다.
 벨기에 정통 양조방식으로 만들어진 이 프리미엄 블렌드는 포멜로의 상큼한 맛과 호가든 밀맥주의 산뜻함이 조화를 이루며, 여름날의 휴식을 더욱 여유롭게 만들어 줍니다.",https://beer-api-prod.idkulab.com/media/drinks/hoegaarden_pomelo.png
-오늘,오늘,맥주,🇰🇷,Wheat Beer - Belgian White,4.7%,"오렌지 필과 코리엔더 씨앗이 맥주의 달콤한 아로마와 풍미를 극대화, 마시기 전부터 달콤한 오렌지 아로마가 후각을 자극하고, 가벼운 바디와 청량한 탄산감으로 어느 누구나 편하게 마실 수 있는 맥주",https://beer-api-prod.idkulab.com/media/drinks/oneul.png
-미스터문 애플사이더,Mister Moon Apple Cider,맥주,🇵🇹,Etc - Apple cider,4.5%,풍부한 사과향이 느껴지는 애플사이다.,https://beer-api-prod.idkulab.com/media/drinks/mister_moon_apple_cider.png
-구스아일랜드 소피,Goose Island Sofie,맥주,🇺🇸,Pale Ale - Saison,6.5%,"전반적으로 은은한 오렌지 향이 느껴지고, 끝 맛에서는 부드러운 바닐라 향이 더해져 훌륭한 밸런스를 완성합니다. Sofie는 새콤하고 드라이한 벨기에 스타일의 팜하우스 스파클링 엘리로, 와인 배럴에서 오렌지 껍질과 함께 숙성시켜 깊은 풍미를 느낄 수 있습니다. 특히 샴페인 애호가라면, Sofie의 신선하고 부드러운 바닐라 피니시를 더욱 선호할 것입니다.",https://beer-api-prod.idkulab.com/media/drinks/goose_island_sofie.png
-린데만스 빼슈레제,Lindemans Pecheresse,맥주,🇧🇪,Wild/Sour Beer - Lambic,2.5%,"린데만스 빼슈레제는 풍성한 과일의 풍미에 람빅 특유의 쌉쌀함과 달콤한 복숭아가 완벽한 밸런스를 이루고 있다. 복숭아 과즙이 절반 가까이 들어간 람빅으로, 진한 복숭아의 풍미를 느낄 수 있는 가장 완벽한 식전주로 자부한다.
+오늘,오늘,Beer,한국,4.7%,"오렌지 필과 코리엔더 씨앗이 맥주의 달콤한 아로마와 풍미를 극대화, 마시기 전부터 달콤한 오렌지 아로마가 후각을 자극하고, 가벼운 바디와 청량한 탄산감으로 어느 누구나 편하게 마실 수 있는 맥주",https://beer-api-prod.idkulab.com/media/drinks/oneul.png
+미스터문 애플사이더,Mister Moon Apple Cider,Beer,포르투갈,4.5%,풍부한 사과향이 느껴지는 애플사이다.,https://beer-api-prod.idkulab.com/media/drinks/mister_moon_apple_cider.png
+구스아일랜드 소피,Goose Island Sofie,Beer,미국,6.5%,"전반적으로 은은한 오렌지 향이 느껴지고, 끝 맛에서는 부드러운 바닐라 향이 더해져 훌륭한 밸런스를 완성합니다. Sofie는 새콤하고 드라이한 벨기에 스타일의 팜하우스 스파클링 엘리로, 와인 배럴에서 오렌지 껍질과 함께 숙성시켜 깊은 풍미를 느낄 수 있습니다. 특히 샴페인 애호가라면, Sofie의 신선하고 부드러운 바닐라 피니시를 더욱 선호할 것입니다.",https://beer-api-prod.idkulab.com/media/drinks/goose_island_sofie.png
+린데만스 빼슈레제,Lindemans Pecheresse,Beer,벨기에,2.5%,"린데만스 빼슈레제는 풍성한 과일의 풍미에 람빅 특유의 쌉쌀함과 달콤한 복숭아가 완벽한 밸런스를 이루고 있다. 복숭아 과즙이 절반 가까이 들어간 람빅으로, 진한 복숭아의 풍미를 느낄 수 있는 가장 완벽한 식전주로 자부한다.
 하루 중 언제 마셔도 즐겁지만, 햇볕이 잘 드는 테라스에서 사랑하는 연인과 함께 즐기기에 제격이다. 디저트와 가장 잘 어울리는 맥주가 아니라 그 자체가 디저이트이다.",https://beer-api-prod.idkulab.com/media/drinks/lindemans_pecheresse.png
-린데만스 크릭,Lindemans Kriek,맥주,🇧🇪,Wild/Sour Beer - Lambic,3.5%,"린데만스 크릭은 1년동안 참나무로 숙성하여 체리의 달콤함을 극대화하였으며, 신선한 체리의 맛에 신맛과 단맛의 절묘한 조화가 돋보인다.
+린데만스 크릭,Lindemans Kriek,Beer,벨기에,3.5%,"린데만스 크릭은 1년동안 참나무로 숙성하여 체리의 달콤함을 극대화하였으며, 신선한 체리의 맛에 신맛과 단맛의 절묘한 조화가 돋보인다.
 달콤하고 향기로운 과일의 맛은 전 세계 람빅 애호가들에게 혁신적인 맛을 선사하였다.
 1970년대 크릭꾸베를 미국으로 수출하면서, 운송 중 파도의 흔들림으로 발효를 활성화시켜 코르크 마개가 튀어 오르게 하는 문제점을 해결하기 위해 지금의 크릭을 대안으로 양조하게 된 것이다.",https://beer-api-prod.idkulab.com/media/drinks/lindemans_kriek.png
-한옥마을 에일,HANOK VILLAGE ALE,맥주,🇺🇸,Pale Ale,4.5%,"한옥마을 에일은 독일의 정통 방식과 한국의 전통을 이어받아 '우리 것'에 대한 소중함을 지키고자 탄생되었으며, 국내산 쌀을 더해 한국의 맛과 정체성을 받았습니다.",https://beer-api-prod.idkulab.com/media/drinks/hanok_village_ale.png
-라온 위트 에일,Raon Wheat Ale,맥주,🇰🇷,Wheat Beer - Wheat Ale,5.2%,"라온은 '즐거움'이란 의미의 순우리말 입니다. 달콤한 바나나향, 부드러운 거품과 정향의 풍미를 즐겨보세요!",https://beer-api-prod.idkulab.com/media/drinks/raon_wheat_ale.png
-린데만스 프랑부아즈,Lindemans Framboise,맥주,🇧🇪,Wild/Sour Beer - Lambic,2.5%,"린데만스 프랑부아즈는 람빅에 천연 라즈베리 과즙을 더하여 1년동안 참나무로 숙성한다.
+한옥마을 에일,HANOK VILLAGE ALE,Beer,미국,4.5%,"한옥마을 에일은 독일의 정통 방식과 한국의 전통을 이어받아 '우리 것'에 대한 소중함을 지키고자 탄생되었으며, 국내산 쌀을 더해 한국의 맛과 정체성을 받았습니다.",https://beer-api-prod.idkulab.com/media/drinks/hanok_village_ale.png
+라온 위트 에일,Raon Wheat Ale,Beer,한국,5.2%,"라온은 '즐거움'이란 의미의 순우리말 입니다. 달콤한 바나나향, 부드러운 거품과 정향의 풍미를 즐겨보세요!",https://beer-api-prod.idkulab.com/media/drinks/raon_wheat_ale.png
+린데만스 프랑부아즈,Lindemans Framboise,Beer,벨기에,2.5%,"린데만스 프랑부아즈는 람빅에 천연 라즈베리 과즙을 더하여 1년동안 참나무로 숙성한다.
 어두운 분홍 빛 위에 살며시 핑크 빛을 띤 거품이 얹어져 있으며, 그것은 특별한 감동으로 다가온다.
 진한 라즈베리의 달콤함과 어우러진 람빅맥주의 특징인 새콤함은 식전주로 더할 나위 없다.
 천연 라즈베리 과즙은 섬세한 과일 향과 아름다운 핑크 빛을 만들어 줍니다. 파워풀한 라즈베리의 풍미는 에피타이저는 물론 요리에도 응용할 수 있다.",https://beer-api-prod.idkulab.com/media/drinks/lindemans_framboise.png
-커피 골든 에일,Coffe Golden Ale,맥주,🇰🇷,Specialty Beer - Golden Ale,5%,"새로운 미식 문화를 위해 탄생한 스페셜티 비어 블루보틀의 콜드 브루잉과 유사한 양조 방식인 드라이 호핑 기법을 사용하여 커피의 아로마를 더한 황금빛 골든 에일로,
+커피 골든 에일,Coffe Golden Ale,Beer,한국,5%,"새로운 미식 문화를 위해 탄생한 스페셜티 비어 블루보틀의 콜드 브루잉과 유사한 양조 방식인 드라이 호핑 기법을 사용하여 커피의 아로마를 더한 황금빛 골든 에일로,
 블루보틀의 대표 블렌드인 ‘쓰리 아프리카스’와 황금빛 맥아, 그리고 시트라 홉의 섬세한 조화로 만들어진 밝은 풍미의 맥주로, 커피 골든 에일의 프루티한 향과 은은한 커피의 여운을 즐겨보세요.",https://beer-api-prod.idkulab.com/media/drinks/coffe_golden_ale.png
-제주맥주 배럴 시리즈: 블루보틀 커피에디션,Jeju Beer Barrel Series: Blue Bottle Coffe Edition,맥주,🇰🇷,Stout - Imperial Stout Barrel Aged,13.5%,"맛있는 커피로 세상을 연결하는 블루보틀과 높은 퀄리티의 다양한 맥주를 만드는 제주맥주가 만나 시간과 노력으로 빚어낸 프리미엄 배럴 숙성 맥주를 선보입니다. 제주맥주 배럴 시리즈 블루보틀 커피 에디션은 블루보틀 대표 블렌드인 '벨라 도노반'의 초콜릿, 라즈베리 향미와 버번 배럴, 로스팅 몰트에서 오는 묵직한 아로마가 조화롭게 어우러지며 섬세하고 복합적인 풍미를 만들어 냅니다. 시간, 노력 그리고 커피의 조화를 경험해 보세요.",https://beer-api-prod.idkulab.com/media/drinks/jeju_beer_barrel_series.png
-불닭맥주,Buldak Beer,맥주,🇰🇷,Etc,5.8%,불닭볶음면과 궁합이 좋은 달달하고 상큼한 망고에일,https://beer-api-prod.idkulab.com/media/drinks/buldak_beer.png
-2080 이공팔공맥주,2080 Beer,맥주,🇰🇷,Wheat Beer - Belgian White,4.5%,오렌지 껍질과 고수 씨앗을 첨가하여 풍부한 맛과 향의 조화가 뛰어난 화이트 밀맥주,https://beer-api-prod.idkulab.com/media/drinks/2080beer.png
-Y블랙 IPL,Y Black IPL,맥주,🇰🇷,Pale Lager,4.7%,Y X 핸드앤몰트가 신진 아티스트와 함께 Y의 빛나는 가능성을 발굴합니다. 산뜻한 과일향과 상큼한 시트러스향이 어우러진 블랙 인디언 페일 라거의 반전 매력에 빠져보세요!,https://beer-api-prod.idkulab.com/media/drinks/y_black_ipl.png
-리터구츠 고제 오리지널,Ritterguts Gose Original,맥주,🇩🇪,Wild/Sour Beer - Gose,4.7%,"괴테의 도시 라이프치히의 전통맥주인 고제는 염분이 많이 포함되어 있던 고제강의 물을 사용하여 짠맛과 젖산균발효에서 유래한 신맛을 가지고 있는 것이 특징입니다.
+제주맥주 배럴 시리즈: 블루보틀 커피에디션,Jeju Beer Barrel Series: Blue Bottle Coffe Edition,Beer,한국,13.5%,"맛있는 커피로 세상을 연결하는 블루보틀과 높은 퀄리티의 다양한 맥주를 만드는 제주맥주가 만나 시간과 노력으로 빚어낸 프리미엄 배럴 숙성 맥주를 선보입니다. 제주맥주 배럴 시리즈 블루보틀 커피 에디션은 블루보틀 대표 블렌드인 '벨라 도노반'의 초콜릿, 라즈베리 향미와 버번 배럴, 로스팅 몰트에서 오는 묵직한 아로마가 조화롭게 어우러지며 섬세하고 복합적인 풍미를 만들어 냅니다. 시간, 노력 그리고 커피의 조화를 경험해 보세요.",https://beer-api-prod.idkulab.com/media/drinks/jeju_beer_barrel_series.png
+불닭맥주,Buldak Beer,Beer,한국,5.8%,불닭볶음면과 궁합이 좋은 달달하고 상큼한 망고에일,https://beer-api-prod.idkulab.com/media/drinks/buldak_beer.png
+2080 이공팔공맥주,2080 Beer,Beer,한국,4.5%,오렌지 껍질과 고수 씨앗을 첨가하여 풍부한 맛과 향의 조화가 뛰어난 화이트 밀맥주,https://beer-api-prod.idkulab.com/media/drinks/2080beer.png
+Y블랙 IPL,Y Black IPL,Beer,한국,4.7%,Y X 핸드앤몰트가 신진 아티스트와 함께 Y의 빛나는 가능성을 발굴합니다. 산뜻한 과일향과 상큼한 시트러스향이 어우러진 블랙 인디언 페일 라거의 반전 매력에 빠져보세요!,https://beer-api-prod.idkulab.com/media/drinks/y_black_ipl.png
+리터구츠 고제 오리지널,Ritterguts Gose Original,Beer,독일,4.7%,"괴테의 도시 라이프치히의 전통맥주인 고제는 염분이 많이 포함되어 있던 고제강의 물을 사용하여 짠맛과 젖산균발효에서 유래한 신맛을 가지고 있는 것이 특징입니다.
 여기에 고수씨앗을 첨가해 맛과 풍미를 더한 개성있는 맥주입니다.
 미국의 크래프트 양조장에서 다양한 스타일로 모방되고 있으나 한국에 수입되는 오리지널 고제맥주는 리터구츠 한 종류 뿐입니다.",https://beer-api-prod.idkulab.com/media/drinks/original_ritterguts_gose.png
-KFC 칰,KFC Chick,맥주,🇰🇷,Pale Ale - Golden Ale,4.5%,"칙~~은 캔맥주를 딸 때 나는 시원한 소리와 맛난 치킨을 센스있게 줄여 부르는 소리입니다.
+KFC 칰,KFC Chick,Beer,한국,4.5%,"칙~~은 캔맥주를 딸 때 나는 시원한 소리와 맛난 치킨을 센스있게 줄여 부르는 소리입니다.
 
 글로벌 치킨 브랜드 KFC와 수제맥주 전문 브랜드 카브루가 만나 찾아낸 치킨맛을 최상으로 올려주는 오렌지와 골든에일의 황금비율을 즐겨보세요.",https://beer-api-prod.idkulab.com/media/drinks/kfc_chick.png
-대니쉬 비(어)키퍼스 세종,Danish Bee(r) keepers Saison,맥주,🇰🇷,Pale Ale - Saison,6.5%,"여름 야생화 생꿀과 당근, 생강, 레몬그라스 블렌드 티와 덴마크 유기농 꿀을 대량 투입하여 화사하고 스파이시하면서도 상큼한 캐릭터의 세종",https://beer-api-prod.idkulab.com/media/drinks/danish_beerkeepers_saison.png
-초코 로코 포터,Choco Loco Porter,맥주,🇰🇷,Porter,6.6%,기존 로버스트 포터보다 훨씬 많은 카카오닙스와 바닐라를 투입하여 보다 깊고 진한 초콜릿의 풍미를 느낄 수 있는 포터,https://beer-api-prod.idkulab.com/media/drinks/cholo_loco_porter_30Yrhxd.png
-구스아일랜드 마틸다,Goose Matilda,맥주,🇺🇸,Pale Ale,7%,"금빛 일출의 컬러와 더불어 말린 과일과 정향의 향을 가진 Matilda는 매콤한 효모의 풍미와 만족스러운 드라이 피니쉬를 선보입니다.
+대니쉬 비(어)키퍼스 세종,Danish Bee(r) keepers Saison,Beer,한국,6.5%,"여름 야생화 생꿀과 당근, 생강, 레몬그라스 블렌드 티와 덴마크 유기농 꿀을 대량 투입하여 화사하고 스파이시하면서도 상큼한 캐릭터의 세종",https://beer-api-prod.idkulab.com/media/drinks/danish_beerkeepers_saison.png
+초코 로코 포터,Choco Loco Porter,Beer,한국,6.6%,기존 로버스트 포터보다 훨씬 많은 카카오닙스와 바닐라를 투입하여 보다 깊고 진한 초콜릿의 풍미를 느낄 수 있는 포터,https://beer-api-prod.idkulab.com/media/drinks/cholo_loco_porter_30Yrhxd.png
+구스아일랜드 마틸다,Goose Matilda,Beer,미국,7%,"금빛 일출의 컬러와 더불어 말린 과일과 정향의 향을 가진 Matilda는 매콤한 효모의 풍미와 만족스러운 드라이 피니쉬를 선보입니다.
 전설에 따르면, 마틸다 백작부인이 세운 수도원에서 수도사들이 수세기 동안이나 독특한 에일 맥주를 양조해 왔다고 합니다.
 벨기에에 머무는 동안 이 전설의 수도원과 수도사들의 맥주에 영감을 받은 구스 아일랜드 팀은 시카고로 돌아와 존경의 마음을 담은 벨기에식 페일 에일 Matilda를 만들게 됐습니다.",https://beer-api-prod.idkulab.com/media/drinks/matilda.png
-구스아일랜드 줄리엣,Goose Juliet,맥주,🇺🇸,Wild/Sour Beer,7.1%,"Juliet은 야생효모를 사용하여 발효시킨 후 블랙베리와 함께 와인 배럴에서 숙성시켰습니다.
+구스아일랜드 줄리엣,Goose Juliet,Beer,미국,7.1%,"Juliet은 야생효모를 사용하여 발효시킨 후 블랙베리와 함께 와인 배럴에서 숙성시켰습니다.
 새콤하면서도 달콤한 과일 향 또한 느껴지는, 다양한 맛을 느낄 수 있는 에일 맥주입니다.
 피노 누아 와인 애호가와 벨기에 사워 에일을 즐겨 드시는 분들에게 특히 추천하는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/juliet.png
-구스아일랜드 롤리타,Goose Lolita,맥주,🇺🇸,Pale Ale,7.5%,"Lolita는 분홍장미 빛을 띈 벨기에 스타일 페일 에일 맥주입니다.
+구스아일랜드 롤리타,Goose Lolita,Beer,미국,7.5%,"Lolita는 분홍장미 빛을 띈 벨기에 스타일 페일 에일 맥주입니다.
 야생 효모를 사용하여 발효시킨 후 라즈베리와 함께 와인 배럴에서 숙성시켰습니다.
 청량한 바디감과 라즈베리 향은 물론, 과일 잼의 풍미 또한 은은하게 느낄 수 있습니다.
 벨기에 블랑부아즈 또는 람빅과 같이 과일향이 풍부한 맥주를 즐기는 사람들에게 특히 추천하는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/lolita.png
-버번카운티 브랜드 스타우트 2017,Bourbon County Brand Stout 2017,맥주,🇺🇸,Stout,14.1%,"2017년 버번카운티의 첫 만남은 강렬한 커피, 다크초콜렛, 바닐라, 오크, 파인, 리커리쉬, 당밀의 향 그리고 스모키향입니다.
+버번카운티 브랜드 스타우트 2017,Bourbon County Brand Stout 2017,Beer,미국,14.1%,"2017년 버번카운티의 첫 만남은 강렬한 커피, 다크초콜렛, 바닐라, 오크, 파인, 리커리쉬, 당밀의 향 그리고 스모키향입니다.
 한모금을 마셨을 때에는 묵직한 질감, 그리고 리치한 맛으로 단숨에 사로 잡는 맛입니다.
 
 구스아일랜드가 업계 최초로 배럴에이징을 시도하고 센세이션을 일으킨 맥주입니다.
 임페리얼 스타우트를 양조한 후, 버번카운티 배럴에서 12개월동안 다시 숙성 시켰습니다.
 무더운 여름과 혹독한 겨울로 유명한 시카고의 날씨에서 버번배럴이 수축과 팽창을 거듭하며 임페리얼 스타우트에 버번카운티 위스키와 오크배럴의 풍미를 입혔습니다.
 1년에 단 한번, 블랙프라이데이에만 출시되는 한정판 제품으로 병입 발효가 진행되어 출시 연도에 따라 각기 다른 풍미를 즐길 수 있는 희소한 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/bourbon2017.png
-구스아일랜드 질리안,Goose Gillian,맥주,🇺🇸,Pale Ale,7.5%,"구스아일랜드의 한 양조사가 그의 부인이 종종 간식으로 만들어 준 아뮤즈부쉬에서 영감을 받아, 딸기, 백후추 그리고 꿀의 적절한 조화를 느낄 수 있도록 Gillian을 만들었습니다.
+구스아일랜드 질리안,Goose Gillian,Beer,미국,7.5%,"구스아일랜드의 한 양조사가 그의 부인이 종종 간식으로 만들어 준 아뮤즈부쉬에서 영감을 받아, 딸기, 백후추 그리고 꿀의 적절한 조화를 느낄 수 있도록 Gillian을 만들었습니다.
 맥주 일부를 와인베럴에서 숙성시킨, 새콤하면서도 기분 좋은 달콤함을 느낄 수 있는 벨기에 스타일 팜하우스 에일입니다.",https://beer-api-prod.idkulab.com/media/drinks/gillian.png
-구스아일랜드 할리아,Goose Halia,맥주,🇺🇸,Pale Ale,7.5%,"Halia는 와인 배럴에서 복숭아와 함께 숙성된 팜하우스 에일입니다.
+구스아일랜드 할리아,Goose Halia,Beer,미국,7.5%,"Halia는 와인 배럴에서 복숭아와 함께 숙성된 팜하우스 에일입니다.
 하와이어로 “소중한 사람의 죽음을 기리다” 라는 뜻을 지닌 이 맥주는, 복숭아를 좋아했던 소중한 친구를 기리며 만든 맥주입니다.
 은은한 과일 향과 부드러운 바디감은 복숭아의 새콤하면서도 달콤한 맛으로 피니시를 이룹니다.",https://beer-api-prod.idkulab.com/media/drinks/halia.png
-크래머리 필스너,Kraemerlee Pilsner,맥주,🇰🇷,Pale Lager - Pilsner,4.7%,청량감과 깔끔한 맥아의 진항 풍미가 매력인 필스너. 쌉살함과 고급스런 아로마가 개운하면서도 고소한 피니쉬를 선사. 크래머리 대표 라거,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_pilsner.png
-크래머리 라거,Kraemerlee Lager,맥주,🇰🇷,Pale Lager,4.7%,보리의 구수한 풍미와 깔끔하면서도 부드러운 목 넘김이 특징. 필스너보다 고소하고 에일보다 가벼운 맥주. 첫잔으로 부담 없이 먹기 좋은 맥주,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_lager.png
-크래머리 바이젠,Kraemerlee Weizen,맥주,🇰🇷,Wheat Beer - Weizen,5%,풍부한 과일향이 입안 가득 퍼지는 독일 바이에른 스타일의 오리지널 밀맥주. 독일 현지만큼이나 맛있는 바이젠을 먹고 싶다면 강추,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_weizen.png
-크래머리 바이젠복,Kraemerlee Weizen Bock,맥주,🇰🇷,Bock - Weizen Bock,7%,"바이젠 특유의 부드러우면서도 다양한 아로마를 함유하고 있으며, 오랜 숙성기간을 통해 높은 알코올 함량과 풍부한 바디감을 동시에 느낄 수 있는 복(BOCK) 스타일 맥주",https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_weizen_bock.png
-크래머리 IPA,Kraemerlee IPA,맥주,🇰🇷,India Pale Ale,5%,은은한 달콤함이 느껴지는 몰트의 바디감과 상큼한 홉의 아로마가 잘 조화된 IPA. 홉의 특징이 부각된 미국식 IPA와 비교되는 홉의 밸란스가 매력적인 유럽식 IPA,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_ipa.png
-크래머리 페일에일,Kraemerlee Pale Ale,맥주,🇰🇷,Pale Ale,6.5%,풀내음 베이스에 살짝 쌉쌀하고 상큼한 과일향이 기분 좋게 퍼지는 아메리칸스타일 페일에일. 홉의 시트러스한 매력을 한껏 느껴볼 수 있는 맥주.,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_pale_ale.png
-크래머리 스타우트,Kraemerlee Stout,맥주,🇰🇷,Stout,6%,초콜릿과 커피의 향이 은은하게 느껴지는 가장 베이직한 흑맥주로 스타우트의 정석을 맛볼 수 있는 크래머리 대표 스타우트,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_stout.png
-크래머리 임페리얼 스타우트,Kraemerlee Imperial Stout,맥주,🇰🇷,Stout - Imperial Stout,11%,"스페셜 몰트에서 느껴지는 커피, 카카오, 넛츠의 풍미가 고소하면서도 달달하게 느껴지는, 한 모금에도 기분이 자동 상승되는 임페리얼 스타우트입니다.",https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_imperial_stout.png
-사우어가이스트 오렌지,Sourgeist Orange,맥주,🇰🇷,Wheat Beer - Weisse,7%,"오렌지 과즙의 상큼함과 함께 들어간 레몬의 새콤함,
+크래머리 필스너,Kraemerlee Pilsner,Beer,한국,4.7%,청량감과 깔끔한 맥아의 진항 풍미가 매력인 필스너. 쌉살함과 고급스런 아로마가 개운하면서도 고소한 피니쉬를 선사. 크래머리 대표 라거,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_pilsner.png
+크래머리 라거,Kraemerlee Lager,Beer,한국,4.7%,보리의 구수한 풍미와 깔끔하면서도 부드러운 목 넘김이 특징. 필스너보다 고소하고 에일보다 가벼운 맥주. 첫잔으로 부담 없이 먹기 좋은 맥주,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_lager.png
+크래머리 바이젠,Kraemerlee Weizen,Beer,한국,5%,풍부한 과일향이 입안 가득 퍼지는 독일 바이에른 스타일의 오리지널 밀맥주. 독일 현지만큼이나 맛있는 바이젠을 먹고 싶다면 강추,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_weizen.png
+크래머리 바이젠복,Kraemerlee Weizen Bock,Beer,한국,7%,"바이젠 특유의 부드러우면서도 다양한 아로마를 함유하고 있으며, 오랜 숙성기간을 통해 높은 알코올 함량과 풍부한 바디감을 동시에 느낄 수 있는 복(BOCK) 스타일 맥주",https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_weizen_bock.png
+크래머리 IPA,Kraemerlee IPA,Beer,한국,5%,은은한 달콤함이 느껴지는 몰트의 바디감과 상큼한 홉의 아로마가 잘 조화된 IPA. 홉의 특징이 부각된 미국식 IPA와 비교되는 홉의 밸란스가 매력적인 유럽식 IPA,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_ipa.png
+크래머리 페일에일,Kraemerlee Pale Ale,Beer,한국,6.5%,풀내음 베이스에 살짝 쌉쌀하고 상큼한 과일향이 기분 좋게 퍼지는 아메리칸스타일 페일에일. 홉의 시트러스한 매력을 한껏 느껴볼 수 있는 맥주.,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_pale_ale.png
+크래머리 스타우트,Kraemerlee Stout,Beer,한국,6%,초콜릿과 커피의 향이 은은하게 느껴지는 가장 베이직한 흑맥주로 스타우트의 정석을 맛볼 수 있는 크래머리 대표 스타우트,https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_stout.png
+크래머리 임페리얼 스타우트,Kraemerlee Imperial Stout,Beer,한국,11%,"스페셜 몰트에서 느껴지는 커피, 카카오, 넛츠의 풍미가 고소하면서도 달달하게 느껴지는, 한 모금에도 기분이 자동 상승되는 임페리얼 스타우트입니다.",https://beer-api-prod.idkulab.com/media/drinks/kraemerlee_imperial_stout.png
+사우어가이스트 오렌지,Sourgeist Orange,Beer,한국,7%,"오렌지 과즙의 상큼함과 함께 들어간 레몬의 새콤함,
 프루티한 아로마가 매력적인 베를리너바이세.
 태양빛을 닮은 오렌지 컬러가 에너지를 주는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/sourgeist_orange.png
-사우어가이스트 라즈베리,Sourgeist Raspberry,맥주,🇰🇷,Wheat Beer - Weisse,7%,"라즈베리 과즙의 상큼함과 새콤함,
+사우어가이스트 라즈베리,Sourgeist Raspberry,Beer,한국,7%,"라즈베리 과즙의 상큼함과 새콤함,
 프루티한 아로마가 매력적인 베를리너바이세.
 러블리한 레드코랄 컬러가 오감을 자극하는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/sourgeist_raspeberry.png
-사우어가이스트 에이프리컷,Sourgeist Apricot,맥주,🇰🇷,Wheat Beer - Weisse,7%,"살구 과즙의 상큼함과 달콤함,
+사우어가이스트 에이프리컷,Sourgeist Apricot,Beer,한국,7%,"살구 과즙의 상큼함과 달콤함,
 프루티한 아로마가 매력적인 베를리너바이세.
 나른한듯한 피치 컬러가 마음의 여유를 선사하는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/sourgeist_apricot.png
-멜팅 스타우트,Melting Stout,맥주,🇰🇷,Stout,9%,"스페셜 몰트에서 느껴지는 카카오, 볶은 넛의 풍미에
+멜팅 스타우트,Melting Stout,Beer,한국,9%,"스페셜 몰트에서 느껴지는 카카오, 볶은 넛의 풍미에
 바닐라빈의 아로마가 더해져 달콤한 솔티드 카라멜이 연상되는
 버번 배럴에이징 카라멜 임페리얼 스타우트
 
 ????멜팅스타우트는 배럴에이징을 위해 오크통에 넣어 숙성한 Barrel Work 맥주로 탄산감이 상대적으로 없습니다. 솔티드카라멜의 풍미와 질감을 비슷하게 구현하고 피니시에서 탄산으로 톡톡튀는 요소를 배제하기 위해, 배럴숙성 후에도 2차적인 탄산충진을 자제하였습니다.",https://beer-api-prod.idkulab.com/media/drinks/melting_stout.png
-가평물안개,Gapyeong Hazy Fog Oatmeal IPA,맥주,🇰🇷,India Pale Ale - Oatmeal IPA,6.5%,"오트밀이 선사하는 특유의 바디감과 구수함, 드라이홉핑으로 향긋하면서도 비터함의 밸런스가 매력적인 오트밀IPA. 크래머리가 위치한 가평 조종천에서 피어나는 물안개처럼 Hazy한 맛과 비쥬얼을 맥주로 만나보세요.",https://beer-api-prod.idkulab.com/media/drinks/gapyeong_fog_ipa.png
-내일바이젠,See You Tomorrow Weizen,맥주,🇰🇷,Wheat Beer - Weizen,5.8%,"크래머리와 이탈리아 최고의 브루마스터 다리오(Dario)가 콜라보하여 만든 맥주로 시트라와 심코 홉이 들어갔습니다. 리치, 망고, 파파야, 파인애플의 묵직한 열대과일 아로마의 특징을 가진 ‘시트라(Citra)’ 홉과 솔, 나무의 쌉쌀한 특징이 두드러진 ‘심코(Simcoe) 홉의 만남. 한 모금 마셨을때 부드러운 비터함과 열대과일의 시트러스함이 은은하게 퍼지는 복합적인 매력이 팡팡 느껴집니다.",https://beer-api-prod.idkulab.com/media/drinks/see_you_weizen.png
-패셔니스타,Passionista,맥주,🇰🇷,Wild/Sour Beer - Tropical Gose,4.5%,"과일과 유산균의 콜라보라 할 수 있는 이번 패셔니스타 배치는 달콤한 과일항과 새콤한 신맛, 은은한 짠맛이 어우러진 가볍게 마실 수 있는 Light Body의 고제입니다.
+가평물안개,Gapyeong Hazy Fog Oatmeal IPA,Beer,한국,6.5%,"오트밀이 선사하는 특유의 바디감과 구수함, 드라이홉핑으로 향긋하면서도 비터함의 밸런스가 매력적인 오트밀IPA. 크래머리가 위치한 가평 조종천에서 피어나는 물안개처럼 Hazy한 맛과 비쥬얼을 맥주로 만나보세요.",https://beer-api-prod.idkulab.com/media/drinks/gapyeong_fog_ipa.png
+내일바이젠,See You Tomorrow Weizen,Beer,한국,5.8%,"크래머리와 이탈리아 최고의 브루마스터 다리오(Dario)가 콜라보하여 만든 맥주로 시트라와 심코 홉이 들어갔습니다. 리치, 망고, 파파야, 파인애플의 묵직한 열대과일 아로마의 특징을 가진 ‘시트라(Citra)’ 홉과 솔, 나무의 쌉쌀한 특징이 두드러진 ‘심코(Simcoe) 홉의 만남. 한 모금 마셨을때 부드러운 비터함과 열대과일의 시트러스함이 은은하게 퍼지는 복합적인 매력이 팡팡 느껴집니다.",https://beer-api-prod.idkulab.com/media/drinks/see_you_weizen.png
+패셔니스타,Passionista,Beer,한국,4.5%,"과일과 유산균의 콜라보라 할 수 있는 이번 패셔니스타 배치는 달콤한 과일항과 새콤한 신맛, 은은한 짠맛이 어우러진 가볍게 마실 수 있는 Light Body의 고제입니다.
 
 파인애플, 코코넛, 패션후르츠 과즙과 맥주 본연의 맛을 위해 오랜시간 저온에서 사우어링(souring)하여 유산균이 살아있습니다. 유산균이 살아있어 빠르게 만들어지는 거품의 유지력은 약한 특징이 있습니다.
 
 풋풋한 초여름 5월에 가볍게 마시기 좋은
 Light Body의 트로피컬고제 ‘패셔니스타’
 곧 여러분을 찾아갑니다. ????????????????",https://beer-api-prod.idkulab.com/media/drinks/passionista.png
-임페리얼 필스너,Imperial Pilsner,맥주,🇰🇷,Pale Lager - Pilsner,9%,"밝은 황금색과 기분 좋은 단맛,
+임페리얼 필스너,Imperial Pilsner,Beer,한국,9%,"밝은 황금색과 기분 좋은 단맛,
 적당한 탄산과 시원한 목넘김,
 부드러우면서도 쌉쌀하고 고급스러운 피니시,
 
@@ -284,47 +284,47 @@ Light Body의 트로피컬고제 ‘패셔니스타’
 
 라거, 필스너는 가볍게 먹는다는 편견을 깨면
 뜨거운 여름 강렬한 놈의 ⚡️’KICK’⚡️을 느낄 수 있습니다.????",https://beer-api-prod.idkulab.com/media/drinks/imperial_pilsner.png
-트로피컬 스무디 IPA,Tropical Smoothie IPA,맥주,🇰🇷,India Pale Ale,5.9%,"망고, 패션후르츠, 파인애플 등 과일의 쥬이시함과
+트로피컬 스무디 IPA,Tropical Smoothie IPA,Beer,한국,5.9%,"망고, 패션후르츠, 파인애플 등 과일의 쥬이시함과
 스무디 질감이 입안에서 부드럽게 감도는 트로피컬 스무디 IPA
 
 신선한 과즙의 맥주로
 단맛과 은은한 쓴맛의 밸런스가
 비타민처럼 다가오는 드링커블한 맥주",https://beer-api-prod.idkulab.com/media/drinks/tropical_smoothie_ipa.png
-대포항 스타우트,Daepo Port Stout,맥주,🇰🇷,Stout,5.1%,"다크초콜릿, 초콜릿, 로스티함과 시나몬향의 조화를 느낄 수 있는 스타우트",https://beer-api-prod.idkulab.com/media/drinks/daepo_port_stout.png
-I LOVE 켄싱턴 1,I Love Kensington 1,맥주,🇰🇷,Pale Ale - Golden Ale,4.4%,"산뜻하고 청량하여 가볍게 마실 수 있는 금색 빛깔이 매력적인 골든에일.
+대포항 스타우트,Daepo Port Stout,Beer,한국,5.1%,"다크초콜릿, 초콜릿, 로스티함과 시나몬향의 조화를 느낄 수 있는 스타우트",https://beer-api-prod.idkulab.com/media/drinks/daepo_port_stout.png
+I LOVE 켄싱턴 1,I Love Kensington 1,Beer,한국,4.4%,"산뜻하고 청량하여 가볍게 마실 수 있는 금색 빛깔이 매력적인 골든에일.
 ‌설악산의 웅장함과 에메랄드 빛 동해 바다의 멋진 비경을 자랑하는, 강원도 속초의 대표 리조트 ‘켄싱턴 설악비치’와 콜라보레이션",https://beer-api-prod.idkulab.com/media/drinks/i_love_kensington1.png
-I LOVE 켄싱턴 2,I Love Kensington 2,맥주,🇰🇷,Wheat Beer,5.2%,"바나나향의 은은한 풍미와 거품이 풍성한 밀맥주.
+I LOVE 켄싱턴 2,I Love Kensington 2,Beer,한국,5.2%,"바나나향의 은은한 풍미와 거품이 풍성한 밀맥주.
 강원도 속초의 대표 리조트 ‘켄싱턴 설악비치’와 콜라보레이션 한 두번째 맥주.",https://beer-api-prod.idkulab.com/media/drinks/i_love_kensington2.png
-소호259 IPA,Soho259 IPA,맥주,🇰🇷,India Pale Ale,6.3%,"시트러시한 열대과일의 향이 폭발하는듯한 풍미와 바디감이 있는 아이피에이.
+소호259 IPA,Soho259 IPA,Beer,한국,6.3%,"시트러시한 열대과일의 향이 폭발하는듯한 풍미와 바디감이 있는 아이피에이.
 여유와 낭만을 찾을 수 있는 자유로운 공간, 강원도 속초의 대표 커뮤니티 호스텔 ‘소호259’ 와 콜라보레이션.",https://beer-api-prod.idkulab.com/media/drinks/soho259.png
-루트바나 둔켈 바이젠복,Root Vana Dunkel Weizenbock,맥주,🇰🇷,Bock - Dunkel Weizenbock,7.5%,"카라멜, 건과일 & 바나나의 풍미가 은은하게 느껴지는 국내 상업 양조장 최초의 둔켈 바이젠복.
+루트바나 둔켈 바이젠복,Root Vana Dunkel Weizenbock,Beer,한국,7.5%,"카라멜, 건과일 & 바나나의 풍미가 은은하게 느껴지는 국내 상업 양조장 최초의 둔켈 바이젠복.
 ‌서울 영등포에 있는 '비어바나' 양조장과의 콜라보레이션!",/beer-default.png
-다크리뎀션,Dark Redemption,맥주,🇰🇷,Stout - Imperial Stout,9%,"진저 브레드 쿠키와 추운 겨울의 추위를 녹여주는 허브티의 조합에 영감을 받아 만들어 완성시킨 임페리얼 스타우트
+다크리뎀션,Dark Redemption,Beer,한국,9%,"진저 브레드 쿠키와 추운 겨울의 추위를 녹여주는 허브티의 조합에 영감을 받아 만들어 완성시킨 임페리얼 스타우트
 기존 임페리얼 스타우트 스타일에 시나몬, 카카오닙스, 넛맥 & 카다멈을 첨가하여 스파이시함과 허벌한 느낌을 가미함",https://beer-api-prod.idkulab.com/media/drinks/dark_redemption.png
-루트 라임,Root Lime,맥주,🇰🇷,Specialty Beer - Hazy Fruit Beer,4.8%,"kveik 효모를 사용하고 부재료로 라임과 생강을 넣어
+루트 라임,Root Lime,Beer,한국,4.8%,"kveik 효모를 사용하고 부재료로 라임과 생강을 넣어
 라임의 시트러시함과 생강의 은은한 플로럴함이 조화롭게 느껴지는 Hazy Fruit Beer",https://beer-api-prod.idkulab.com/media/drinks/root_lime.png
-블티나,Breakfast Tea Latte Beer,맥주,🇰🇷,Pale Ale - Hazy Pale Ale,5%,"부재료로 얼그레이 홍차와 유당을 넣고 Citra, Talus 홉을 넣어 얼그레이 밀크티의 부드러움과 향긋한 풍미가 느껴지고 시트러스와 쥬시한 Hazy Pale Ale",https://beer-api-prod.idkulab.com/media/drinks/breakfast_tea_latte_beer.png
-마이 사우어 아이피에이,My Sour IPA,맥주,🇰🇷,India Pale Ale - Sour IPA,5%,"라임, 무화과 & Amarillo, Citra 홉 두가지가 들어가 새콤하고 라임과 무화과의 풍미가 팡팡터지는 산뜻한 IPA",https://beer-api-prod.idkulab.com/media/drinks/my_sour_ipa.png
-이스트 씨 아이피에이,East Sea IPA,맥주,🇰🇷,India Pale Ale,6%,"카비터링 홉을 증량하여 쓴맛을 살리며, 4C 홉 (Columbus, Chinook, Cascade, Centennial) 특유의 솔향과 어씨(earthy)한 풍미가 극대화된 미국 Westcoast IPA의 특징을 살린 IPA",https://beer-api-prod.idkulab.com/media/drinks/east_sea_ipa.png
-하이 & 드라이,High & Dry,맥주,🇰🇷,Strong Ale - Tripel,8%,"전통적인 벨지안 효모의 프루티한 향과 플로럴하고 스파이시한 허브의 풍미가 조화를 이루며 청량하고 깔끔한 맛을 내는 트리펠
+블티나,Breakfast Tea Latte Beer,Beer,한국,5%,"부재료로 얼그레이 홍차와 유당을 넣고 Citra, Talus 홉을 넣어 얼그레이 밀크티의 부드러움과 향긋한 풍미가 느껴지고 시트러스와 쥬시한 Hazy Pale Ale",https://beer-api-prod.idkulab.com/media/drinks/breakfast_tea_latte_beer.png
+마이 사우어 아이피에이,My Sour IPA,Beer,한국,5%,"라임, 무화과 & Amarillo, Citra 홉 두가지가 들어가 새콤하고 라임과 무화과의 풍미가 팡팡터지는 산뜻한 IPA",https://beer-api-prod.idkulab.com/media/drinks/my_sour_ipa.png
+이스트 씨 아이피에이,East Sea IPA,Beer,한국,6%,"카비터링 홉을 증량하여 쓴맛을 살리며, 4C 홉 (Columbus, Chinook, Cascade, Centennial) 특유의 솔향과 어씨(earthy)한 풍미가 극대화된 미국 Westcoast IPA의 특징을 살린 IPA",https://beer-api-prod.idkulab.com/media/drinks/east_sea_ipa.png
+하이 & 드라이,High & Dry,Beer,한국,8%,"전통적인 벨지안 효모의 프루티한 향과 플로럴하고 스파이시한 허브의 풍미가 조화를 이루며 청량하고 깔끔한 맛을 내는 트리펠
 [강원도 쌀 + 펜넬 씨드 + Hallertau Tettnang Hop & Hallertau Blanc Hop]",/beer-default.png
-블티나2,Earl Grey Tea Latte Beer,맥주,🇰🇷,Pale Ale - Hazy Pale Ale,5%,"또 다른 재미를 느낄 수 있는 블티나의 두번째 시리즈!
+블티나2,Earl Grey Tea Latte Beer,Beer,한국,5%,"또 다른 재미를 느낄 수 있는 블티나의 두번째 시리즈!
 홍차, 유당 & 홉의 풍미가 조화롭게 느껴지는 헤이지 쥬시 페일에일
 [Earl Grey Tea + Sabro + HBC 472 Hop]",https://beer-api-prod.idkulab.com/media/drinks/earl_grey_tea_latte_beer.png
-블루 블랙,Blue Black,맥주,🇰🇷,Stout,4.8%,"한미콜라보 프로젝트'를 통해 선보이는 크래프트 루트의 스페셜 맥주!
+블루 블랙,Blue Black,Beer,한국,4.8%,"한미콜라보 프로젝트'를 통해 선보이는 크래프트 루트의 스페셜 맥주!
 블루베리, 메이플시럽, 유당이 첨가되어 은은한 블루베리 느낌의 달콤한 디저트처럼 즐길 수 있는 스위트 스타우트",https://beer-api-prod.idkulab.com/media/drinks/blue_black.png
-썸머사우어,Summer Sour,맥주,🇰🇷,Wild/Sour Beer,5%,"라즈베리, 히비스커스, 코리앤더씨드, 동해안 천연 미네랄소금이 들어가고 로랄 홉의 풍미가 은은하게 풍기는 루비색상의 새콤한 맥주",/beer-default.png
-구스끽스,Goose Ggeeks,맥주,🇰🇷,Wild/Sour Beer - Table Fruit Sour,3.6%,"1세대 크래프트비어 브랜드로 맥주 문화 알리기에 앞장 선 구스아일랜드와 끽비어가 함께 새롭고 재밌는 콜라보 Summer 맥주를 선보입니다.
+썸머사우어,Summer Sour,Beer,한국,5%,"라즈베리, 히비스커스, 코리앤더씨드, 동해안 천연 미네랄소금이 들어가고 로랄 홉의 풍미가 은은하게 풍기는 루비색상의 새콤한 맥주",/beer-default.png
+구스끽스,Goose Ggeeks,Beer,한국,3.6%,"1세대 크래프트비어 브랜드로 맥주 문화 알리기에 앞장 선 구스아일랜드와 끽비어가 함께 새롭고 재밌는 콜라보 Summer 맥주를 선보입니다.
 샴페인을 베이스로 오렌지 쥬스를 섞어 만드는 칵테일 '미모사'에서 영감을 받아, 김천에서 자란 샤인 머스캣 포도와 프랑스산 블러디 오렌지를 듬뿍 넣어 양조해 과일의 새콤함이 매력적인 테이블 사우어 맥주입니다.",/beer-default.png
-레모니 웨이브,Lemony Wave,맥주,🇰🇷,Wild/Sour Beer - Pastry Sour Ale,8.5%,"레모니 웨이브는 레몬 케이크에 영감을 받아 만든 페이스트리 사워 에일입니다. 설레임과 같은 유산균을 사용한 맥주에 레몬 케이크와 최대한 비슷한 맛을 내고자 바닐라, 아몬드, 레몬 제스트 등을 넣어 만들었습니다.
+레모니 웨이브,Lemony Wave,Beer,한국,8.5%,"레모니 웨이브는 레몬 케이크에 영감을 받아 만든 페이스트리 사워 에일입니다. 설레임과 같은 유산균을 사용한 맥주에 레몬 케이크와 최대한 비슷한 맛을 내고자 바닐라, 아몬드, 레몬 제스트 등을 넣어 만들었습니다.
 
 바닐라의 단맛, 아몬드의 너티함, 레몬의 상큼함에 요구르트 같은 풍미가 잘 어우러지며, 와인처럼 잔을 돌리면 더욱 깊은 맛을 느낄 수 있는, 마치 디저트를 마시는 것 같은 맥주입니다.
 
 다가오는 가을이 설레이는 요즘, 레모니 웨이브와 새콤달콤한 휴식을 즐겨주세요!",https://beer-api-prod.idkulab.com/media/drinks/lemony_wave.png
-새새검검정정,Double SaeGeomjung,맥주,🇰🇷,India Pale Ale - Double Black IPA,7.4%,"새새검검정정'은 Black IPA / Cascadian Dark Ale 스타일로, 2021년 출시된 ‘새검정’의 Double IPA 버전입니다.
+새새검검정정,Double SaeGeomjung,Beer,한국,7.4%,"새새검검정정'은 Black IPA / Cascadian Dark Ale 스타일로, 2021년 출시된 ‘새검정’의 Double IPA 버전입니다.
 IPA 스타일을 베이스로 검은 맥아의 조심스러운 사용을 통해 색과 캐릭터에 변화를 준 맥주입니다. 과실 향이 메인 캐릭터를 이루고, 코코아와 같은 힌트가 이를 받쳐주며 밸런스를 이룹니다.
 이 맥주는 'Bottle conditioning' 기법을 활용해 패키징 된 맥주로, 부드러운 탄산 질감을 가집니다. 병에서 2차 발효 및 숙성된 제품입니다. 냉장 보관 후 음용해 주세요.",https://beer-api-prod.idkulab.com/media/drinks/double_sae_geomjung.png
-만춘 <레이트 스프링>,Late Spring,맥주,🇰🇷,Bock - Maibock,5.8%,"독일의 스트롱 비어인 Bock bier 스타일 중에 Maibock 이란 스타일이 있는데요, 5월의 맥주란 뜻을 가집니다.
+만춘 <레이트 스프링>,Late Spring,Beer,한국,5.8%,"독일의 스트롱 비어인 Bock bier 스타일 중에 Maibock 이란 스타일이 있는데요, 5월의 맥주란 뜻을 가집니다.
 다른 말로 Frühlingsbier라고도 부르고, 봄의 맥주라 하지요.
 -
 이 봄의 술에 야생꽃꿀과 흰 재스민을 넣어 양조했습니다.
@@ -334,133 +334,133 @@ IPA 스타일을 베이스로 검은 맥아의 조심스러운 사용을 통해 
 
 밖은 봄이 지나가고 있고 마음엔 겨울 같은 때가 계속되고 있습니다. 그리운 이들도 늘어가고 지쳐가기만 합니다.
 하지만 마음속에도 봄날이 반드시 찾아올 거라고 생각합니다. 친구들 모두 희망을 잃지 않으시길 기도합니다.",https://beer-api-prod.idkulab.com/media/drinks/late_spring.png
-비에르 드 제주,Biere de Jeju,맥주,🇰🇷,Pale Ale - Saison,7%,"‘비에르 드 제주’는 지난 겨우내 천천히 발효시킨 세종입니다. 마치 지도 없이 떠나는 여행처럼, 처음부터 어떤 맥주를 만들어야겠다는 뚜렷한 그림보다는 봄이 될 때까지 맥주가 발효되고 변하는 과정을 천천히 지켜보았습니다. 이번 배치는 스테인레스 발효조에서 1차 발효 후 제주도 구좌에서 재배된 제철 유기농 금귤과 함께 한 달 동안 2차 발효를 거쳤습니다. 완성된 맥주는 병과 케그에 나누어 담아 양조장 셀러에서 한 달간 추가로 숙성 기간을 가진 뒤 6월 중 출시 예정입니다. 긴 작업의 맥주였던 만큼 팀원들의 정성과 노고가 들어갔습니다. 우리가 간직해 놓은 봄날 제주의 한 조각을 드립니다.",https://beer-api-prod.idkulab.com/media/drinks/biere_de_jeju.png
-미드소마,Mid Sommer,맥주,🇰🇷,India Pale Ale - Kveik IPA,6.4%,"미드소마'는 작년에 출시되어 많은 사랑을 받았던 '노르딕 IPA'의 썸머 리메이크 버전 아이피에이 입니다. ‘한여름’이란 뜻의 미드소마는 북유럽의 하지 축제에서 그 이름을 따왔습니다.
+비에르 드 제주,Biere de Jeju,Beer,한국,7%,"‘비에르 드 제주’는 지난 겨우내 천천히 발효시킨 세종입니다. 마치 지도 없이 떠나는 여행처럼, 처음부터 어떤 맥주를 만들어야겠다는 뚜렷한 그림보다는 봄이 될 때까지 맥주가 발효되고 변하는 과정을 천천히 지켜보았습니다. 이번 배치는 스테인레스 발효조에서 1차 발효 후 제주도 구좌에서 재배된 제철 유기농 금귤과 함께 한 달 동안 2차 발효를 거쳤습니다. 완성된 맥주는 병과 케그에 나누어 담아 양조장 셀러에서 한 달간 추가로 숙성 기간을 가진 뒤 6월 중 출시 예정입니다. 긴 작업의 맥주였던 만큼 팀원들의 정성과 노고가 들어갔습니다. 우리가 간직해 놓은 봄날 제주의 한 조각을 드립니다.",https://beer-api-prod.idkulab.com/media/drinks/biere_de_jeju.png
+미드소마,Mid Sommer,Beer,한국,6.4%,"미드소마'는 작년에 출시되어 많은 사랑을 받았던 '노르딕 IPA'의 썸머 리메이크 버전 아이피에이 입니다. ‘한여름’이란 뜻의 미드소마는 북유럽의 하지 축제에서 그 이름을 따왔습니다.
 
 노르웨이의 농가 효모 Kveik이 주는 시트러스한 느낌과 Citra, Strata, Idaho 7 홉이 주는 열대과일의 캐릭터가 서로의 경계를 허물며 조화롭게 드러나는 맥주입니다. 무더운 여름날 끽비어 컴퍼니가 드리는 한 잔의 여름 축제를 즐겨보세요!",https://beer-api-prod.idkulab.com/media/drinks/mid_sommer.png
-뮬 고제,Mule Gose,맥주,🇰🇷,Wild/Sour Beer - Gose,4.2%,"뮬 고제'는 진저비어를 베이스로 한 칵테일 모스코 뮬(Moscow mule)을 독일의 새콤하고 짭짤한 고제(Gose) 스타일로 재해석한 맥주입니다.
+뮬 고제,Mule Gose,Beer,한국,4.2%,"뮬 고제'는 진저비어를 베이스로 한 칵테일 모스코 뮬(Moscow mule)을 독일의 새콤하고 짭짤한 고제(Gose) 스타일로 재해석한 맥주입니다.
 
 지난해 사랑받았던 '고제, 모스코 뮬'의 리메이크 버전으로 생강, 라임주스, 라임 잎, 코리앤더씨, 핑크 솔트 등 다양한 부재료들이 조화롭게 사용되었습니다.",https://beer-api-prod.idkulab.com/media/drinks/mule_gose.png
-콘 퍼 세컨드,Corn Per Second,맥주,🇰🇷,Pale Ale - Vanilla Cream Ale,5.1%,"미국의 유럽 출신 이민자들은 유럽의 페일 라거 열풍에 대항하기 위하여 옥수수, 쌀 등을 섞어 깔끔한 풍미의 맥주들을 만들었습니다. 이번에 소개해 드릴 맥주는 그중 하나인 크림 에일(Cream Ale)입니다.
+콘 퍼 세컨드,Corn Per Second,Beer,한국,5.1%,"미국의 유럽 출신 이민자들은 유럽의 페일 라거 열풍에 대항하기 위하여 옥수수, 쌀 등을 섞어 깔끔한 풍미의 맥주들을 만들었습니다. 이번에 소개해 드릴 맥주는 그중 하나인 크림 에일(Cream Ale)입니다.
 
 콘 퍼 세컨드는 제주도에서 자란 '초당 옥수수'를 부재료로 사용하여 만들었습니다.
 
 여기에 버번 바닐라라고도 불리우는 마다가스카르 바닐라 빈을 후발효 및 숙성 단계에서 사용해 달콤한 풍미를 더하고자 했습니다. 인공적인 재료들은 사용하지 않았고, 자연 그대로의 재료들로 은은한 맛의 레이어를 쌓으려고 노력했습니다.
 
 '월간 끽비어' 맥주를 비롯해 종종 우리나라에서 나는 제철 재료를 사용한 맥주로 찾아 뵙겠습니다.",https://beer-api-prod.idkulab.com/media/drinks/corn_per_second.png
-45일,Day 45,맥주,🇰🇷,Pale Lager - German Pilsner,5.4%,"Day 45'는 독일식 필스에 초점을 맞춰 양조 되었습니다. 맥주명 뒤에 숫자는 라거링 일수를 의미합니다. 긴 시간 동안 수없이 라거를 만들며 동료들과 고민에 고민을 거듭했고, '좋은 라거'를 관통하는 핵심은 '라거링(Lagering)'에 들인 시간' 이라는 결론을 얻었습니다.
+45일,Day 45,Beer,한국,5.4%,"Day 45'는 독일식 필스에 초점을 맞춰 양조 되었습니다. 맥주명 뒤에 숫자는 라거링 일수를 의미합니다. 긴 시간 동안 수없이 라거를 만들며 동료들과 고민에 고민을 거듭했고, '좋은 라거'를 관통하는 핵심은 '라거링(Lagering)'에 들인 시간' 이라는 결론을 얻었습니다.
 
 대부분의 현대 라거는 길어도 1달 이내에 패키징 되고 있으며. 저희 이어라운드 제품인 '꿀꺽' 또한 품질이 준수하더라도 최소 1달의 발효와 숙성 시간을 기준으로 만들어지고 있습니다.
 
 10월 월간 끽비어 45일을 시작으로 60일, 90일 숙성된 맥주가 차례대로 선보여질 예정입니다.",https://beer-api-prod.idkulab.com/media/drinks/day45.png
-60일,Day 60,맥주,🇰🇷,Pale Lager - German Pilsner,5.4%,"Day 60'은 'Day 45'의 연작으로 독일식 필스에 초점을 맞춰 양조 되었습니다. 맥주명 뒤에 숫자는 라거링 일수를 의미합니다.
+60일,Day 60,Beer,한국,5.4%,"Day 60'은 'Day 45'의 연작으로 독일식 필스에 초점을 맞춰 양조 되었습니다. 맥주명 뒤에 숫자는 라거링 일수를 의미합니다.
 
 Day 시리즈의 마지막인 90일은 월간 끽비어 프로젝트와 별개로 추후 선보여질 예정입니다.",https://beer-api-prod.idkulab.com/media/drinks/day60.png
-90일,Day 90,맥주,🇰🇷,Pale Lager - German Pilsner,5.4%,"Day 90'은 'Day 45', 'Day60'의 연작으로 독일식 필스에 초점을 맞춰 양조 되었습니다. 맥주명 뒤에 숫자는 라거링 일수를 의미합니다.
+90일,Day 90,Beer,한국,5.4%,"Day 90'은 'Day 45', 'Day60'의 연작으로 독일식 필스에 초점을 맞춰 양조 되었습니다. 맥주명 뒤에 숫자는 라거링 일수를 의미합니다.
 
 Day 시리즈의 마지막인 90일을 통해 숙성된 시간을 즐겨보세요.",https://beer-api-prod.idkulab.com/media/drinks/day90.png
-복숭아가 있는 겨울,Wintry Nectarines,맥주,🇰🇷,Pale Ale - Saison,6.7%,"‘복숭아가 있는 겨울’은 지난 6월에 출시된 비에르 드 제주와 동일한 방향성을 가지고 있는 맥주입니다. 명확한 목적지보다는 넉넉한 시선으로 맥주가 발효하고 변화되는 과정을 지켜봅니다.
+복숭아가 있는 겨울,Wintry Nectarines,Beer,한국,6.7%,"‘복숭아가 있는 겨울’은 지난 6월에 출시된 비에르 드 제주와 동일한 방향성을 가지고 있는 맥주입니다. 명확한 목적지보다는 넉넉한 시선으로 맥주가 발효하고 변화되는 과정을 지켜봅니다.
 
 이번 배치는 세종 효모를 중심으로 한 혼합된 균주로 1차 발효를 거쳤습니다. 이후 다른 탱크로 옮겨져 별도의 온도 조절 없이 천도복숭아와 함께 세 달간 2차 발효를 거쳤습니다. 사용된 복숭아는 여름의 시작을 알리는 오월도(김천)와 신선복숭아(경산)가 4:1 비율로 들어갔으며, 이 기간 동안 원주와 과일이 잘 접촉할 수 있도록 삐자쥬(pigéage) 해주었습니다.
 
 완성된 맥주는 병과 케그로 나누어 담아 양조장 셀러에서 두 달 동안 추가로 숙성과 안정화 과정을 거쳤습니다. 모든 과정은 스테인리스 용기에서 진행되었으며, 나무통은 사용하지 않았습니다.",https://beer-api-prod.idkulab.com/media/drinks/wintry_nectarines.png
-카페 스트라파짜토,Caffe Strapazzato,맥주,🇰🇷,Stout - Espresso Stout,5%,"카페 스트라파짜토'는 갓 내린 에스프레소에 설탕 한 스푼을 넣고 카카오 파우더로 토핑 한 나폴리 스타일의 커피로, 월간 끽 비어 12월 맥주는 이 커피에서 영감을 받아 만들게 되었습니다.
+카페 스트라파짜토,Caffe Strapazzato,Beer,한국,5%,"카페 스트라파짜토'는 갓 내린 에스프레소에 설탕 한 스푼을 넣고 카카오 파우더로 토핑 한 나폴리 스타일의 커피로, 월간 끽 비어 12월 맥주는 이 커피에서 영감을 받아 만들게 되었습니다.
 
 이번 맥주를 위해 공수한 원두는 에티오피아의 ‘제레나 아바야 (Gelena Abaya) 허니 G1’으로 꽃, 블루베리, 꿀, 코튼 캔디 등의 컵 노트를 가지고 있습니다.
 소규모 커피 로스터리 Kettle Works Company에서 원두를 볶았으며, 신선한 커피 캐릭터를 위해 모든 후숙성 작업은 커피가 로스팅 된 날로부터 3일 이내에 진행되었습니다.
 
 초콜릿 캐릭터는 Cholaca 사의 리퀴드 카카오를 사용해 풍성함을 더했습니다.
 몰트빌에 포함된 오트밀은 오일리 한 바디를 더해주며, 블랙과 캐러멜 몰트 등 여러 스페셜티 몰트들을 통해 스타우트가 낼 수 있는 커피스러움과 정말 커피가 만나 한 잔의 진한 풍미를 선사합니다.",https://beer-api-prod.idkulab.com/media/drinks/caffe_strapazzato.png
-네버마인드,Never Mind,맥주,🇰🇷,Stout - Irish Dry Stout,4.1%,"같은 스타일의 맥주로 우리에게 친숙하며 세계적으로 유명한 기네스, 머피스에 대한 오마주가 담겨있는 맥주이자, 끽비어컴퍼니가 맥주로 그려낼 수 있는 스펙트럼의 한 갈래이기도 합니다.
+네버마인드,Never Mind,Beer,한국,4.1%,"같은 스타일의 맥주로 우리에게 친숙하며 세계적으로 유명한 기네스, 머피스에 대한 오마주가 담겨있는 맥주이자, 끽비어컴퍼니가 맥주로 그려낼 수 있는 스펙트럼의 한 갈래이기도 합니다.
 
 이 의미들을 담아내고, 스타일의 완성도를 높이기 위해 검은 맥아를 비롯한 원재료들을 정교하게 사용하고, 오트몰트와 프라이밍기법을 활용해 질소가 주는 느낌을 대신하였습니다.
 
 섬세한 탄산감과 부드러운 질감, 깔끔한 바디감을 통해 음용성을 살리면서 스타우트의 특징인 커피, 초콜릿, 카라멜, 볶은 풍미들을 조화롭게 나타냈습니다.
 
 맥주의 이름처럼, 걱정 없이, 모든 일이 잘 풀리는 새 해가 되길 바라며, 소중한 사람들과 함께하는 자리에 편안한 맥주가 되었으면 좋겠습니다.",https://beer-api-prod.idkulab.com/media/drinks/never_mind.png
-내추럴 가든: 제주 댕유지,Natural Garden Sour Ale: Dangyuja,맥주,🇰🇷,Wild/Sour Beer - Sour Ale,4.9%,갓 수확한 신선한 제주 토종 유자로 보통의 유자와는 결이 다른 아로마에 쌉살한 느낌이 강한 댕유지의 향을 최대한 살린 새콤한 사워에일.,/beer-default.png
-강원 에일,Gangwon Ale,맥주,🇰🇷,Pale Ale - American Pale Ale,4.5%,"시트러스, 플로럴, 자몽 등의 풍미 극대화된 홉의 향과 맛이 일품",https://beer-api-prod.idkulab.com/media/drinks/gangwon_ale.png
-전라 라거,Jeolla Lager,맥주,🇰🇷,Pale Lager - Munich Helles,4.5%,"전라북도에서 자란 호프 사용, 은은한 과일향, 깔끔한 피니시",https://beer-api-prod.idkulab.com/media/drinks/jeolla_lager.png
-스퀴즈 라거,Squeeze Lager,맥주,🇰🇷,Pale Lager - Munich Helles,5%,"2021 대한민국 주류대상 라거부문 대상
+내추럴 가든: 제주 댕유지,Natural Garden Sour Ale: Dangyuja,Beer,한국,4.9%,갓 수확한 신선한 제주 토종 유자로 보통의 유자와는 결이 다른 아로마에 쌉살한 느낌이 강한 댕유지의 향을 최대한 살린 새콤한 사워에일.,/beer-default.png
+강원 에일,Gangwon Ale,Beer,한국,4.5%,"시트러스, 플로럴, 자몽 등의 풍미 극대화된 홉의 향과 맛이 일품",https://beer-api-prod.idkulab.com/media/drinks/gangwon_ale.png
+전라 라거,Jeolla Lager,Beer,한국,4.5%,"전라북도에서 자란 호프 사용, 은은한 과일향, 깔끔한 피니시",https://beer-api-prod.idkulab.com/media/drinks/jeolla_lager.png
+스퀴즈 라거,Squeeze Lager,Beer,한국,5%,"2021 대한민국 주류대상 라거부문 대상
 스페셜 몰트에서 비롯된 깊은 풍미, 산뜻하고 깔끔한 피니시",https://beer-api-prod.idkulab.com/media/drinks/squeeze_lager.png
-파리의 꿈,Dream of Paris,맥주,🇰🇷,Wild/Sour Beer - Saison,5%,유산균 발효하여 발생한 산미가 혀끝을 사로잡는 산뜻한 샴페인의 풍미,https://beer-api-prod.idkulab.com/media/drinks/dream_of_paris.png
-밤이면 밤마다,Night After Night,맥주,🇰🇷,Porter - American Porter,5.8%,"2020 & 2021 대한민국 주류대상 에일부문 대상
+파리의 꿈,Dream of Paris,Beer,한국,5%,유산균 발효하여 발생한 산미가 혀끝을 사로잡는 산뜻한 샴페인의 풍미,https://beer-api-prod.idkulab.com/media/drinks/dream_of_paris.png
+밤이면 밤마다,Night After Night,Beer,한국,5.8%,"2020 & 2021 대한민국 주류대상 에일부문 대상
 다크 초콜릿&커피의 풍부한 맛, 입안 가득 퍼지는 밤의 풍미",https://beer-api-prod.idkulab.com/media/drinks/night_after_night.png
-소양강 에일,Soyang-gang Ale,맥주,🇰🇷,Pale Ale - American Pale Ale,5%,"2020 대한민국 주류대상 Best of 2020
+소양강 에일,Soyang-gang Ale,Beer,한국,5%,"2020 대한민국 주류대상 Best of 2020
 복숭아, 열대과일 풍미를 내는 고급 홉만을 엄선하여 극대화된 홉의 향과 맛",https://beer-api-prod.idkulab.com/media/drinks/soyang_gang_ale.png
-스퀴즈 화이트,Squeeze White,맥주,🇰🇷,Wheat Beer - Belgian Witbier,5%,"벨기에 호가든 밀맥주 재현. 오렌지 껍질, 고수 씨앗 첨가. 산뜻하며 훌륭한 목 넘김",https://beer-api-prod.idkulab.com/media/drinks/squeeze_white.png
-춘천 IPA,Chuncheon IPA,맥주,🇰🇷,India Pale Ale - American IPA,6%,"2019 대한민국 주류대상 에일부문 대상
+스퀴즈 화이트,Squeeze White,Beer,한국,5%,"벨기에 호가든 밀맥주 재현. 오렌지 껍질, 고수 씨앗 첨가. 산뜻하며 훌륭한 목 넘김",https://beer-api-prod.idkulab.com/media/drinks/squeeze_white.png
+춘천 IPA,Chuncheon IPA,Beer,한국,6%,"2019 대한민국 주류대상 에일부문 대상
 더블 드라이 호핑 하여 폭발적인 홉 향과 열대과일 등의 풍미 가득",https://beer-api-prod.idkulab.com/media/drinks/chuncheon_ipa.png
-353 라거,353 Lager,맥주,🇰🇷,Pale Lager - Munich Helles,5%,"2019 대한민국 주류대상 라거부문 대상
+353 라거,353 Lager,Beer,한국,5%,"2019 대한민국 주류대상 라거부문 대상
 은은한 과일의 향, 라거 본연의 청량감과 함께 깊은 풍미와 산뜻한 피니시",https://beer-api-prod.idkulab.com/media/drinks/353_lager.png
-하노이 맥주,Hanoi Beer,맥주,🇻🇳,Pale Lager,4.6%,"하노이 맥주 맥주는 연간 생산량이 HABECO 제품의 총 생산량의 70 %를 차지합니다. 
+하노이 맥주,Hanoi Beer,Beer,베트남,4.6%,"하노이 맥주 맥주는 연간 생산량이 HABECO 제품의 총 생산량의 70 %를 차지합니다. 
 밝은 노란색 색상, 쫀쫀한 거품, 매끄러운 쓴맛, 부드럽고 감칠맛 나는 맥주로 베트남 북부의 지방 및 도시 시장에서 안정적인 위치를 차지합니다.
 
 베트남은 동남아 국가 중 맥주 소비가 2위일 정도로 맥주를 많이 마시는 나라입니다.
 맥주사랑이 넘치는 나라답게 기대이상의 맛과 풍미를 자랑하며 판매되고 있습니다.
 베트남에서 시원하게 즐기는 베트남 맥주 이제 한국에서도 느낄 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/bia_ha_noi.png
-앙코르 스타우트,Angkor Extra Stout,맥주,🇰🇭,Stout,8%,"몽드 셀렉션을 다수 수상한 캄브류에서 만들어졌으며, 품질과 맛이 보장된 흑맥주 입니다.
+앙코르 스타우트,Angkor Extra Stout,Beer,캄보디아,8%,"몽드 셀렉션을 다수 수상한 캄브류에서 만들어졌으며, 품질과 맛이 보장된 흑맥주 입니다.
 강한 도수와 칠흑같은 블랙칼라를 가지고 있으며 아이보리 빛을 내는 거품이 피어오릅니다.
 훌륭한 바디감과 맛을 가진, 좋은 스타우트가 갖춰야할 향를 고루 갖춘 흑맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/angkor_extra_stout.png
-사이공익스포트,Saigon Export,맥주,🇻🇳,Pale Lager,4.9%,"베트남을 대표하는 라거 비어로 깔끔한 목넘김이 좋고 홉의 향이 은은히 지속적으로 유지되는 것이 특징입니다,
+사이공익스포트,Saigon Export,Beer,베트남,4.9%,"베트남을 대표하는 라거 비어로 깔끔한 목넘김이 좋고 홉의 향이 은은히 지속적으로 유지되는 것이 특징입니다,
 <사이공 익스포트>는 베트남에서 오랫동안 사랑받고 있는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/saigon_export.png
-드렁큰초콜릿 스타우트,Drunken Chocolate Stout,맥주,🇰🇷,Stout,4.5%,"""Drunken Chocolate""이라는 초콜릿 케이크 레시피를 모티브로 만든 제품입니다. 카카오닙스와 코코아 분말을 사용하여 초콜릿의 풍미가 더욱 깊어진 스타우트입니다. 달콤쌉싸름한 초콜릿맛과 부드럽고 쫀득한 식감으로 디저트로 즐기기에도 좋습니다.",https://beer-api-prod.idkulab.com/media/drinks/drunken_choco_stout.png
-커피리브레 커피맥주,Coffee Libre Coffee Beer,맥주,🇰🇷,Specialty Beer,4.5%,"스페셜티 원두 전문점 ""키피리브레""와 협업한 커피맥주 입니다. 커피리브레의 다크리브레 블렌드와 호주산 맥아의 고소함을 느낄 수 있으며 목넘김이 좋아 마시키 쉽다는 특징을 갖고 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/brewguru_coffee_libre.png
-부루구루 봄,Brewguru Cherry Blossom,맥주,🇰🇷,Specialty Beer,4%,"왜인지 설레고 간질간질한 그 계절.
+드렁큰초콜릿 스타우트,Drunken Chocolate Stout,Beer,한국,4.5%,"""Drunken Chocolate""이라는 초콜릿 케이크 레시피를 모티브로 만든 제품입니다. 카카오닙스와 코코아 분말을 사용하여 초콜릿의 풍미가 더욱 깊어진 스타우트입니다. 달콤쌉싸름한 초콜릿맛과 부드럽고 쫀득한 식감으로 디저트로 즐기기에도 좋습니다.",https://beer-api-prod.idkulab.com/media/drinks/drunken_choco_stout.png
+커피리브레 커피맥주,Coffee Libre Coffee Beer,Beer,한국,4.5%,"스페셜티 원두 전문점 ""키피리브레""와 협업한 커피맥주 입니다. 커피리브레의 다크리브레 블렌드와 호주산 맥아의 고소함을 느낄 수 있으며 목넘김이 좋아 마시키 쉽다는 특징을 갖고 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/brewguru_coffee_libre.png
+부루구루 봄,Brewguru Cherry Blossom,Beer,한국,4%,"왜인지 설레고 간질간질한 그 계절.
 따뜻하고 싱그러운 봄을 그대로 담았습니다.????
 입 안 가득 부드럽게 전해지는 벚꽃향과 신선한 체리가 산뜻하고 화사한 봄을 닮았습니다.",https://beer-api-prod.idkulab.com/media/drinks/brewguru_bom.png
-사무엘스미스 넛 브라운에일,Samuel Smiths Nut Brown Ale,맥주,🇬🇧,Brown Ale,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); best barley malt, yeast and aromatic hops; fermented in ‘stone Yorkshire squares’ to create a relatively dry ale with rich nutty colour and palate of beech nuts, almonds and walnuts.
+사무엘스미스 넛 브라운에일,Samuel Smiths Nut Brown Ale,Beer,영국,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); best barley malt, yeast and aromatic hops; fermented in ‘stone Yorkshire squares’ to create a relatively dry ale with rich nutty colour and palate of beech nuts, almonds and walnuts.
 Best served at about 55°F (13°C).
 Ingredients • water, malted barley, yeast, cane sugar, hops, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_nut_brown.png
-사무엘스미스 태디포터,Samuel Smiths Taddy Porter,맥주,🇬🇧,Porter,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground), malted barley, roasted malt, yeast and hops. Fermented in ‘stone Yorkshire squares’.
+사무엘스미스 태디포터,Samuel Smiths Taddy Porter,Beer,영국,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground), malted barley, roasted malt, yeast and hops. Fermented in ‘stone Yorkshire squares’.
 Best served at about 55°F (13°C).
 Ingredients • water, malted barley, yeast, hops, cane sugar, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_taddy_porter.png
-사무엘스미스 오트밀 스타우트,Samuel Smiths Oatmeal Stout,맥주,🇬🇧,Stout,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); fermented in ‘stone Yorkshire squares’ to create an almost opaque, wonderfully silky and smooth textured ale with a complex medium dry palate and bittersweet finish.
+사무엘스미스 오트밀 스타우트,Samuel Smiths Oatmeal Stout,Beer,영국,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); fermented in ‘stone Yorkshire squares’ to create an almost opaque, wonderfully silky and smooth textured ale with a complex medium dry palate and bittersweet finish.
 Best served at about 55°F (13°C).
 Ingredients • water, malted barley, cane sugar, roasted malt, yeast, hops, oatmeal, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_oatmeal_stout.png
-사무엘스미스 퓨어 브루 오가닉 라거,Samuel Smiths Pure Brewed Organic Lager,맥주,🇬🇧,Pale Lager,5%,"Brewed with great care using only organic malted barley, organic hops, medium-soft water and a bottom-fermenting yeast; matured at low temperatures to bring out its delicate flavour and soft hop-character finish.
+사무엘스미스 퓨어 브루 오가닉 라거,Samuel Smiths Pure Brewed Organic Lager,Beer,영국,5%,"Brewed with great care using only organic malted barley, organic hops, medium-soft water and a bottom-fermenting yeast; matured at low temperatures to bring out its delicate flavour and soft hop-character finish.
 The cold maturation period allows the bottom-fermenting yeasts to secondary ferment and improve this lager’s flavour, purity and condition.
 Best served at about 44°F (7°C).
 Ingredients • water, organic malted barley, yeast, organic hops, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_pure_brewed.png
-사무엘스미스 오가닉 페일에일,Samuel Smiths Organic Pale Ale,맥주,🇬🇧,Pale Ale,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); best barley malt, yeast and aromatic hops; fermented in ‘stone Yorkshire squares’ to create a full, rounded flavour and after-taste.
+사무엘스미스 오가닉 페일에일,Samuel Smiths Organic Pale Ale,Beer,영국,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); best barley malt, yeast and aromatic hops; fermented in ‘stone Yorkshire squares’ to create a full, rounded flavour and after-taste.
 Best served at about 51°F (11°C).
 Ingredients • water, organic malted barley, yeast, organic hops, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_pale_ale.png
-사무엘스미스 인디아 에일,Samuel Smiths India Ale,맥주,🇬🇧,India Pale Ale,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); best malted barley and a generous amount of choicest aroma hops; fermented in ‘stone Yorkshire squares’ to create an exceptionally full-flavoured complex ale with an abundance of maltiness and fruity hop character.
+사무엘스미스 인디아 에일,Samuel Smiths India Ale,Beer,영국,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); best malted barley and a generous amount of choicest aroma hops; fermented in ‘stone Yorkshire squares’ to create an exceptionally full-flavoured complex ale with an abundance of maltiness and fruity hop character.
 The label on the bottle is based on Samuel Smith’s Victorian letterhead when the brewery was a contractor to Her Majesty Queen Victoria’s forces.
 Best served at about 51°F (11°C).
 Ingredients • Water, malted barley, yeast, hops.",https://beer-api-prod.idkulab.com/media/drinks/smiths_india_ale.png
-사무엘스미스 요크셔 스팅고,Samuel Smiths Yorkshire Stingo,맥주,🇬🇧,Strong Ale,9%,"Some of the oak casks at Samuel Smith’s date back more than a century with the individual oak staves being replaced by the Old Brewery coopers over the years. Gradually the casks soak in more & more of the character of the ale fermented in stone Yorkshire squares. Yorkshire Stingo is aged for at least a year, matured in these well-used oak casks in the brewery’s underground cellars deriving fruit, raisin, treacle toffee, Christmas pudding and slight oaky flavours, before being further naturally conditioned in bottle.
+사무엘스미스 요크셔 스팅고,Samuel Smiths Yorkshire Stingo,Beer,영국,9%,"Some of the oak casks at Samuel Smith’s date back more than a century with the individual oak staves being replaced by the Old Brewery coopers over the years. Gradually the casks soak in more & more of the character of the ale fermented in stone Yorkshire squares. Yorkshire Stingo is aged for at least a year, matured in these well-used oak casks in the brewery’s underground cellars deriving fruit, raisin, treacle toffee, Christmas pudding and slight oaky flavours, before being further naturally conditioned in bottle.
 LIMITED AVAILABILITY
 Best served at about 51°F (11°C).
 Ingredients • water, malted barley, cane sugar, hops, yeast.",https://beer-api-prod.idkulab.com/media/drinks/smiths_yorkshire_stingo.png
-사무엘스미스 윈터 웰컴 에일,Samuel Smiths Winter Welcome Ale,맥주,🇬🇧,Dark Ale - Winter Warmer,6%,"This seasonal beer is a limited edition brewed for the short days and long nights of winter. The full body resulting from fermentation in ‘stone Yorkshire squares’ and the luxurious malt character, which will appeal to a broad range of drinkers, is balanced against whole-dried Fuggle and Golding hops with nuances and complexities that should be contemplated before an open fire.
+사무엘스미스 윈터 웰컴 에일,Samuel Smiths Winter Welcome Ale,Beer,영국,6%,"This seasonal beer is a limited edition brewed for the short days and long nights of winter. The full body resulting from fermentation in ‘stone Yorkshire squares’ and the luxurious malt character, which will appeal to a broad range of drinkers, is balanced against whole-dried Fuggle and Golding hops with nuances and complexities that should be contemplated before an open fire.
 LIMITED EDITION SEASONAL BREW
 Best served at about 51°F (11°C).
 Ingredients • water, malted barley, yeast, hops, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_winter_welcome.png
-사무엘스미스 오가닉 위트,Samuel Smiths Organic Wheat Beer,맥주,🇬🇧,Wheat Beer,5%,"Wheat beer has always been known as an elixir or tonic; especially when unfiltered with the brewer’s yeast still in the bottle. Organic Wheat Beer is golden, fruity – the naturally occurring fruit esters from the yeast give prominent citrus and banana flavours – and thirst quenching.
+사무엘스미스 오가닉 위트,Samuel Smiths Organic Wheat Beer,Beer,영국,5%,"Wheat beer has always been known as an elixir or tonic; especially when unfiltered with the brewer’s yeast still in the bottle. Organic Wheat Beer is golden, fruity – the naturally occurring fruit esters from the yeast give prominent citrus and banana flavours – and thirst quenching.
 Serve chilled at 44°F (7°C) with an optional slice of lemon.
 Ingredients • water, organic malted wheat, organic malted barley, yeast, organic hops, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_wheat.png
-사무엘스미스 오가닉 사이더,Samuel Smiths Organic Cider,맥주,🇬🇧,Etc - Cider,5%,"A medium dry cider with brilliant straw colour, light body, clean apple flavour and a gentle apple blossom finish. Samuel Smith’s makes this cider at a small, independent British brewery, the oldest brewery in Yorkshire.
+사무엘스미스 오가닉 사이더,Samuel Smiths Organic Cider,Beer,영국,5%,"A medium dry cider with brilliant straw colour, light body, clean apple flavour and a gentle apple blossom finish. Samuel Smith’s makes this cider at a small, independent British brewery, the oldest brewery in Yorkshire.
 NATURALLY GLUTEN FREE
 Best served at about 44°F (7°C).
 Ingredients • water, organic apple concentrate, organic cane sugar, malic acid, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_cider.png
-사무엘스미스 오가닉 페리,Samuel Smiths Organic Perry,맥주,🇬🇧,Etc - Pear Cider,5%,"A dry, sparkling pear cider with glowing pale straw colour, smooth body, crisp but rich flavour and the gentle aroma of a summer pear orchard. Samuel Smith’s makes this perry at a small, independent British brewery, the oldest brewery in Yorkshire.
+사무엘스미스 오가닉 페리,Samuel Smiths Organic Perry,Beer,영국,5%,"A dry, sparkling pear cider with glowing pale straw colour, smooth body, crisp but rich flavour and the gentle aroma of a summer pear orchard. Samuel Smith’s makes this perry at a small, independent British brewery, the oldest brewery in Yorkshire.
 NATURALLY GLUTEN FREE
 Best served at about 44°F (7°C).
 Ingredients • water, organic pear concentrate, organic cane sugar, malic acid, yeast, organic pear extract, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_cherry.png
-사무엘스미스 오가닉 체리,Samuel Smiths Organic Cherry Fruit Beer,맥주,🇬🇧,Specialty Beer - Fruit Beer,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 체리,Samuel Smiths Organic Cherry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
 Ingredients • Water, organic malted barley, organic malted wheat, organic cane sugar, organic cherry concentrate, organic cherry extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_perry.png
-사무엘스미스 오가닉 스트로베리,Samuel Smiths Organic Strawberry Fruit Beer,맥주,🇬🇧,Specialty Beer - Fruit Beer,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 스트로베리,Samuel Smiths Organic Strawberry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
 Ingredients • water, organic malted barley, organic malted wheat, organic cane sugar, organic strawberry concentrate, organic strawberry extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_strawberry.png
-사무엘스미스 오가닉 라즈베리,Samuel Smiths Organic Raspberry Fruit Beer,맥주,🇬🇧,Specialty Beer - Fruit Beer,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 라즈베리,Samuel Smiths Organic Raspberry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
 Ingredients • water, organic malted barley, organic malted wheat, organic cane sugar, organic raspberry concentrate, organic raspberry extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_raspberry.png
-사무엘스미스 알콜 프리 샘 브라운 에일,Samuel Smiths Alcohol Free Sam’s Brown Ale,맥주,🇬🇧,Non-alcoholic,0.5%,"A superior alcohol free ale, less than 0.5%ABV, dark brown in colour with mahogany highlights and a lingering tight ecru head. The nose is malt forward and the beer is dry and satisfying. The dry malty character is an excellent complement to spicy food. The bottle label is based on an advertising poster used by Samuel Smith’s in the 1950s.
+사무엘스미스 알콜 프리 샘 브라운 에일,Samuel Smiths Alcohol Free Sam’s Brown Ale,Beer,영국,0.5%,"A superior alcohol free ale, less than 0.5%ABV, dark brown in colour with mahogany highlights and a lingering tight ecru head. The nose is malt forward and the beer is dry and satisfying. The dry malty character is an excellent complement to spicy food. The bottle label is based on an advertising poster used by Samuel Smith’s in the 1950s.
 Best served at about 55°F (13°C).
 Ingredients • water, malted barley, yeast, hops.",https://beer-api-prod.idkulab.com/media/drinks/smiths_free_sams_brown_ale.png
-봄의 모양,Shape of Spring,맥주,🇰🇷,Pale Ale - Saison,5.3%,"‘봄의 모양’은 봄의 시작을 알리는 맥주로 스타일은 세종(Saison)입니다. 옛 벨기에 농부들의 맥주가 그러했듯 보리 맥아를 베이스로 밀, 귀리, 호밀 등 다양한 곡물을 사용했고 아울러 산뜻함과 드라이한 피니시를 위해 제주 감귤꽃에서 채취한 야생꿀을 더했습니다.
+봄의 모양,Shape of Spring,Beer,한국,5.3%,"‘봄의 모양’은 봄의 시작을 알리는 맥주로 스타일은 세종(Saison)입니다. 옛 벨기에 농부들의 맥주가 그러했듯 보리 맥아를 베이스로 밀, 귀리, 호밀 등 다양한 곡물을 사용했고 아울러 산뜻함과 드라이한 피니시를 위해 제주 감귤꽃에서 채취한 야생꿀을 더했습니다.
 
 1차 발효는 양조팀에서 선별한 세종 효모로 진행되었으며, 발효 후에는 Citra와 Azacca로 드라이 호핑 했습니다. 1차 발효가 끝난 맥주는 추운 겨울이 오기 전인 11월에 병과 케그로 나누어 담았고 양조장 셀러에서 네 달 동안 추가로 숙성과 안정화 과정을 거쳤습니다. 모든 과정은 나무통이 아닌 스테인리스 용기에서 진행했습니다.",https://beer-api-prod.idkulab.com/media/drinks/shape_of_spring.png
-뽀할라 수빌라,Põhjala Suvila,맥주,🇪🇪,India Pale Ale - Session IPA,3.8%,"A hazy DDH session IPA brewed with juicy Citra and Mosaic hops.
+뽀할라 수빌라,Põhjala Suvila,Beer,에스토니아,3.8%,"A hazy DDH session IPA brewed with juicy Citra and Mosaic hops.
 
 Taste: Sweet biscuity malts mix with a pillowy soft oat malt body that gets layered with tropical fruits and tinned nectarines. A touch of fresh hoppy bitterness comes in at the end, balancing out the sweetness and making you crave another sip.
 
@@ -471,7 +471,7 @@ Nose: Fresh white peaches and juicy pineapple mingle with fresh citrus zest, fil
 Malts: Pilsner zero, Oat malt, Dextrin malt, Golden promise low colour, Maltodextrin
 
 Hops: Citra, Mosaic, Vic Secret, Columbus",https://beer-api-prod.idkulab.com/media/drinks/suvila.png
-뽀할라 라아거,Põhjala Laager,맥주,🇪🇪,Pale Lager - Lager,4.7%,"A crisp easy drinking lager brewed for every occasion.
+뽀할라 라아거,Põhjala Laager,Beer,에스토니아,4.7%,"A crisp easy drinking lager brewed for every occasion.
 
 Taste: A crisp hoppy bitterness combines with delicate notes of toasted biscuit and freshly baked white bread.
 
@@ -482,7 +482,7 @@ Nose: Floral hops and rich bready malts are joined by just a hint of white peppe
 Malts: Pilsner zero, Dextrin malt, Wheat malt, Munich malt
 
 Hops: Magnum, Tettnang, Hallertauer Mittelfrüh",https://beer-api-prod.idkulab.com/media/drinks/laager.png
-뽀할라 비르말리제,Põhjala Virmalised,맥주,🇪🇪,India Pale Ale,6.5%,"A powerful and hoppy IPA that uses a blend of American hops, giving the beer a fresh citrus and grapefruit punch. Contains barley malt.
+뽀할라 비르말리제,Põhjala Virmalised,Beer,에스토니아,6.5%,"A powerful and hoppy IPA that uses a blend of American hops, giving the beer a fresh citrus and grapefruit punch. Contains barley malt.
 
 Taste: Initially pink grapefruit juice will wash over your tongue, with a zing of lively carbonation that follows you all the way down. Lime zest and even a hint of peppercorn can be found if left on the tongue, before the massive mango kick knocks through your teeth.
 
@@ -495,7 +495,7 @@ Malts: Pilsner Zero, Cara pale, Crystal 150
 Hops: Columbus, Citra, Yellow Sub, Azacca
 
 Translation: Aurora Borealis (The Northern Lights)",https://beer-api-prod.idkulab.com/media/drinks/virmalised.png
-뽀할라 프란츠라우어 0,Põhjala Prenzlauer 0,맥주,🇪🇪,Non-alcoholic - Weisse,0.5%,"A rich and creamy non-alcoholic sour beer, brewed with raspberries.
+뽀할라 프란츠라우어 0,Põhjala Prenzlauer 0,Beer,에스토니아,0.5%,"A rich and creamy non-alcoholic sour beer, brewed with raspberries.
 
 Taste: Smooth, fresh oats mix with sweet lactose to give a full and creamy body balanced by a fresh raspberry taste. Gentle acidity comes through on the aftertaste with more raspberries following, letting this slide down easy as perfect accompaniment to a sunny day.
 
@@ -506,7 +506,7 @@ Nose: Fresh raspberry and hints of sweet malts combined with invitingly creamy h
 Malts: Pilsner zero, Dextrin malt, Golden naked oats, maltodextrin, lactose
 
 Hops: Hallertau Blanc, Hüll Melon, raspberries",https://beer-api-prod.idkulab.com/media/drinks/prenzlauer-0.png
-뽀할라 툰드라,Põhjala Tundra,맥주,🇪🇪,Non-alcoholic - IPA,0.5%,"A refreshing citrus-forward non-alcoholic IPA brewed with spruce tips.
+뽀할라 툰드라,Põhjala Tundra,Beer,에스토니아,0.5%,"A refreshing citrus-forward non-alcoholic IPA brewed with spruce tips.
 
 Taste: Overripe mango and melon mix with oat biscuits and fresh citrus. Hints of refreshing spruce resin and a pleasant tingle of carbonation join the aftertaste, with a final touch of freshly zested lemon.
 
@@ -517,7 +517,7 @@ Nose: Bright lemon and mixed citrus zest combine with tropical pineapple notes t
 Malts: Dextrin malt, T50 malt, Crystal 150, Golden naked oats, Maltodextrin, Lactose
 
 Hops: Citra, Yellow sub, Spruce tips",https://beer-api-prod.idkulab.com/media/drinks/tundra.png
-뽀할라 오렌지 고제,Põhjala Orange Gose,맥주,🇪🇪,Wild/Sour Beer - Gose,5.5%,"A citrus-forward gose brewed with Oranges, Coriander, Himalayan rock salt, and our house culture of lactobacillus.
+뽀할라 오렌지 고제,Põhjala Orange Gose,Beer,에스토니아,5.5%,"A citrus-forward gose brewed with Oranges, Coriander, Himalayan rock salt, and our house culture of lactobacillus.
 
 Taste: Refreshing citrus sour notes come through mixed with hints of fresh rye fields, and balanced out by a sweet, jammy orange juiciness. Even more floral zest shines through as the glass warms.
 
@@ -528,7 +528,7 @@ Nose: Freshly peeled citrus, hints of exotic spicy coriander, and some tropical 
 Malts: Pilsner Zero, wheat malt, rye malt, cara pale
 
 Hops: Hallertau Blanc, HBC 431",https://beer-api-prod.idkulab.com/media/drinks/orange-gose.png
-뽀할라 코스모스,Põhjala Kosmos,맥주,🇪🇪,India Pale Ale - NE IPA,5.5%,"An intergalactic IPA brewed with huge amounts of Citra and Mosaic.
+뽀할라 코스모스,Põhjala Kosmos,Beer,에스토니아,5.5%,"An intergalactic IPA brewed with huge amounts of Citra and Mosaic.
 
 Taste: Sweet hops dominate, with a light malt backbone underneath. Tropical fruits and fresh citrus make up the bulk of this nectar like beer, with juicy notes and a low bitterness clearing the way for another glass.
 
@@ -541,7 +541,7 @@ Malts: Pilsner Zero, flaked wheat, flaked oats
 Hops: Mosaic, Citra, El Dorado, Vic Secret
 
 Translation: Space",https://beer-api-prod.idkulab.com/media/drinks/kosmos.png
-뽀할라 헬지,Põhjala Helge,맥주,🇪🇪,Pale Ale,5%,"A gluten free hazy pale ale brewed with juicy tropical new world hops. Contains less than 20mg of gluten per kg.
+뽀할라 헬지,Põhjala Helge,Beer,에스토니아,5%,"A gluten free hazy pale ale brewed with juicy tropical new world hops. Contains less than 20mg of gluten per kg.
 
 Taste: Sweet citrus fruits and deliciously overripe pineapple rolls around the tongue before being joined by fresh coconut and a pleasantly sweet and creamy oat mouthfeel, matched with a delicate tingling carbonation. Peach and bright stone fruits join in and a juicy, refreshing, passionfruit-like hop character lingers on the tongue.
 
@@ -552,7 +552,7 @@ Nose: Freshly zested lime, stewed pineapple, fragrant mango, and hints of toaste
 Malts: Pilsner, Flaked oats, Golden naked oats, Oat malt, Dextrin malt, Maltodextrin
 
 Hops: Sabro, El Dorado, Vic Secret, Galaxy, Simcoe",https://beer-api-prod.idkulab.com/media/drinks/helge.png
-뽀할라 오투,Põhjala Õhtu,맥주,🇪🇪,Porter,5.5%,"An easy going porter brewed with oats and rye, bursting with vanilla and chocolate flavours.
+뽀할라 오투,Põhjala Õhtu,Beer,에스토니아,5.5%,"An easy going porter brewed with oats and rye, bursting with vanilla and chocolate flavours.
 
 Taste: Sweet caramel malts jump out first, with red berries and hints of smooth morning coffee following — a light nuttiness and toffee follows, with huge chocolate notes coming in, all washed down with a creamy vanilla finish.
 
@@ -565,7 +565,7 @@ Malts: Munich malt, Pilsner Zero, Flaked oats, Cara pale, Cara 150, Cara 300, Ca
 Hops: Magnum, First Gold
 
 Translation: Evening",https://beer-api-prod.idkulab.com/media/drinks/ohtu.png
-뽀할라 우스마임,Põhjala Uss Maailm,맥주,🇪🇪,India Pale Ale - Session IPA,4.7%,"A hop-forward California-inspired session beer. Brewed with oat flakes for an extra silky mouthfeel. Hopped and dry hopped with a blend of New World hops (Galaxy and Mosaic). Contains wheat and barley malts and unmalted oats.
+뽀할라 우스마임,Põhjala Uss Maailm,Beer,에스토니아,4.7%,"A hop-forward California-inspired session beer. Brewed with oat flakes for an extra silky mouthfeel. Hopped and dry hopped with a blend of New World hops (Galaxy and Mosaic). Contains wheat and barley malts and unmalted oats.
 
 Taste: Dry and clean, this tastes as it smells – joining the fruity nose is a lemon and lime kick, with just enough bitterness to balance it out.
 
@@ -578,7 +578,7 @@ Malts: Pilsner Zero, Wheat malt, Oat flakes, Cara pale
 Hops: Magnum, Galaxy, Mosaic
 
 Translation: The New World",https://beer-api-prod.idkulab.com/media/drinks/uus-maailm.png
-뽀할라 무스트 쿨드,Põhjala Must Kuld,맥주,🇪🇪,Porter,7.8%,"A rich porter with smooth honey notes. Brewed with lactose for that extra silky texture. Enjoy on its own or as a dessert at the end of a decadent meal. Contains barley malt and lactose.
+뽀할라 무스트 쿨드,Põhjala Must Kuld,Beer,에스토니아,7.8%,"A rich porter with smooth honey notes. Brewed with lactose for that extra silky texture. Enjoy on its own or as a dessert at the end of a decadent meal. Contains barley malt and lactose.
 
 Taste: As with the aroma, chocolate will come through first and foremost – this time a creamy white chocolate. Balancing this is a suggestion of delicate coffee with a decadent hint of raspberry and blackcurrant.
 
@@ -591,7 +591,7 @@ Malts: Pilsner Zero, Munich malt, Cara pale, Crystal 50, Crystal 150, Crystal 20
 Hops: Magnum, Goldings
 
 Translation: Black Gold",https://beer-api-prod.idkulab.com/media/drinks/must-kuld.png
-뽀할라 웨에,Põhjala Öö,맥주,🇪🇪,Porter - Imperial Baltic Porter,10.5%,"An Imperial Baltic Porter as dark as the Estonian winter nights. Strong enough to keep you warm through the cold evenings.
+뽀할라 웨에,Põhjala Öö,Beer,에스토니아,10.5%,"An Imperial Baltic Porter as dark as the Estonian winter nights. Strong enough to keep you warm through the cold evenings.
 
 Taste: A rich body comes through at first. Initially the espresso-like acidity is balanced by a sweet taste of caramelised toffee. As your glass warms up you should expect to taste redcurrant, mixed with a dark chocolate, washed down with a slight alcoholic warmth.
 
@@ -604,7 +604,7 @@ Malts: Pilsner Zero, Munich, Carafa II Special, Special B, Chocolate malt, Cryst
 Hops: Magnum, Northern brewer
 
 Translation: Night",https://beer-api-prod.idkulab.com/media/drinks/oo.png
-뽀할라 필키,Põhjala Pilky,맥주,🇪🇪,Pale Lager - Pilsner,5%,"A refreshingly modern German-style pilsner.
+뽀할라 필키,Põhjala Pilky,Beer,에스토니아,5%,"A refreshingly modern German-style pilsner.
 
 Taste: A crisp and clean malt base leads into zesty citrus and hints of sweet honeydew melon followed again by a light biscuity maltiness somewhat reminiscent of pancakes and grandmother’s house in summer. Gentle but assertive hop bitterness finishes off, whilst being washed down by an elegant level of carbonation.
 
@@ -615,7 +615,7 @@ Nose: Fresh lemongrass and delicate elderflower lead you into the glass, and as 
 Malts: Pilsner Zero, Wheat malt, Munich malt
 
 Hops: Tettnang, Saphir, Spalter Select",https://beer-api-prod.idkulab.com/media/drinks/pilky.png
-뽀할라 라이 리버,Põhjala Rye River,맥주,🇪🇪,Pale Ale - Rye Ale,4.5%,"A malt forward session style ale brewed with malted and unmalted rye.
+뽀할라 라이 리버,Põhjala Rye River,Beer,에스토니아,4.5%,"A malt forward session style ale brewed with malted and unmalted rye.
 
 Taste: Like a well-baked loaf of bread straight from the oven the first tastes come from sweet malts with just a hint of caramelised sugar. Spicy rye joins as the beer warms, with notes of black pepper and slightly flamed orange zest. Gentle carbonation helps lift the smooth body and leaves a mouthwatering spicy sweetness on the aftertaste.
 
@@ -626,7 +626,7 @@ Nose: Sweet toasted rye bread topped with orange jam, and a delicate aroma of ho
 Malts: Munich malt, Pilsner Zero, Amber malt, Red malt, Rye malt, Red Rye Crystal malt, Flaked rye
 
 Hops: Columbus, Yellow Sub, Hüll Melon",https://beer-api-prod.idkulab.com/media/drinks/rye-river.png
-뽀할라 토름,Põhjala Torm,맥주,🇪🇪,Wild/Sour Beer - Imperial Gose,8%,"A strong sour and salty wheat beer brewed with lingonberry, heather tips, and honey.
+뽀할라 토름,Põhjala Torm,Beer,에스토니아,8%,"A strong sour and salty wheat beer brewed with lingonberry, heather tips, and honey.
 
 Taste: First comes an inviting honey like sweetness and sourdough bread, balanced by a cascade of lingonberry and fruit character. Smooth wheat slides in, followed by freshly zested lemon riding in with the acidity, whilst a crisp berry bitterness comes through on the aftertaste.
 
@@ -637,7 +637,7 @@ Nose: Lingonberries and freshly blooming heather.
 Malts: Pale malt, Wheat malt, Flaked Spelt, Flaked Wheat
 
 Hops: HBC 431, Coriander seeds, Lingonberries, Honey, Heather tips, Himalayan pink salt",https://beer-api-prod.idkulab.com/media/drinks/torm.png
-뽀할라 포레스트뱅어,Põhjala Forest Bänger,맥주,🇪🇪,Stout - Imperial Stout,12.5%,"A banging Imperial stout brewed with smashed rowan berries, Estonian juniper wood, and smoked malts.
+뽀할라 포레스트뱅어,Põhjala Forest Bänger,Beer,에스토니아,12.5%,"A banging Imperial stout brewed with smashed rowan berries, Estonian juniper wood, and smoked malts.
 
 Taste: Smooth, rich berries mix with an explosion of smoke and spice - fennel, molasses, grape, pine resin and the hint of pipe tobacco.
 
@@ -648,7 +648,7 @@ Nose: Freshly chopped juniper wood and tarry, campfire smoke mingles with overri
 Malts: Pale malt, Munich malt, Carafa Special T-2, Dark chocolate malt, Chocolate rye malt, Birch smoked rye malt, Special B, Cara 300, Cherry smoked pale malt, Peated malt, Flaked oats, Demerara sugar
 
 Hops: Columbus, First Gold, Rowanberries, Juniper wood",https://beer-api-prod.idkulab.com/media/drinks/forest-banger.png
-뽀할라 포르치니,Põhjala Porcini,맥주,🇪🇪,Porter - Salted porcini porter,9%,"A salted Baltic porter brewed with porcini mushrooms and smoked malts.
+뽀할라 포르치니,Põhjala Porcini,Beer,에스토니아,9%,"A salted Baltic porter brewed with porcini mushrooms and smoked malts.
 
 Taste: Smoked mushrooms and dark chocolate, mineral salt and gentle umami notes come through first. Toasted oak and hints of red fruits follow, before a more prominent and distinctive porcini note joins in, layering a full mouthfeel with yet more umami. Gentle bitterness follows, with just a hint of sweet biscuity malt to finish, leading you out of the woods and back to civilisation.
 
@@ -659,7 +659,7 @@ Nose: Like the open door of an old smoke sauna, aromas of juniper, birch, and hi
 Malts: Pale malt, Carafa T-2 Special, Pear smoked rye malt, Flaked oats, Cara pale, Chateau biscuit malt, Cherry smoked rye malt, Peated black malt, Peated rye malt, Peated malt, Crystal 300, Birch smoked rye malt
 
 Hops: Columbus, Chinook, Porcini mushrooms, Himalayan pink rock salt",https://beer-api-prod.idkulab.com/media/drinks/porcini.png
-뽀할라 포트오버이지,Põhjala Port Over Easy,맥주,🇪🇪,Porter - Port Wine BA Imperial Baltic Porter,10.5%,"Collab with Jester King. A Baltic Porter brewed with carmelised Estonian birch syrup and Texan soul, aged in Port Wine barrels.
+뽀할라 포트오버이지,Põhjala Port Over Easy,Beer,에스토니아,10.5%,"Collab with Jester King. A Baltic Porter brewed with carmelised Estonian birch syrup and Texan soul, aged in Port Wine barrels.
 
 Taste: Sweet sticky port wine comes through followed by a slight vanilla taste, reminiscent of toasted Juniper branches and stewed mulberries - lingering on the finish is a smooth taste of mineral rich birch syrup, as if poured over freshly made oat porridge served with a side of plum jam.
 
@@ -670,7 +670,7 @@ Nose: Rich raisins, dark chocolate, and candied almonds leap out of the glass, w
 Malts: Pale malt, Munich malt, Rye malt, Flaked oats, Carafa 2 Special, Cara Pale, Chocolate malt, Cara 150, Dark Birch syrup, Demerara sugar
 
 Hops: Northern Brewer",https://beer-api-prod.idkulab.com/media/drinks/port-over-easy.png
-뽀할라 놈므,Põhjala Nõmme,맥주,🇪🇪,Pale Ale - Birch and Juniper Ale,6.5%,"Birrificio Italiano collab. Traditional style ale brewed with birch bark, juniper, and spruce tips
+뽀할라 놈므,Põhjala Nõmme,Beer,에스토니아,6.5%,"Birrificio Italiano collab. Traditional style ale brewed with birch bark, juniper, and spruce tips
 
 Video: The making of Nõmme ↗
 
@@ -683,7 +683,7 @@ Nose: Strong birch and ready malts on the nose with just a hint of fragrant citr
 Malts: Pilsner malt, pale malt, munich malt, rye malt
 
 Hops: Eureka, Bramling X, birch bark, juniper branches, spruce tips",https://beer-api-prod.idkulab.com/media/drinks/nomme.png
-뽀할라 라우가스,Põhjala Laugas,맥주,🇪🇪,Specialty Beer - Barrel Aged Imperial Gruit,12.3%,"A traditional ale, spiced with Estonian herbs, caraway and juniper berries, aged in bourbon barrels.
+뽀할라 라우가스,Põhjala Laugas,Beer,에스토니아,12.3%,"A traditional ale, spiced with Estonian herbs, caraway and juniper berries, aged in bourbon barrels.
 
 Taste: Rich sweet malty notes come through, before being dashed through with the somehow citrusy taste of juniper berries drying by a fireplace. Earthy spices then appear, including long forgotten herbal aromas that are strangely familiar, as if remembering a childhood hike through nature, or the wild, gnarly, primeval end of your grandmothers herb garden.
 
@@ -694,7 +694,7 @@ Finally, the gentle carbonation lifts the creamy notes from the bourbon barrels,
 Appearance: Copper red with a quickly fading beige head.
 
 Nose: Bourbon vanilla and toffee comes through at first, joined by hints of a jammy Berry character. As the head dissipates some aromas of farmhouse bread spice start to dominate, before being joined by a sweet and spicy herbal character - rosemary, eucalyptus and more.",https://beer-api-prod.idkulab.com/media/drinks/laugas.png
-뽀할라 메츠,Põhjala Mets,맥주,🇪🇪,India Pale Ale - Black IPA,7%,"A forest-inspired black IPA brewed with hand picked spruce tips and forest blueberries.
+뽀할라 메츠,Põhjala Mets,Beer,에스토니아,7%,"A forest-inspired black IPA brewed with hand picked spruce tips and forest blueberries.
 
 Taste: A rich citrus hop character and intense lemony touch from spruce tips hit the tongue first. Berries and red fruits - blueberries, raspberries, and redcurrant come through, balanced by an assertive bitterness. Slight coffee notes compliment a rich caramel maltiness.
 
@@ -705,7 +705,7 @@ Nose: Spruce tips, blueberry leaves, pine resin jump out of the glass - the smel
 Malts: Pale malt, Munich malt, Cara Pale, Cara 150, Cara 300, Black Malt, Carafa Type 2 Special, Flaked Barley
 
 Hops: Magnum, Amarillo, Columbus, Mosaic, Yellow Sub, spruce tips, forest blueberries",https://beer-api-prod.idkulab.com/media/drinks/mets.png
-뽀할라 칼라나,Põhjala Kalana,맥주,🇪🇪,Brown Ale,8%,"Brown ale brewed with hand picked pine needles from Kalana village and fresh vanilla pods.
+뽀할라 칼라나,Põhjala Kalana,Beer,에스토니아,8%,"Brown ale brewed with hand picked pine needles from Kalana village and fresh vanilla pods.
 
 Taste: Toasted dark rye bread with a resiny, pine kick - more vanilla follows through and merges with the sweetness of the malt, leaving a full and creamy aftertaste.
 
@@ -716,7 +716,7 @@ Nose: Rich, sweet, vanilla creme brûlée comes through, followed by a malty swe
 Malts: Pale malt, Munich malt, Cara 50, Brown malt, Cara pale, Flaked oats, Rye malt, Amber malt, Cara 150
 
 Hops: Magnum, Centennial, Simcoe, Pine needles, Vanilla pods",https://beer-api-prod.idkulab.com/media/drinks/kalana.png
-뽀할라 Château Noir,Põhjala Château Noir,맥주,🇪🇪,Porter - BA Imperial Baltic Porter,12%,"A vinous Imperial Baltic Porter aged in 2017/2018 Bordeaux red wine barrels and Pedro Ximenez barrels.
+뽀할라 Château Noir,Põhjala Château Noir,Beer,에스토니아,12%,"A vinous Imperial Baltic Porter aged in 2017/2018 Bordeaux red wine barrels and Pedro Ximenez barrels.
 
 Taste: Staring off with rich, barrel forward notes of oak, cloves, and vanilla Château Noir then leads you down a moonlit path through your very own vin-yard plucking sweet jammy flavours of blackberry and raisins along the way, with hints of tart cherry and vinous tannins to take in as the beer warms. Finally you are hit with an indulgent finish of dark chocolate and cascara, with faint aromas of jasmine and honeysuckle as the night closes around you.
 
@@ -727,7 +727,7 @@ Nose: Smoked plums, pomegranate molasses, and sweet caramel coated cranberries, 
 Malts: Pilsner, Munich malt, Pale malt, Carafa special T-2, Special B, Dark chocolate malt, Chocolate rye, Cara 300, Cara 150, Red ale, Flaked barley, Demerara sugar
 
 Hops: Northern Brewer, Magnum, Chinook, Simcoe, Pacifica",https://beer-api-prod.idkulab.com/media/drinks/chateau-noir.png
-뽀할라 야쿠 레이브,Põhjala Jätku Leiba,맥주,🇪🇪,Porter - BA Imperial Porter,12.5%,"A rich Imperial Porter brewed with toasted rye flakes, aged in Bourbon and American Rye Whiskey barrels.
+뽀할라 야쿠 레이브,Põhjala Jätku Leiba,Beer,에스토니아,12.5%,"A rich Imperial Porter brewed with toasted rye flakes, aged in Bourbon and American Rye Whiskey barrels.
 
 Taste: Dried plums and hints of winter spices dominate, with a silky smooth lingering caramel aftertaste.
 
@@ -738,7 +738,7 @@ Nose: Oven fresh rye bread and jam, hints of cracked black pepper and juniper br
 Malts: Munich, Pale ale, Vienna, Pilsner zero, Finest Pale ale, Amber malt, Carafa special T-2, Chocolate rye, Brown malt, Flaked oats, Oat malt, Golden naked oats, Red rye crystal, Special B, Red malt, Caramel pale, Dark chocolate malt, Cara 300, T-50, Toasted rye flakes, Muscavado sugar, Demerara sugar
 
 Hops: Chinook, Columbus, Magnum, Eureka, Northern Brewer, Hull melon",https://beer-api-prod.idkulab.com/media/drinks/jatku-leiba.png
-뽀할라 곤 캠핑,Põhjala Gone Camping,맥주,🇪🇪,Stout - BA Imperial Stout,11.5%,"An epic Imperial Stout aged in Rum, Mezcal, and Scotch for 11 months, inspired by good times around a campfire with friends.
+뽀할라 곤 캠핑,Põhjala Gone Camping,Beer,에스토니아,11.5%,"An epic Imperial Stout aged in Rum, Mezcal, and Scotch for 11 months, inspired by good times around a campfire with friends.
 
 Taste: Sweet maple syrup mixes with rich oaky tannins and dark chocolate, coating the tongue before offering a spicy lingering taste of chewy liquorice.
 
@@ -749,7 +749,7 @@ Nose: Rich, burnt sugar and molasses is buffered by hints of espresso and raisin
 Malts: Pilsner zero, Pilsner, Munich malt, Carafa special T-2, Dark chocolate malt, Aromatic malt, Cara 150, T-50, Amber malt, Red ale, Flaked oats, Special B, Cara 300, Dark sugar
 
 Hops: Columbus, Magnum, Ekuanot, Northern Brewer",https://beer-api-prod.idkulab.com/media/drinks/gone-camping.png
-뽀할라 바나나,Põhjala Banaananen,맥주,🇪🇪,Stout - BA Imperial Stout,13.5%,"A rum BA Imperial Stout.
+뽀할라 바나나,Põhjala Banaananen,Beer,에스토니아,13.5%,"A rum BA Imperial Stout.
 
 Taste: An explosion of sweet, overripe banana plucked straight from the fruit bowl mixes with hints of coffee and sweet Caribbean rum all layered on top of a smooth malt base. Oaky tannins and just a hint of lingering hoppy bitterness joins in, leaving you with an insanely decadent, dessert like finish.
 
@@ -760,7 +760,7 @@ Nose: Sweet freshly baked chocolate banana bread, fruity aged rum and molasses m
 Malts: Pilsner, Pilsner zero, Munich malt, Flaked oats, Rye malt, Caramel Pale, Carafa 2 special, Chocolate rye, Cara 150, Peated malt, Special B, Carafa 2, Oat malt, Amber malt, Caramel 150, Demerara sugar
 
 Hops: Columbus, Chinook, Southern Passion",https://beer-api-prod.idkulab.com/media/drinks/banaananen.png
-뽀할라 다크 타임즈,Põhjala Dark Times,맥주,🇪🇪,Stout - Sherry and Rye Whiskey BA Imperial Stout,12%,"A sweet Imperial Stout aged in a blend of Pedro Ximenez sherry and American Rye Whiskey barrels.
+뽀할라 다크 타임즈,Põhjala Dark Times,Beer,에스토니아,12%,"A sweet Imperial Stout aged in a blend of Pedro Ximenez sherry and American Rye Whiskey barrels.
 
 Taste: Sweet sherry and dark chocolate jumps onto the tongue with raisins and dried figs following as the glass warms. Cloves, ginger and pralines slide down with just a hint of fondant icing before finally smooth anise with vinous notes of cherry wine remains on the tongue until the next sip.
 
@@ -771,7 +771,7 @@ Nose: Toasted walnuts and raisins join with rich dark chocolate and pomegranate 
 Malts: Pale malt, Munich malt, Carafa 2, Carafa special type 2, Dark chocolate malt, Chocolate rye malt, Golden naked oats, Cara pale, Brown malt, Aromatic malt, Cara 150, Cara 300, Flaked oats
 
 Hops: Chinook, Warrior, Southern promise, Columbus, Northern Brewer, Demerara sugar",https://beer-api-prod.idkulab.com/media/drinks/dark-times.png
-뽀할라 트리플 배럴,Põhjala Triple Barrel,맥주,🇪🇪,Etc - BA Barley Wine,13%,"A carefully blended multi-vintage barley wine.
+뽀할라 트리플 배럴,Põhjala Triple Barrel,Beer,에스토니아,13%,"A carefully blended multi-vintage barley wine.
 
 Taste: Smooth and sweet marzipan leads the taste with a long warming aftertaste. Candied hazelnuts and pecans join in with a rich, sweet malt backbone supporting the rounded oaky tannins eventually giving way to sweet honey and warming toasted spices.
 
@@ -782,7 +782,7 @@ Nose: Rich aged bourbon and vintage oak furniture mixes with heady vanilla and b
 Malts: Pale malt, Munich malt, Vienna malt, Finest pale ale, Cookie malt, Aromatic malt, Special B, Amber malt, Flaked rye, Carafa special type 3, Carafa special type 2, Red malt, Cara pale, Cara 150, Cara 300, Chocolate rye malt, Brown malt 200, Red rye crystal, Demerara sugar, Muscavado sugar
 
 Hops: Columbus, First Gold, Cascade, Northern Brewer, Chinook, Eureka",https://beer-api-prod.idkulab.com/media/drinks/triple-barrel.png
-뽀할라 벨불,Põhjala Belle Bulle,맥주,🇪🇪,Wild/Sour Beer - Champagne & Sauternes BA Imperial Gose,8%,"An imperial gose brewed with redcurrants and aged in Champagne and Sauternes barrels.
+뽀할라 벨불,Põhjala Belle Bulle,Beer,에스토니아,8%,"An imperial gose brewed with redcurrants and aged in Champagne and Sauternes barrels.
 
 Taste: Redcurrant tartness and a creamy Sauternes dessert wine characteristic sweetness mixes with a refreshing minerality and hints of mixed spices. Full bodied and well developed citrus acidity follows, with a touch of plum coming in before being washed down by smooth carbonation.
 
@@ -793,7 +793,7 @@ Nose: Fresh redcurrants, fragrant rose petals and sweet cherries mix with hints 
 Malts: Bohemian pilsner malt, Pilsner zero
 
 Hops: Redcurrants, Hüll Melon, Himalayan pink salt, coriander seeds",https://beer-api-prod.idkulab.com/media/drinks/belle-bulle.png
-뽀할라 웨에 XO,Põhjala Öö XO,맥주,🇪🇪,Porter - Cognac Barrel Aged Imperial Baltic Porter,11.5%,"A special version of the Öö, aged for months in Cognac barrels.
+뽀할라 웨에 XO,Põhjala Öö XO,Beer,에스토니아,11.5%,"A special version of the Öö, aged for months in Cognac barrels.
 
 Taste: A silky smooth texture of dark malts, red fruits, cognac, liquorice, and honey. Hints of molasses mix with those of rich dark chocolate, all balanced with elegant tannins cleansing the palate.
 
@@ -804,7 +804,7 @@ Nose: Dark fruits, plums, raisins, cranberries, and grapes - a rich forest fruit
 Malts: Pilsner Zero, Munich, Carafa II Special, Special B, Chocolate malt, Crystal 300, Demerara sugar
 
 Hops: Magnum, Northern Brewer",https://beer-api-prod.idkulab.com/media/drinks/oo-xo.png
-뽀할라 바케로 브랙퍼스트,Põhjala Vaquero Breakfast,맥주,🇪🇪,Stout - Imperial Stout,12%,"A Mexican campfire-inspired Imperial Stout brewed with Ancho Mulato chillis and aged in Tequila and Bourbon barrels.
+뽀할라 바케로 브랙퍼스트,Põhjala Vaquero Breakfast,Beer,에스토니아,12%,"A Mexican campfire-inspired Imperial Stout brewed with Ancho Mulato chillis and aged in Tequila and Bourbon barrels.
 
 Taste: Sweet agave and chocolate mingle with warming toasted chilli and spices, reminding you of spiced mole with a mezcal to follow. Fruity dried berries join the mix with more spice and hints of gentle smoke and freshly cracked long pepper on the finish.
 
@@ -815,7 +815,7 @@ Nose: Leather and pipe tobacco mingles with spicy malts and sweet red berries, b
 Malts: Pale malt, Munich malt, Rye malt, Carafa Special T-2, Dark chocolate malt, Chocolate rye malt, Special B, Red malt, Cherry smoked rye malt, Simpsons T-50, Crystal 300, Flaked oats, Demerara sugar
 
 Hops: Columbus, Northern Brewer, Eureka!, Nugget, Liquorice root, Ancho Mulato chilli, Cinnamon",https://beer-api-prod.idkulab.com/media/drinks/vaquero-breakfast.png
-뽀할라 블랙 잼,Põhjala Black Jam,맥주,🇪🇪,Porter - Imperial Baltic Porter,11.9%,"A daring blend of Imperial Baltic Porters, aged in sherry and bourbon casks.
+뽀할라 블랙 잼,Põhjala Black Jam,Beer,에스토니아,11.9%,"A daring blend of Imperial Baltic Porters, aged in sherry and bourbon casks.
 
 Taste: Sharp red fruits burst across the tongue, with oaky tannins and silky smooth red grapes mixing it up. Sweet toasted caramel malts and spicy rye join the jam, with hints of espresso and slightly herbal liquer-like bitterness rounding it all out.
 
@@ -826,7 +826,7 @@ Nose: Sherry and madeira sweetness jumps out immediately, balanced by a soft tou
 Malts: Pale malt, Munich malt, Special B, Cara 150, Cara 300, Carafa T-2 Special, Chocolate malt, Chocolate rye malt, Flaked oats, Demerara sugar, Blackcurrants
 
 Hops: Columbus, Chinook, Northern Brewer",https://beer-api-prod.idkulab.com/media/drinks/black-jam.png
-뽀할라 바닐라 필로우,Põhjala Vanilla Pillow,맥주,🇪🇪,Strong Ale - Double Vanilla Strong Ale,12.9%,"A luxuriously creamy strong ale blended from Bourbon, Cognac, and Sherry with mounds of both Madagascar and Tahitian vanilla pods.
+뽀할라 바닐라 필로우,Põhjala Vanilla Pillow,Beer,에스토니아,12.9%,"A luxuriously creamy strong ale blended from Bourbon, Cognac, and Sherry with mounds of both Madagascar and Tahitian vanilla pods.
 
 Taste: Sweet vanilla dusted hot cross buns come through immediately, reminding the open oven of your favourite bakers before mixing with lashings of toasted Italian meringue, hints of freshly toasted coconut, and warming winter spices. More vanilla lingers on the tongue with dates, dried fig, and raisins joining in, ending on a full and creamy body.
 
@@ -837,7 +837,7 @@ Nose: Strong freshly sliced vanilla beans and well baked pastry mixes with hints
 Malts: Pale malt, Munich malt, Red malt, Cara pale, Cara 150, Cara 300, Cookie malt, Aromatic malt, Special B, Flaked rye, Carafa special type 2, Carafa special type 2, Carafa special type 3, Chocolate malt dark, Chocolate rye, Flaked oats
 
 Hops: Columbus, First Gold, Cascade, Northern Brewer, Madagascar Vanilla, Tahitian Vanilla",https://beer-api-prod.idkulab.com/media/drinks/vanilla-pillow.png
-뽀할라 메이플리셔스,Põhjala Maplelicious,맥주,🇪🇪,Dark Ale - Imperial Dark Ale,11.5%,"A specially blended dark ale aged for over 9 months in freshly emptied Vermont Maple syrup barrels.
+뽀할라 메이플리셔스,Põhjala Maplelicious,Beer,에스토니아,11.5%,"A specially blended dark ale aged for over 9 months in freshly emptied Vermont Maple syrup barrels.
 
 Taste: Smooth and sweet caramel malts blend with an elegant maple syrup and honeycomb coated dark chocolate. Blackberry jam and toasted bread join the syrupy, raisin like aftertaste, with a rich warming mouthfeel and just a hint of sweet lingering oak.
 
@@ -848,7 +848,7 @@ Nose: Rich maple syrup and treacle burst out of the glass with smooth toasted wh
 Malts: Pale malt, Munich malt, Carafa T-2 special, Red malt, Flaked oats, Carafa type 2, T-50, Caramel 150, Caramel 300, Special B, Aromatic malt
 
 Hops: Chinook, Columbus, First Gold, Northern Brewer, Eureka!",https://beer-api-prod.idkulab.com/media/drinks/maplelicious.png
-뽀할라 암체어 디텍티브,Põhjala Armchair Detective,맥주,🇪🇪,Porter - Imperial Baltic Porter,15%,"A gently smoked multigrain Imperial Baltic Porter aged in a blend of XO Cognac barrels.
+뽀할라 암체어 디텍티브,Põhjala Armchair Detective,Beer,에스토니아,15%,"A gently smoked multigrain Imperial Baltic Porter aged in a blend of XO Cognac barrels.
 
 Taste: Toasted coconut and charcoal grilled flatbreads smeared with blackcurrant jam mingle with sticky toffee pudding and warming winter spices. Red grapes and a hint of spicy rye round out the palate, with a warming cognac aftertaste.
 
@@ -859,7 +859,7 @@ Nose: Rich and smoky with hints of toasted oak and freshly baked bread.
 Malts: Pale malt, Munich malt, Cherry smoked pale malt, Peated malt, Oak smoked wheat malt, Cara 300, Carafa T-2 special, Special B, Muscavado sugar
 
 Hops: Columbus, Chinook, Eureka!",https://beer-api-prod.idkulab.com/media/drinks/armchair-detective.png
-뽀할라 피메 웨에 PX,Põhjala Pime Öö PX,맥주,🇪🇪,Stout - Pedro Ximenez Sherry Barrel Aged Imperial Stout,13.9%,"Sherry barrel aged limited version of Pime Öö.
+뽀할라 피메 웨에 PX,Põhjala Pime Öö PX,Beer,에스토니아,13.9%,"Sherry barrel aged limited version of Pime Öö.
 
 Taste: Big and bold, this immediately makes the Pedro Ximenez felt. Luxuriously sweet, with a heavy presence of cherry and chocolate. The raisin character from the aroma comes through again, sliding down the tongue smoothly. Best enjoyed when sipped by a fireplace.
 
@@ -870,14 +870,19 @@ Nose: The smell of dates, raisins, cranberries, and above all, sherry overwhelm 
 Malts: Pale malt, Munich malt, Special B, Crystal 300, Crystal 150, Crystal 200, Carafa type 2 special, Chocolate malt, Chocolate Rye, Oats
 
 Hops: Magnum, Northern Brewer",https://beer-api-prod.idkulab.com/media/drinks/pime-oo-px.png
-뽀할라 피메 웨에 아일라이 BA,Põhjala Pime Öö Islay BA,맥주,🇪🇪,Stout - Barrel Aged Imperial Stout,13.6%,"An Imperial Stout, aged in Scotch Whisky barrels from Islay.
-
-Taste: Immediately warming malty notes, with tangy red berries and sweet heather honey following - all wrapped up in a package of intense smokiness. Best paired with smoked game meats, thunderstorms, and waves crashing against a rocky beach.
-
-Appearance: Jet black with a tan brown head..
-
-Nose: Campfire roasted malt, peat smoke mixed with iodine, whispers of alcohol - almost challenging you to venture further.
-
-Malts: Pale malt, Munich malt, Carafa Special II, Special B, Chocolate malt, Cara 300, Flaked oats, Chocolate rye
-
-Hops: El Dorado, Hallertau Blanc",https://beer-api-prod.idkulab.com/media/drinks/pime-oo-islay-ba.png
+KGB 레몬,"KGB Lemon, 5%",Cocktail,뉴질랜드,5%,"맥주로 알려졌지만, KGB는 보드카이다.
+레몬향과 레몬맛이 살짝 돌다가, 끝에 알코올 향이 살짝 감돌아 가볍게 즐기기 좋다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/kgb_w400.jpg
+시원한청풍소주,Cool Cheongpung Soju,Soju,한국,17.2%,"시원 소주'로 이름을 변경하였고, 다시 '시원한 청풍'으로 재변경 했다. 하지만 사람들에게는 예전 이름인 '시원 소주'로 더 많이 불리고 있다.
+이름처럼 시원하고 묵직한 알콜 향이 풍긴다.
+강하고 시원한 술을 좋아하는 사람들에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/c1soju_w400.jpg
+탈로 프리미티보 디 만두리아,"Talo Primitivo Di Manduria, 14%",Wine,이탈리아,14%,"만두리아 지역의 프리미티보 품종 포도로 만든 와인이다. 진한 초콜릿, 바닐라, 블랙베리, 체리향이 느껴진다. 풀 바디 와인을 쉽게 느끼고 싶은 사람에게 추천하는 와인이다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Talo_Primitivo_Di_Manduria_w400.jpg
+써머스비,"SomersBy, 4.5%",Etc,덴마크,4.5%,"칼스버그에서 제조한 도수 있는 사이다. 세간 인식과 달리 본디 사이다는 사과주를 뜻하는 말이다. 
+사과맛 탄산음료에 알코올이 첨가된 맛이다. 
+사과 과즙의 단 맛이 강하며, 술을 즐기지 않는 사람에게도 추천하기 좋다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/somersby_apple_w400.jpg
+와일드 터키 버번 위스키,"Wild Turkey Bourbon Whiskey, 40.5%",Whisky,미국,40.5%,"알콜의 톡 쏘는 향은 없는 편이고 과자 누네띠네와 같은 단향이 올라온다.
+입안 전체로 신선한 꿀 같은 달큰함이 가득 채워지며 알싸한 맛도 살짝 느낄 수 있다.
+술의 질감은 밀크 초콜릿을 녹여 먹었을 때 거의 끝물쯤에 입천장과 혓바닥에 남아있는 초콜릿의 몽글몽글한 질감이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Wild_Turkey_Bourbon_Whiskey_w400.jpg
+느린마을 늘봄 막걸리,"Slow Town Always Spring Makgeolli, 6%",Traditional,한국,6%,"인공감미료인 아스파탐을 사용하지 않고 쌀, 누룩, 물만으로 빚은 막걸리다.
+단맛과 산미가 좋다.
+숙성 될 수록 맛이 달라지는 것이 특징이다.
+느린마을 양조장에서 봄, 여름, 가을, 겨울 막걸리를 나누어 마셔볼 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/slowbrew_makgeulli_w400.jpg
