@@ -1,7 +1,7 @@
 import { Controller, Delete, Get, Header, HttpCode, Post, Redirect, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 
-import { User } from '@src/entities/users.entity';
+import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
 import { AuthService } from './auth.service';
 import { UserKakaoDto } from './dto/users.kakao.dto';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
@@ -25,8 +25,7 @@ export class AuthController {
 	@Get('/kakao-callback')
 	@HttpCode(200)
 	async kakaoLoginCallback(@Req() userData) {
-		// (userData.user as UserKakaoDto)에 사용자 정보
-		const user: User = await this.authService.createKakaoUser(userData.user as UserKakaoDto);
+		const user: GetUserInfoDto = await this.authService.createKakaoUser(userData.user as UserKakaoDto);
 		return this.authService.login(user);
 	}
 

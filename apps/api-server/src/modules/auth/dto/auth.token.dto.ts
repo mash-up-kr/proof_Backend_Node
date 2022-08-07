@@ -1,7 +1,7 @@
-import { User } from '@src/entities/users.entity';
+import { GetUserInfoDto } from '@src/modules/users/dto/get-user-info.dto';
 
 export class TokenDto {
 	readonly accessToken: string;
 	readonly refreshToken: string;
-	readonly user: User;
+	readonly user: GetUserInfoDto;
 }

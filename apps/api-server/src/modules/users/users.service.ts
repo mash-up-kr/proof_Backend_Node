@@ -5,6 +5,7 @@ import { Repository } from 'typeorm';
 
 import { User } from '@src/entities/users.entity';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { GetUserInfoDto } from './dto/get-user-info.dto';
 
 @Injectable()
 export class UsersService {
@@ -12,6 +13,19 @@ export class UsersService {
 		@InjectRepository(User)
 		private readonly usersRepository: Repository<User>,
 	) {}
+
+	async getUser(id: string): Promise<GetUserInfoDto> {
+		const user: GetUserInfoDto = await this.usersRepository
+			.createQueryBuilder('user')
+			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
+			.leftJoin('user.profile', 'profile')
+			.where('user.id = :id', {
+				id,
+			})
+			.getOne();
+
+		return user;
+	}
 
 	async updateUser(id: string, updateUserDto: UpdateUserDto) {
 		return await this.usersRepository.update(
@@ -23,14 +37,5 @@ export class UsersService {
 				},
 			},
 		);
-	}
-
-	async test(id: string) {
-		const user = await this.usersRepository.findOne({
-			where: { id },
-			relations: ['profile'],
-		});
-
-		return user;
 	}
 }

@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Put, Req, UseGuards } from '@nestjs/common';
 
-import { User } from '@src/entities/users.entity';
 import { JwtAuthGuard } from '@src/modules/auth/guards/jwt-auth.guard';
+import { GetUserInfoDto } from './dto/get-user-info.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UsersService } from './users.service';
 
@@ -10,15 +10,14 @@ import { UsersService } from './users.service';
 export class UsersController {
 	constructor(private readonly usersSerivce: UsersService) {}
 
+	@Get()
+	async getUser(@Req() userData) {
+		const user: GetUserInfoDto = await this.usersSerivce.getUser(userData.user.id);
+		return { user };
+	}
+
 	@Put()
 	async updateUser(@Req() userData, @Body() updateUserDto: UpdateUserDto) {
 		return await this.usersSerivce.updateUser(userData.user.id, updateUserDto);
-	}
-
-	// XXX: This is just test code. Plz delete later.
-	@Get('/test')
-	async test(@Req() userData) {
-		const user: User = await this.usersSerivce.test(userData.user.id);
-		return { user };
 	}
 }

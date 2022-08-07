@@ -6,6 +6,7 @@ import { JwtConfig, OauthConfig } from '@src/config/config.constant';
 import { UsersProfile } from '@src/entities/users-profile.entity';
 import { User } from '@src/entities/users.entity';
 import { Repository } from 'typeorm';
+import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
 
 import { TokenDto } from './dto/auth.token.dto';
 import { UserKakaoDto } from './dto/users.kakao.dto';
@@ -29,19 +30,30 @@ export class AuthService {
 		}&redirect_uri=${this.#oauthConfig.callbackUrl}`;
 	}
 
-	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<User> {
-		let kakaoUser = await this.usersRepository.findOne({
-			where: { social_id: kakaoUserData.kakaoId, type: 'kakao' },
-		});
+	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<GetUserInfoDto> {
+		let kakaoUser = await this.usersRepository
+			.createQueryBuilder('user')
+			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
+			.leftJoin('user.profile', 'profile')
+			.where('user.social_id = :social_id AND user.type = :type', {
+				social_id: kakaoUserData.kakaoId,
+				type: 'kakao',
+			})
+			.getOne();
 
-		if (!kakaoUser) {
-			// 신규 유저
+		if (kakaoUser) return kakaoUser;
+		else {
 			const defaultUserProfileUrl =
 				'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png';
 
-			const defaultUserProfile = await this.usersProfileRepository.findOne({
-				where: { image_url: defaultUserProfileUrl },
-			});
+			const defaultUserProfile = await this.usersProfileRepository
+				.createQueryBuilder('users_profile')
+				.select(['users_profile.id', 'users_profile.image_url'])
+				.where('users_profile.image_url = :image_url', {
+					image_url: defaultUserProfileUrl,
+				})
+				.getOne();
+
 			kakaoUser = await this.usersRepository.save({
 				name: kakaoUserData.name,
 				nickname: kakaoUserData.name,
@@ -50,15 +62,12 @@ export class AuthService {
 				type: 'kakao',
 				profile: defaultUserProfile,
 			});
-
-			return kakaoUser;
-		} else {
-			// 기존 유저
+			delete kakaoUser.deletedAt, kakaoUser.createdAt, kakaoUser.updatedAt;
 			return kakaoUser;
 		}
 	}
 
-	async login(user: User): Promise<TokenDto> {
+	async login(user: GetUserInfoDto): Promise<TokenDto> {
 		const payload = { id: user.id };
 		const accessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
@@ -84,7 +93,7 @@ export class AuthService {
 		return { accessToken: newAccessToken };
 	}
 
-	async getUser(id: string) {
+	async getUserIdIfExist(id: string) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
 		});
