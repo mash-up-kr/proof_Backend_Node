@@ -1,5 +1,5 @@
 export const mockUser = {
-	id: '1',
+	id: 1,
 	createdAt: '2022-07-01T01:43:24.252Z',
 	updatedAt: '2022-07-01T01:43:24.252Z',
 	deletedAt: null,
