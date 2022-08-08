@@ -6,7 +6,7 @@ import { Companion, Mood, Pairing, Taste, Time, Weather } from '@src/types/revie
 
 export class CreateInitialReviewData implements Seeder {
 	public async run(factory: Factory, connection: Connection): Promise<any> {
-		await connection
+		await connection // TODO: update not to insert same data twice.
 			.createQueryBuilder()
 			.insert()
 			.into(Review)

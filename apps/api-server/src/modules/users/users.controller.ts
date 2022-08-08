@@ -8,11 +8,4 @@ import { UsersService } from './users.service';
 @UseGuards(JwtAuthGuard)
 export class UsersController {
 	constructor(private readonly usersSerivce: UsersService) {}
-
-	// XXX: This is just test code. Plz delete later.
-	@Get('/test')
-	async test(@Req() userData) {
-		const user: User = await this.usersSerivce.test(userData.user.id);
-		return { user };
-	}
 }

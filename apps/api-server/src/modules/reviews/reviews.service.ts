@@ -1,23 +1,31 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Review } from '@src/entities/reviews.entity';
+
 import { Repository } from 'typeorm';
 
+import { Review } from '@src/entities/reviews.entity';
+import { User } from '@src/entities/users.entity';
+import { GetDrinkInfoDto } from '@src/modules/drinks/dto/get-drink-info.dto';
 import { CreateReviewDto } from './dto/create-review.dto';
 import { ReviewCardResponseDto } from './dto/review-item-response.dto';
-import { UpdateReviewDto } from './dto/update-review.dto';
 
 @Injectable()
 export class ReviewsService {
 	constructor(@InjectRepository(Review) private readonly reviewRepository: Repository<Review>) {}
 
-	// async createReviews(_createReviewDto: CreateReviewDto): Promise<[]> {
-	// 	return 'This action adds a new review';
-	// }
-
-	// async findReviewsByUser(id: number) {
-	// 	return `This action returns all reviews`;
-	// }
+	async createReview(user: User, drink: GetDrinkInfoDto, createReviewDto: CreateReviewDto): Promise<void> {
+		try {
+			// TODO: Fix to Auth user properly.
+			const review = this.reviewRepository.create({
+				...createReviewDto,
+				reviewer_id: user.id,
+				reviewed_drink_id: drink.id,
+			});
+			await this.reviewRepository.save(review);
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
 
 	async findReviewsById(id: number): Promise<ReviewCardResponseDto> {
 		try {

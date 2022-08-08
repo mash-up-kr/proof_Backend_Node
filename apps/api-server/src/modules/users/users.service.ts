@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
@@ -12,11 +12,11 @@ export class UsersService {
 		private readonly usersRepository: Repository<User>,
 	) {}
 
-	async test(userId: number) {
-		const user = await this.usersRepository.findOne({
-			where: { id: userId },
-		});
-
+	async findById(id: User['id']): Promise<User> {
+		const user = await this.usersRepository.findOne({ where: { id: id } });
+		if (!user) {
+			throw new BadRequestException('User not found');
+		}
 		return user;
 	}
 }

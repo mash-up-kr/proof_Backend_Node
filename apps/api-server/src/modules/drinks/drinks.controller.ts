@@ -35,7 +35,7 @@ export class DrinksController {
 	}
 
 	@Get(':id')
-	public async findById(@Param('id') id: string) {
+	public async findById(@Param('id') id: number) {
 		return await this.drinksService.findById(id);
 	}
 }
