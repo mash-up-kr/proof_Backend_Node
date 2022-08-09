@@ -3,6 +3,7 @@ import { Connection } from 'typeorm';
 
 import { User } from '../../entities/users.entity';
 import { UsersProfile } from '../../entities/users-profile.entity';
+import { DEFAULT_USER_PROFILE } from '@src/modules/users-profile/users-profile.constants';
 
 const seedUserData = {
 	name: 'test martin',
@@ -14,8 +15,7 @@ const seedUserData = {
 
 export class CreateInitialUserData implements Seeder {
 	public async run(factory: Factory, connection: Connection): Promise<any> {
-		const defaultUserProfile =
-			'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png';
+		const defaultUserProfile = DEFAULT_USER_PROFILE;
 
 		const usersProfile = await connection
 			.getRepository(UsersProfile)

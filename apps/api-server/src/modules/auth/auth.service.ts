@@ -1,15 +1,16 @@
+import { Repository } from 'typeorm';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
+
 import { JwtConfig, OauthConfig } from '@src/config/config.constant';
 import { UsersProfile } from '@src/entities/users-profile.entity';
 import { User } from '@src/entities/users.entity';
-import { Repository } from 'typeorm';
 import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
-
 import { TokenDto } from './dto/auth.token.dto';
 import { UserKakaoDto } from './dto/users.kakao.dto';
+import { DEFAULT_USER_PROFILE } from '../users-profile/users-profile.constants';
 
 @Injectable()
 export class AuthService {
@@ -43,9 +44,8 @@ export class AuthService {
 
 		if (kakaoUser) return kakaoUser;
 		else {
-			//TODO:
-			const defaultUserProfileUrl =
-				'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png';
+			console.log(DEFAULT_USER_PROFILE);
+			const defaultUserProfileUrl = DEFAULT_USER_PROFILE;
 
 			const defaultUserProfile = await this.usersProfileRepository
 				.createQueryBuilder('users_profile')
