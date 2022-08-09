@@ -1,7 +1,8 @@
-import { Controller, Delete, Get, Header, HttpCode, Post, Redirect, Req, UseGuards } from '@nestjs/common';
+import { Controller, Get, Header, HttpCode, Post, Redirect, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 
 import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
+import { AuthUser } from '@src/decorators/auth.decorator';
 import { AuthService } from './auth.service';
 import { UserKakaoDto } from './dto/users.kakao.dto';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
@@ -24,20 +25,20 @@ export class AuthController {
 	@UseGuards(AuthGuard('kakao'))
 	@Get('/kakao-callback')
 	@HttpCode(200)
-	async kakaoLoginCallback(@Req() userData) {
-		const user: GetUserInfoDto = await this.authService.createKakaoUser(userData.user as UserKakaoDto);
+	async kakaoLoginCallback(@AuthUser() kakaoUser) {
+		const user: GetUserInfoDto = await this.authService.createKakaoUser(kakaoUser as UserKakaoDto);
 		return this.authService.login(user);
 	}
 
 	@UseGuards(JwtRefreshGuard)
 	@Post('token-refresh')
-	async refreshToken(@Req() userData) {
-		return await this.authService.refresh(userData.user);
+	async refreshToken(@AuthUser() user) {
+		return await this.authService.refresh(user);
 	}
 
 	@UseGuards(JwtAuthGuard)
 	@Post('logout')
-	async logout(@Req() userData) {
-		await this.authService.logout(userData.user.id);
+	async logout(@AuthUser() user) {
+		await this.authService.logout(user.id);
 	}
 }

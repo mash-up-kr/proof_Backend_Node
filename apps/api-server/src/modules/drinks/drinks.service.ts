@@ -27,7 +27,7 @@ export class DrinksService {
 		}
 	}
 
-	public async findById(id: string): Promise<GetDrinkInfoDto> {
+	public async findById(id: number): Promise<GetDrinkInfoDto> {
 		try {
 			const drinkInfo = await this.drinkRepository
 				.createQueryBuilder('drink')

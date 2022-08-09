@@ -1,10 +1,11 @@
-import { IsNumber, IsString, IsUUID } from 'class-validator';
+import { IsNumber, IsString } from 'class-validator';
+import { PrimaryGeneratedColumn } from 'typeorm';
 
 import { GetUserProfileInfoDto } from '@src/modules/users-profile/dto/get-user-profile-info.dto';
 
 export class GetUserInfoDto {
-	@IsUUID()
-	readonly id: string;
+	@PrimaryGeneratedColumn()
+	readonly id: number;
 
 	@IsString()
 	readonly name: string;

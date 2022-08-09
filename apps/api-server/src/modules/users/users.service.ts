@@ -14,7 +14,7 @@ export class UsersService {
 		private readonly usersRepository: Repository<User>,
 	) {}
 
-	async getUser(id: string): Promise<GetUserInfoDto> {
+	async getUser(id: number): Promise<GetUserInfoDto> {
 		const user: GetUserInfoDto = await this.usersRepository
 			.createQueryBuilder('user')
 			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
@@ -23,11 +23,10 @@ export class UsersService {
 				id,
 			})
 			.getOne();
-
 		return user;
 	}
 
-	async updateUser(id: string, updateUserDto: UpdateUserDto) {
+	async updateUser(id: number, updateUserDto: UpdateUserDto) {
 		return await this.usersRepository.update(
 			{ id },
 			{
@@ -39,7 +38,7 @@ export class UsersService {
 		);
 	}
 
-	async deleteUser(id: string) {
+	async deleteUser(id: number) {
 		await this.usersRepository.delete({ id });
 	}
 }

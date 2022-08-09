@@ -43,6 +43,7 @@ export class AuthService {
 
 		if (kakaoUser) return kakaoUser;
 		else {
+			//TODO:
 			const defaultUserProfileUrl =
 				'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png';
 
@@ -93,7 +94,7 @@ export class AuthService {
 		return { accessToken: newAccessToken };
 	}
 
-	async getUserIdIfExist(id: string) {
+	async getUserIdIfExist(id: number) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
 		});
@@ -103,7 +104,7 @@ export class AuthService {
 		} else throw new UnauthorizedException();
 	}
 
-	async logout(id: string) {
+	async logout(id: number) {
 		return 'Logout user';
 	}
 }

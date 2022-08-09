@@ -9,6 +9,7 @@ import { DrinksCategoryModule } from './modules/drinks-category/drinks-category.
 import { DrinksModule } from './modules/drinks/drinks.module';
 import { UsersModule } from './modules/users/users.module';
 import { UsersProfileModule } from './modules/users-profile/users-profile.module';
+import { WorldcupModule } from './modules/worldcup/worldcup.module';
 
 @Module({
 	imports: [
@@ -19,6 +20,7 @@ import { UsersProfileModule } from './modules/users-profile/users-profile.module
 		DrinksCategoryModule,
 		DrinksModule,
 		UsersProfileModule,
+		WorldcupModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

@@ -1,8 +1,9 @@
-import { IsString, IsUUID } from 'class-validator';
+import { IsString } from 'class-validator';
+import { PrimaryGeneratedColumn } from 'typeorm';
 
 export class GetUserProfileInfoDto {
-	@IsUUID()
-	readonly id: string;
+	@PrimaryGeneratedColumn()
+	readonly id: number;
 
 	@IsString()
 	readonly image_url: string;

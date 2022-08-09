@@ -45,7 +45,7 @@ describe('DrinksController', () => {
 			expect(service.findByCategory).toHaveBeenCalledWith(name);
 			expect(await controller.findByCategory(name)).toEqual([
 				{
-					id: '64f4a1d5-e59d-4590-86dc-c0c8a0aac459',
+					id: 1,
 					createdAt: '2022-07-20T17:09:06.034Z',
 					updatedAt: '2022-07-20T17:09:06.034Z',
 					deletedAt: null,
@@ -61,17 +61,17 @@ describe('DrinksController', () => {
 
 	describe('findByCategory', () => {
 		it('should thorw BadRequestException Error if id is invalid', async () => {
-			const id = 'abcdefabcdefabcdefabcdefabcdefab';
+			const id = 99999;
 			await expect(controller.findById(id)).rejects.toThrow(BadRequestException);
 		});
 
 		it('should call drinksService.findById', async () => {
-			const id = '64f4a1d5-e59d-4590-86dc-c0c8a0aac459';
+			const id = 1;
 			await controller.findById(id);
 			expect(service.findById).toHaveBeenCalledWith(id);
 			expect(await controller.findById(id)).toEqual([
 				{
-					id: '64f4a1d5-e59d-4590-86dc-c0c8a0aac459',
+					id: 1,
 					createdAt: '2022-07-20T17:09:06.034Z',
 					updatedAt: '2022-07-20T17:09:06.034Z',
 					deletedAt: null,
@@ -81,7 +81,7 @@ describe('DrinksController', () => {
 					description: 'description test1',
 					image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 					category: {
-						name: '맥주',
+						name: 'Beer',
 					},
 				},
 			]);

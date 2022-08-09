@@ -6,7 +6,7 @@ import { Category } from '@src/types/drinks-category.types';
 
 export const mockDrinks = [
 	{
-		id: '64f4a1d5-e59d-4590-86dc-c0c8a0aac459',
+		id: 1,
 		createdAt: '2022-07-20T17:09:06.034Z',
 		updatedAt: '2022-07-20T17:09:06.034Z',
 		deletedAt: null,
@@ -16,11 +16,11 @@ export const mockDrinks = [
 		description: 'description test1',
 		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 		category: {
-			name: '맥주',
+			name: 'Beer',
 		},
 	},
 	{
-		id: '64f4a1d5-e59d-4590-86dc-c0c8a0aac460',
+		id: 2,
 		createdAt: '2022-07-20T17:09:06.034Z',
 		updatedAt: '2022-07-20T17:09:06.034Z',
 		deletedAt: null,
@@ -30,7 +30,7 @@ export const mockDrinks = [
 		description: 'soju test1',
 		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 		category: {
-			name: '소주',
+			name: 'Soju',
 		},
 	},
 ];
@@ -46,17 +46,17 @@ export class MockDrinksRepository {
 export const MockDrinksService = {
 	findAll: jest.fn(() => mockDrinks),
 	findById: jest.fn((id) => {
-		if (id === 'abcdefabcdefabcdefabcdefabcdefab') {
+		if (id === 99999) {
 			throw new BadRequestException();
-		} else if (id === '64f4a1d5-e59d-4590-86dc-c0c8a0aac459') {
+		} else if (id === 1) {
 			return [mockDrinks[0]];
 		}
 	}),
 	findByCategory: jest.fn((name) => {
 		if (Object.values(Category).includes(name as Category)) {
-			if (name === '맥주') {
+			if (name === 'Beer') {
 				return [omit(mockDrinks[0], 'category')];
-			} else if (name === '소주') {
+			} else if (name === 'Soju') {
 				return [omit(mockDrinks[1], 'category')];
 			}
 		} else {
