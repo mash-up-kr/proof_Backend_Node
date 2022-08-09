@@ -3,10 +3,10 @@ import { IsEmail, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 import { ApiProperty } from '@nestjs/swagger';
 import { Review } from './reviews.entity';
-import { SimpleCommonEntity } from './simple-common.entity';
+import { CommonEntity } from './common.entity';
 
 @Entity()
-export class User extends SimpleCommonEntity {
+export class User extends CommonEntity {
 	@IsString()
 	@IsNotEmpty()
 	@Column({ type: 'varchar', nullable: false })

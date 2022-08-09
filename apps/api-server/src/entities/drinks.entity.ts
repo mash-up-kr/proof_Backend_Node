@@ -4,10 +4,10 @@ import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
 
 import { DrinksCategory } from './drinks-category.entity';
 import { Review } from './reviews.entity';
-import { SimpleCommonEntity } from './simple-common.entity';
+import { CommonEntity } from './common.entity';
 
 @Entity()
-export class Drink extends SimpleCommonEntity {
+export class Drink extends CommonEntity {
 	@Column({ type: 'varchar', nullable: false })
 	name: string;
 

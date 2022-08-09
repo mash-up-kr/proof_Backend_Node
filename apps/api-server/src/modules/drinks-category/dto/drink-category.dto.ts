@@ -2,7 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class DrinkCategoryDto {
 	@ApiProperty({ description: '카테고리 ID' })
-	id: string;
+	id: number;
 
 	@ApiProperty({ description: '카테고리 이름' })
 	name: string;

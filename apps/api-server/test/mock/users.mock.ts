@@ -1,5 +1,5 @@
 export const mockUser = {
-	id: '40118a2e-dc89-46de-bbb0-46b8ac0c6846',
+	id: 1,
 	createdAt: '2022-07-01T01:43:24.252Z',
 	updatedAt: '2022-07-01T01:43:24.252Z',
 	deletedAt: null,

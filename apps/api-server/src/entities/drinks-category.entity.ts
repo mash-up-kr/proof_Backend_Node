@@ -5,10 +5,10 @@ import { IsNotEmpty, IsString } from 'class-validator';
 
 import { Drink } from './drinks.entity';
 import { Category } from '../types/drinks-category.types';
-import { SimpleCommonEntity } from './simple-common.entity';
+import { CommonEntity } from './common.entity';
 
 @Entity()
-export class DrinksCategory extends SimpleCommonEntity {
+export class DrinksCategory extends CommonEntity {
 	@ApiProperty({
 		enum: Category,
 		example: Category.Beer,

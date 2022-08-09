@@ -3,12 +3,12 @@ import { Mood, Pairing, Weather, Time, Companion, Taste } from '@src/types/revie
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 
-import { SimpleCommonEntity } from './simple-common.entity';
+import { CommonEntity } from './common.entity';
 import { Drink } from './drinks.entity';
 import { User } from './users.entity';
 
 @Entity()
-export class Review extends SimpleCommonEntity {
+export class Review extends CommonEntity {
 	@ApiProperty({
 		enum: Weather,
 		example: Weather.Rainy,
