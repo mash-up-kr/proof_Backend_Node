@@ -6,7 +6,7 @@ export enum Weather {
 }
 
 export enum Time {
-	Evenving = 'Evening',
+	Evening = 'Evening',
 	Noon = 'Noon',
 	Midnight = 'Midnight',
 	Dawn = 'Dawn',
