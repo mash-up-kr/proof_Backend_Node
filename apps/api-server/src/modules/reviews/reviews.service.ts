@@ -11,14 +11,15 @@ import { ReviewCardResponseDto } from './dto/review-item-response.dto';
 export class ReviewsService {
 	constructor(@InjectRepository(Review) private readonly reviewRepository: Repository<Review>) {}
 
-	async createReview(userId: number, drinkId: number, createReviewDto: CreateReviewDto): Promise<void> {
+	async createReview(userId: number, drinkId: number, createReviewDto: CreateReviewDto): Promise<number> {
 		try {
 			const review = this.reviewRepository.create({
 				...createReviewDto,
 				reviewer_id: userId,
 				reviewed_drink_id: drinkId,
 			});
-			await this.reviewRepository.save(review);
+			const result = await this.reviewRepository.save(review);
+			return result.id;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
