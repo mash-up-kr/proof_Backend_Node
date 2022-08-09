@@ -54,8 +54,7 @@ export class Review extends SimpleCommonEntity {
 		description: 'The answer of 혹시 몇 차였어요?',
 	})
 	@IsNumber()
-	@IsNotEmpty()
-	@Column({ type: 'int', nullable: false })
+	@Column({ type: 'int', nullable: true })
 	spot: 1 | 2 | 3;
 
 	@ApiProperty({
@@ -109,8 +108,7 @@ export class Review extends SimpleCommonEntity {
 		description: 'The answer of 이 술을 먹었던 장소는',
 	})
 	@IsString()
-	@IsNotEmpty()
-	@Column({ type: 'varchar', nullable: true })
+	@Column({ type: 'text', nullable: true })
 	place: string;
 
 	@ApiProperty({
@@ -118,37 +116,30 @@ export class Review extends SimpleCommonEntity {
 		example: ['Grilled', 'Fried'],
 		description: 'The answer of 곁들인 안주의 종류는 (여러개 가능)',
 	})
-	@IsString()
-	@IsNotEmpty()
-	@Column({ type: 'text', array: true, nullable: true }) // https://stackoverflow.com/questions/57611633/typeorm-array-is-not-supported-in-postgres
+	@Column({ type: 'varchar', array: true, nullable: true })
 	pairing: Pairing[];
 
-	// Relation
 	@ApiProperty({ example: 1 })
 	@IsNumber()
 	@IsNotEmpty()
 	@Column()
 	reviewer_id: number;
 
-	// TODO: user_id: users 테이블과 1:n (한 개의 user당 여러 리뷰 가능)
-	// 참고: drink 와 drinks-category (한 개의 category당 여러 drink 가능)
 	@ApiProperty({
 		type: () => User,
 		description: 'The user who wrote this review',
 	})
 	@ManyToOne(() => User, (reviewer: User) => reviewer.reviews, {
-		onDelete: 'CASCADE', // if user(reviewer) is deleted, delete all reviews
+		onDelete: 'SET NULL', // if user(reviewer) is deleted, reviewer_id is set to null
 	})
 	@JoinColumn([
-		//	foreignKey 정보들
 		{
-			name: 'reviewer_id', // db에 저장되는 field name
-			referencedColumnName: 'id', // User의 id
+			name: 'reviewer_id',
+			referencedColumnName: 'id',
 		},
 	])
 	reviewer: User;
 
-	// TODO: drink_id: drinks 테이블과 1:n (한 개의 drink당 여러 리뷰 가능)
 	@ApiProperty({ example: 1 })
 	@IsNumber()
 	@IsNotEmpty()
@@ -160,13 +151,12 @@ export class Review extends SimpleCommonEntity {
 		description: 'The drink this review is about',
 	})
 	@ManyToOne(() => Drink, (reviewed_drink: Drink) => reviewed_drink.reviews, {
-		onDelete: 'CASCADE', // if drink(reviewed_drink) is deleted, delete all reviews
+		onDelete: 'SET NULL', // if drink(reviewed_drink) is deleted, reviewed_drink_id is set to null
 	})
 	@JoinColumn([
-		//	foreignKey 정보들
 		{
-			name: 'reviewed_drink_id', // db에 저장되는 field name
-			referencedColumnName: 'id', // Drink의 id
+			name: 'reviewed_drink_id',
+			referencedColumnName: 'id',
 		},
 	])
 	reviewed_drink: Drink;

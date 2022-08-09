@@ -30,7 +30,9 @@ export class Drink extends SimpleCommonEntity {
 		type: () => DrinksCategory,
 		description: 'Category of the drink such as beer, wine, etc.',
 	})
-	@ManyToOne(() => DrinksCategory, (drinkCategory) => drinkCategory.drinks)
+	@ManyToOne(() => DrinksCategory, (drinkCategory) => drinkCategory.drinks, {
+		onDelete: 'SET NULL',
+	})
 	category: DrinksCategory;
 
 	@ApiProperty({

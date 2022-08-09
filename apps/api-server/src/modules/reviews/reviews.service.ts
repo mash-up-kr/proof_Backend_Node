@@ -4,8 +4,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Review } from '@src/entities/reviews.entity';
-import { User } from '@src/entities/users.entity';
-import { GetDrinkInfoDto } from '@src/modules/drinks/dto/get-drink-info.dto';
 import { CreateReviewDto } from './dto/create-review.dto';
 import { ReviewCardResponseDto } from './dto/review-item-response.dto';
 
@@ -13,13 +11,12 @@ import { ReviewCardResponseDto } from './dto/review-item-response.dto';
 export class ReviewsService {
 	constructor(@InjectRepository(Review) private readonly reviewRepository: Repository<Review>) {}
 
-	async createReview(user: User, drink: GetDrinkInfoDto, createReviewDto: CreateReviewDto): Promise<void> {
+	async createReview(userId: number, drinkId: number, createReviewDto: CreateReviewDto): Promise<void> {
 		try {
-			// TODO: Fix to Auth user properly.
 			const review = this.reviewRepository.create({
 				...createReviewDto,
-				reviewer_id: user.id,
-				reviewed_drink_id: drink.id,
+				reviewer_id: userId,
+				reviewed_drink_id: drinkId,
 			});
 			await this.reviewRepository.save(review);
 		} catch (error) {
