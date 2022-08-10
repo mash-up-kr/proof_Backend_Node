@@ -21,7 +21,11 @@ export class DrinksService {
 
 	public async findAll(): Promise<Drink[]> {
 		try {
-			return await this.drinkRepository.find();
+			return await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select(['drink', 'category.name'])
+				.leftJoin('drink.category', 'category')
+				.getMany();
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
