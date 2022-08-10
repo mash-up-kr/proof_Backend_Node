@@ -24,13 +24,13 @@ name,en_name,category,origin,abv,description,image_url
 구미호 피치에일,Kumiho Peach Ale,Beer,한국,4.5%,부드러운 밀맥주 베이스에 천연 복숭아 원액을 더해 언제든 마시기 편한 에일 맥주,https://beer-api-prod.idkulab.com/media/drinks/gumiho-peach-ale.png
 핸드앤몰트 상상 페일 에일,Hand and Malt Sangsang Pale Ale,Beer,한국,5.1%,"달콤한 페일에일, 상상해 봤어? 네 가지 홉과 국내산 꿀, 허니몰트로 페일에일은 쓰다는 편견을 바꿀 핸드앤몰트의 달콤한 상상!",https://beer-api-prod.idkulab.com/media/drinks/hand-and-malt-pale-ale.png
 강서 마일드 에일,GANGSEO MILD ALE,Beer,한국,4.6%,아메리칸 페일에일을 한국식으로 재해석하여 많은 양의 홉을 사용해 열대과일과 꽃향기가 특징인 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/gangseo.png
-세븐브로이 곰표 밀맥주,GOMPYO WHEAT BEER,Beer,한국,4.5%,달콤하고 향긋한 열대과일향을 풍부하게 느낄 수 있으며 부드러운 거품과 개운한 끝 맛이 특징인 밀맥주입니다.,/beer-default.png
+세븐브로이 곰표 밀맥주,GOMPYO WHEAT BEER,Beer,한국,4.5%,달콤하고 향긋한 열대과일향을 풍부하게 느낄 수 있으며 부드러운 거품과 개운한 끝 맛이 특징인 밀맥주입니다.,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 한강 에일,HANGANG ALE,Beer,한국,5.2%,밀맥아를 베이스로 하여 부드럽고 조밀한 거품이 특징으로 맥아의 단맛과 오렌지 껍질의 상큼함이 청량감을 높여 편하게 마실 수 있는 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/hangang.png
-서울 에일,SEOUL SOUL ALE,Beer,한국,5%,"홉의 깔끔한 쓴맛과 프리미엄 맥아의 은은한 단맛이 조화를 이루며, 입안과 코 끝에 남는 홉 향기가 특징인 맥주입니다.",/beer-default.png
-양평 에일,YANGPYEONG ALE,Beer,한국,4.5%,"청량감이 높고, 마신 후 은은하게 퍼지는 상쾌한 과일 향과 알싸한 후추 향이 조화를 이루는 에일 맥주입니다.",/beer-default.png
-독립 에일,INDEPENDENCE 1909,Beer,한국,6%,"풍부한 탄산감과 깔끔한 뒷맛으로 가볍고 산뜻하게 마실 수 있으며, 상쾌한 과일향과 스파이시함이 조화를 이뤄 기분 좋게 마실 수 있는 맥주",/beer-default.png
-코리아 페일 에일,KPA,Beer,한국,4.6%,"아메리칸 스타일인 페일 에일을 재해석한 맥주로 맥아 특유의 달콤함이 느껴지며, 마신 후 강렬한 과일향과 은은한 버터감이 여운을 남기는 맥주입니다.",/beer-default.png
-서초,SEOCHO WHEAT,Beer,한국,4.2%,가장 편하게 마실 수 있는 밀맥주로 밀맥주 특유의 바나나의 풍미를 느낄 수 있는 맥주이다.,/beer-default.png
+서울 에일,SEOUL SOUL ALE,Beer,한국,5%,"홉의 깔끔한 쓴맛과 프리미엄 맥아의 은은한 단맛이 조화를 이루며, 입안과 코 끝에 남는 홉 향기가 특징인 맥주입니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
+양평 에일,YANGPYEONG ALE,Beer,한국,4.5%,"청량감이 높고, 마신 후 은은하게 퍼지는 상쾌한 과일 향과 알싸한 후추 향이 조화를 이루는 에일 맥주입니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
+독립 에일,INDEPENDENCE 1909,Beer,한국,6%,"풍부한 탄산감과 깔끔한 뒷맛으로 가볍고 산뜻하게 마실 수 있으며, 상쾌한 과일향과 스파이시함이 조화를 이뤄 기분 좋게 마실 수 있는 맥주",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
+코리아 페일 에일,KPA,Beer,한국,4.6%,"아메리칸 스타일인 페일 에일을 재해석한 맥주로 맥아 특유의 달콤함이 느껴지며, 마신 후 강렬한 과일향과 은은한 버터감이 여운을 남기는 맥주입니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
+서초,SEOCHO WHEAT,Beer,한국,4.2%,가장 편하게 마실 수 있는 밀맥주로 밀맥주 특유의 바나나의 풍미를 느낄 수 있는 맥주이다.,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 맥아더,"MAC A, THE",Beer,한국,4.7%,캐러멜 몰트 맥아의 단맛과 꽃향기를 가지고 있으며 비스킷과 같은 단맛과 고소한 맛이 나는 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/mac-a-the.png
 흥청망청,HEUNG-CHUNG MANG-CHUNG,Beer,한국,5%,깔끔한 맛으로 자몽 향과 시트러스 향이 나며 맥아에서 오는 캐러멜 맛이 나는 진한 호박색의 라거 맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/heung-chung-mang-chung.png
 레오,LEO,Beer,태국,5%,"태국 3대 맥주. 더운 태국의 기후에 알맞는 페일 라거
@@ -80,13 +80,13 @@ T-바이젠,T-Weizen,Beer,한국,4.5%,"독일남부 스타일의 밀맥주로, �
 스밈,Smimm,Beer,한국,5.5%,"'스밈'은 크래프트 에일로 호밀과 카라멜 몰트를 절제하여 사용해 뽑아낸 몰트 캐릭터와 은은한 효모 에스테르의 바탕 위에 팔코너스 플라이트, 심코 홉을 사용하여 레몬, 자몽의 시트러스한 느낌과 꽃향을 가진 홉 캐릭터가 주를 이루는 맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/smimm.png
 코코넛 레밍턴,Coconu Lamington,Beer,한국,10%,"코코넛 래밍턴'은 Pastry Stout 스타일의 맥주로 단맛과 진득한 질감, 여러 부재료의 캐릭터를 최대한 뽑아내 마치 디저트를 마시는 듯한 경험을 선사합니다.",https://beer-api-prod.idkulab.com/media/drinks/coconut_lamington.png
 마오우 클래시카,Mahou Classic,Beer,스페인,4.8%,"100여 년 전에 만들어진 맥주로 조리법, 맛, 품질을 그대로 유지하고 있습니다. 향이 풍부하고 알코올과 산도의 균형이 잘 잡힌 약간의 과일 향이 나는 상쾌한 맥주입니다.
-현재도 코르크 사용을 유지하고 있어 1890년의 오리지널 마오우를 맛볼 수 있습니다. 밝은 황금색으로 부드러운 바디감과 풍미, 균형 잡힌 맛으로 유명하며 꽃, 홉의 색조와 함께 가벼운 과일 향이 납니다.",/beer-default.png
+현재도 코르크 사용을 유지하고 있어 1890년의 오리지널 마오우를 맛볼 수 있습니다. 밝은 황금색으로 부드러운 바디감과 풍미, 균형 잡힌 맛으로 유명하며 꽃, 홉의 색조와 함께 가벼운 과일 향이 납니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 마오우 5 스타 세션 아이피에이,Mahou 5 Star Session IPA,Beer,스페인,4.5%,"스페인 마오우와 미국 마스터 브루어스의 노하우가 결합되어 완성되었습니다. 아로마와 쓴맛 중에서 균형 잡힌 방식으로 홉을 사용하여 아로마와 향을 유지하지만 알코올은 적고 상쾌한 특성을 가졌습니다.
-Stone Fruit, 건포도, 감귤류 및 소나무 향이 조화있게 결합된 강렬한 향이 뛰어난 특징입니다. 귀리를 첨가하여 바디감을 제공하고 특별한 부드러운 맛을 느낄 수 있습니다.",/beer-default.png
-리겔 헤페바이스,Riegele Hefe weiss,Beer,독일,5%,"독일 남부의 대표적인 맥주 스타일인 밀맥주로서 효모를 필터링하지 않아 밀맥주 고유의 바나나향, 풍선껌과 같은 은은한 아로마와 부드러운 거품이 조화를 이루며 쓴맛이 전혀없는 상큼한 스타일의 밀맥주로서 누구나 편하게 즐길 수 있습니다",/beer-default.png
+Stone Fruit, 건포도, 감귤류 및 소나무 향이 조화있게 결합된 강렬한 향이 뛰어난 특징입니다. 귀리를 첨가하여 바디감을 제공하고 특별한 부드러운 맛을 느낄 수 있습니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
+리겔 헤페바이스,Riegele Hefe weiss,Beer,독일,5%,"독일 남부의 대표적인 맥주 스타일인 밀맥주로서 효모를 필터링하지 않아 밀맥주 고유의 바나나향, 풍선껌과 같은 은은한 아로마와 부드러운 거품이 조화를 이루며 쓴맛이 전혀없는 상큼한 스타일의 밀맥주로서 누구나 편하게 즐길 수 있습니다",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 녹투스 100,Noctus 100,Beer,독일,10%,세계 비어 소플리에 챔피언이자 리겔 브루어리의 사장인 세바스티앙 프릴러 리겔의 레서피로 탄생한 녹투스 100은 향기로운 커피와 초콜렛의 풍미를 느낄 수 있는 임페리얼 스타우트의 정석,https://beer-api-prod.idkulab.com/media/drinks/noctus100.png
-슈렝케를라 메르첸,Schlenkerla Marzen,Beer,독일,5.1%,도시 전체가 유네스코 문화 유산으로 지정된 독일의 베니스 밤베르크의 전통 훈연맥주 슈렝케를라는 너도밤나무 연기로 맥아를 건조시켜 은은한 훈연향을 가진 최고급 맥아와 1387년부터 이어져온 전통적인 양조방식을 이용하여 만들어진 프리미엄 독일맥주입니다.,/beer-default.png
-소넨호펜,Gaffel Sonnenhofpen,Beer,독일,4.9%,태양의 홉'이란 이름을 가진 소넨호펜은 시트라홉만을 사용하여 쓰지 않으면서도 향긋한 샴페인 같은 느낌과 귀여운 아기사슴을 레이블로 사용하여 '밤비맥주'라고 불리우며 특히 여성들에게 인기가 많은 페일에일,/beer-default.png
+슈렝케를라 메르첸,Schlenkerla Marzen,Beer,독일,5.1%,도시 전체가 유네스코 문화 유산으로 지정된 독일의 베니스 밤베르크의 전통 훈연맥주 슈렝케를라는 너도밤나무 연기로 맥아를 건조시켜 은은한 훈연향을 가진 최고급 맥아와 1387년부터 이어져온 전통적인 양조방식을 이용하여 만들어진 프리미엄 독일맥주입니다.,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
+소넨호펜,Gaffel Sonnenhofpen,Beer,독일,4.9%,태양의 홉'이란 이름을 가진 소넨호펜은 시트라홉만을 사용하여 쓰지 않으면서도 향긋한 샴페인 같은 느낌과 귀여운 아기사슴을 레이블로 사용하여 '밤비맥주'라고 불리우며 특히 여성들에게 인기가 많은 페일에일,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 가펠쾰쉬,Gaffel kolsch,Beer,독일,4.8%,"독일 쾰른에서 생산된 밝은 황금빛의 맥주로 에일효모를 사용하지만 라거와 같이 낮은 온도에서 오랜기간 숙성하여 벌꿀향과 꽃향기, 부드러운 목넘김과 상쾌함을 동시에 느낄 수 있는 쾰른 판매 1위 맥주",https://beer-api-prod.idkulab.com/media/drinks/gaffel_kolsch.png
 가펠레몬,Gaffel Lemon,Beer,독일,2.4%,"가펠쾰쉬와 천연레몬쥬스를 5:5로 섞어 맥주의 짜릿함과 레몬의 상큼함을 동시에 느낄 수 있는 2.4%의 저알콜 레몬맥주.
 산뜻한 과일맥주로 음료처럼 즈릭거나 고도수의 술과 믹스해도 좋습니다.",https://beer-api-prod.idkulab.com/media/drinks/gaffel_lemon.png
@@ -109,22 +109,22 @@ Stone Fruit, 건포도, 감귤류 및 소나무 향이 조화있게 결합된 �
 댄싱파파,Dancing Papa,Beer,한국,7%,사과의 풍미와 와인스러운 피니시로 애주가들이 선호하는 Dry Cider,https://beer-api-prod.idkulab.com/media/drinks/dancing_papa.png
 루드베리,Rude Berry,Beer,한국,4.5%,로컬 딸기로 시작하여 상큼한 바질로 마무리되는 탄산 톡톡 스윗 사이더,https://beer-api-prod.idkulab.com/media/drinks/rude_berry.png
 요새로제,Yose Rose,Beer,한국,6.4%,베리의 산뜻함을 고스란히 담은 로즈빛 프리미엄 애플사이더,https://beer-api-prod.idkulab.com/media/drinks/yose_rose.png
-산미구엘 세르베자 블랑카,San Miguel Cerveza Blanca,Beer,필리핀,5.4%,스파이시함과 스모키 그리고 풍부한 과일향의 완벽한 조화를 가진 산미구엘 세르베자 블랑카 밀맥주는 은은하게 피어나는 시트러스 향과 민트 향의 부드러움 뿐만 아니라 진한 골드 컬러 위의 크리미한 거품은 최고의 밀맥주 맛을 선사하는 산미구엘의 선물과도 같은 프리미엄 맥주 중 하나입니ㅏㄷ.,/beer-default.png
+산미구엘 세르베자 블랑카,San Miguel Cerveza Blanca,Beer,필리핀,5.4%,스파이시함과 스모키 그리고 풍부한 과일향의 완벽한 조화를 가진 산미구엘 세르베자 블랑카 밀맥주는 은은하게 피어나는 시트러스 향과 민트 향의 부드러움 뿐만 아니라 진한 골드 컬러 위의 크리미한 거품은 최고의 밀맥주 맛을 선사하는 산미구엘의 선물과도 같은 프리미엄 맥주 중 하나입니ㅏㄷ.,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 라구니타스 IPA,Lagunitas IPA,Beer,미국,6.2%,"라구니타스는 1993년 미국 캘리포니아 내 작은 도시에서 출발하여, 전 세계적으로 맥덕들 사이에서 꾸준한 입소문을 타고 있습니다. 미국에서는 단연 No.1 IPA로 사랑받고 있습니다.
 살균처리 하지 않은 상당 수의 DRY HOPS를 넣어 고유의 독특한 맛과 향을 살린 점은 라구니타스의 고유 제조 공법입니다. 이러한 살균처리 하지 않은 본연의 홉은 쌉쌀한 맛과 달콤함의 밸런스를 잡아 완벽한 맥주를 만드는 역할을 합니다.",https://beer-api-prod.idkulab.com/media/drinks/lagunitas_ipa.png
-슈티글 시트론 라들러,Stiegl Radler Zitrone,Beer,오스트리아,2%,"상큼한 레몬의 풍취가 첫 모금에서 생생하게 전해지며, Real Lemon 쥬스가 전하는 citrus하며 상쾌한 aroma가 가벼운 스파클링의 느낌과 함께 입안 가득 퍼지면서, 라들러의 스위티한 마무리가 오래도록 상큼함을 지니고 있음",/beer-default.png
+슈티글 시트론 라들러,Stiegl Radler Zitrone,Beer,오스트리아,2%,"상큼한 레몬의 풍취가 첫 모금에서 생생하게 전해지며, Real Lemon 쥬스가 전하는 citrus하며 상쾌한 aroma가 가벼운 스파클링의 느낌과 함께 입안 가득 퍼지면서, 라들러의 스위티한 마무리가 오래도록 상큼함을 지니고 있음",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 아리랑IPA,Aribeer Arirang IPA,Beer,한국,7.2%,"많은 맥아와 홉을 사용하여 알코올 농도가 높고 쓴맛이 강하며 오렌지 향이 매력적인 미국식 에일맥주
 홉에서 비롯된 쓴맛이 강하지만 재료의 비중이 높아 보리와 홉의 향이 잘 살아남. 쓴맛이 강한 편이라 맥주 초보자들이 접하기에 다소 난이도가 있으나 맥주 마니아들은 대부분 IPA에 열광함",https://beer-api-prod.idkulab.com/media/drinks/arirang_ipa.png
 동강에일,Aribeer Pale Ale,Beer,한국,4.8%,다양한 몰트의 풍미와 시트러스한 홉의 풍미가 잘 어우러진 부드러운 정통 에일맥주,https://beer-api-prod.idkulab.com/media/drinks/aribeer_pale_ale.png
 곤드레필스너,Aribeer Pilsner,Beer,한국,4.8%,밝고 투명하며 곤드레의 풍미와 더불어청량감이 살아있는 체코식 라거맥주,https://beer-api-prod.idkulab.com/media/drinks/aribeer_pilsner.png
-윤바이젠,Aribeer Weizen,Beer,한국,5.5%,홉과 효모의 풍미와 부드러운 신맛이 강조된 독일식 밀맥주,/beer-default.png
-마인스타우트,Aribeer Stout,Beer,한국,5.2%,로스팅한 맥아의 그윽한 풍미와 묵직한 바디감이 살아있는 영국식 흑맥주,/beer-default.png
+윤바이젠,Aribeer Weizen,Beer,한국,5.5%,홉과 효모의 풍미와 부드러운 신맛이 강조된 독일식 밀맥주,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
+마인스타우트,Aribeer Stout,Beer,한국,5.2%,로스팅한 맥아의 그윽한 풍미와 묵직한 바디감이 살아있는 영국식 흑맥주,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 아랏차IPA,Aribeer Aracha IPA,Beer,한국,5.2%,오렌지향과 드라이한 바디감으로 청량감이 뛰어난 IPA,https://beer-api-prod.idkulab.com/media/drinks/aribeer_aracha_ipa.png
-화수 바이젠,Whasoo Weizen,Beer,한국,5%,화수 브루어리의 대표적인 밀 맥주로서 헤페 바이젠 효모를 사용하여 이스트 아로마의 바나나 향과 부드러운 마우스 필을 입가에 담을 수 있는 맥주,/beer-default.png
+화수 바이젠,Whasoo Weizen,Beer,한국,5%,화수 브루어리의 대표적인 밀 맥주로서 헤페 바이젠 효모를 사용하여 이스트 아로마의 바나나 향과 부드러운 마우스 필을 입가에 담을 수 있는 맥주,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 화수 아메리칸라거,Whasoo American Lager,Beer,한국,5%,"로컬브루어리의 브루어의 자존심과 기본기를 바탕으로 가장 베이직한 스타일의 깔끔하고 신선한 아메리칸 라거
 2019년 주류대상 크래프트 맥주 라거 부문 대상 
 양조 공정 처음부터 끝까지 미국에서 생산된 신선한 몰트, 홉 그리고 효모를 사용하여 완성된 맥주입니다. 강한 탄산감으로 드라이한 피니시에 크리스피함이 두드러지며 홉의 향긋함을 느낄 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/american_lager_WRk5O5H.png
-화수 쾰쉬,Whasoo Kolsch,Beer,한국,5%,"라거와 에일의 장점만을 담아 만들어낸 맥주, 라거의 깔끔한 맛과 에일의 향긋한 아로마가 느껴지며 어떤 음식과도 조화로운 맥주",/beer-default.png
+화수 쾰쉬,Whasoo Kolsch,Beer,한국,5%,"라거와 에일의 장점만을 담아 만들어낸 맥주, 라거의 깔끔한 맛과 에일의 향긋한 아로마가 느껴지며 어떤 음식과도 조화로운 맥주",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 화수 알트비어,Whasoo Alt Bier,Beer,한국,5%,캐러멜 몰트를 사용하여 몰티함을 갖추고 오랜 시간의 저온 숙성 속에서 올드한 풍미를 갖춘 화수 브루어리의 오랜 맥주,https://beer-api-prod.idkulab.com/media/drinks/alt_beer_WoLkPSB.png
 화수 유자페일에일,Whasoo Yuza Pale Ale,Beer,한국,5%,"홉의 아로마와 한국적인 유자의 향의 조화가 이뤄낸 페일 에일로써 시트러스 함의 절정을 만들어 준 화수 브루어리의 ""제2의 시그니처""맥주",https://beer-api-prod.idkulab.com/media/drinks/yuza_pale_ale.png
 화수 불멍,Whasoo Session IPA,Beer,한국,5%,"시트라 단일 홉을 사용하여 자몽, 시트럿, 망고의 풍미를 갖춘 음용성이 좋은 세션 아이피에이
@@ -139,17 +139,17 @@ IPA입문자에게 추천하는 맥주",https://beer-api-prod.idkulab.com/media/
 하노이 프리미엄,Hanoi Premium,Beer,베트남,4.9%,"라거타입이지만 무게감 있는 맥주로 가벼운 목넘김과 함께 묵직하고 터프한 뒷맛이 오래 남습니다. 
 
 지난 16년 오바마 전미 대통령이 베트남 내한 당시 서민 식당을 찾아 이른바 ‘분짜외교’로 화제를 모았습니다, 당시 분짜와 함께 마신 맥주가 바로 <하노이프리미엄> 대통령이 선택한 베트남의 유명맥주입니다.",https://beer-api-prod.idkulab.com/media/drinks/hanoi_beer.png
-앙코르맥주,Angkor,Beer,캄보디아,5%,"벨기에 “몽드 셀렉션” 2회 수상하며 품질과 맛이 보장된 캄보디아의 국민맥주 입니다.
+앙코르Beer,Angkor,Beer,캄보디아,5%,"벨기에 “몽드 셀렉션” 2회 수상하며 품질과 맛이 보장된 캄보디아의 국민맥주 입니다.
 풍부한 홉의 향과 밝은 골드칼라를 가지고 있으며 홉에 쌉쌉함이 풍부하게 느껴지며 부드러운 목넘김이 즐거움을 주는 맛을 가지고 있습니다. 링크라우 방식으로 개봉이 편리합니다.",https://beer-api-prod.idkulab.com/media/drinks/angkor.png
 제주 슬라이스,Jeju Slice,Beer,한국,4.1%,"제주 슬라이스는 패션 프루트를 넣어 과일의 상큼한 향과 맛이 풍부하며 부드럽고 가벼운 질감이 특징인 에일입니다.
 기분 좋은 탄산감까지 더해져 언제나 경쾌하게 즐길 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/jeju_slice.png
-사무엘스미스 오가닉 아프리콧 프룻비어,Samuel Smith's Organic Apricot Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 아프리콧 프룻비어,Samuel Smith's Organic Apricot Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic 맥주 to create fruit 맥주s of considerable strength and flavour. The smooth distinctive character of the matured 맥주 serves as the perfect counterpoint to the pure organic fruit juice.
 
 Ingredients • water, organic malted barley, organic malted wheat, organic cane sugar, organic apricot concentrate, organic apricot extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/organic_apricot.png
 사무엘스미스 오가닉 초콜렛 스타우트,Samuel Smith's Organic Chocolate Stout,Beer,영국,5%,"Brewed with well water (the original well, sunk in 1758, is still in use with the hard water is drawn from 85 feet underground), the gently roasted organic chocolate malt and organic cocoa impart a delicious, smooth and creamy character, with inviting deep flavours and a delightful finish – this is the perfect marriage of satisfying stout and luxurious chocolate.
 
 Ingredients; water, organic malted barley, organic cane sugar, yeast, organic hops, organic cocoa extract, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/organic_chocolate_stout.png
-사무엘스미스 임페리얼 스타우트,Samuel Smith's Imperial Stout,Beer,영국,7%,"This distinctive type of beer was originally brewed to withstand the abuses of shipping in foul weather to Imperial Russia. It was a favourite of Russian nobility whose taste for the finest food and drink was world famous.
+사무엘스미스 임페리얼 스타우트,Samuel Smith's Imperial Stout,Beer,영국,7%,"This distinctive type of 맥주 was originally brewed to withstand the abuses of shipping in foul weather to Imperial Russia. It was a favourite of Russian nobility whose taste for the finest food and drink was world famous.
 A rich flavourful brew; deep chocolate in colour with a roasted barley nose and flavour that is a complexity of malt, hops, alcohol and yeast. Fermented in ‘stone Yorkshire squares’.
 
 Ingredients • Water, malted barley, roasted malt, cane sugar, yeast, hops.",https://beer-api-prod.idkulab.com/media/drinks/samuel_smith_imperial_stout.png
@@ -157,7 +157,7 @@ Ingredients • Water, malted barley, roasted malt, cane sugar, yeast, hops.",ht
 알코올향이 느껴지지 않아 술을 잘 못 마시는 분들에게 좋은 맥주.
 아주 시원하게 마시면 더욱더 좋은 맥주",https://beer-api-prod.idkulab.com/media/drinks/corsendonk.png
 콜센동크 파터,Corsendonk Parter Dubbel,Beer,벨기에,6.5%,"진한 몰트향, 부드럽고 매력적인 카라멜 향 진한 목넘김, 깊이 숙성된 세련된 맛.
-듀벨과 같은 진한 에일 스타일에 익숙하지 않은 경우, 듀벨 스타일을 처음 경험하기에 아주 좋은 맥주",/beer-default.png
+듀벨과 같은 진한 에일 스타일에 익숙하지 않은 경우, 듀벨 스타일을 처음 경험하기에 아주 좋은 맥주",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 제주 거멍 에일,Jeju Geomeong Ale,Beer,한국,4.3%,거멍'은 '검다'라는 의미의 제주 방언입니다. 제주 흑보리와 초콜릿 밀을 사용하여 제주의 여름밤을 떠올리게 하는 경쾌한 흑맥주입니다.,https://beer-api-prod.idkulab.com/media/drinks/jeju_geomeong_ale.png
 제주 펠롱 에일,JEJU PELLONG ALE,Beer,한국,5.5%,펠롱'은 '반짝'이라는 의미의 제주 방언입니다. 다양하고 개성있는 홉을 블렌딩하여 반짝이는 시트러스 향을 느낄 수 있는 제주스러운 페일 에일입니다.,https://beer-api-prod.idkulab.com/media/drinks/jeju_pellong_ale.png
 호가든 보타닉 레몬그라스 & 시트러스 제스트,Hoegaarden Botanic Lemongrass & Citrus Zest,Beer,한국,2.5%,"봄날의 휴식을 닮은 보타니컬 블랜드
@@ -171,7 +171,7 @@ Pleasantly sweet and fizzy, it is like a stroll through the greenest of gardens 
 사워한 맛때문에 이름 붙여진 이 사이다는 설탕을 추가하지 않아 클래식한 느낌의 약간 드라이한 맛이 납니다.
 
 It will set your mind wandering to warm summer evenings when the garden is overflowing with juicy, ripe apples and a hedgehog scurries about in the bushes.",https://beer-api-prod.idkulab.com/media/drinks/hoggys-apple-paradise.png
-노르디스크 캠핑맥주,Nordisk Camping Beer,Beer,한국,5.3%,"오랜 역사를 가진 덴마크 아웃도어 브랜드 Nordisk 
+노르디스크 캠핑Beer,Nordisk Camping Beer,Beer,한국,5.3%,"오랜 역사를 가진 덴마크 아웃도어 브랜드 Nordisk 
 삶의 질을 향상시킬 자연속에서의 시간 고귀한 자연을 누리세요.",https://beer-api-prod.idkulab.com/media/drinks/nordisk_camping_beer.png
 백양 BYC 비엔나 라거,Baekyang BYC Vienna Lager,Beer,한국,5.2%,아버지의 순백 메리야스로 추억되는 백양 BYC가 오비맥주와 만나 양털같이 부드러운 거품과 고소한 향이 가득한 비엔라 라거로 탄생했습니다. 오늘저녁 나를 위한 '행복 한잔' 어떠세요?,https://beer-api-prod.idkulab.com/media/drinks/baekyang_byc_vienna_lager.png
 슈퍼스타즈 페일에일,SUPER STARS PALE ALE,Beer,한국,4.7%,"슈퍼스타즈 쌉쌀함을 즐겨라 
@@ -195,7 +195,7 @@ SSG랜더스라거,SSG LANDERS LAGER,Beer,한국,4.5%,"SSG랜더스 라거는 �
 벨기에 정통 양조방식으로 만들어진 이 프리미엄 블렌드는 포멜로의 상큼한 맛과 호가든 밀맥주의 산뜻함이 조화를 이루며, 여름날의 휴식을 더욱 여유롭게 만들어 줍니다.",https://beer-api-prod.idkulab.com/media/drinks/hoegaarden_pomelo.png
 오늘,오늘,Beer,한국,4.7%,"오렌지 필과 코리엔더 씨앗이 맥주의 달콤한 아로마와 풍미를 극대화, 마시기 전부터 달콤한 오렌지 아로마가 후각을 자극하고, 가벼운 바디와 청량한 탄산감으로 어느 누구나 편하게 마실 수 있는 맥주",https://beer-api-prod.idkulab.com/media/drinks/oneul.png
 미스터문 애플사이더,Mister Moon Apple Cider,Beer,포르투갈,4.5%,풍부한 사과향이 느껴지는 애플사이다.,https://beer-api-prod.idkulab.com/media/drinks/mister_moon_apple_cider.png
-구스아일랜드 소피,Goose Island Sofie,Beer,미국,6.5%,"전반적으로 은은한 오렌지 향이 느껴지고, 끝 맛에서는 부드러운 바닐라 향이 더해져 훌륭한 밸런스를 완성합니다. Sofie는 새콤하고 드라이한 벨기에 스타일의 팜하우스 스파클링 엘리로, 와인 배럴에서 오렌지 껍질과 함께 숙성시켜 깊은 풍미를 느낄 수 있습니다. 특히 샴페인 애호가라면, Sofie의 신선하고 부드러운 바닐라 피니시를 더욱 선호할 것입니다.",https://beer-api-prod.idkulab.com/media/drinks/goose_island_sofie.png
+구스아일랜드 소피,Goose Island Sofie,Beer,미국,6.5%,"전반적으로 은은한 오렌지 향이 느껴지고, 끝 맛에서는 부드러운 바닐라 향이 더해져 훌륭한 밸런스를 완성합니다. Sofie는 새콤하고 드라이한 벨기에 스타일의 팜하우스 스파클링 엘리로, Wine 배럴에서 오렌지 껍질과 함께 숙성시켜 깊은 풍미를 느낄 수 있습니다. 특히 샴페인 애호가라면, Sofie의 신선하고 부드러운 바닐라 피니시를 더욱 선호할 것입니다.",https://beer-api-prod.idkulab.com/media/drinks/goose_island_sofie.png
 린데만스 빼슈레제,Lindemans Pecheresse,Beer,벨기에,2.5%,"린데만스 빼슈레제는 풍성한 과일의 풍미에 람빅 특유의 쌉쌀함과 달콤한 복숭아가 완벽한 밸런스를 이루고 있다. 복숭아 과즙이 절반 가까이 들어간 람빅으로, 진한 복숭아의 풍미를 느낄 수 있는 가장 완벽한 식전주로 자부한다.
 하루 중 언제 마셔도 즐겁지만, 햇볕이 잘 드는 테라스에서 사랑하는 연인과 함께 즐기기에 제격이다. 디저트와 가장 잘 어울리는 맥주가 아니라 그 자체가 디저이트이다.",https://beer-api-prod.idkulab.com/media/drinks/lindemans_pecheresse.png
 린데만스 크릭,Lindemans Kriek,Beer,벨기에,3.5%,"린데만스 크릭은 1년동안 참나무로 숙성하여 체리의 달콤함을 극대화하였으며, 신선한 체리의 맛에 신맛과 단맛의 절묘한 조화가 돋보인다.
@@ -264,7 +264,7 @@ KFC 칰,KFC Chick,Beer,한국,4.5%,"칙~~은 캔맥주를 딸 때 나는 시원�
 바닐라빈의 아로마가 더해져 달콤한 솔티드 카라멜이 연상되는
 버번 배럴에이징 카라멜 임페리얼 스타우트
 
-????멜팅스타우트는 배럴에이징을 위해 오크통에 넣어 숙성한 Barrel Work 맥주로 탄산감이 상대적으로 없습니다. 솔티드카라멜의 풍미와 질감을 비슷하게 구현하고 피니시에서 탄산으로 톡톡튀는 요소를 배제하기 위해, 배럴숙성 후에도 2차적인 탄산충진을 자제하였습니다.",https://beer-api-prod.idkulab.com/media/drinks/melting_stout.png
+멜팅스타우트는 배럴에이징을 위해 오크통에 넣어 숙성한 Barrel Work 맥주로 탄산감이 상대적으로 없습니다. 솔티드카라멜의 풍미와 질감을 비슷하게 구현하고 피니시에서 탄산으로 톡톡튀는 요소를 배제하기 위해, 배럴숙성 후에도 2차적인 탄산충진을 자제하였습니다.",https://beer-api-prod.idkulab.com/media/drinks/melting_stout.png
 가평물안개,Gapyeong Hazy Fog Oatmeal IPA,Beer,한국,6.5%,"오트밀이 선사하는 특유의 바디감과 구수함, 드라이홉핑으로 향긋하면서도 비터함의 밸런스가 매력적인 오트밀IPA. 크래머리가 위치한 가평 조종천에서 피어나는 물안개처럼 Hazy한 맛과 비쥬얼을 맥주로 만나보세요.",https://beer-api-prod.idkulab.com/media/drinks/gapyeong_fog_ipa.png
 내일바이젠,See You Tomorrow Weizen,Beer,한국,5.8%,"크래머리와 이탈리아 최고의 브루마스터 다리오(Dario)가 콜라보하여 만든 맥주로 시트라와 심코 홉이 들어갔습니다. 리치, 망고, 파파야, 파인애플의 묵직한 열대과일 아로마의 특징을 가진 ‘시트라(Citra)’ 홉과 솔, 나무의 쌉쌀한 특징이 두드러진 ‘심코(Simcoe) 홉의 만남. 한 모금 마셨을때 부드러운 비터함과 열대과일의 시트러스함이 은은하게 퍼지는 복합적인 매력이 팡팡 느껴집니다.",https://beer-api-prod.idkulab.com/media/drinks/see_you_weizen.png
 패셔니스타,Passionista,Beer,한국,4.5%,"과일과 유산균의 콜라보라 할 수 있는 이번 패셔니스타 배치는 달콤한 과일항과 새콤한 신맛, 은은한 짠맛이 어우러진 가볍게 마실 수 있는 Light Body의 고제입니다.
@@ -273,7 +273,7 @@ KFC 칰,KFC Chick,Beer,한국,4.5%,"칙~~은 캔맥주를 딸 때 나는 시원�
 
 풋풋한 초여름 5월에 가볍게 마시기 좋은
 Light Body의 트로피컬고제 ‘패셔니스타’
-곧 여러분을 찾아갑니다. ????????????????",https://beer-api-prod.idkulab.com/media/drinks/passionista.png
+곧 여러분을 찾아갑니다. ",https://beer-api-prod.idkulab.com/media/drinks/passionista.png
 임페리얼 필스너,Imperial Pilsner,Beer,한국,9%,"밝은 황금색과 기분 좋은 단맛,
 적당한 탄산과 시원한 목넘김,
 부드러우면서도 쌉쌀하고 고급스러운 피니시,
@@ -283,7 +283,7 @@ Light Body의 트로피컬고제 ‘패셔니스타’
 크래머리 임페리얼 필스너 'KIP'
 
 라거, 필스너는 가볍게 먹는다는 편견을 깨면
-뜨거운 여름 강렬한 놈의 ⚡️’KICK’⚡️을 느낄 수 있습니다.????",https://beer-api-prod.idkulab.com/media/drinks/imperial_pilsner.png
+뜨거운 여름 강렬한 놈의 ⚡️’KICK’⚡️을 느낄 수 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/imperial_pilsner.png
 트로피컬 스무디 IPA,Tropical Smoothie IPA,Beer,한국,5.9%,"망고, 패션후르츠, 파인애플 등 과일의 쥬이시함과
 스무디 질감이 입안에서 부드럽게 감도는 트로피컬 스무디 IPA
 
@@ -298,24 +298,24 @@ I LOVE 켄싱턴 2,I Love Kensington 2,Beer,한국,5.2%,"바나나향의 은은�
 소호259 IPA,Soho259 IPA,Beer,한국,6.3%,"시트러시한 열대과일의 향이 폭발하는듯한 풍미와 바디감이 있는 아이피에이.
 여유와 낭만을 찾을 수 있는 자유로운 공간, 강원도 속초의 대표 커뮤니티 호스텔 ‘소호259’ 와 콜라보레이션.",https://beer-api-prod.idkulab.com/media/drinks/soho259.png
 루트바나 둔켈 바이젠복,Root Vana Dunkel Weizenbock,Beer,한국,7.5%,"카라멜, 건과일 & 바나나의 풍미가 은은하게 느껴지는 국내 상업 양조장 최초의 둔켈 바이젠복.
-‌서울 영등포에 있는 '비어바나' 양조장과의 콜라보레이션!",/beer-default.png
+‌서울 영등포에 있는 '비어바나' 양조장과의 콜라보레이션!",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 다크리뎀션,Dark Redemption,Beer,한국,9%,"진저 브레드 쿠키와 추운 겨울의 추위를 녹여주는 허브티의 조합에 영감을 받아 만들어 완성시킨 임페리얼 스타우트
 기존 임페리얼 스타우트 스타일에 시나몬, 카카오닙스, 넛맥 & 카다멈을 첨가하여 스파이시함과 허벌한 느낌을 가미함",https://beer-api-prod.idkulab.com/media/drinks/dark_redemption.png
 루트 라임,Root Lime,Beer,한국,4.8%,"kveik 효모를 사용하고 부재료로 라임과 생강을 넣어
-라임의 시트러시함과 생강의 은은한 플로럴함이 조화롭게 느껴지는 Hazy Fruit Beer",https://beer-api-prod.idkulab.com/media/drinks/root_lime.png
+라임의 시트러시함과 생강의 은은한 플로럴함이 조화롭게 느껴지는 Hazy Fruit 맥주",https://beer-api-prod.idkulab.com/media/drinks/root_lime.png
 블티나,Breakfast Tea Latte Beer,Beer,한국,5%,"부재료로 얼그레이 홍차와 유당을 넣고 Citra, Talus 홉을 넣어 얼그레이 밀크티의 부드러움과 향긋한 풍미가 느껴지고 시트러스와 쥬시한 Hazy Pale Ale",https://beer-api-prod.idkulab.com/media/drinks/breakfast_tea_latte_beer.png
 마이 사우어 아이피에이,My Sour IPA,Beer,한국,5%,"라임, 무화과 & Amarillo, Citra 홉 두가지가 들어가 새콤하고 라임과 무화과의 풍미가 팡팡터지는 산뜻한 IPA",https://beer-api-prod.idkulab.com/media/drinks/my_sour_ipa.png
 이스트 씨 아이피에이,East Sea IPA,Beer,한국,6%,"카비터링 홉을 증량하여 쓴맛을 살리며, 4C 홉 (Columbus, Chinook, Cascade, Centennial) 특유의 솔향과 어씨(earthy)한 풍미가 극대화된 미국 Westcoast IPA의 특징을 살린 IPA",https://beer-api-prod.idkulab.com/media/drinks/east_sea_ipa.png
 하이 & 드라이,High & Dry,Beer,한국,8%,"전통적인 벨지안 효모의 프루티한 향과 플로럴하고 스파이시한 허브의 풍미가 조화를 이루며 청량하고 깔끔한 맛을 내는 트리펠
-[강원도 쌀 + 펜넬 씨드 + Hallertau Tettnang Hop & Hallertau Blanc Hop]",/beer-default.png
+[강원도 쌀 + 펜넬 씨드 + Hallertau Tettnang Hop & Hallertau Blanc Hop]",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 블티나2,Earl Grey Tea Latte Beer,Beer,한국,5%,"또 다른 재미를 느낄 수 있는 블티나의 두번째 시리즈!
 홍차, 유당 & 홉의 풍미가 조화롭게 느껴지는 헤이지 쥬시 페일에일
 [Earl Grey Tea + Sabro + HBC 472 Hop]",https://beer-api-prod.idkulab.com/media/drinks/earl_grey_tea_latte_beer.png
 블루 블랙,Blue Black,Beer,한국,4.8%,"한미콜라보 프로젝트'를 통해 선보이는 크래프트 루트의 스페셜 맥주!
 블루베리, 메이플시럽, 유당이 첨가되어 은은한 블루베리 느낌의 달콤한 디저트처럼 즐길 수 있는 스위트 스타우트",https://beer-api-prod.idkulab.com/media/drinks/blue_black.png
-썸머사우어,Summer Sour,Beer,한국,5%,"라즈베리, 히비스커스, 코리앤더씨드, 동해안 천연 미네랄소금이 들어가고 로랄 홉의 풍미가 은은하게 풍기는 루비색상의 새콤한 맥주",/beer-default.png
+썸머사우어,Summer Sour,Beer,한국,5%,"라즈베리, 히비스커스, 코리앤더씨드, 동해안 천연 미네랄소금이 들어가고 로랄 홉의 풍미가 은은하게 풍기는 루비색상의 새콤한 맥주",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 구스끽스,Goose Ggeeks,Beer,한국,3.6%,"1세대 크래프트비어 브랜드로 맥주 문화 알리기에 앞장 선 구스아일랜드와 끽비어가 함께 새롭고 재밌는 콜라보 Summer 맥주를 선보입니다.
-샴페인을 베이스로 오렌지 쥬스를 섞어 만드는 칵테일 '미모사'에서 영감을 받아, 김천에서 자란 샤인 머스캣 포도와 프랑스산 블러디 오렌지를 듬뿍 넣어 양조해 과일의 새콤함이 매력적인 테이블 사우어 맥주입니다.",/beer-default.png
+샴페인을 베이스로 오렌지 쥬스를 섞어 만드는 칵테일 '미모사'에서 영감을 받아, 김천에서 자란 샤인 머스캣 포도와 프랑스산 블러디 오렌지를 듬뿍 넣어 양조해 과일의 새콤함이 매력적인 테이블 사우어 맥주입니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 레모니 웨이브,Lemony Wave,Beer,한국,8.5%,"레모니 웨이브는 레몬 케이크에 영감을 받아 만든 페이스트리 사워 에일입니다. 설레임과 같은 유산균을 사용한 맥주에 레몬 케이크와 최대한 비슷한 맛을 내고자 바닐라, 아몬드, 레몬 제스트 등을 넣어 만들었습니다.
 
 바닐라의 단맛, 아몬드의 너티함, 레몬의 상큼함에 요구르트 같은 풍미가 잘 어우러지며, 와인처럼 잔을 돌리면 더욱 깊은 맛을 느낄 수 있는, 마치 디저트를 마시는 것 같은 맥주입니다.
@@ -378,22 +378,22 @@ Day 시리즈의 마지막인 90일을 통해 숙성된 시간을 즐겨보세�
 섬세한 탄산감과 부드러운 질감, 깔끔한 바디감을 통해 음용성을 살리면서 스타우트의 특징인 커피, 초콜릿, 카라멜, 볶은 풍미들을 조화롭게 나타냈습니다.
 
 맥주의 이름처럼, 걱정 없이, 모든 일이 잘 풀리는 새 해가 되길 바라며, 소중한 사람들과 함께하는 자리에 편안한 맥주가 되었으면 좋겠습니다.",https://beer-api-prod.idkulab.com/media/drinks/never_mind.png
-내추럴 가든: 제주 댕유지,Natural Garden Sour Ale: Dangyuja,Beer,한국,4.9%,갓 수확한 신선한 제주 토종 유자로 보통의 유자와는 결이 다른 아로마에 쌉살한 느낌이 강한 댕유지의 향을 최대한 살린 새콤한 사워에일.,/beer-default.png
+내추럴 가든: 제주 댕유지,Natural Garden Sour Ale: Dangyuja,Beer,한국,4.9%,갓 수확한 신선한 제주 토종 유자로 보통의 유자와는 결이 다른 아로마에 쌉살한 느낌이 강한 댕유지의 향을 최대한 살린 새콤한 사워에일.,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png
 강원 에일,Gangwon Ale,Beer,한국,4.5%,"시트러스, 플로럴, 자몽 등의 풍미 극대화된 홉의 향과 맛이 일품",https://beer-api-prod.idkulab.com/media/drinks/gangwon_ale.png
 전라 라거,Jeolla Lager,Beer,한국,4.5%,"전라북도에서 자란 호프 사용, 은은한 과일향, 깔끔한 피니시",https://beer-api-prod.idkulab.com/media/drinks/jeolla_lager.png
-스퀴즈 라거,Squeeze Lager,Beer,한국,5%,"2021 대한민국 주류대상 라거부문 대상
+스퀴즈 라거,Squeeze Lager,Beer,한국,5%,"2021 한국 주류대상 라거부문 대상
 스페셜 몰트에서 비롯된 깊은 풍미, 산뜻하고 깔끔한 피니시",https://beer-api-prod.idkulab.com/media/drinks/squeeze_lager.png
 파리의 꿈,Dream of Paris,Beer,한국,5%,유산균 발효하여 발생한 산미가 혀끝을 사로잡는 산뜻한 샴페인의 풍미,https://beer-api-prod.idkulab.com/media/drinks/dream_of_paris.png
-밤이면 밤마다,Night After Night,Beer,한국,5.8%,"2020 & 2021 대한민국 주류대상 에일부문 대상
+밤이면 밤마다,Night After Night,Beer,한국,5.8%,"2020 & 2021 한국 주류대상 에일부문 대상
 다크 초콜릿&커피의 풍부한 맛, 입안 가득 퍼지는 밤의 풍미",https://beer-api-prod.idkulab.com/media/drinks/night_after_night.png
-소양강 에일,Soyang-gang Ale,Beer,한국,5%,"2020 대한민국 주류대상 Best of 2020
+소양강 에일,Soyang-gang Ale,Beer,한국,5%,"2020 한국 주류대상 Best of 2020
 복숭아, 열대과일 풍미를 내는 고급 홉만을 엄선하여 극대화된 홉의 향과 맛",https://beer-api-prod.idkulab.com/media/drinks/soyang_gang_ale.png
 스퀴즈 화이트,Squeeze White,Beer,한국,5%,"벨기에 호가든 밀맥주 재현. 오렌지 껍질, 고수 씨앗 첨가. 산뜻하며 훌륭한 목 넘김",https://beer-api-prod.idkulab.com/media/drinks/squeeze_white.png
-춘천 IPA,Chuncheon IPA,Beer,한국,6%,"2019 대한민국 주류대상 에일부문 대상
+춘천 IPA,Chuncheon IPA,Beer,한국,6%,"2019 한국 주류대상 에일부문 대상
 더블 드라이 호핑 하여 폭발적인 홉 향과 열대과일 등의 풍미 가득",https://beer-api-prod.idkulab.com/media/drinks/chuncheon_ipa.png
-353 라거,353 Lager,Beer,한국,5%,"2019 대한민국 주류대상 라거부문 대상
+353 라거,353 Lager,Beer,한국,5%,"2019 한국 주류대상 라거부문 대상
 은은한 과일의 향, 라거 본연의 청량감과 함께 깊은 풍미와 산뜻한 피니시",https://beer-api-prod.idkulab.com/media/drinks/353_lager.png
-하노이 맥주,Hanoi Beer,Beer,베트남,4.6%,"하노이 맥주 맥주는 연간 생산량이 HABECO 제품의 총 생산량의 70 %를 차지합니다. 
+하노이 Beer,Hanoi Beer,Beer,베트남,4.6%,"하노이 맥주 맥주는 연간 생산량이 HABECO 제품의 총 생산량의 70 %를 차지합니다. 
 밝은 노란색 색상, 쫀쫀한 거품, 매끄러운 쓴맛, 부드럽고 감칠맛 나는 맥주로 베트남 북부의 지방 및 도시 시장에서 안정적인 위치를 차지합니다.
 
 베트남은 동남아 국가 중 맥주 소비가 2위일 정도로 맥주를 많이 마시는 나라입니다.
@@ -407,7 +407,7 @@ Day 시리즈의 마지막인 90일을 통해 숙성된 시간을 즐겨보세�
 드렁큰초콜릿 스타우트,Drunken Chocolate Stout,Beer,한국,4.5%,"""Drunken Chocolate""이라는 초콜릿 케이크 레시피를 모티브로 만든 제품입니다. 카카오닙스와 코코아 분말을 사용하여 초콜릿의 풍미가 더욱 깊어진 스타우트입니다. 달콤쌉싸름한 초콜릿맛과 부드럽고 쫀득한 식감으로 디저트로 즐기기에도 좋습니다.",https://beer-api-prod.idkulab.com/media/drinks/drunken_choco_stout.png
 커피리브레 커피맥주,Coffee Libre Coffee Beer,Beer,한국,4.5%,"스페셜티 원두 전문점 ""키피리브레""와 협업한 커피맥주 입니다. 커피리브레의 다크리브레 블렌드와 호주산 맥아의 고소함을 느낄 수 있으며 목넘김이 좋아 마시키 쉽다는 특징을 갖고 있습니다.",https://beer-api-prod.idkulab.com/media/drinks/brewguru_coffee_libre.png
 부루구루 봄,Brewguru Cherry Blossom,Beer,한국,4%,"왜인지 설레고 간질간질한 그 계절.
-따뜻하고 싱그러운 봄을 그대로 담았습니다.????
+따뜻하고 싱그러운 봄을 그대로 담았습니다.
 입 안 가득 부드럽게 전해지는 벚꽃향과 신선한 체리가 산뜻하고 화사한 봄을 닮았습니다.",https://beer-api-prod.idkulab.com/media/drinks/brewguru_bom.png
 사무엘스미스 넛 브라운에일,Samuel Smiths Nut Brown Ale,Beer,영국,5%,"Brewed with well water (the original well at the Old Brewery, sunk in 1758, is still in use, with the hard well water being drawn from 85 feet underground); best barley malt, yeast and aromatic hops; fermented in ‘stone Yorkshire squares’ to create a relatively dry ale with rich nutty colour and palate of beech nuts, almonds and walnuts.
 Best served at about 55°F (13°C).
@@ -433,11 +433,11 @@ Ingredients • Water, malted barley, yeast, hops.",https://beer-api-prod.idkula
 LIMITED AVAILABILITY
 Best served at about 51°F (11°C).
 Ingredients • water, malted barley, cane sugar, hops, yeast.",https://beer-api-prod.idkulab.com/media/drinks/smiths_yorkshire_stingo.png
-사무엘스미스 윈터 웰컴 에일,Samuel Smiths Winter Welcome Ale,Beer,영국,6%,"This seasonal beer is a limited edition brewed for the short days and long nights of winter. The full body resulting from fermentation in ‘stone Yorkshire squares’ and the luxurious malt character, which will appeal to a broad range of drinkers, is balanced against whole-dried Fuggle and Golding hops with nuances and complexities that should be contemplated before an open fire.
+사무엘스미스 윈터 웰컴 에일,Samuel Smiths Winter Welcome Ale,Beer,영국,6%,"This seasonal 맥주 is a limited edition brewed for the short days and long nights of winter. The full body resulting from fermentation in ‘stone Yorkshire squares’ and the luxurious malt character, which will appeal to a broad range of drinkers, is balanced against whole-dried Fuggle and Golding hops with nuances and complexities that should be contemplated before an open fire.
 LIMITED EDITION SEASONAL BREW
 Best served at about 51°F (11°C).
 Ingredients • water, malted barley, yeast, hops, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_winter_welcome.png
-사무엘스미스 오가닉 위트,Samuel Smiths Organic Wheat Beer,Beer,영국,5%,"Wheat beer has always been known as an elixir or tonic; especially when unfiltered with the brewer’s yeast still in the bottle. Organic Wheat Beer is golden, fruity – the naturally occurring fruit esters from the yeast give prominent citrus and banana flavours – and thirst quenching.
+사무엘스미스 오가닉 위트,Samuel Smiths Organic Wheat Beer,Beer,영국,5%,"Wheat 맥주 has always been known as an elixir or tonic; especially when unfiltered with the brewer’s yeast still in the bottle. Organic Wheat 맥주 is golden, fruity – the naturally occurring fruit esters from the yeast give prominent citrus and banana flavours – and thirst quenching.
 Serve chilled at 44°F (7°C) with an optional slice of lemon.
 Ingredients • water, organic malted wheat, organic malted barley, yeast, organic hops, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_wheat.png
 사무엘스미스 오가닉 사이더,Samuel Smiths Organic Cider,Beer,영국,5%,"A medium dry cider with brilliant straw colour, light body, clean apple flavour and a gentle apple blossom finish. Samuel Smith’s makes this cider at a small, independent British brewery, the oldest brewery in Yorkshire.
@@ -448,13 +448,13 @@ Ingredients • water, organic apple concentrate, organic cane sugar, malic acid
 NATURALLY GLUTEN FREE
 Best served at about 44°F (7°C).
 Ingredients • water, organic pear concentrate, organic cane sugar, malic acid, yeast, organic pear extract, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_cherry.png
-사무엘스미스 오가닉 체리,Samuel Smiths Organic Cherry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 체리,Samuel Smiths Organic Cherry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic 맥주 to create fruit 맥주s of considerable strength and flavour. The smooth distinctive character of the matured 맥주 serves as the perfect counterpoint to the pure organic fruit juice.
 Ingredients • Water, organic malted barley, organic malted wheat, organic cane sugar, organic cherry concentrate, organic cherry extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_perry.png
-사무엘스미스 오가닉 스트로베리,Samuel Smiths Organic Strawberry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 스트로베리,Samuel Smiths Organic Strawberry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic 맥주 to create fruit 맥주s of considerable strength and flavour. The smooth distinctive character of the matured 맥주 serves as the perfect counterpoint to the pure organic fruit juice.
 Ingredients • water, organic malted barley, organic malted wheat, organic cane sugar, organic strawberry concentrate, organic strawberry extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_strawberry.png
-사무엘스미스 오가닉 라즈베리,Samuel Smiths Organic Raspberry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic beer to create fruit beers of considerable strength and flavour. The smooth distinctive character of the matured beer serves as the perfect counterpoint to the pure organic fruit juice.
+사무엘스미스 오가닉 라즈베리,Samuel Smiths Organic Raspberry Fruit Beer,Beer,영국,5.1%,"Handcrafted at the tiny All Saints Brewery set in a time warp in Stamford using the old manually operated brewing equipment. Finest organically grown barley and wheat are used to create a  complex ale which, having undergone primary and secondary fermentation with different yeasts and extended maturation, is taken to Samuel Smith’s small, independent British brewery at Tadcaster. There it is blended with pure organic cherry, strawberry, raspberry or apricot fruit juices and more organic 맥주 to create fruit 맥주s of considerable strength and flavour. The smooth distinctive character of the matured 맥주 serves as the perfect counterpoint to the pure organic fruit juice.
 Ingredients • water, organic malted barley, organic malted wheat, organic cane sugar, organic raspberry concentrate, organic raspberry extract, organic hops, yeast, carbon dioxide.",https://beer-api-prod.idkulab.com/media/drinks/smiths_raspberry.png
-사무엘스미스 알콜 프리 샘 브라운 에일,Samuel Smiths Alcohol Free Sam’s Brown Ale,Beer,영국,0.5%,"A superior alcohol free ale, less than 0.5%ABV, dark brown in colour with mahogany highlights and a lingering tight ecru head. The nose is malt forward and the beer is dry and satisfying. The dry malty character is an excellent complement to spicy food. The bottle label is based on an advertising poster used by Samuel Smith’s in the 1950s.
+사무엘스미스 알콜 프리 샘 브라운 에일,Samuel Smiths Alcohol Free Sam’s Brown Ale,Beer,영국,0.5%,"A superior alcohol free ale, less than 0.5%ABV, dark brown in colour with mahogany highlights and a lingering tight ecru head. The nose is malt forward and the 맥주 is dry and satisfying. The dry malty character is an excellent complement to spicy food. The bottle label is based on an advertising poster used by Samuel Smith’s in the 1950s.
 Best served at about 55°F (13°C).
 Ingredients • water, malted barley, yeast, hops.",https://beer-api-prod.idkulab.com/media/drinks/smiths_free_sams_brown_ale.png
 봄의 모양,Shape of Spring,Beer,한국,5.3%,"‘봄의 모양’은 봄의 시작을 알리는 맥주로 스타일은 세종(Saison)입니다. 옛 벨기에 농부들의 맥주가 그러했듯 보리 맥아를 베이스로 밀, 귀리, 호밀 등 다양한 곡물을 사용했고 아울러 산뜻함과 드라이한 피니시를 위해 제주 감귤꽃에서 채취한 야생꿀을 더했습니다.
@@ -565,7 +565,7 @@ Malts: Munich malt, Pilsner Zero, Flaked oats, Cara pale, Cara 150, Cara 300, Ca
 Hops: Magnum, First Gold
 
 Translation: Evening",https://beer-api-prod.idkulab.com/media/drinks/ohtu.png
-뽀할라 우스마임,Põhjala Uss Maailm,Beer,에스토니아,4.7%,"A hop-forward California-inspired session beer. Brewed with oat flakes for an extra silky mouthfeel. Hopped and dry hopped with a blend of New World hops (Galaxy and Mosaic). Contains wheat and barley malts and unmalted oats.
+뽀할라 우스마임,Põhjala Uss Maailm,Beer,에스토니아,4.7%,"A hop-forward California-inspired session 맥주. Brewed with oat flakes for an extra silky mouthfeel. Hopped and dry hopped with a blend of New World hops (Galaxy and Mosaic). Contains wheat and barley malts and unmalted oats.
 
 Taste: Dry and clean, this tastes as it smells – joining the fruity nose is a lemon and lime kick, with just enough bitterness to balance it out.
 
@@ -882,7 +882,187 @@ KGB 레몬,"KGB Lemon, 5%",Cocktail,뉴질랜드,5%,"맥주로 알려졌지만, 
 와일드 터키 버번 위스키,"Wild Turkey Bourbon Whiskey, 40.5%",Whisky,미국,40.5%,"알콜의 톡 쏘는 향은 없는 편이고 과자 누네띠네와 같은 단향이 올라온다.
 입안 전체로 신선한 꿀 같은 달큰함이 가득 채워지며 알싸한 맛도 살짝 느낄 수 있다.
 술의 질감은 밀크 초콜릿을 녹여 먹었을 때 거의 끝물쯤에 입천장과 혓바닥에 남아있는 초콜릿의 몽글몽글한 질감이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Wild_Turkey_Bourbon_Whiskey_w400.jpg
-느린마을 늘봄 막걸리,"Slow Town Always Spring Makgeolli, 6%",Traditional,한국,6%,"인공감미료인 아스파탐을 사용하지 않고 쌀, 누룩, 물만으로 빚은 막걸리다.
+느린마을 늘봄 막걸리,"Slow Town Always Spring Makgeolli, 6%",Traditional,한국,6%,"인공감미료인 아스파탐을 사용하지 않고 쌀, 누룩, 물만으로 빚은 전통주다.
+단맛과 산미가 좋다.
+숙성 될 수록 맛이 달라지는 것이 특징이다.
+느린마을 양조장에서 봄, 여름, 가을, 겨울 전통주를 나누어 마셔볼 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/slowbrew_makgeulli_w400.jpg
+스텔라 아르투아,"Stella Arotois, 5%",Beer,벨기에,5%,"유럽에서 인기있는 맥주 중 하나이며, 영국에서는 가장 대중적인 맥주이다.
+옥수수가 첨가되어 있어 단맛이 강하다. 최고급 홉인 사츠 홉을 사용한다. 드라이하며, 진한 꽃향기가 난다.
+마시고나면 입에 단내가 남는다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/stella_artois_w400.jpg
+KGB 레몬,"KGB Lemon, 5%",Etc,뉴질랜드,5%,"맥주로 알려졌지만, KGB는 보드카이다.
+레몬향과 레몬맛이 살짝 돌다가, 끝에 알코올 향이 살짝 감돌아 가볍게 즐기기 좋다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/kgb_w400.jpg
+에페스 필스너,"EFES Pilsner, 5%",Beer,터키,5%,"터키의 대표 맥주 에페스 필스너.
+탄산이 강하고 신선하고 상쾌한 무난한 맥주의 맛이 난다.
+청량감있고 시원한 라거계열의 맥주를 선호하는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/EFES_Pilsner_w400.jpg
+타이거 라들러 자몽,"Tiger Rad, 2%",Beer,싱가포르,2%,"상쾌한 청량감을 가지고 있는 맥주이다.
+천연 과즙이 함유되어 있으며 자몽의 상콤, 청량, 쌉쌀한 맛이 어우러져있다.
+2도의 낮은 도수로 음료처럼 부담없이 마실 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/tiger_raddler_grapefruit_w400.jpg
+칭따오 스타우트,"TSINGTAO STOUT, 4.8%",Beer,중국,4.80%,"부드러운 흑맥주이다.
+카라멜 맛이 나고, 끝맛이 조금 쓰다.
+흑맥주 애호가에겐 살짝 심심할 수 있지만 흑맥주를 처음으로 시도하는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/tsingtao_stout_w400.jpg
+세븐브로이 곰표 밀맥주,"7brau Gompyo Wheatbear, 4.5%",Beer,한국,4.50%,"CU가 선보인 곰표와 콜라보한 밀맥주이다.
+부드러운 목넘김과 달콤한 복숭아, 파인애플 맛이 난다.
+남녀노소 누구나 부담없이 가볍게 마실 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/gom_pyo_w400.jpg
+오비 라거,"OB Lager, 4.6%",Beer,한국,4.60%,"Hite에게 뒤쳐져있던 국내 시장을 탈환할 수 있게 해준 OB 라거이다. 복고 감성을 자극하는 디자인으로 출시되었다.
+향은 홉의 씁쓸한 향, 맥아의 구수한 향이 난다.
+처음에 쓴 맛이 감돌고 뒤에는 달콤한 맛이 도는것이 특징이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/ob_lager_w400.jpg
+타이거 라들러 레몬,"Tiger Radler Lemon, 2%",Beer,싱가포르,2%,"상쾌한 청량감을 가지고 있는 맥주이다.
+천연 과즙이 함유되어 있어 향이 달달하고 은은한 레몬맛이 난다.
+2도의 낮은 도수로 음료처럼 부담없이 마실 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/tiger_raddler_lemon_w400.jpg
+쥬시후레쉬맥주,"Juicy Fresh Beer, 4.5%",Beer,한국,4.50%,"라거에 쥬시 후레쉬 껌 향을 입힌 맛이다.
+캔을 열면 쥬시 후레쉬 향이 퍼진다. 쥬시 후레쉬 껌을 씹으며 맥주를 마시는 기분이 든다. 
+기존 맥주 공식과 다른 색다른 경험을 원하는 사람에게 추천한다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Juicy_Fresh_Beer_w400.jpg
+금성맥주,"Gold Star Beer, 5.1%",Beer,한국,5.10%,"LG전자가 금성전자였던 시절의 향수를 자극하는 맥주이다.
+주종은 골든에일로, 깊은 맛의 페일에일과 청량한 라거의 중간 타입이다. 
+황금빛 맥아와 열대과일 향의 홉에 제주산 황금향이 조화를 이뤄 에일 특유의 향기와 깔끔한 끝맛이 특징이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Gold_Star_Beer_w400.jpg
+제주 거멍 에일,"Jeju Geomeong Ale, 4.3%",Beer,한국,4.30%,"제주 흑보리와 초콜릿 밀맥아로 맛을 낸 맥주.
+탄산은 과하지 않고 적당한 청량감을 준다.
+부담 없고 깔끔한 맛을 즐기고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Jeju_Geomeong_Ale_w400.jpg
+오드 괴즈 틸퀸 아렌시아,"Oude Gueze Tilquin a L'Ancienne, 7%",Beer,벨기에,7%,"상큼한 레몬 풍미가 느껴지며 텁텁한 맛과 쓴 맛도 스쳐 지나간다. 
+과일 향과 꽃의 향기도 느낄 수 있어 화사함을 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Oude_Gueze_Tilquin_a_L'Ancienne_w400.jpg
+시원한청풍Soju,"C1 Soju, 17.2%",Soju,한국,17.20%,"시원 소주'로 이름을 변경하였고, 다시 '시원한 청풍'으로 재변경 했다. 하지만 사람들에게는 예전 이름인 '시원 소주'로 더 많이 불리고 있다.
+이름처럼 시원하고 묵직한 알콜 향이 풍긴다.
+강하고 시원한 술을 좋아하는 사람들에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/c1soju_w400.jpg
+참이슬 후레시,"Chamisul Fresh Soju , 16.9%",Soju,한국,16.90%,"국가대표 소주라고 해도 이견이 없을만큼 유명한 소주.
+대나무 숯 정제로 이슬같은 깨끗함을 지향하는 소주이다.
+쓰지만 깔끔한 맛을 원하는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/charm_i_sel_soju_w400.jpg
+처음처럼,"Cheo-um-cheo-rum Soju, 16.5%",Soju,한국,16.50%,"참이슬의 막강한 라이벌 처음처럼.
+부드럽고 마시기 부담스럽지 않은 맛에 많은 인기가 있다.
+부드러운 소주를 마시고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/cheo_um_cheo_rum_soju_w400.jpg
+자몽에이슬,"Jamong-eh-i-seul Soju, 13%",Soju,한국,13%,"과일 소주 시대를 연 소주.
+소주보다 가볍고 자몽의 맛이 들어 있어 상큼함과 청량함이 더해졌다.
+상큼한 과일 소주의 맛을 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/jamong_eh_i_sul_soju_w400.jpg
+참이슬 오리지날,"Chamisul Original Soju, 20.1%",Soju,한국,20.10%,"소주 본연의 깊고 진한 맛을 살린 참이슬 오리지널.
+소주의 본연의 맛을 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/charm_i_sel_original_soju_w400.jpg
+탈로 프리미티보 디 만두리아,"Talo Primitivo Di Manduria, 14%",Wine,이탈리아,14%,"만두리아 지역의 프리미티보 품종 포도로 만든 와인이다. 진한 초콜릿, 바닐라, 블랙베리, 체리향이 느껴진다. 풀 바디 와인을 쉽게 느끼고 싶은 사람에게 추천하는 와인이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Talo_Primitivo_Di_Manduria_w400.jpg
+"킴 크로포드, 피노 그리","Kim Crawford, Pinot Gris, 13%",Wine,뉴질랜드,13%,소비뇽 블랑의 뒤를 이어 뉴질랜드를 대표하고 있는 와인이다. 미디움바디에 산도가 잘 느껴지는 편으로 꿀과 같은 달콤한 느낌과 시트러스 향이 함께 느껴진다. 밸런스가 좋아 과한 느낌을 좋아하지 않는 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Kim_Crawford_Pinot_Gris_w400.jpg
+커클랜드 시그니처 토니 포트 10년,"Kirkland Signature Tawny Port 10 years old, 20%",Wine,포르투갈,20%,"포트 와인은 발효 중 브랜디를 첨가한 와인으로 주정 강화 와인의 한 종류이다. 단맛이 강한 편이고 라즈베리, 블랙베리의 향과 끝맛으로 나무향과 쌉쌀한 맛이 살짝 있다. 가성비가 좋은 와인이라 저렴한 가격에 포트와인을 접하고 싶을 때 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Kirkland_Signature_Tawny_Port_10_years_old_w400.jpg
+버니니 클래식,"Bernini Classic, 4.5%",Wine,남아프리카공화국,4.50%,상당한 인지도를 가지고 있는 스파클링 와인이다. 가볍게 탄산감이 일어나며 단맛이 강하다. 부담스럽지 않아 강한 술을 못 마시는 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Bernini_Classic_w400.jpg
+T7 까베르네 소비뇽,"T7 Cabernet Sauvignon, 13%",Wine,칠레,13%,이마트 트레이더스의 단독 라벨을 붙인 레드와인이다. 드라이하면서 산미가 강한 편이고 텁텁하고 씁쓸한 뒷맛이 있다. 드라이한 저렴한 와인을 찾는 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/T7_Cabernet_Sauvignon_w400.jpg
+그란 띠에라 비노 블랑코,"Gran Tierra vino blanco, 10.5%",Wine,스페인,10.50%,바디감이 있고 산도가 강한 편이다. 세미 스위트라고 명시되어 있듯이 단맛이 느껴진다. 과일이랑 같이 먹기 좋은 와인이다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Gran_Tierra_vino_blanco_w400.jpg
+느린마을 Traditional,"Slow City Makgeolli, 6%",Traditional,한국,6%,"인공감미료인 아스파탐을 사용하지 않고 쌀, 누룩, 물만으로 빚은 막걸리다.
 단맛과 산미가 좋다.
 숙성 될 수록 맛이 달라지는 것이 특징이다.
 느린마을 양조장에서 봄, 여름, 가을, 겨울 막걸리를 나누어 마셔볼 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/slowbrew_makgeulli_w400.jpg
+과천미주,"Gwacheon Mijoo, 9%",Traditional,한국,9%,"우리쌀 무첨가 무감미료 맑은 탁주이다. 쌉쌀한 맥주도 좋지만 달큰한 미주도 좋다, 라는 의미를 담고 있다.
+달달하고 부드러운 맛이 특징이다.
+친환경 녹색주의를 표방하는 양조장, 과천도가에서 만든 제품이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Gwacheon_Mijoo_w400.jpg
+관악산 생Traditional,"Gwanaksan Draft Makgeolli, 6%",Traditional,한국,6%,"우리쌀 무첨가 무감미료의 탁주이다. 
+각기 다른 개성을 가진 막걸리와 함께 편하게 마실 수 있는 막걸리를 지향하며, 그에 알맞게 가볍고 부드러운 맛이 특징이다. 
+친환경 녹색주의를 표방하는 양조장, 과천도가에서 만든 제품이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Gwanak_Mountain_Makgeolli_w400.jpg
+국순당 생Traditional,"Guksundang Draft Makgeolli, 6%",Traditional,한국,6%,"2번의 쌀 발효 이후, 3번의 유산균 발효를 적용한 5단 발효 제법을 활용한 막걸리이다.
+과실 향미가 있으며, 첫 맛에 약간 단 맛이 느껴지고 끝 맛은 막걸리 특유의 씁쓸한 맛이 난다.
+음주와 건강을 함께 챙기고 싶은 분들께 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Guksundang_Makgeolli_w400.jpg
+소백산 Traditional,"Sobaeksan Makgeolli, 6%",Traditional,한국,6%,"노무현 대통령 시절 청와대 만찬주로 사용됐던 술이다.
+많이 달지 않고 드라이한 풍미가 있으며, 쌀의 달짝지근하고 구수한 풍미가 끝맛에 느껴진다.
+부드럽고 순한 맛으로, 막걸리를 입문하려는 사람에게 추천하기 좋은 술이다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Sobaeksan_Makgeolli_w400.jpg
+대잎 동동주,"Bamboo Leaf Dongdongju, 6%",Traditional,한국,6%,"담양에서 맛 볼 수 있는 동동주이다.
+동동주다운 달달한 맛이 특징이다. 영지, 인삼, 생강, 죽엽분이라는 가향재 덕분인지, 아스파탐의 쓴 맛 과는 다른 향이 난다.
+달달한 전통주를 즐기고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Bamboo_Leaf_Dongdongju_w400.jpg
+이엔제이 브랜디,"E&J Brandy, 40%",Etc,미국,40%,"E&J 브랜디는 독특한 풍미를 지닌 클래식 양주이다. 
+포도, 말린 과일, 향신료 및 바닐라와 같은 맛있는 풍미와 재료가 주입되어 정통 스타일과 부드러운 맛을 만들어낸다.
+진저 에일 혹은 콜라와도 섞어 마셔도 굉장히 좋은 맛을 가지고 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/E&J_Brandy_w400.jpg
+로얄 살루트 21 스카치 위스키,"Royal Salute 21 Year Old Blended Scotch Whisky, 40%",Whisky,영국,40%,"스모키한 맛과, 꿀 맛 같은 스위트한 맛, 도수에 비해 잘 넘어가는 목넘김이 특징이다.
+가격대의 이상의 맛을 내는 양주이다.
+강한 위스키의 향을 즐기는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Royal_Salute_21_Year_Old_Blended_Scotch_Whisky_w400.jpg
+스카치 블루 21년,"Scotch Blue 21years old, 40%",Whisky,한국,40%,"몰트의 독특한 향과 그레인의 부드러움이 그대로 살아 있는 위스키이다.
+목 넘김이 부드러워 스트레이트로 마셔도 좋다.
+가격대 또한 저렴하기에 양주 입문으로도 좋다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Scotch_Blue_21years_old_w400.jpg
+까뮤XO 엘레강스,"Camus XO ELECANCE, 40%",Etc,프랑스,40%,"꼬냑은 프랑스 꼬냑 지방에서 생산하는 브랜디이다. 부드러우며 꽃향, 과일향과 은은한 오크터치의 향이 난다. 대표적인 식후주로 술을 즐기는 분들에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Camus_XO_ELECANCE_w400.jpg
+듀어스 18년산 블랜디드 스카치 위스키,"Dewar's 18 Blended Scotch Whisky, 40%",Whisky,영국,40%,싱글 몰트와 싱글 그레인 스카치 위스키를 블렌딩한 블렌디드 스카치 위스키이다. 과일과 꽃향기가 나며 딸기류 과실과 구운 보리의 맛이 난다. 부드럽고 은은한 향이 좋아 위스키 입문자나 여성들에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Dewar's_18_Blended_Scotch_Whisky_w400.jpg
+글렌피딕 21년 리저바 럼 캐스크 피니쉬,"Glenfiddich 21years old Reserva Rum Cask Finish, 40%",Whisky,영국,40%,"글렌피딕 21년 럼캐스크 피니쉬는 럼 캐스크에서 숙성된 싱글몰트 스카치위스키이다. 생강과 무화과, 라임, 바나나의 깊은 풍미에 강렬하면서도 산뜻한 토피의 맛이 난다. 풍부하고 깊은 맛을 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Glenfiddich_21years_old_Reserva_Rum_Cask_Finish_w400.jpg
+조니 워커 블랙 라벨 12년 산,"Johnnie Walker Black Label 12 Year Old, 40%",Whisky,영국,40%,"블랙라벨 12년산은 조니 워커를 대표하는 위스키이다. 첫맛은 부드러운 풍부함, 다음에는 스모키 풍미가 전해지며, 오렌지와 시트러스 오일이 섞인 과일 향과 바닐라 향, 과일 등의 맛과 향이 조화를 이루면서 미묘하게 깊은 맛이 나서 강하고 남성적인 매력이 느껴진다. 위스키 입문용으로 추천한다..",https://d1sqi8cd60mbpv.cloudfront.net/w400/Johnnie_Walker_Black_Label_12_Year_Old_w400.jpg
+올드 패션드,"Old Fashioned, 32%",Cocktail,캐나다,32%,"위스키 베이스의 칵테일이다. 양주, 설탕 그리고 비터스를 쓴 단순한 조합이었으며 여기에 버번 위스키가 추가되었다. 바닐라 향과 오크향이 느껴지고 쓴 맛이 있다. 도수가 강한 편이라 독한 술을 칵테일로 즐기고 싶을 때 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/oldfashioned_w400.jpg
+마가리타,"Margarita, 30%",Cocktail,없음,30%,"라틴어로 '진주'를 뜻하는 칵테일. 데킬라, 트리플 섹, 오렌지 맛 리큐어, 라임 즙 또는 레몬즙을 이용해서 만든 칵테일이다. 잔 주위에 소금을 묻혀 마시는 것이 특징. 도수가 높은 편이나, 라임 베이스로 인해 상큼한 맛으로 알콜향은 거의 느낄 수 없다. 상큼한 맛을 좋아하거나, 처음 칵테일을 접하는 사람한테 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/margarita_w400.jpg
+블루 라군,"Blue Lagoon, 25%",Cocktail,없음,25%,"푸른 산호초'라는 뜻을 가진 칵테일. 보드카, 블루 큐라소, 레몬 주스를 이용해 만든다. 달고 상큼한 맛으로 가볍게 즐기기에 좋은 술이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/bluelagoon_w400.jpg
+솔티 독,"Salty Dog, 11%",Cocktail,없음,11%,"진, 자몽 주스. 글라스 테두리에 소금을 묻혀 마시는 칵테일이다. 진 대신 보드카를 이용하기도 한다. 자몽의 쌉쌀한 맛을 느낄 수 있는 것이 특징이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/saltydog_w400.jpg
+섹스 온 더 비치,"Sex on the beach, 23%",Cocktail,없음,23%,"보드카, 피치 리큐어, 크랜베리 주스, 오렌지 주스를 이용해 만든 칵테일이다. 붉은 색을 특징으로, 달달하고 상큼한 과일맛을 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/sexonthebeach_w400.jpg
+캘리포니아 레모네이드,"California Lemonade, 13%",Cocktail,없음,13%,"버본위스키, 레몬 주스, 라임 주스, 그레나딘 시럽, 설탕, 소다수를 이용해 만든 칵테일이다. 달달한 레모네이드에 위스키 향을 느낄 수 있다. 레모네이드를 좋아하는 사람들에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/california_lemonade_w400.jpg
+밥 말리,"Bob Marley, 7%",Cocktail,없음,7%,"골드 럼, 블루 큐라소, 그레나딘 시럽, 바나나 리큐어로 만드는 칵테일이다. 초록, 파랑, 노랑 세 가지 색으로 자메이카를 표현했다. 열대과일의 맛을 느낄수 있으며, 슬러시처럼 만들어 마시기도 한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/bobmarley_w400.jpg
+브랜디 플립,"Brandy Flip, 28%",Cocktail,없음,28%,"브랜디, 설탕, 계란 노른자로 만드는 칵테일이다. 부드럽고 크리미한 질감이 특징으로 브랜디의 과일 향과, 설탕이 들어가 달달한 맛을 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/brandyflip_w400.jpg
+샹그리아,"Sangria, 8%",Cocktail,스페인,8%,"와인을 베이스로 다양한 과일, 탄산수, 설탕등을 넣어 하루정도 숙성시킨 후 마시는 칵테일이다. 취향에 따라 다양한 과일을 넣어 마셔서, 다양한 과일 향을 느낄 수 있다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/sangria_w400.jpg
+마티니,"Martini, 34%",Cocktail,,34%,"드라이 진, 드라이 베르무트를 이용해 만드는 칵테일이다. 진한 솔잎향과 쓴맛을 느낄 수있다. 주로 올리브를 곁들여 마신다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/martini_w400.jpg
+심술 7,"Simsool 7, 7%",Etc,한국,7%,"포도, 블루베리 등의 과실을 원료로 빚은 새콤달콤한 스파클링 라이스 와인이다. 쌀을 기본으로 빚어 목 넘김이 부드러우며 인공감미료를 사용하지 않아 과일 본연의 달콤함을 느낄 수 있다. 톡톡 튀는 스파클의 상쾌함과 과실의 달콤함을 동시에 느끼고 싶은 20~30대가 부담없이 즐기기 좋은 술이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Simsool_7_w400.jpg
+써머스비,"SomersBy, 4.5%",Etc,덴마크,4.50%,"칼스버그에서 제조한 도수 있는 사이다. 세간 인식과 달리 본디 사이다는 사과주를 뜻하는 말이다. 
+사과맛 탄산음료에 알코올이 첨가된 맛이다. 
+사과 과즙의 단 맛이 강하며, 술을 즐기지 않는 사람에게도 추천하기 좋다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/somersby_apple_w400.jpg
+템트 7,"Tempt 7, 4.5%",Etc,덴마크,4.50%,"덴마크에서 만드는 사이다. 세간 인식과 달리 본디 사이다는 사과주를 뜻하는 말이다.
+탄산이 있으며, 사과주의 단 맛과 함께 은은한 꽃 향기가 느껴진다. 
+같은 시리즈인 템트9에 비해 부드러운 맛이다.
+낮은 도수의 달콤한 과실주를 좋아하는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Tempt_7_w400.png
+템트 9,"Tempt 9, 4.5%",Etc,덴마크,4.50%,"덴마크에서 만드는 사이다. 세간 인식과 달리 본디 사이다는 사과주를 뜻하는 말이다.
+탄산이 있으며, 사과주의 단 맛과 함께 딸기, 라임의 상큼함과 단 맛이 느껴진다. 
+같은 시리즈인 템트7에 비해 달콤한 맛이다.
+낮은 도수의 달콤한 과실주를 좋아하는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Tempt_9_w400.jpg
+복숭아 소다,"Peach Soda, 3%",Etc,한국,3%,"복숭아 맛이 나는 과일 탄산주 제품이다. 순하리 브랜드와 카카오프렌즈가 콜라보하여 어피치가 로고에 등장한다.
+복숭아과즙을 10",https://d1sqi8cd60mbpv.cloudfront.net/w400/Peach_Soda_w400.jpg
+이슬 톡톡,"Jinro TokTok, 3%",Etc,한국,3%,"하이트 진로에서 만든 과일 탄산주. 
+일본의 '호로요이'와 유사한 맛이 난다. 복숭아의 단 맛과, 탄산의 청량함을 느낄 수 있다. 도수가 낮아 알코올맛은 잘 느껴지지 않는다.
+술을 즐기지 않는 사람들도 가볍게 즐기기 좋은 주류이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Jinro_Tok_Tok_w400.jpg
+좋은데이 민트초코,"Joeunday Mint Choco, 12.5%",Etc,한국,12.50%,"소주 같은 디자인이지만 주종은 리큐르.
+일반적인 소주와 달리 투명한 병에 들어있으며 그 대신 내용물이 민트색이다.
+향은 은은한 초코향이 나며, 맛은 민트맛이지만 조금 밍밍한 편이고 미약하게 초코맛도 느껴진다. 
+일반적인 리큐르에 비하면 단맛은 많이 약한 편이다.
+색다른 맛으로 술자리의 분위기를 고조시키고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/jo_eun_day_mint_choco_w400.jpg
+진로,"Jinro soju, 16.5%",Soju,한국,16.50%,"흑국으로 소주를 만들어 특유의 쓴 맛이 매력적인 소주.
+또한 굉장히 깔끔한 맛으로도 유명하다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/jinro_soju_w400.jpg
+백세주,"Bekseju, 13%",Etc,한국,13%,"찹쌀로 빚어, 구기자, 오미자, 홍삼 등 12가지 한약재와 함께 발효시켜 만든 전통 약주. 마시면 백세까지 살 수 있다 하여 이런 이름이 붙었다. 강한 향과 다양한 약재가 들어가 신맛, 단맛과 감칠맛이 어우러진 복합적인 맛을 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Bekseju_w400.jpg
+15년 숙성 매취순,"Matchsoon, 16%",Etc,한국,16%,"최상급 청매실로 15년 숙성기간을 거쳐 만들어진 담금주. 화이트 와인과 블렌딩하여 화이트와인의 맛과 함께, 매실 향의 달콤함, 숙성에 의한 씁씁한 맛을 느낄 수 있는 술이다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Matchsoon_w400.jpg
+산사춘,"sansachun, 13%",Etc,한국,13%,"산사나무 열매로 만든 술이다. 산사나무 열매는 섬장 건강, 혈액순환, 노화방지에 효과를 가진다고 알려져 있다. 꽃향기와 함께 새콤달콤한 맛을 느낄 수 있으며, 목넘김이 부드럽다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/sansachun_w400.jpg
+서울의 밤,"Seoul Night, 25%",Etc,한국,25%,"황매실을 원료로, 노간주나무 열매로 향을 낸 증류주이다. 매실 향을 함께 느낄 수 있으며, 달지 않고 목넘김이 부드럽다. 토닉워터와 함께 칵테일로도 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Seoul_Night_w400.jpg
+꿀Traditional,"Honey Makgeolli, 6%",Traditional,한국,6%,"함유된 벌꿀의 향과 맛이 단맛을 풍부하게 해준다. 그렇지만 지나치게 단 맛은 아니며, 천연 탄산이 강하다. 꿀 특유의 단맛을 좋아하는 사람에게 추천하는 제품이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Honey_Makgeolli_w400.jpg
+호랑이 생 Traditional,"Horangi Draft Makjeolli, 6%",Traditional,한국,6%,"합성감미료를 첨가하지 않고, 생 발효를 통해 맛을 낸 프리미엄 막걸리이다. 부드러운 바디감을 가지고 있으며 맛과 향이 풍부하고 목 넘김이 뛰어나다. 효모가 살아있어 8주 동안 숙성도에 따라 다양한 맛을 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Horangi_Draft_Makjeolli_w400.jpg
+심술6 Traditional,"Simsool6 Makjeolli, 6%",Traditional,한국,6%,심술 6은 인기 과실주 심술의 막걸리 버전이다. 포천쌀로 빚어 목 넘김이 부드럽고 상쾌한 탄산과 입맛을 돋우는 단맛이 특징이다. 특히 잘 익은 막걸리에서만 느낄 수 있는 은은한 과실향을 느끼고 싶은 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Simsool6_Makjeolli_w400.jpg
+인생Traditional,"Insaeng Makgeolli, 5%",Traditional,한국,5%,달콤하고 상큼한 맛을 느낄 수 있으며 뒷맛이 깔끔하여 목넘김이 편하다. 다른 막걸리들보다 걸쭉하지 않고 도수가 낮아 가볍게 즐기기 좋다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Insaeng_Makgeolli_w400.jpg
+화요41,"Hwayo 41, 41%",Soju,한국,41%,지하 150m 천연 암반수와 100,https://d1sqi8cd60mbpv.cloudfront.net/w400/Hwayo_41_w400.jpg
+이이치코,"Iichiko, 25%",Soju,일본,25%,"일본에서 서민들의 나폴레옹이라고 불리는 대표적인 보리소주이다. 색이 투명하고 은은한 향수 냄새가 느껴질 정도로 부드럽다. 25도라 혓바닥 끝을 살짝 쏘는 정도의 순한 맛인데, 뒷맛이 쓰다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Iichiko_w400.jpg
+일품 진로,"Ilpoom Jinro, 25%",Soju,한국,25%,순 쌀 100,https://d1sqi8cd60mbpv.cloudfront.net/w400/Ilpoom_Jinro_w400.jpg
+안동Soju 일품21,"Andong_Soju_Ilpoom_21, 21%",Soju,한국,21%,"뒤끝이 깨끗한 전통 증류식 쌀 소주의 참맛을 느낄 수 있다. 안동소주 특유의 그윽한 향이 나며, 술을 입에 넣으면 크림과 같은 순하고 부드러움이 느껴지며 목넘김이 좋다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Andong_Soju_Ilpoom_w400.jpg
+폰타나프레다 모스카토 다스티 2018,"Fontananfredda Moscato D'sti 2018, 5%",Wine,이탈리아,5%,"달고 탄산이 많은 스파클링 와인이다. 화려한 황금색 밀짚 빛깔을 띠며 잘 익은 배, 복숭아, 꿀, 레몬, 오렌지향을 지니고 있다. 모스카토 포도 자체의 맛과 향이 잘 표현되어 디저트 와인으로 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Fontananfredda_Moscato_D'sti_2018_w400.jpg
+심술 10,"Simsool 10, 10%",Etc,한국,10%,자몽과 깔라만시의 과실을 원료로 빚은 새콤달콤한 스파클링 라이스 와인이다. 쌀을 기본으로 빚어 목 넘김이 부드러우며 인공감미료를 사용하지 않아 과일 본연의 달콤함을 느낄 수 있다. 상큼한 열대과일의 맛과 향을 만끽하고 싶은 사람에게 추천한다. ,https://d1sqi8cd60mbpv.cloudfront.net/w400/Simsool_10_w400.jpg
+느린마을 늘봄 Traditional,"Slow Town Always Spring Makgeolli, 6%",Traditional,한국,6%,"느린마을 막걸리 중 가장 산뜻하고 신선함을 느낄 수 있다. 인공감미료를 전혀 사용하지 않았으며, 장기간 보관이 가능하다. 국내산 쌀 함량을 2배가량 늘려 쌀의 부드러우면서도 묵직한 맛이 느껴진다. 갓 빚은 막걸리의 상큼한 맛이 탄산미를 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Slow_Town_Always_Spring_Makgeolli_w400.jpg
+우도 땅콩 전통주,"Udo Peanut Makgeolli, 6%",Traditional,한국,6%,"제주 우도 특산품인 땅콩으로 만든 막걸리이다. 인공향을 첨가하지 않은 은은한 단맛과 땅콩의 고소함이 특징이다.
+보관기간이 길면 산미가 늘어나 다른 느낌으로 즐길 수 있다. 자연스러운 풍미를 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Udo_Peanut_Makgeolli_w400.jpg
+청하,"Chungha, 13%",Etc,한국,13%,"가장 대중적인 청주 중 하나이다. 쓴맛과 알코올 향이 적고 약한 단맛과 신맛이 도는 술이다. 도수가 낮아 목넘김이 부드럽다.
+부담없이 깔끔한 맛을 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Chungha_w400.jpg
+버니니 Wine 스프리처 딸기맛,"BERNINI Wine Spritzer Strawberry, 5.2%",Cocktail,스페인,5.20%,"버니니 와인 스프리처는 버니니의 캔 버전으로 간편하게 마실 수 있는 술이다. 
+딸기향이 첨가되었지만 부담스럽지 않은 단맛을 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/BERNINI_Wine_Spritzer_Strawberry_w400.jpg
+바르슈타이너 프리미엄 베롬,"Warsteiner Premium Verum, 4.8%",Beer,독일,4.80%,"""맥주의 여왕"" 혹은 ""미스 독일""이라고 불리는 독일의 유명 맥주 회사 바르슈타이너의 대표격인 필스너 맥주이다.
+밸런스가 좋은 맥주로 단맛과 부드러움, 호프의 향, 쌉쌀한 여운까지 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Warsteiner_Premium_Verum_w400.jpg
+데스페라도스 모히또 민트 & 라임,"Desperados Mojitoe Mint & Lime, 5.9%",Beer,네덜란드,5.90%,"데킬라 베이스의 가향 맥주인 데스페라도스에 민트와 라임 향을 첨가한 버전이다. 모히토가 럼 베이스의 칵테일이기 때문에 여기에도 럼향이 첨가되었다.
+모히토의 맛을 기대한다면 실망할 수도 있으나, 모히토향 맥주라는 독특함을 원한다면 시도해볼만 하다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Desperados_Mojitoe_Mint&Lime_w400.jpg
+유성 골든 에일,"Yuseong Golden Ale, 4.5%",Beer,한국,4.50%,"대전 유성구의 지역 수제맥주이다. 수제맥주의 인기에 힘입어 유성구와 바이젠하우스의 협약으로 출시되었다.
+에일과 라거의 중간 형태인 골든에일이다. 시트러스한 상쾌함과 몰트의 고소함을 동시에 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Yuseong_Golden_Ale_w400.jpg
+장홍삼 장수Traditional,"Jang Red Ginseng Jangsu Makgeolli, 6%",Traditional,한국,6%,"전통 6년근 홍삼을 발효시킨 막걸리이다. 홍삼전문기업과 장수막걸리의 협약으로 개발된 제품이다.
+홍삼향과 탄산이 조화로우며, 산미와 청량감이 있어 목넘김 좋은 깔끔한 막걸리이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Jang_Red_Ginseng_Jangsu_Makgeolli_w400.jpg
+청하 드라이,"Chungha Dry, 13.5%",Etc,한국,13.50%,"오리지널 청하의 담백한 맛이 강화된 청주이다. 단맛은 줄이고 도수를 높였다. 장기간 저온발효를 거쳐 향도 맛도 좀 더 진한 편이다.
+은은한 단맛의 깔끔한 청주를 원하는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Chungha_Dry_w400.jpg
+좋은데이 깔라만시,"Good Day Calamansi, 12.5%",Soju,한국,12.50%,"곡물을 발효시켜 증류한 주정에 천연 깔라만시 과즙을 넣어 달고 상큼한 맛이 나는 과일 리큐르이다. 깔라만시 특유의 쌉쌀한 맛도 느낄 수 있다.
+젊은 소비층의 트렌드에 맞춰 당 함량과 칼로리도 낮춘 것이 특징이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Good_Day_Calamansi_w400.jpg
+애플 폭스 사이다,"Apple Fox Cider, 4.5%",Etc,싱가포르,4.50%,"사과로 만든 술인 사이다이다. 진한 사과맛과 톡 쏘는 탄산을 함께 느낄 수 있다. 국내 유명한 사이다는 써머스비가 있다. 
+써머스비에 비해 덜 달고 농익은 사과의 맛을 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Apple_Fox_Cider_w400.jpg
+길비스 보드카,"Gilbey's Vodka, 37.5%",Etc,영국,37.50%,"가성비 좋게 마실 수 있는 보드카이다. 알코올 향이 강하고, 여전히 소주나 마찬가지라는 평도 있으나 가격이 워낙 저렴하여 활용도가 높다.
+특별한 향이나 맛이 없기 때문에 다양한 칵테일 제조에 사용할 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Gilbey's_Vodka_w400.jpg
+시에라 깐따브리아 크리안자,"Sierra Cantabria Crianza, 14.4%",Wine,스페인,14.40%,"리오하 전통방식으로 양조해 14개월 간 프랑스 및 미국산 오크통에서 숙성, 별도의 필터링 없이 병입한다. 
+붉은 체리, 딸기의 강렬한 향이 풍부하며, 잼처럼 농축된 과일 맛과 섬세한 탄닌의 씁쓸한 맛, 여운에서 약간의 버터 향을 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Sierra_Cantabria_Crianza_w400.jpg
+길비스 진,"Gilbey's Gin, 37.5%",Etc,영국,37.50%,시트러스 향이 특징이다. 가격이 저렴하여 다양한 방법으로 마실 수 있으나 특유의 향이 강해 호불호가 갈릴 수 있다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Gilbey's_Gin_w400.jpg
+호가든,"Hoegaarden, 4.9%",Beer,벨기에,4.90%,"벨기에의 호가든 지역에서 생산되는 밀맥주. 밝고 희뿌연 색이 특징이다. 
+밀, 코리엔더 씨드, 오렌지 필을 사용해 은은한 향을 느낄 수 있으며, 특유의 부드럽고 풍성한 맛과 구름거품이 특징인 맥주이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Hoegaarden_w400.jpg
+와일드 터키 버번 위스키,"Wild Turkey Bourbon Whiskey, 40.5%",Whisky,미국,40.50%,"알콜의 톡 쏘는 향은 없는 편이고 과자 누네띠네와 같은 단향이 올라온다.
+입안 전체로 신선한 꿀 같은 달큰함이 가득 채워지며 알싸한 맛도 살짝 느낄 수 있다.
+술의 질감은 밀크 초콜릿을 녹여 먹었을 때 거의 끝물쯤에 입천장과 혓바닥에 남아있는 초콜릿의 몽글몽글한 질감이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Wild_Turkey_Bourbon_Whiskey_w400.jpg
+코젤 다크,"Kozel Dark, 3.8%",Beer,체코,3.80%,"코젤은 염소라는 뜻이다.
+매우 순한 흑맥주. 커피향이 살짝 풍기고 탄산은 적은 편. 쓴맛을 즐기지 않는 사람에게 추천한다.
+시나몬가루와 설탕을 잔 입구에 바르면 더 맛있게 먹을 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Kozel_Dark_w400.jpg
+골든버블 모스카토,"Golden Bubbles Moscato, 7%",Beer,이탈리아,7%,"이름처럼 밝고 가벼운 노란색을 띠고, 포도, 과일의 맛과 향이 풍부하다.
+달달하고, 가벼운 산미와 적당한 탄산이 느껴진다.
+디저트와 잘 어울린다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Golden_Bubbles_Moscato_w400.jpg
+파울라너 바이스 비어,"Paulaner Weissbier, 5.5%",Beer,독일,5.50%,"바나나 향 등 독일식 밀맥주의 고유의 향이 나지만, 특출난 향은 없으며 향 자체도 세지 않다.
+강한 탄산으로 시작하여 청량감을 높인다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Paulaner_Weissbier_w400.jpg
+싱하,"Singha, 5%",Beer,태국,5%,보리 맥아로 만들어서 보리 몰트와 홉 때문에 쌉쌀한 뒷맛을 느낄 수 있다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Singha_w400.jpg
+파울라너 뮌헨 헬,"Paulaner Munchner Hell, 4.9%",Beer,독일,4.90%,"헬이라는 말은 독일어로 맑은, 밝은, 경쾌한 이라는 뜻이고, 뮌헨은 헬레스 라거의 중심지를 뜻한다.
+쓴맛이 적고 단맛도 있으면서 산뜻하여 대중적으로 가볍게 즐길 수 있는 맥주이다.
+크게 호불호가 갈리지 않아 다양한 사람이 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Paulaner_Munchner_Hell_w400.jpg
+크로넨버그 1664,"Kronenbourg 1664, 5%",Beer,프랑스,5%,"프랑스산 맥주로 알자스-로렌의 스트라스부르에서 양조되는 술이다.
+코리안더 씨앗과 시트러스향, 오렌지 껍질이 함유되어 있어 독특한 맛이 난다.
+병이 예쁘고 새콤달콤한 과일향으로 가볍게 즐길 수 있어 비교적 여성들이 선호하는 술이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Kronenbourg_1664_w400.jpg
