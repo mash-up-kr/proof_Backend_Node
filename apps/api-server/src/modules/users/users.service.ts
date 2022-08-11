@@ -27,15 +27,7 @@ export class UsersService {
 	}
 
 	async updateUser(id: number, updateUserDto: UpdateUserDto) {
-		return await this.usersRepository.update(
-			{ id },
-			{
-				nickname: updateUserDto.nickname,
-				profile: {
-					id: updateUserDto.profile_id,
-				},
-			},
-		);
+		return await this.usersRepository.update({ id }, updateUserDto);
 	}
 
 	async deleteUser(id: number) {

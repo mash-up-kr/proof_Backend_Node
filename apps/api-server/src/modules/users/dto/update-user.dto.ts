@@ -1,11 +1,12 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
+
+import { UpdateUserProfileDto } from './update-user-profile.dto';
 
 export class UpdateUserDto {
-	@IsNotEmpty()
+	@IsOptional()
 	@IsString()
 	readonly nickname: string;
 
-	@IsNotEmpty()
-	@IsNumber()
-	readonly profile_id: number;
+	@IsOptional()
+	readonly profile: UpdateUserProfileDto;
 }
