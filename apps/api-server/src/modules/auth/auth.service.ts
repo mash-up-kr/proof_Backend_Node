@@ -63,8 +63,13 @@ export class AuthService {
 				type: 'kakao',
 				profile: defaultUserProfile,
 			});
-			delete kakaoUser.deletedAt, kakaoUser.createdAt, kakaoUser.updatedAt;
-			return kakaoUser;
+			return {
+				id: kakaoUser.id,
+				name: kakaoUser.name,
+				nickname: kakaoUser.nickname,
+				email: kakaoUser.email,
+				profile: kakaoUser.profile,
+			};
 		}
 	}
 
