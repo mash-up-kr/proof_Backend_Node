@@ -44,15 +44,15 @@ export class MockDrinksRepository {
 }
 
 export const MockDrinksService = {
-	findAll: jest.fn(() => mockDrinks),
-	findById: jest.fn((id) => {
+	findAllDrinks: jest.fn(() => mockDrinks),
+	findDrinkById: jest.fn((id) => {
 		if (id === 99999) {
 			throw new BadRequestException();
 		} else if (id === 1) {
 			return [mockDrinks[0]];
 		}
 	}),
-	findByCategory: jest.fn((name) => {
+	findDrinksByCategory: jest.fn((name) => {
 		if (Object.values(Category).includes(name as Category)) {
 			if (name === 'Beer') {
 				return [omit(mockDrinks[0], 'category')];
