@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { QueryResult, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
