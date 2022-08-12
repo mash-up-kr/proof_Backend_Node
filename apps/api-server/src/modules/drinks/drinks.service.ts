@@ -74,7 +74,7 @@ export class DrinksService {
 
 	public async findReviewedDrinksbyUser(userId: number): Promise<GetDrinkInfoDto[]> {
 		try {
-			const userReviewedDrinksInfo = await this.drinkRepository
+			const userReviewedDrinks = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select([
 					'drink.id',
@@ -89,7 +89,7 @@ export class DrinksService {
 				.leftJoin('drink.reviews', 'review')
 				.where('review.reviewer_id = :id', { id: userId })
 				.getMany();
-			return userReviewedDrinksInfo;
+			return userReviewedDrinks;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
