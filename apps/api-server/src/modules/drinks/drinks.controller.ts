@@ -21,11 +21,15 @@ export class DrinksController {
 
 	@Get('/category')
 	@ApiDocs.findDrinksByCategory('카테고리별 술 상세 정보 조회')
-	public async findDrinksByCategory(@Query('name') name: Category) {
+	public async findDrinksByCategory(
+		@Query('name') name: Category,
+		@Query('offset') offset: number,
+		@Query('length') length: number,
+	) {
 		if (!name) {
 			throw new BadRequestException();
 		}
-		return await this.drinksService.findDrinksByCategory(name);
+		return await this.drinksService.findDrinksByCategory(name, offset, length);
 	}
 
 	@Get(':id')

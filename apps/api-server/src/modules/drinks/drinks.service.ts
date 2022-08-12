@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Repository } from 'typeorm';
+import { QueryResult, Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
@@ -25,6 +25,7 @@ export class DrinksService {
 				.createQueryBuilder('drink')
 				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
+				.orderBy('drink.createdAt', 'DESC')
 				.getMany();
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
@@ -56,17 +57,28 @@ export class DrinksService {
 		}
 	}
 
-	public async findDrinksByCategory(category: string): Promise<Drink[]> {
+	public async findDrinksByCategory(
+		category: string,
+		offset = 0,
+		length = 30,
+	): Promise<{ count: number; list: Drink[] }> {
 		try {
-			if (category === 'All') {
-				return await this.findAllDrinks();
+			let queryBuilder = this.drinkRepository.createQueryBuilder('drink');
+
+			if (category !== 'All') {
+				queryBuilder = queryBuilder
+					.leftJoin('drink.category', 'category')
+					.where('category.name = :category', { category });
 			}
-			const drinksInfoByCategory = await this.drinkRepository
-				.createQueryBuilder('drink')
-				.leftJoin('drink.category', 'category')
-				.where('category.name = :category', { category })
+
+			const count = await queryBuilder.getCount();
+			const drinksByCategory = await queryBuilder
+				.orderBy('drink.createdAt', 'DESC')
+				.skip(offset)
+				.take(length)
 				.getMany();
-			return drinksInfoByCategory;
+
+			return { count, list: drinksByCategory };
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
