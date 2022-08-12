@@ -1,9 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-import { Column, Entity, ManyToOne } from 'typeorm';
+import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
 
-import { CommonEntity } from './common.entity';
 import { DrinksCategory } from './drinks-category.entity';
+import { Review } from './reviews.entity';
+import { CommonEntity } from './common.entity';
 
 @Entity()
 export class Drink extends CommonEntity {
@@ -29,6 +30,17 @@ export class Drink extends CommonEntity {
 		type: () => DrinksCategory,
 		description: 'Category of the drink such as beer, wine, etc.',
 	})
-	@ManyToOne(() => DrinksCategory, (drinkCategory) => drinkCategory.drinks)
+	@ManyToOne(() => DrinksCategory, (drinkCategory) => drinkCategory.drinks, {
+		onDelete: 'SET NULL',
+	})
 	category: DrinksCategory;
+
+	@ApiProperty({
+		type: () => [Review],
+		description: 'The reviews of this drink',
+	})
+	@OneToMany(() => Review, (review: Review) => review.reviewed_drink, {
+		cascade: true, // user를 통해 review가 추가, 수정, 삭제되고 사용자가 저장되면 추가된 review도 저장된다.
+	})
+	reviews: Review[];
 }

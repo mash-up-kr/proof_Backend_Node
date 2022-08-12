@@ -1,6 +1,7 @@
 import { IsString } from 'class-validator';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { WorldcupRoundDto } from '../modules/worldcup/dto/worldcup.dto';
+import { Column, Entity } from 'typeorm';
+
+import { WorldcupRoundDto } from '@src/modules/worldcup/dto/worldcup.dto';
 import { CommonEntity } from './common.entity';
 
 @Entity()

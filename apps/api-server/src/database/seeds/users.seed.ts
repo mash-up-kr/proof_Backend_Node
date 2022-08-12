@@ -11,6 +11,8 @@ const seedUserData = {
 	email: 'testtest@email.com',
 	social_id: 123456789,
 	type: 'test',
+	profile_emoji: 'test',
+	refreshToken: 'test',
 };
 
 export class CreateInitialUserData implements Seeder {

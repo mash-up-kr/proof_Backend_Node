@@ -7,6 +7,7 @@ import { ConfigModule } from './config/config.module';
 import { DatabaseModule } from './database/database.module';
 import { DrinksCategoryModule } from './modules/drinks-category/drinks-category.module';
 import { DrinksModule } from './modules/drinks/drinks.module';
+import { ReviewsModule } from './modules/reviews/reviews.module';
 import { UsersModule } from './modules/users/users.module';
 import { UsersProfileModule } from './modules/users-profile/users-profile.module';
 import { WorldcupModule } from './modules/worldcup/worldcup.module';
@@ -21,6 +22,7 @@ import { WorldcupModule } from './modules/worldcup/worldcup.module';
 		DrinksModule,
 		UsersProfileModule,
 		WorldcupModule,
+		ReviewsModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

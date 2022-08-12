@@ -1,6 +1,8 @@
-import { Column, Entity, ManyToOne } from 'typeorm';
+import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
 import { IsEmail, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
+import { ApiProperty } from '@nestjs/swagger';
+import { Review } from './reviews.entity';
 import { CommonEntity } from './common.entity';
 import { UsersProfile } from './users-profile.entity';
 
@@ -30,6 +32,24 @@ export class User extends CommonEntity {
 	@IsNotEmpty()
 	@Column({ type: 'varchar', nullable: false })
 	type: string;
+
+	@IsString()
+	@IsNotEmpty()
+	@Column({ type: 'varchar', nullable: false, default: 'aa' })
+	profile_emoji: string;
+
+	@IsString()
+	@Column({ type: 'varchar', nullable: true })
+	refreshToken?: string;
+
+	@ApiProperty({
+		type: () => [Review],
+		description: 'The reviews of this user',
+	})
+	@OneToMany(() => Review, (review: Review) => review.reviewer, {
+		cascade: true, // user를 통해 review가 추가, 수정, 삭제되고 사용자가 저장되면 추가된 review도 저장된다.
+	})
+	reviews: Review[];
 
 	@ManyToOne(() => UsersProfile, (userProfile) => userProfile.users, { nullable: false })
 	profile: UsersProfile;

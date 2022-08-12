@@ -1,10 +1,12 @@
-import { BadRequestException, HttpException, Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Drink } from '@src/entities/drinks.entity';
+
 import { Repository } from 'typeorm';
+
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
-import { Worldcup } from '../../entities/worldcup.entity';
+import { Drink } from '@src/entities/drinks.entity';
+import { Worldcup } from '@src/entities/worldcup.entity';
 
 @Injectable()
 export class WolrdCupService {

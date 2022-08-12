@@ -5,7 +5,7 @@ export const mockDrinksCategory = {
 	deletedAt: null,
 	name: 'beer test1',
 	abv: 0.1,
-	origin: '🇺🇸',
+	origin: '미국',
 	description: 'description test1',
 	image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 	category: {
