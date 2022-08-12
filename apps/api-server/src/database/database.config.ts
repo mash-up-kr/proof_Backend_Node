@@ -20,7 +20,11 @@ const config = {
 	password: `${dbConfig.password}`,
 	database: dbConfig.dbname,
 	entities: [UsersProfile, User, DrinksCategory, Drink, Worldcup, Review],
-	seeds: ['apps/api-server/src/database/seeds/users.seed.ts', 'apps/api-server/src/database/seeds/*.seed.ts'],
+	seeds: [
+		'apps/api-server/src/database/seeds/users-profile.seed.ts',
+		'apps/api-server/src/database/seeds/users.seed.ts',
+		'apps/api-server/src/database/seeds/*.seed.ts',
+	],
 	namingStrategy: new SnakeNamingStrategy(),
 	synchronize: process.env.NODE_ENV !== 'prod',
 	logging: process.env.NODE_ENV !== 'prod',
