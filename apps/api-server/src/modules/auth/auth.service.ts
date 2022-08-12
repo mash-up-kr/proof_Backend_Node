@@ -1,19 +1,25 @@
+import { Repository } from 'typeorm';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { hash } from 'bcryptjs';
+
 import { JwtConfig, OauthConfig } from '@src/config/config.constant';
+import { UsersProfile } from '@src/entities/users-profile.entity';
 import { User } from '@src/entities/users.entity';
-import { UserKakaoDto } from './dto/users.kakao.dto';
+import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
 import { TokenDto } from './dto/auth.token.dto';
+import { UserKakaoDto } from './dto/users.kakao.dto';
+import { DEFAULT_USER_PROFILE } from '../users-profile/users-profile.constants';
+import { AuthReseponseDto } from './dto/auth-response.dto';
 
 @Injectable()
 export class AuthService {
 	constructor(
 		@InjectRepository(User)
 		private readonly usersRepository: Repository<User>,
+		@InjectRepository(UsersProfile)
+		private readonly usersProfileRepository: Repository<UsersProfile>,
 		private readonly configService: ConfigService,
 		private readonly jwtService: JwtService,
 	) {}
@@ -26,30 +32,43 @@ export class AuthService {
 		}&redirect_uri=${this.#oauthConfig.callbackUrl}`;
 	}
 
-	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<User> {
-		let kakaoUser = await this.usersRepository.findOne({
-			where: { social_id: kakaoUserData.kakaoId, type: 'kakao' },
-		});
+	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<GetUserInfoDto> {
+		let kakaoUser = await this.usersRepository
+			.createQueryBuilder('user')
+			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
+			.leftJoin('user.profile', 'profile')
+			.where('user.social_id = :social_id AND user.type = :type', {
+				social_id: kakaoUserData.kakaoId,
+				type: 'kakao',
+			})
+			.getOne();
 
-		if (!kakaoUser) {
-			// 신규 유저
-			const newKakaoUser = this.usersRepository.create({
+		if (kakaoUser) return kakaoUser;
+		else {
+			console.log(DEFAULT_USER_PROFILE);
+			const defaultUserProfileUrl = DEFAULT_USER_PROFILE;
+
+			const defaultUserProfile = await this.usersProfileRepository
+				.createQueryBuilder('users_profile')
+				.select(['users_profile.id', 'users_profile.image_url'])
+				.where('users_profile.image_url = :image_url', {
+					image_url: defaultUserProfileUrl,
+				})
+				.getOne();
+
+			kakaoUser = await this.usersRepository.save({
 				name: kakaoUserData.name,
 				nickname: kakaoUserData.name,
 				email: kakaoUserData.email,
 				social_id: kakaoUserData.kakaoId,
 				type: 'kakao',
+				profile: defaultUserProfile,
 			});
-
-			kakaoUser = await this.usersRepository.save(newKakaoUser); // db에 만들어진 객체를 저장
-			return kakaoUser;
-		} else {
-			// 기존 유저
-			return kakaoUser;
+			return new AuthReseponseDto(kakaoUser);
 		}
 	}
 
-	async login(user: User): Promise<TokenDto> {
+	async login(user: GetUserInfoDto): Promise<TokenDto> {
 		const payload = { id: user.id };
 		const accessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
@@ -59,8 +78,6 @@ export class AuthService {
 			secret: this.#jwtConfig.jwtRefreshTokenSecret,
 			expiresIn: this.#jwtConfig.jwtRefreshTokenExpire,
 		});
-
-		await this.setRefreshToken(refreshToken, user.id);
 
 		return {
 			accessToken: accessToken,
@@ -77,17 +94,7 @@ export class AuthService {
 		return { accessToken: newAccessToken };
 	}
 
-	// user refresh token update
-	async setRefreshToken(refreshToken: string, id: number) {
-		const user = await this.usersRepository.findOne({
-			where: { id },
-		});
-		const currentHashedRefreshToken = await hash(refreshToken, 10);
-		user.refreshToken = currentHashedRefreshToken;
-		await this.usersRepository.save(user);
-	}
-
-	async getUser(id: number) {
+	async getUserIdIfExist(id: number) {
 		const user = await this.usersRepository.findOne({
 			where: { id },
 		});
@@ -97,11 +104,7 @@ export class AuthService {
 		} else throw new UnauthorizedException();
 	}
 
-	async removeRefreshToken(id: number) {
-		const user = await this.usersRepository.findOne({
-			where: { id },
-		});
-		user.refreshToken = null;
-		return this.usersRepository.save(user);
+	async logout(id: number) {
+		return 'Logout user';
 	}
 }
