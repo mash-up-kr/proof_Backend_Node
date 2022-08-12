@@ -1,5 +1,4 @@
 import { CreateDateColumn, DeleteDateColumn, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
-import { IsUUID } from 'class-validator';
 import { Exclude } from 'class-transformer';
 
 export abstract class CommonEntity {

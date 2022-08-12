@@ -8,10 +8,11 @@ import { JwtRefreshStrategy } from './strategies/jwt-refresh.strategy';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { KakaoStrategy } from './strategies/kakao.strategy';
 import { User } from '@src/entities/users.entity';
+import { UsersProfile } from '@src/entities/users-profile.entity';
 
 @Module({
 	imports: [
-		TypeOrmModule.forFeature([User]),
+		TypeOrmModule.forFeature([User, UsersProfile]),
 		JwtModule.register({
 			secret: process.env.JWT_ACCESS_TOKEN_SECRET,
 			signOptions: { expiresIn: process.env.JWT_ACCESS_TOKEN_EXPIRATION_TIME },
