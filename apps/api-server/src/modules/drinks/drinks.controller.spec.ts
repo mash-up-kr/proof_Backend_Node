@@ -29,21 +29,21 @@ describe('DrinksController', () => {
 		expect(controller).toBeDefined();
 	});
 
-	describe('findByCategory', () => {
+	describe('findDrinksByCategory', () => {
 		it('should thorw BadRequestException Error if query is missing', async () => {
-			await expect(controller.findByCategory(undefined)).rejects.toThrow(BadRequestException);
+			await expect(controller.findDrinksByCategory(undefined)).rejects.toThrow(BadRequestException);
 		});
 
 		it('should thorw BadRequestException Error if query is invalid', async () => {
 			const name = Category['InvalidDrinkCategory'];
-			await expect(controller.findByCategory(name)).rejects.toThrow(BadRequestException);
+			await expect(controller.findDrinksByCategory(name)).rejects.toThrow(BadRequestException);
 		});
 
-		it('should call drinksService.findByCategory', async () => {
+		it('should call drinksService.findDrinksByCategory', async () => {
 			const name = Category['Beer'];
-			await controller.findByCategory(name);
-			expect(service.findByCategory).toHaveBeenCalledWith(name);
-			expect(await controller.findByCategory(name)).toEqual([
+			await controller.findDrinksByCategory(name);
+			expect(service.findDrinksByCategory).toHaveBeenCalledWith(name);
+			expect(await controller.findDrinksByCategory(name)).toEqual([
 				{
 					id: 1,
 					createdAt: '2022-07-20T17:09:06.034Z',
@@ -59,17 +59,17 @@ describe('DrinksController', () => {
 		});
 	});
 
-	describe('findByCategory', () => {
+	describe('findDrinkById', () => {
 		it('should thorw BadRequestException Error if id is invalid', async () => {
 			const id = 99999;
-			await expect(controller.findById(id)).rejects.toThrow(BadRequestException);
+			await expect(controller.findDrinkById(id)).rejects.toThrow(BadRequestException);
 		});
 
-		it('should call drinksService.findById', async () => {
+		it('should call drinksService.findDrinkById', async () => {
 			const id = 1;
-			await controller.findById(id);
-			expect(service.findById).toHaveBeenCalledWith(id);
-			expect(await controller.findById(id)).toEqual([
+			await controller.findDrinkById(id);
+			expect(service.findDrinkById).toHaveBeenCalledWith(id);
+			expect(await controller.findDrinkById(id)).toEqual([
 				{
 					id: 1,
 					createdAt: '2022-07-20T17:09:06.034Z',

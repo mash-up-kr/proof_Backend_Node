@@ -19,7 +19,7 @@ export class DrinksService {
 		return 'This action adds a new drink';
 	}
 
-	public async findAll(): Promise<Drink[]> {
+	public async findAllDrinks(): Promise<Drink[]> {
 		try {
 			return await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -31,7 +31,7 @@ export class DrinksService {
 		}
 	}
 
-	public async findById(id: number): Promise<GetDrinkInfoDto> {
+	public async findDrinkById(id: number): Promise<GetDrinkInfoDto> {
 		try {
 			const drinkInfo = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -56,14 +56,40 @@ export class DrinksService {
 		}
 	}
 
-	public async findByCategory(category: string): Promise<Drink[]> {
+	public async findDrinksByCategory(category: string): Promise<Drink[]> {
 		try {
+			if (category === 'All') {
+				return await this.findAllDrinks();
+			}
 			const drinksInfoByCategory = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.leftJoin('drink.category', 'category')
 				.where('category.name = :category', { category })
 				.getMany();
 			return drinksInfoByCategory;
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
+
+	public async findReviewedDrinksbyUser(userId: number): Promise<GetDrinkInfoDto[]> {
+		try {
+			const userReviewedDrinks = await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select([
+					'drink.id',
+					'drink.name',
+					'drink.abv',
+					'drink.origin',
+					'drink.description',
+					'drink.image_url',
+					'category.name',
+				])
+				.leftJoin('drink.category', 'category')
+				.leftJoin('drink.reviews', 'review')
+				.where('review.reviewer_id = :id', { id: userId })
+				.getMany();
+			return userReviewedDrinks;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}

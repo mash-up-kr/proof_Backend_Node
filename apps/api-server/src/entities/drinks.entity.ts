@@ -8,18 +8,34 @@ import { CommonEntity } from './common.entity';
 
 @Entity()
 export class Drink extends CommonEntity {
+	@ApiProperty({
+		description: '술 이름 (한글)',
+	})
 	@Column({ type: 'varchar', nullable: false })
 	name: string;
 
+	@ApiProperty({
+		description: '술 도수 (단위 %)',
+	})
 	@Column({ type: 'float', nullable: false })
 	abv: number;
 
+	@ApiProperty({
+		example: '미국',
+		description: '술 산지 (한글)',
+	})
 	@Column({ type: 'varchar' })
 	origin: string;
 
+	@ApiProperty({
+		description: '술 설명',
+	})
 	@Column({ type: 'text', default: '준비 중입니다. 🍻' })
 	description: string;
 
+	@ApiProperty({
+		description: '술 이미지 URL',
+	})
 	@Column({
 		type: 'varchar',
 		default: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
