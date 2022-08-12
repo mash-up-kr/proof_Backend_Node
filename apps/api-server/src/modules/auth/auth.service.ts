@@ -11,6 +11,7 @@ import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
 import { TokenDto } from './dto/auth.token.dto';
 import { UserKakaoDto } from './dto/users.kakao.dto';
 import { DEFAULT_USER_PROFILE } from '../users-profile/users-profile.constants';
+import { AuthReseponseDto } from './dto/auth-response.dto';
 
 @Injectable()
 export class AuthService {
@@ -63,13 +64,7 @@ export class AuthService {
 				type: 'kakao',
 				profile: defaultUserProfile,
 			});
-			return {
-				id: kakaoUser.id,
-				name: kakaoUser.name,
-				nickname: kakaoUser.nickname,
-				email: kakaoUser.email,
-				profile: kakaoUser.profile,
-			};
+			return new AuthReseponseDto(kakaoUser);
 		}
 	}
 

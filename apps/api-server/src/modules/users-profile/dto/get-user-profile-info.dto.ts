@@ -10,4 +10,9 @@ export class GetUserProfileInfoDto {
 	@IsString()
 	@ApiProperty({ description: '프로필사진 url' })
 	readonly image_url: string;
+
+	constructor({ id, image_url }) {
+		this.id = id;
+		this.image_url = image_url;
+	}
 }

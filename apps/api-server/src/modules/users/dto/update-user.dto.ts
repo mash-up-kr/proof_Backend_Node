@@ -1,6 +1,6 @@
 import { IsOptional, IsString } from 'class-validator';
 
-import { UpdateUserProfileDto } from './update-user-profile.dto';
+import { UpdateUserProfileDto } from '../../users-profile/dto/update-user-profile.dto';
 
 export class UpdateUserDto {
 	@IsOptional()
