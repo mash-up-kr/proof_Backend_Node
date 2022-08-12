@@ -21,10 +21,10 @@ export class ReviewCardResponseDto {
 			mood: reviewOfDrink.mood,
 			weather: reviewOfDrink.weather,
 			time: reviewOfDrink.time,
-			light: this.#decideThreshold(reviewOfDrink.light) ? 'Light' : 'Heavy',
-			sweet: this.#decideThreshold(reviewOfDrink.sweet) ? 'Sweet' : 'Bitter',
-			mild: this.#decideThreshold(reviewOfDrink.mild) ? 'Mild' : 'Strong',
-			smooth: this.#decideThreshold(reviewOfDrink.smooth) ? 'Smooth' : 'Burning',
+			is_heavy: this.#decideThreshold(reviewOfDrink.is_heavy) ? 'Light' : 'Heavy',
+			is_bitter: this.#decideThreshold(reviewOfDrink.is_bitter) ? 'Sweet' : 'Bitter',
+			is_strong: this.#decideThreshold(reviewOfDrink.is_strong) ? 'Mild' : 'Strong',
+			is_burning: this.#decideThreshold(reviewOfDrink.is_burning) ? 'Smooth' : 'Burning',
 			taste: reviewOfDrink.taste,
 		};
 	}

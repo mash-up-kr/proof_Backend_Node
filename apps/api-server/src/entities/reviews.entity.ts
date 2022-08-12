@@ -64,7 +64,7 @@ export class Review extends CommonEntity {
 	@IsNumber()
 	@IsNotEmpty()
 	@Column({ type: 'int', nullable: false })
-	light: 1 | 2 | 3 | 4 | 5 | 6;
+	is_heavy: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		example: 1,
@@ -73,7 +73,7 @@ export class Review extends CommonEntity {
 	@IsNumber()
 	@IsNotEmpty()
 	@Column({ type: 'int', nullable: false })
-	sweet: 1 | 2 | 3 | 4 | 5 | 6;
+	is_bitter: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		example: 1,
@@ -82,7 +82,7 @@ export class Review extends CommonEntity {
 	@IsNumber()
 	@IsNotEmpty()
 	@Column({ type: 'int', nullable: false })
-	mild: 1 | 2 | 3 | 4 | 5 | 6;
+	is_strong: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		example: 1,
@@ -91,7 +91,7 @@ export class Review extends CommonEntity {
 	@IsNumber()
 	@IsNotEmpty()
 	@Column({ type: 'int', nullable: false })
-	smooth: 1 | 2 | 3 | 4 | 5 | 6;
+	is_burning: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		enum: Taste,

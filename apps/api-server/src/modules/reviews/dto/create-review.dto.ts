@@ -8,10 +8,10 @@ export class CreateReviewDto extends PickType(Review, [
 	'time',
 	'companion',
 	'mood',
-	'light',
-	'sweet',
-	'mild',
-	'smooth',
+	'is_heavy',
+	'is_bitter',
+	'is_strong',
+	'is_burning',
 	'taste',
 ]) {
 	@IsOptional()
