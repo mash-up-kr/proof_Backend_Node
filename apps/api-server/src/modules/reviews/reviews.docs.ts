@@ -3,7 +3,7 @@ import { ApiBearerAuth, ApiOperation, ApiResponse } from '@nestjs/swagger';
 
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 
-import { ReviewCardResponseDto } from './dto/review-item-response.dto';
+import { ReviewCardResponseDto } from './dto/review-card-response.dto';
 import { ReviewsController } from './reviews.controller';
 
 export const ApiDocs: SwaggerMethodDoc<ReviewsController> = {

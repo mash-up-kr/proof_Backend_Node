@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { Review } from '@src/entities/reviews.entity';
 import { CreateReviewDto } from './dto/create-review.dto';
-import { ReviewCardResponseDto } from './dto/review-item-response.dto';
+import { ReviewCardResponseDto } from './dto/review-card-response.dto';
 
 @Injectable()
 export class ReviewsService {
@@ -52,28 +52,9 @@ export class ReviewsService {
 			if (!reviewOfDrink) {
 				throw new Error('Review not found');
 			}
-
-			const drink = reviewOfDrink.reviewed_drink;
-			const userReview = {
-				id: reviewOfDrink.id,
-				createdAt: reviewOfDrink.createdAt,
-				mood: reviewOfDrink.mood,
-				weather: reviewOfDrink.weather,
-				time: reviewOfDrink.time,
-				light: this.#decideThreshold(reviewOfDrink.light) ? 'Light' : 'Heavy',
-				sweet: this.#decideThreshold(reviewOfDrink.sweet) ? 'Sweet' : 'Bitter',
-				mild: this.#decideThreshold(reviewOfDrink.mild) ? 'Mild' : 'Strong',
-				smooth: this.#decideThreshold(reviewOfDrink.smooth) ? 'Smooth' : 'Burning',
-				taste: reviewOfDrink.taste,
-			};
-
-			return new ReviewCardResponseDto(drink, userReview);
+			return new ReviewCardResponseDto(reviewOfDrink);
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
-
-	#decideThreshold = (value: number): boolean => {
-		return value <= 3 ? true : false;
-	};
 }
