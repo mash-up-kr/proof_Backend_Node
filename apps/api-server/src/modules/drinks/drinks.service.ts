@@ -25,6 +25,7 @@ export class DrinksService {
 				.createQueryBuilder('drink')
 				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
+				.orderBy('drink.createdAt', 'DESC')
 				.getMany();
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
@@ -48,18 +49,32 @@ export class DrinksService {
 		}
 	}
 
-	public async findDrinksByCategory(category: string): Promise<DrinkDto[]> {
+	public async findDrinksByCategory(
+		category: string,
+		page = 0,
+		length = 30,
+	): Promise<{ totalPageCount: number; list: DrinkDto[] }> {
 		try {
-			if (category === 'All') {
-				return await this.findAllDrinks();
+			console.log(category, page, length);
+			let queryBuilder = this.drinkRepository.createQueryBuilder('drink');
+
+			if (category !== 'All') {
+				queryBuilder = queryBuilder
+					.leftJoin('drink.category', 'category')
+					.where('category.name = :category', { category });
 			}
-			const drinksByCategory = await this.drinkRepository
-				.createQueryBuilder('drink')
+			const count = await queryBuilder.getCount();
+			const totalPageCount = Math.ceil(count / length);
+			const drinksByCategory = await queryBuilder
 				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
 				.where('category.name = :category', { category })
+				.orderBy('drink.createdAt', 'DESC')
+				.skip((page - 1) * length)
+				.take(length)
 				.getMany();
-			return drinksByCategory;
+
+			return { totalPageCount: totalPageCount, list: drinksByCategory.map((drink) => new DrinkDto(drink)) };
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
