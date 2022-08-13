@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, HttpCode, Post, UseGuards } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 
 import { AuthUser } from '@src/decorators/auth.decorator';
@@ -16,7 +16,7 @@ export class AuthController {
 	constructor(private readonly authService: AuthService) {}
 
 	@UseGuards(KakaoAuthGuard)
-	@Get('/kakao-login')
+	@Post('/kakao-login')
 	@HttpCode(200)
 	@ApiDocs.kakaoLogin('회원가입&로그인 후 유저 정보, 토큰 반환')
 	async kakaoLogin(@Body('kakaoUser') kakaoUser) {
