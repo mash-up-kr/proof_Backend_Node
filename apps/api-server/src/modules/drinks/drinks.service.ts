@@ -60,12 +60,12 @@ export class DrinksService {
 				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category');
 
-			const count = await queryBuilder.getCount();
-			const totalPageCount = Math.ceil(count / length);
-
 			if (category !== 'All') {
 				queryBuilder = queryBuilder.where('category.name = :category', { category });
 			}
+			const count = await queryBuilder.getCount();
+			const totalPageCount = Math.ceil(count / length);
+
 			const drinksByCategory = await queryBuilder
 				.orderBy('drink.createdAt', 'DESC')
 				.skip((page - 1) * length)
