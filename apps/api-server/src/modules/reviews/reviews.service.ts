@@ -25,6 +25,33 @@ export class ReviewsService {
 		}
 	}
 
+	// { totalPageCount: number; reviewList: ReviewCardResponseDto[] }
+	async findReviewsOfDrink(userId: number, drinkId: number, page = 1, length = 4): Promise<any> {
+		try {
+			const queryBuilder = this.reviewRepository.createQueryBuilder('review');
+
+			const count = await queryBuilder.getCount();
+			const totalPageCount = Math.ceil(count / length);
+			const reviewsOfDrink = await queryBuilder
+				.leftJoinAndSelect('review.reviewed_drink', 'drink')
+				.leftJoinAndSelect('drink.category', 'category')
+				.where('review.reviewer_id = :id', { id: userId })
+				.orderBy('review.cratedAt', 'DESC')
+				.skip((page - 1) * length)
+				.take(length)
+				.getMany();
+
+			return {
+				totalPageCount: totalPageCount,
+				reviewList: reviewsOfDrink.map((review) => {
+					new ReviewCardResponseDto(review);
+				}),
+			};
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
+
 	async findReviewsById(id: number): Promise<ReviewCardResponseDto> {
 		try {
 			const reviewOfDrink = await this.reviewRepository

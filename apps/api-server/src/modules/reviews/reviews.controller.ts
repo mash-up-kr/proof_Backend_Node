@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, UseGuards, Query } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 
 import { ReviewsService } from './reviews.service';
@@ -22,6 +22,17 @@ export class ReviewsController {
 		@Body() createReviewDto: CreateReviewDto,
 	) {
 		return await this.reviewsService.createReview(user.id, drinkId, createReviewDto);
+	}
+
+	@Get('/drinks/:drinkId')
+	@ApiDocs.findReviewsOfDrink('나의 술 저장고 - 리뷰한 술 - 리뷰 카드들')
+	async findReviewsOfDrink(
+		@AuthUser() user: User,
+		@Query('drinkId') drinkId: number,
+		@Query('page') page: number,
+		@Query('length') length: number,
+	) {
+		return await this.reviewsService.findReviewsOfDrink(user.id, drinkId, page, length);
 	}
 
 	@Get('/:reviewCardId')
