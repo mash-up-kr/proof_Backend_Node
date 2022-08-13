@@ -33,6 +33,8 @@ export class DrinksCategory extends CommonEntity {
 		type: () => [Drink],
 		description: 'Specific Drinks in the category',
 	})
-	@OneToMany(() => Drink, (drink) => drink.category)
+	@OneToMany(() => Drink, (drink: Drink) => drink.category, {
+		cascade: true,
+	})
 	drinks: Drink[];
 }
