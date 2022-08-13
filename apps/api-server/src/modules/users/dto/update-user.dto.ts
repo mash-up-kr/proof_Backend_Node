@@ -1,6 +1,6 @@
 import { IsOptional, IsString } from 'class-validator';
 
-import { UpdateUserProfileDto } from '../../users-profile/dto/update-user-profile.dto';
+import { UpdateUserProfileRequestDto } from '../../users-profile/dto/update-user-profile-request.dto';
 
 export class UpdateUserDto {
 	@IsOptional()
@@ -8,5 +8,5 @@ export class UpdateUserDto {
 	readonly nickname: string;
 
 	@IsOptional()
-	readonly profile: UpdateUserProfileDto;
+	readonly profile: UpdateUserProfileRequestDto;
 }

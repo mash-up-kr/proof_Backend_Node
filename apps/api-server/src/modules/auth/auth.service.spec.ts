@@ -1,13 +1,13 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
+import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 
-import { AuthService } from './auth.service';
-import { MockUsersRepository } from '../../../test/mock/users.mock';
-import { User } from '@src/entities/users.entity';
 import { UsersProfile } from '@src/entities/users-profile.entity';
+import { User } from '@src/entities/users.entity';
 import { MockUsersProfileRepository } from '../../../test/mock/users-profile.mock';
+import { MockUsersRepository } from '../../../test/mock/users.mock';
+import { AuthService } from './auth.service';
 
 describe('AuthService', () => {
 	let service: AuthService;
@@ -30,7 +30,7 @@ describe('AuthService', () => {
 					provide: ConfigService,
 					useValue: {
 						get: jest.fn((key: string) => {
-							if (key === 'oauthConfig' || key === 'jwtConfig') {
+							if (key === 'jwtConfig') {
 								return 1;
 							}
 							return null;

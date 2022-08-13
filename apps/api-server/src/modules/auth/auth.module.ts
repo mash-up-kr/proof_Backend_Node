@@ -1,17 +1,19 @@
-import { JwtModule } from '@nestjs/jwt';
+import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
+import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { UsersProfile } from '@src/entities/users-profile.entity';
+import { User } from '@src/entities/users.entity';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { JwtRefreshStrategy } from './strategies/jwt-refresh.strategy';
 import { JwtStrategy } from './strategies/jwt.strategy';
-import { KakaoStrategy } from './strategies/kakao.strategy';
-import { User } from '@src/entities/users.entity';
-import { UsersProfile } from '@src/entities/users-profile.entity';
+import { KakaoAuthStrategy } from './strategies/kakao-auth.strategy';
 
 @Module({
 	imports: [
+		HttpModule,
 		TypeOrmModule.forFeature([User, UsersProfile]),
 		JwtModule.register({
 			secret: process.env.JWT_ACCESS_TOKEN_SECRET,
@@ -19,6 +21,6 @@ import { UsersProfile } from '@src/entities/users-profile.entity';
 		}),
 	],
 	controllers: [AuthController],
-	providers: [AuthService, KakaoStrategy, JwtStrategy, JwtRefreshStrategy],
+	providers: [AuthService, KakaoAuthStrategy, JwtStrategy, JwtRefreshStrategy],
 })
 export class AuthModule {}

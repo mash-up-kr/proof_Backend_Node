@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { GetUserProfileInfoDto } from '@src/modules/users-profile/dto/get-user-profile-info.dto';
+import { UserProfilesResponseDto } from '@src/modules/users-profile/dto/user-profiles-response.dto';
 
 export class AuthReseponseDto {
 	@ApiProperty({ description: '사용자 id' })
@@ -15,13 +15,13 @@ export class AuthReseponseDto {
 	email: string;
 
 	@ApiProperty({ description: '사용자 프로필사진 정보' })
-	profile: GetUserProfileInfoDto;
+	profile: UserProfilesResponseDto;
 
 	constructor({ id, name, nickname, email, profile }) {
 		this.id = id;
 		this.name = name;
 		this.nickname = nickname;
 		this.email = email;
-		this.profile = new GetUserProfileInfoDto(profile);
+		this.profile = new UserProfilesResponseDto(profile);
 	}
 }

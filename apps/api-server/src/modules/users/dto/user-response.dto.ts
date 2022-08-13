@@ -1,10 +1,10 @@
+import { ApiProperty } from '@nestjs/swagger';
 import { IsString } from 'class-validator';
 import { PrimaryGeneratedColumn } from 'typeorm';
-import { ApiProperty } from '@nestjs/swagger';
 
-import { GetUserProfileInfoDto } from '@src/modules/users-profile/dto/get-user-profile-info.dto';
+import { UserProfilesResponseDto } from '@src/modules/users-profile/dto/user-profiles-response.dto';
 
-export class GetUserInfoDto {
+export class UserResponseDto {
 	@PrimaryGeneratedColumn()
 	@ApiProperty({ description: '사용자 id' })
 	readonly id: number;
@@ -22,5 +22,5 @@ export class GetUserInfoDto {
 	readonly email: string;
 
 	@ApiProperty({ description: '새로운 프로필사진 정보' })
-	readonly profile: GetUserProfileInfoDto;
+	readonly profile: UserProfilesResponseDto;
 }

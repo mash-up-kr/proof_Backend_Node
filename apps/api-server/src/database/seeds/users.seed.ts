@@ -1,9 +1,9 @@
-import { Factory, Seeder } from 'typeorm-seeding';
 import { Connection } from 'typeorm';
+import { Factory, Seeder } from 'typeorm-seeding';
 
-import { User } from '../../entities/users.entity';
-import { UsersProfile } from '../../entities/users-profile.entity';
 import { DEFAULT_USER_PROFILE } from '@src/modules/users-profile/users-profile.constants';
+import { UsersProfile } from '../../entities/users-profile.entity';
+import { User } from '../../entities/users.entity';
 
 const seedUserData = {
 	name: 'test martin',
@@ -12,7 +12,6 @@ const seedUserData = {
 	social_id: 123456789,
 	type: 'test',
 	profile_emoji: 'test',
-	refreshToken: 'test',
 };
 
 export class CreateInitialUserData implements Seeder {

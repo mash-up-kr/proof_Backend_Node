@@ -4,7 +4,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { UsersProfile } from '@src/entities/users-profile.entity';
-import { GetUserProfileInfoDto } from './dto/get-user-profile-info.dto';
+import { UserProfilesResponseDto } from './dto/user-profiles-response.dto';
 
 @Injectable()
 export class UsersProfileService {
@@ -13,7 +13,7 @@ export class UsersProfileService {
 		private readonly usersProfileRepository: Repository<UsersProfile>,
 	) {}
 
-	async findAll(): Promise<GetUserProfileInfoDto[]> {
+	async findAll(): Promise<UserProfilesResponseDto[]> {
 		const usersProfiles = await this.usersProfileRepository.find();
 		return usersProfiles;
 	}

@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-import { GetUserInfoDto } from '@src/modules/users/dto/get-user-info.dto';
+import { UserResponseDto } from '@src/modules/users/dto/user-response.dto';
 
 export class TokenDto {
 	@ApiProperty({ description: 'access token' })
@@ -10,5 +10,5 @@ export class TokenDto {
 	readonly refreshToken: string;
 
 	@ApiProperty({ description: '사용자 정보' })
-	readonly user: GetUserInfoDto;
+	readonly user: UserResponseDto;
 }

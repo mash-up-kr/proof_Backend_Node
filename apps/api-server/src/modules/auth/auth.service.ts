@@ -1,17 +1,17 @@
-import { Repository } from 'typeorm';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
-import { JwtConfig, OauthConfig } from '@src/config/config.constant';
+import { JwtConfig } from '@src/config/config.constant';
 import { UsersProfile } from '@src/entities/users-profile.entity';
 import { User } from '@src/entities/users.entity';
-import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
+import { DEFAULT_USER_PROFILE } from '../users-profile/users-profile.constants';
+import { UserResponseDto } from '../users/dto/user-response.dto';
+import { AuthReseponseDto } from './dto/auth-response.dto';
 import { TokenDto } from './dto/auth.token.dto';
 import { UserKakaoDto } from './dto/users.kakao.dto';
-import { DEFAULT_USER_PROFILE } from '../users-profile/users-profile.constants';
-import { AuthReseponseDto } from './dto/auth-response.dto';
 
 @Injectable()
 export class AuthService {
@@ -23,16 +23,10 @@ export class AuthService {
 		private readonly configService: ConfigService,
 		private readonly jwtService: JwtService,
 	) {}
-	#oauthConfig = this.configService.get<OauthConfig>('oauthConfig').kakao;
 	#jwtConfig = this.configService.get<JwtConfig>('jwtConfig');
 
-	getKakaoLoginPage(): string {
-		return `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${
-			this.#oauthConfig.clientId
-		}&redirect_uri=${this.#oauthConfig.callbackUrl}`;
-	}
-
-	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<GetUserInfoDto> {
+	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<UserResponseDto> {
+		console.log(kakaoUserData);
 		let kakaoUser = await this.usersRepository
 			.createQueryBuilder('user')
 			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
@@ -68,7 +62,7 @@ export class AuthService {
 		}
 	}
 
-	async login(user: GetUserInfoDto): Promise<TokenDto> {
+	async login(user: UserResponseDto): Promise<TokenDto> {
 		const payload = { id: user.id };
 		const accessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,

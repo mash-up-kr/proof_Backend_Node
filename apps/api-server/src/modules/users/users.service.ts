@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { User } from '@src/entities/users.entity';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { GetUserInfoDto } from './dto/get-user-info.dto';
+import { UserResponseDto } from './dto/user-response.dto';
 
 @Injectable()
 export class UsersService {
@@ -14,8 +14,8 @@ export class UsersService {
 		private readonly usersRepository: Repository<User>,
 	) {}
 
-	async getUser(id: number): Promise<GetUserInfoDto> {
-		const user: GetUserInfoDto = await this.usersRepository
+	async getUser(id: number): Promise<UserResponseDto> {
+		const user: UserResponseDto = await this.usersRepository
 			.createQueryBuilder('user')
 			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
 			.leftJoin('user.profile', 'profile')

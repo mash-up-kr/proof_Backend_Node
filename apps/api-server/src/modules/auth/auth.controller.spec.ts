@@ -1,14 +1,16 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { HttpModule } from '@nestjs/axios';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
+import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 
+import { UsersProfile } from '@src/entities/users-profile.entity';
+import { User } from '@src/entities/users.entity';
+import { MockUsersProfileRepository } from '../../../test/mock/users-profile.mock';
+import { MockUsersRepository } from '../../../test/mock/users.mock';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
-import { MockUsersRepository } from '../../../test/mock/users.mock';
-import { User } from '@src/entities/users.entity';
-import { UsersProfile } from '@src/entities/users-profile.entity';
-import { MockUsersProfileRepository } from '../../../test/mock/users-profile.mock';
+import { KakaoAuthStrategy } from './strategies/kakao-auth.strategy';
 
 describe('AuthController', () => {
 	let controller: AuthController;
@@ -16,10 +18,12 @@ describe('AuthController', () => {
 
 	beforeEach(async () => {
 		const module: TestingModule = await Test.createTestingModule({
+			imports: [HttpModule],
 			controllers: [AuthController],
 			providers: [
 				AuthService,
 				JwtService,
+				KakaoAuthStrategy,
 				{
 					provide: getRepositoryToken(User),
 					useClass: MockUsersRepository,
@@ -32,7 +36,7 @@ describe('AuthController', () => {
 					provide: ConfigService,
 					useValue: {
 						get: jest.fn((key: string) => {
-							if (key === 'oauthConfig' || key === 'jwtConfig') {
+							if (key === 'jwtConfig') {
 								return 1;
 							}
 							return null;

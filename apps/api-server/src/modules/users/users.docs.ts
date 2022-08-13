@@ -1,7 +1,7 @@
 import { applyDecorators } from '@nestjs/common';
-import { ApiBearerAuth, ApiBody, ApiOperation, ApiParam, ApiQuery, ApiResponse } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
-import { GetUserInfoDto } from './dto/get-user-info.dto';
+import { UserResponseDto } from './dto/user-response.dto';
 import { UsersController } from './users.controller';
 
 export const ApiDocs: SwaggerMethodDoc<UsersController> = {
@@ -14,7 +14,7 @@ export const ApiDocs: SwaggerMethodDoc<UsersController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: GetUserInfoDto,
+				type: UserResponseDto,
 			}),
 			ApiBearerAuth('Authorization'),
 		);
