@@ -2,6 +2,7 @@ import { Connection } from 'typeorm';
 import { Factory, Seeder } from 'typeorm-seeding';
 
 import { DEFAULT_USER_PROFILE } from '@src/modules/users-profile/users-profile.constants';
+import { UserType } from '@src/types/users.types';
 import { UsersProfile } from '../../entities/users-profile.entity';
 import { User } from '../../entities/users.entity';
 
@@ -10,8 +11,7 @@ const seedUserData = {
 	nickname: 'test nickname',
 	email: 'testtest@email.com',
 	social_id: 123456789,
-	type: 'test',
-	profile_emoji: 'test',
+	type: UserType.Kakao,
 };
 
 export class CreateInitialUserData implements Seeder {

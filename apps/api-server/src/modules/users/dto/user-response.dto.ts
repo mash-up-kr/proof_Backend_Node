@@ -3,6 +3,7 @@ import { IsString } from 'class-validator';
 import { PrimaryGeneratedColumn } from 'typeorm';
 
 import { UserProfilesResponseDto } from '@src/modules/users-profile/dto/user-profiles-response.dto';
+import { UserType } from '@src/types/users.types';
 
 export class UserResponseDto {
 	@PrimaryGeneratedColumn()
@@ -21,14 +22,19 @@ export class UserResponseDto {
 	@ApiProperty({ description: '사용자 이메일' })
 	readonly email: string;
 
+	@IsString()
+	@ApiProperty({ description: '사용자 타입 (카카오유저, 관리자)' })
+	readonly type: UserType;
+
 	@ApiProperty({ description: '새로운 프로필사진 정보' })
 	readonly profile: UserProfilesResponseDto;
 
-	constructor({ id, name, nickname, email, profile }) {
+	constructor({ id, name, nickname, email, type, profile }) {
 		this.id = id;
 		this.name = name;
 		this.nickname = nickname;
 		this.email = email;
+		this.type = type;
 		this.profile = new UserProfilesResponseDto(profile);
 	}
 }
