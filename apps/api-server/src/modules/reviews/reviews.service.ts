@@ -29,24 +29,8 @@ export class ReviewsService {
 		try {
 			const reviewOfDrink = await this.reviewRepository
 				.createQueryBuilder('review')
-				.select([
-					'review.id',
-					'review.createdAt',
-					'review.mood',
-					'review.weather',
-					'review.time',
-					'review.is_heavy',
-					'review.is_bitter',
-					'review.is_strong',
-					'review.is_burning',
-					'review.taste',
-					'drink.name',
-					'drink.category',
-					'drink.image_url',
-					'drink.abv',
-					'drink.origin',
-				])
-				.leftJoin('review.reviewed_drink', 'drink')
+				.leftJoinAndSelect('review.reviewed_drink', 'drink')
+				.leftJoinAndSelect('drink.category', 'category')
 				.where('review.id = :id', { id })
 				.getOne();
 			if (!reviewOfDrink) {

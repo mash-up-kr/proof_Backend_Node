@@ -21,11 +21,15 @@ export class DrinksController {
 
 	@Get('/category')
 	@ApiDocs.findDrinksByCategory('카테고리별 술 상세 정보 조회')
-	public async findDrinksByCategory(@Query('name') name: Category) {
+	public async findDrinksByCategory(
+		@Query('name') name: Category,
+		@Query('page') page: number,
+		@Query('length') length: number,
+	) {
 		if (!name) {
 			throw new BadRequestException();
 		}
-		return await this.drinksService.findDrinksByCategory(name);
+		return await this.drinksService.findDrinksByCategory(name, page, length);
 	}
 
 	@Get(':id')
@@ -34,7 +38,7 @@ export class DrinksController {
 		return await this.drinksService.findDrinkById(id);
 	}
 
-	@Get('/reviews/users/:id')
+	@Get('/users/reviews')
 	@UseGuards(JwtAuthGuard)
 	@ApiDocs.findUserReviewedDrinks('나의 술 저장고 - 리뷰한 술 목록')
 	public async findUserReviewedDrinks(@AuthUser() user: User) {

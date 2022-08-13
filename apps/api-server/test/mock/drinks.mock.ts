@@ -55,9 +55,9 @@ export const MockDrinksService = {
 	findDrinksByCategory: jest.fn((name) => {
 		if (Object.values(Category).includes(name as Category)) {
 			if (name === 'Beer') {
-				return [omit(mockDrinks[0], 'category')];
+				return { count: 1, list: [omit(mockDrinks[0], 'category')] };
 			} else if (name === 'Soju') {
-				return [omit(mockDrinks[1], 'category')];
+				return { count: 1, list: [omit(mockDrinks[1], 'category')] };
 			}
 		} else {
 			throw new BadRequestException();
