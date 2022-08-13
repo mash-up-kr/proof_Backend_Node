@@ -1,5 +1,5 @@
 import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from '@nestjs/common';
-import { UserKakaoDto } from '../dto/users.kakao.dto';
+import { KakaoUserDto } from '../dto/kakao-user.dto';
 import { KakaoAuthStrategy } from '../strategies/kakao-auth.strategy';
 
 @Injectable()
@@ -15,11 +15,11 @@ export class KakaoAuthGuard implements CanActivate {
 		if (!validateTokenResult.id) throw new UnauthorizedException();
 
 		const kakaoAccount = validateTokenResult.kakao_account;
-		const kakaoUser: UserKakaoDto = {
+		const kakaoUser = new KakaoUserDto({
 			name: kakaoAccount.profile.nickname,
 			kakaoId: validateTokenResult.id,
 			email: kakaoAccount.has_email && !kakaoAccount.email_needs_agreement ? kakaoAccount.email : null,
-		};
+		});
 		request.body = { kakaoUser: kakaoUser };
 
 		return true;

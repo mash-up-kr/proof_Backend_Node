@@ -15,6 +15,6 @@ export class UsersProfileService {
 
 	async findAll(): Promise<UserProfilesResponseDto[]> {
 		const usersProfiles = await this.usersProfileRepository.find();
-		return usersProfiles;
+		return usersProfiles.map((profile) => new UserProfilesResponseDto(profile));
 	}
 }

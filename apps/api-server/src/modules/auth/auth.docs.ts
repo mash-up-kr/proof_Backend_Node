@@ -2,9 +2,9 @@ import { applyDecorators } from '@nestjs/common';
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { AuthController } from './auth.controller';
-import { TokenDto } from './dto/auth.token.dto';
 import { KakaoLoginRequestDto } from './dto/kakao-login-request.dto';
-import { TokenRefreshDto } from './dto/token-refresh.dto';
+import { KakaoLoginResponseDto } from './dto/kakao-login-response.dto';
+import { TokenRefreshResponseDto } from './dto/token-refresh-response.dto';
 
 export const ApiDocs: SwaggerMethodDoc<AuthController> = {
 	kakaoLogin(summary: string) {
@@ -20,7 +20,7 @@ export const ApiDocs: SwaggerMethodDoc<AuthController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: TokenDto,
+				type: KakaoLoginResponseDto,
 			}),
 		);
 	},
@@ -33,7 +33,7 @@ export const ApiDocs: SwaggerMethodDoc<AuthController> = {
 			ApiResponse({
 				status: 201,
 				description: '',
-				type: TokenRefreshDto,
+				type: TokenRefreshResponseDto,
 			}),
 			ApiBearerAuth('Authorization'),
 		);

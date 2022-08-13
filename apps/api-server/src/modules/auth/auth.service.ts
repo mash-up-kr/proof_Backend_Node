@@ -9,9 +9,9 @@ import { UsersProfile } from '@src/entities/users-profile.entity';
 import { User } from '@src/entities/users.entity';
 import { DEFAULT_USER_PROFILE } from '../users-profile/users-profile.constants';
 import { UserResponseDto } from '../users/dto/user-response.dto';
-import { AuthReseponseDto } from './dto/auth-response.dto';
-import { TokenDto } from './dto/auth.token.dto';
-import { UserKakaoDto } from './dto/users.kakao.dto';
+import { KakaoLoginResponseDto } from './dto/kakao-login-response.dto';
+import { KakaoUserDto } from './dto/kakao-user.dto';
+import { TokenRefreshResponseDto } from './dto/token-refresh-response.dto';
 
 @Injectable()
 export class AuthService {
@@ -25,21 +25,15 @@ export class AuthService {
 	) {}
 	#jwtConfig = this.configService.get<JwtConfig>('jwtConfig');
 
-	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<UserResponseDto> {
+	async createKakaoUser(kakaoUserData: KakaoUserDto): Promise<UserResponseDto> {
 		console.log(kakaoUserData);
-		let kakaoUser = await this.usersRepository
-			.createQueryBuilder('user')
-			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
-			.leftJoin('user.profile', 'profile')
-			.where('user.social_id = :social_id AND user.type = :type', {
-				social_id: kakaoUserData.kakaoId,
-				type: 'kakao',
-			})
-			.getOne();
+		let kakaoUser = await this.usersRepository.findOne({
+			where: { social_id: kakaoUserData.kakaoId, type: 'kakao' },
+			relations: ['profile'],
+		});
 
-		if (kakaoUser) return kakaoUser;
+		if (kakaoUser) return new UserResponseDto(kakaoUser);
 		else {
-			console.log(DEFAULT_USER_PROFILE);
 			const defaultUserProfileUrl = DEFAULT_USER_PROFILE;
 
 			const defaultUserProfile = await this.usersProfileRepository
@@ -58,11 +52,11 @@ export class AuthService {
 				type: 'kakao',
 				profile: defaultUserProfile,
 			});
-			return new AuthReseponseDto(kakaoUser);
+			return new UserResponseDto(kakaoUser);
 		}
 	}
 
-	async login(user: UserResponseDto): Promise<TokenDto> {
+	async login(user: UserResponseDto): Promise<KakaoLoginResponseDto> {
 		const payload = { id: user.id };
 		const accessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
@@ -73,11 +67,11 @@ export class AuthService {
 			expiresIn: this.#jwtConfig.jwtRefreshTokenExpire,
 		});
 
-		return {
-			accessToken: accessToken,
-			refreshToken: refreshToken,
-			user: user,
-		};
+		return new KakaoLoginResponseDto({
+			accessToken,
+			refreshToken,
+			user,
+		});
 	}
 
 	async refresh(payload: any) {
@@ -85,7 +79,7 @@ export class AuthService {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
 			expiresIn: this.#jwtConfig.jwtAccessTokenExpire,
 		});
-		return { accessToken: newAccessToken };
+		return new TokenRefreshResponseDto({ accessToken: newAccessToken });
 	}
 
 	async getUserIdIfExist(id: number) {

@@ -23,4 +23,12 @@ export class UserResponseDto {
 
 	@ApiProperty({ description: '새로운 프로필사진 정보' })
 	readonly profile: UserProfilesResponseDto;
+
+	constructor({ id, name, nickname, email, profile }) {
+		this.id = id;
+		this.name = name;
+		this.nickname = nickname;
+		this.email = email;
+		this.profile = new UserProfilesResponseDto(profile);
+	}
 }

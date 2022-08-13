@@ -3,7 +3,7 @@ import { ApiTags } from '@nestjs/swagger';
 
 import { AuthUser } from '@src/decorators/auth.decorator';
 import { JwtAuthGuard } from '@src/modules/auth/guards/jwt-auth.guard';
-import { UpdateUserDto } from './dto/update-user.dto';
+import { UpdateUserRequestDto } from './dto/update-user-request.dto';
 import { UserResponseDto } from './dto/user-response.dto';
 import { ApiDocs } from './users.docs';
 import { UsersService } from './users.service';
@@ -23,7 +23,7 @@ export class UsersController {
 
 	@Put()
 	@ApiDocs.updateUser('사용자 정보 수정')
-	async updateUser(@AuthUser() userData, @Body() updateUserDto: UpdateUserDto) {
+	async updateUser(@AuthUser() userData, @Body() updateUserDto: UpdateUserRequestDto) {
 		return await this.usersSerivce.updateUser(userData.id, updateUserDto);
 	}
 

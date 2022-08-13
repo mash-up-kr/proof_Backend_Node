@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
-export class UserKakaoDto {
+export class KakaoUserDto {
 	@IsNotEmpty()
 	@IsString()
 	readonly name: string;
@@ -12,4 +12,10 @@ export class UserKakaoDto {
 	@IsNotEmpty()
 	@IsString()
 	readonly email: string;
+
+	constructor({ name, kakaoId, email }) {
+		this.name = name;
+		this.kakaoId = kakaoId;
+		this.email = email;
+	}
 }

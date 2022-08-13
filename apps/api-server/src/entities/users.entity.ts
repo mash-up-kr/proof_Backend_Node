@@ -33,11 +33,6 @@ export class User extends CommonEntity {
 	@Column({ type: 'varchar', nullable: false })
 	type: string;
 
-	@IsString()
-	@IsNotEmpty()
-	@Column({ type: 'varchar', nullable: false, default: 'aa' })
-	profile_emoji: string;
-
 	@ApiProperty({
 		type: () => [Review],
 		description: 'The reviews of this user',

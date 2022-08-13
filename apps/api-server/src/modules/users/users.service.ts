@@ -4,7 +4,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { User } from '@src/entities/users.entity';
-import { UpdateUserDto } from './dto/update-user.dto';
+import { UpdateUserRequestDto } from './dto/update-user-request.dto';
 import { UserResponseDto } from './dto/user-response.dto';
 
 @Injectable()
@@ -15,18 +15,14 @@ export class UsersService {
 	) {}
 
 	async getUser(id: number): Promise<UserResponseDto> {
-		const user: UserResponseDto = await this.usersRepository
-			.createQueryBuilder('user')
-			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
-			.leftJoin('user.profile', 'profile')
-			.where('user.id = :id', {
-				id,
-			})
-			.getOne();
-		return user;
+		const user = await this.usersRepository.findOne({
+			where: { id },
+			relations: ['profile'],
+		});
+		return new UserResponseDto(user);
 	}
 
-	async updateUser(id: number, updateUserDto: UpdateUserDto) {
+	async updateUser(id: number, updateUserDto: UpdateUserRequestDto) {
 		return await this.usersRepository.update({ id }, updateUserDto);
 	}
 

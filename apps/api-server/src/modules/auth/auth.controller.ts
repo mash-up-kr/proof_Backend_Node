@@ -5,7 +5,7 @@ import { AuthUser } from '@src/decorators/auth.decorator';
 import { UserResponseDto } from '../users/dto/user-response.dto';
 import { ApiDocs } from './auth.docs';
 import { AuthService } from './auth.service';
-import { UserKakaoDto } from './dto/users.kakao.dto';
+import { KakaoUserDto } from './dto/kakao-user.dto';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { JwtRefreshGuard } from './guards/jwt-refresh-auth.guard';
 import { KakaoAuthGuard } from './guards/kakao-auth.guard';
@@ -20,7 +20,7 @@ export class AuthController {
 	@HttpCode(200)
 	@ApiDocs.kakaoLogin('회원가입&로그인 후 유저 정보, 토큰 반환')
 	async kakaoLogin(@Body('kakaoUser') kakaoUser) {
-		const user: UserResponseDto = await this.authService.createKakaoUser(kakaoUser as UserKakaoDto);
+		const user: UserResponseDto = await this.authService.createKakaoUser(kakaoUser as KakaoUserDto);
 		return this.authService.login(user);
 	}
 
