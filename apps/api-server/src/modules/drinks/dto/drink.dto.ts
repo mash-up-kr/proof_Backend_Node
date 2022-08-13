@@ -1,9 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { DrinksCategory } from '@src/entities/drinks-category.entity';
-import { Category } from '@src/types/drinks-category.types';
-import { Exclude } from 'class-transformer';
 import { IsEnum, IsNumber, IsString } from 'class-validator';
 import { CreateDateColumn, DeleteDateColumn, UpdateDateColumn } from 'typeorm';
+
+import { DrinksCategory } from '@src/entities/drinks-category.entity';
+import { Category } from '@src/types/drinks-category.types';
 
 export class DrinkDto {
 	@ApiProperty({ description: '술 id' })

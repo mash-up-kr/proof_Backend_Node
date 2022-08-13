@@ -34,7 +34,7 @@ export class DrinksController {
 		return await this.drinksService.findDrinkById(id);
 	}
 
-	@Get('/reviews/users/:id')
+	@Get('/users/reviews')
 	@UseGuards(JwtAuthGuard)
 	@ApiDocs.findUserReviewedDrinks('나의 술 저장고 - 리뷰한 술 목록')
 	public async findUserReviewedDrinks(@AuthUser() user: User) {

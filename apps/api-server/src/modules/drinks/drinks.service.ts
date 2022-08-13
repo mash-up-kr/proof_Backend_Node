@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
-import { GetDrinkInfoDto } from './dto/get-drink-info.dto';
+import { DrinkDto } from './dto/drink.dto';
 
 @Injectable()
 export class DrinksService {
@@ -31,60 +31,46 @@ export class DrinksService {
 		}
 	}
 
-	public async findDrinkById(id: number): Promise<GetDrinkInfoDto> {
+	public async findDrinkById(id: number): Promise<DrinkDto> {
 		try {
-			const drinkInfo = await this.drinkRepository
+			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select([
-					'drink.id',
-					'drink.name',
-					'drink.abv',
-					'drink.origin',
-					'drink.description',
-					'drink.image_url',
-					'category.name',
-				])
+				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
 				.where('drink.id = :id', { id })
 				.getOne();
-			if (!drinkInfo) {
+			if (!drink) {
 				throw new BadRequestException();
 			}
-			return drinkInfo;
+			return drink;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async findDrinksByCategory(category: string): Promise<Drink[]> {
+	public async findDrinksByCategory(category: string): Promise<DrinkDto[]> {
 		try {
 			if (category === 'All') {
 				return await this.findAllDrinks();
 			}
-			const drinksInfoByCategory = await this.drinkRepository
+			const drinksByCategory = await this.drinkRepository
 				.createQueryBuilder('drink')
+				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
 				.where('category.name = :category', { category })
 				.getMany();
-			return drinksInfoByCategory;
+			return drinksByCategory;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async findReviewedDrinksbyUser(userId: number): Promise<GetDrinkInfoDto[]> {
+	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkDto[]> {
 		try {
 			const userReviewedDrinks = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select([
-					'drink.id',
-					'drink.name',
-					'drink.abv',
-					'drink.origin',
-					'drink.description',
-					'drink.image_url',
-					'category.name',
-				])
+				.select(['drink', 'category.name'])
+
 				.leftJoin('drink.category', 'category')
 				.leftJoin('drink.reviews', 'review')
 				.where('review.reviewer_id = :id', { id: userId })
