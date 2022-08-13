@@ -55,14 +55,8 @@ export class DrinksService {
 		length = 30,
 	): Promise<{ totalPageCount: number; list: DrinkDto[] }> {
 		try {
-			console.log(category, page, length);
-			let queryBuilder = this.drinkRepository.createQueryBuilder('drink');
+			const queryBuilder = this.drinkRepository.createQueryBuilder('drink');
 
-			if (category !== 'All') {
-				queryBuilder = queryBuilder
-					.leftJoin('drink.category', 'category')
-					.where('category.name = :category', { category });
-			}
 			const count = await queryBuilder.getCount();
 			const totalPageCount = Math.ceil(count / length);
 			const drinksByCategory = await queryBuilder
