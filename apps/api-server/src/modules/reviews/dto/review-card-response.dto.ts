@@ -1,10 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { DrinkDto } from '@src/modules/drinks/dto/drink.dto';
+
+import { DrinkCardResponseDto } from '@src/modules/drinks/dto/drink-card-response.dto';
 import { ReviewDto } from './review.dto';
 
 export class ReviewCardResponseDto {
 	@ApiProperty({ description: '해당 술 정보' })
-	drink: DrinkDto;
+	drink: DrinkCardResponseDto;
 
 	@ApiProperty({ description: '사용자가 작성한 리뷰 정보' })
 	userReview: ReviewDto;
@@ -14,7 +15,7 @@ export class ReviewCardResponseDto {
 	};
 
 	constructor(reviewOfDrink) {
-		this.drink = new DrinkDto(reviewOfDrink.reviewed_drink);
+		this.drink = new DrinkCardResponseDto(reviewOfDrink.reviewed_drink);
 		this.userReview = {
 			id: reviewOfDrink.id,
 			createdAt: reviewOfDrink.createdAt,

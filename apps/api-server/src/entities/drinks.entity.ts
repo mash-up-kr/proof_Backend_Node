@@ -1,10 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany } from 'typeorm';
 
 import { DrinksCategory } from './drinks-category.entity';
 import { Review } from './reviews.entity';
 import { CommonEntity } from './common.entity';
+import { IsNotEmpty, IsNumber } from 'class-validator';
 
 @Entity()
 export class Drink extends CommonEntity {
@@ -42,13 +43,25 @@ export class Drink extends CommonEntity {
 	}) // TODO: Change default img url to the real one after DES team give the real img.
 	image_url: string;
 
+	@ApiProperty({ example: 1 })
+	@IsNumber()
+	@IsNotEmpty()
+	@Column()
+	drink_category_id: number;
+
 	@ApiProperty({
 		type: () => DrinksCategory,
 		description: 'Category of the drink such as beer, wine, etc.',
 	})
-	@ManyToOne(() => DrinksCategory, (drinkCategory) => drinkCategory.drinks, {
+	@ManyToOne(() => DrinksCategory, (category: DrinksCategory) => category.drinks, {
 		onDelete: 'SET NULL',
 	})
+	@JoinColumn([
+		{
+			name: 'drink_category_id',
+			referencedColumnName: 'id',
+		},
+	])
 	category: DrinksCategory;
 
 	@ApiProperty({

@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
-import { GetDrinkInfoDto } from './dto/get-drink-info.dto';
+import { DrinkDto } from './dto/drink.dto';
 
 @Injectable()
 export class DrinksService {
@@ -32,26 +32,18 @@ export class DrinksService {
 		}
 	}
 
-	public async findDrinkById(id: number): Promise<GetDrinkInfoDto> {
+	public async findDrinkById(id: number): Promise<DrinkDto> {
 		try {
-			const drinkInfo = await this.drinkRepository
+			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select([
-					'drink.id',
-					'drink.name',
-					'drink.abv',
-					'drink.origin',
-					'drink.description',
-					'drink.image_url',
-					'category.name',
-				])
+				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
 				.where('drink.id = :id', { id })
 				.getOne();
-			if (!drinkInfo) {
+			if (!drink) {
 				throw new BadRequestException();
 			}
-			return drinkInfo;
+			return drink;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -61,7 +53,7 @@ export class DrinksService {
 		category: string,
 		page = 0,
 		length = 30,
-	): Promise<{ totalPageCount: number; list: Drink[] }> {
+	): Promise<{ totalPageCount: number; list: DrinkDto[] }> {
 		try {
 			console.log(category, page, length);
 			let queryBuilder = this.drinkRepository.createQueryBuilder('drink');
@@ -71,34 +63,29 @@ export class DrinksService {
 					.leftJoin('drink.category', 'category')
 					.where('category.name = :category', { category });
 			}
-
 			const count = await queryBuilder.getCount();
 			const totalPageCount = Math.ceil(count / length);
 			const drinksByCategory = await queryBuilder
+				.select(['drink', 'category.name'])
+				.leftJoin('drink.category', 'category')
+				.where('category.name = :category', { category })
 				.orderBy('drink.createdAt', 'DESC')
 				.skip((page - 1) * length)
 				.take(length)
 				.getMany();
 
-			return { totalPageCount: totalPageCount, list: drinksByCategory };
+			return { totalPageCount: totalPageCount, list: drinksByCategory.map((drink) => new DrinkDto(drink)) };
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async findReviewedDrinksbyUser(userId: number): Promise<GetDrinkInfoDto[]> {
+	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkDto[]> {
 		try {
 			const userReviewedDrinks = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select([
-					'drink.id',
-					'drink.name',
-					'drink.abv',
-					'drink.origin',
-					'drink.description',
-					'drink.image_url',
-					'category.name',
-				])
+				.select(['drink', 'category.name'])
+
 				.leftJoin('drink.category', 'category')
 				.leftJoin('drink.reviews', 'review')
 				.where('review.reviewer_id = :id', { id: userId })

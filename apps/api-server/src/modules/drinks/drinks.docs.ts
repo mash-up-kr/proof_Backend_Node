@@ -5,7 +5,7 @@ import { Drink } from '@src/entities/drinks.entity';
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { Category } from '@src/types/drinks-category.types';
 import { DrinksController } from './drinks.controller';
-import { GetDrinkInfoDto } from './dto/get-drink-info.dto';
+import { DrinkDto } from './dto/drink.dto';
 
 export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 	findAllDrinks(summary: string) {
@@ -17,7 +17,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: '',
+				type: [DrinkDto],
 			}),
 		);
 	},
@@ -30,7 +30,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: GetDrinkInfoDto,
+				type: DrinkDto,
 			}),
 		);
 	},
@@ -43,7 +43,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: '',
+				type: [DrinkDto],
 			}),
 			ApiQuery({
 				name: 'name',
@@ -62,7 +62,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [GetDrinkInfoDto],
+				type: [DrinkDto],
 			}),
 			ApiBearerAuth('Authorization'),
 		);

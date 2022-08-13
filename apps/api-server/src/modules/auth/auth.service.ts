@@ -45,7 +45,6 @@ export class AuthService {
 
 		if (kakaoUser) return kakaoUser;
 		else {
-			console.log(DEFAULT_USER_PROFILE);
 			const defaultUserProfileUrl = DEFAULT_USER_PROFILE;
 
 			const defaultUserProfile = await this.usersProfileRepository
