@@ -59,10 +59,11 @@ export class DrinksService {
 
 	public async findDrinksByCategory(
 		category: string,
-		offset = 0,
+		page = 0,
 		length = 30,
-	): Promise<{ count: number; list: Drink[] }> {
+	): Promise<{ totalPageCount: number; list: Drink[] }> {
 		try {
+			console.log(category, page, length);
 			let queryBuilder = this.drinkRepository.createQueryBuilder('drink');
 
 			if (category !== 'All') {
@@ -72,13 +73,14 @@ export class DrinksService {
 			}
 
 			const count = await queryBuilder.getCount();
+			const totalPageCount = Math.ceil(count / length);
 			const drinksByCategory = await queryBuilder
 				.orderBy('drink.createdAt', 'DESC')
-				.skip(offset)
+				.skip((page - 1) * length)
 				.take(length)
 				.getMany();
 
-			return { count, list: drinksByCategory };
+			return { totalPageCount: totalPageCount, list: drinksByCategory };
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}

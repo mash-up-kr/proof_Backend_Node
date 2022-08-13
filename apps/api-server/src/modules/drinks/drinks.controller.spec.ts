@@ -43,11 +43,11 @@ describe('DrinksController', () => {
 
 		it('should call drinksService.findDrinksByCategory', async () => {
 			const name = Category['Beer'];
-			const offset = 0,
+			const page = 0,
 				length = 30;
-			await controller.findDrinksByCategory(name, offset, length);
-			expect(service.findDrinksByCategory).toHaveBeenCalledWith(name, offset, length);
-			expect(await controller.findDrinksByCategory(name, offset, length)).toEqual({
+			await controller.findDrinksByCategory(name, page, length);
+			expect(service.findDrinksByCategory).toHaveBeenCalledWith(name, page, length);
+			expect(await controller.findDrinksByCategory(name, page, length)).toEqual({
 				count: 1,
 				list: [
 					{
