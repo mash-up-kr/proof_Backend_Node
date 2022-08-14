@@ -8,7 +8,7 @@ import { User } from '../../entities/users.entity';
 
 const seedUserData = {
 	name: 'zuzu',
-	kakaoId: 2386981290,
+	kakaoId: 2386981290, //TODO: 클라이언트에서 카카오로그인 구현이 완성되면, 그때의 kakaoId로 수정 예정
 	email: 'zuzuu6271@gmail.com',
 };
 
