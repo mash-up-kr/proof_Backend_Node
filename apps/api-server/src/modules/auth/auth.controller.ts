@@ -1,37 +1,26 @@
-import { Controller, Get, Header, HttpCode, Post, Redirect, UseGuards } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
+import { Body, Controller, HttpCode, Post, UseGuards } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 
-import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
 import { AuthUser } from '@src/decorators/auth.decorator';
+import { UserResponseDto } from '../users/dto/user-response.dto';
+import { ApiDocs } from './auth.docs';
 import { AuthService } from './auth.service';
-import { UserKakaoDto } from './dto/users.kakao.dto';
+import { KakaoUserDto } from './dto/kakao-user.dto';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { JwtRefreshGuard } from './guards/jwt-refresh-auth.guard';
-import { ApiDocs } from './auth.docs';
+import { KakaoAuthGuard } from './guards/kakao-auth.guard';
 
 @Controller('auth')
 @ApiTags('auth')
 export class AuthController {
 	constructor(private readonly authService: AuthService) {}
 
-	@Get('/kakao-login')
-	@Header('Content-Type', 'text/html')
-	@Redirect()
-	@ApiDocs.getKakaoLoginPage('카카오 로그인 페이지로 리디렉트')
-	getKakaoLoginPage() {
-		const kakaoCallbackUrl: string = this.authService.getKakaoLoginPage();
-		return {
-			url: kakaoCallbackUrl,
-		};
-	}
-
-	@UseGuards(AuthGuard('kakao'))
-	@Get('/kakao-callback')
+	@UseGuards(KakaoAuthGuard)
+	@Post('/kakao-login')
 	@HttpCode(200)
-	@ApiDocs.kakaoLoginCallback('카카오 로그인에 성공하면 유저 정보, 토큰 반환')
-	async kakaoLoginCallback(@AuthUser() kakaoUser) {
-		const user: GetUserInfoDto = await this.authService.createKakaoUser(kakaoUser as UserKakaoDto);
+	@ApiDocs.kakaoLogin('회원가입&로그인 후 유저 정보, 토큰 반환')
+	async kakaoLogin(@Body('kakaoUser') kakaoUser) {
+		const user: UserResponseDto = await this.authService.createKakaoUser(kakaoUser as KakaoUserDto);
 		return this.authService.login(user);
 	}
 

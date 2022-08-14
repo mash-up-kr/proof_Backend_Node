@@ -1,13 +1,11 @@
-import { Controller, Get, UseGuards } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 
-import { UsersProfileService } from './users-profile.service';
-import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { ApiDocs } from './users-profile.docs';
+import { UsersProfileService } from './users-profile.service';
 
 @Controller('users-profile')
 @ApiTags('profile - 프로필사진 정보')
-@UseGuards(JwtAuthGuard)
 export class UsersProfileController {
 	constructor(private readonly usersProfileService: UsersProfileService) {}
 

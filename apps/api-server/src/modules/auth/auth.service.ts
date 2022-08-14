@@ -1,17 +1,18 @@
-import { Repository } from 'typeorm';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
-import { JwtConfig, OauthConfig } from '@src/config/config.constant';
+import { AdminConfig, JwtConfig } from '@src/config/config.constant';
 import { UsersProfile } from '@src/entities/users-profile.entity';
 import { User } from '@src/entities/users.entity';
-import { GetUserInfoDto } from '../users/dto/get-user-info.dto';
-import { TokenDto } from './dto/auth.token.dto';
-import { UserKakaoDto } from './dto/users.kakao.dto';
+import { UserType } from '@src/types/users.types';
 import { DEFAULT_USER_PROFILE } from '../users-profile/users-profile.constants';
-import { AuthReseponseDto } from './dto/auth-response.dto';
+import { UserResponseDto } from '../users/dto/user-response.dto';
+import { KakaoLoginResponseDto } from './dto/kakao-login-response.dto';
+import { KakaoUserDto } from './dto/kakao-user.dto';
+import { TokenRefreshResponseDto } from './dto/token-refresh-response.dto';
 
 @Injectable()
 export class AuthService {
@@ -23,35 +24,25 @@ export class AuthService {
 		private readonly configService: ConfigService,
 		private readonly jwtService: JwtService,
 	) {}
-	#oauthConfig = this.configService.get<OauthConfig>('oauthConfig').kakao;
 	#jwtConfig = this.configService.get<JwtConfig>('jwtConfig');
+	#adminConfig = this.configService.get<AdminConfig>('adminConfig');
 
-	getKakaoLoginPage(): string {
-		return `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${
-			this.#oauthConfig.clientId
-		}&redirect_uri=${this.#oauthConfig.callbackUrl}`;
-	}
+	async createKakaoUser(kakaoUserData: KakaoUserDto): Promise<UserResponseDto> {
+		let kakaoUser = await this.usersRepository.findOne({
+			where: { social_id: kakaoUserData.kakaoId },
+			relations: ['profile'],
+		});
 
-	async createKakaoUser(kakaoUserData: UserKakaoDto): Promise<GetUserInfoDto> {
-		let kakaoUser = await this.usersRepository
-			.createQueryBuilder('user')
-			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
-			.leftJoin('user.profile', 'profile')
-			.where('user.social_id = :social_id AND user.type = :type', {
-				social_id: kakaoUserData.kakaoId,
-				type: 'kakao',
-			})
-			.getOne();
-
-		if (kakaoUser) return kakaoUser;
+		if (kakaoUser) return new UserResponseDto(kakaoUser);
 		else {
-			const defaultUserProfileUrl = DEFAULT_USER_PROFILE;
+			const userType: UserType =
+				kakaoUserData.email === this.#adminConfig.email ? UserType.Admin : UserType.Kakao;
 
 			const defaultUserProfile = await this.usersProfileRepository
 				.createQueryBuilder('users_profile')
 				.select(['users_profile.id', 'users_profile.image_url'])
 				.where('users_profile.image_url = :image_url', {
-					image_url: defaultUserProfileUrl,
+					image_url: DEFAULT_USER_PROFILE,
 				})
 				.getOne();
 
@@ -60,37 +51,43 @@ export class AuthService {
 				nickname: kakaoUserData.name,
 				email: kakaoUserData.email,
 				social_id: kakaoUserData.kakaoId,
-				type: 'kakao',
+				type: userType,
 				profile: defaultUserProfile,
 			});
-			return new AuthReseponseDto(kakaoUser);
+
+			return new UserResponseDto(kakaoUser);
 		}
 	}
 
-	async login(user: GetUserInfoDto): Promise<TokenDto> {
+	async login(user: UserResponseDto): Promise<KakaoLoginResponseDto> {
 		const payload = { id: user.id };
+		const jwtAccessTokenExpire: string = this.jwtAccessTokenExpireByType(user.type);
+
 		const accessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
-			expiresIn: this.#jwtConfig.jwtAccessTokenExpire,
+			expiresIn: jwtAccessTokenExpire,
 		});
 		const refreshToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtRefreshTokenSecret,
 			expiresIn: this.#jwtConfig.jwtRefreshTokenExpire,
 		});
 
-		return {
-			accessToken: accessToken,
-			refreshToken: refreshToken,
-			user: user,
-		};
+		return new KakaoLoginResponseDto({
+			accessToken,
+			refreshToken,
+			user,
+		});
 	}
 
-	async refresh(payload: any) {
+	async refresh(user: any) {
+		const payload = { id: user.id };
+		const jwtAccessTokenExpire: string = this.jwtAccessTokenExpireByType(user.type);
+
 		const newAccessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
-			expiresIn: this.#jwtConfig.jwtAccessTokenExpire,
+			expiresIn: jwtAccessTokenExpire,
 		});
-		return { accessToken: newAccessToken };
+		return new TokenRefreshResponseDto({ accessToken: newAccessToken });
 	}
 
 	async getUserIdIfExist(id: number) {
@@ -99,11 +96,17 @@ export class AuthService {
 		});
 
 		if (user) {
-			return { id: user.id };
+			return { id: user.id, type: user.type };
 		} else throw new UnauthorizedException();
 	}
 
 	async logout(id: number) {
 		return 'Logout user';
+	}
+
+	private jwtAccessTokenExpireByType(userType: UserType): string {
+		return userType === UserType.Admin
+			? this.#jwtConfig.jwtAccessTokenExpireAdmin
+			: this.#jwtConfig.jwtAccessTokenExpire;
 	}
 }

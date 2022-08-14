@@ -4,8 +4,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { User } from '@src/entities/users.entity';
-import { UpdateUserDto } from './dto/update-user.dto';
-import { GetUserInfoDto } from './dto/get-user-info.dto';
+import { UpdateUserRequestDto } from './dto/update-user-request.dto';
+import { UserResponseDto } from './dto/user-response.dto';
 
 @Injectable()
 export class UsersService {
@@ -14,19 +14,15 @@ export class UsersService {
 		private readonly usersRepository: Repository<User>,
 	) {}
 
-	async getUser(id: number): Promise<GetUserInfoDto> {
-		const user: GetUserInfoDto = await this.usersRepository
-			.createQueryBuilder('user')
-			.select(['user.id', 'user.name', 'user.nickname', 'user.email', 'profile.id', 'profile.image_url'])
-			.leftJoin('user.profile', 'profile')
-			.where('user.id = :id', {
-				id,
-			})
-			.getOne();
-		return user;
+	async getUser(id: number): Promise<UserResponseDto> {
+		const user = await this.usersRepository.findOne({
+			where: { id },
+			relations: ['profile'],
+		});
+		return new UserResponseDto(user);
 	}
 
-	async updateUser(id: number, updateUserDto: UpdateUserDto) {
+	async updateUser(id: number, updateUserDto: UpdateUserRequestDto) {
 		return await this.usersRepository.update({ id }, updateUserDto);
 	}
 

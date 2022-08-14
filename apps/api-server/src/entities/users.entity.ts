@@ -1,9 +1,10 @@
-import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
 import { IsEmail, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
 
 import { ApiProperty } from '@nestjs/swagger';
-import { Review } from './reviews.entity';
+import { UserType } from '@src/types/users.types';
 import { CommonEntity } from './common.entity';
+import { Review } from './reviews.entity';
 import { UsersProfile } from './users-profile.entity';
 
 @Entity()
@@ -30,17 +31,8 @@ export class User extends CommonEntity {
 
 	@IsString()
 	@IsNotEmpty()
-	@Column({ type: 'varchar', nullable: false })
-	type: string;
-
-	@IsString()
-	@IsNotEmpty()
-	@Column({ type: 'varchar', nullable: false, default: 'aa' })
-	profile_emoji: string;
-
-	@IsString()
-	@Column({ type: 'varchar', nullable: true })
-	refreshToken?: string;
+	@Column({ type: 'enum', enum: UserType, nullable: false })
+	type: UserType;
 
 	@ApiProperty({
 		type: () => [Review],

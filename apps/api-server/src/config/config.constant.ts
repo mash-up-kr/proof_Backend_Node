@@ -17,16 +17,14 @@ export type DatabaseConfig = {
 	dbname: string;
 };
 
-export type OauthConfig = {
-	kakao: {
-		clientId: string;
-		callbackUrl: string;
-	};
+export type AdminConfig = {
+	email: string;
 };
 
 export type JwtConfig = {
 	jwtAccessTokenSecret: string;
 	jwtAccessTokenExpire: string;
+	jwtAccessTokenExpireAdmin: string;
 	jwtRefreshTokenSecret: string;
 	jwtRefreshTokenExpire: string;
 };
@@ -48,12 +46,9 @@ export const databaseConfig = (): { databaseConfig: DatabaseConfig } => ({
 	},
 });
 
-export const oauthConfig = (): { oauthConfig: OauthConfig } => ({
-	oauthConfig: {
-		kakao: {
-			clientId: process.env.KAKAO_CLIENT_ID,
-			callbackUrl: process.env.KAKAO_CALLBACK_URL,
-		},
+export const adminConfig = (): { adminConfig: AdminConfig } => ({
+	adminConfig: {
+		email: process.env.ADMIN_EMAIL,
 	},
 });
 
@@ -61,6 +56,7 @@ export const jwtConfig = (): { jwtConfig: JwtConfig } => ({
 	jwtConfig: {
 		jwtAccessTokenSecret: process.env.JWT_ACCESS_TOKEN_SECRET,
 		jwtAccessTokenExpire: process.env.JWT_ACCESS_TOKEN_EXPIRATION_TIME,
+		jwtAccessTokenExpireAdmin: process.env.JWT_ACCESS_TOKEN_EXPIRATION_TIME_ADMIN,
 		jwtRefreshTokenSecret: process.env.JWT_REFRESH_TOKEN_SECRET,
 		jwtRefreshTokenExpire: process.env.JWT_REFRESH_TOKEN_EXPIRATION_TIME,
 	},
