@@ -24,8 +24,8 @@ export class ReviewsController {
 		return await this.reviewsService.createReview(user.id, drinkId, createReviewDto);
 	}
 
-	@Get('/drinks/:drinkId')
-	@ApiDocs.findReviewsOfDrink('나의 술 저장고 - 리뷰한 술 - 리뷰 카드들')
+	@Get('/drinks')
+	@ApiDocs.findReviewsOfDrink('술에 대한 유저 리뷰들 조회')
 	async findReviewsOfDrink(
 		@AuthUser() user: User,
 		@Query('drinkId') drinkId: number,
@@ -36,7 +36,7 @@ export class ReviewsController {
 	}
 
 	@Get('/:reviewCardId')
-	@ApiDocs.findReviewsById('리뷰 상세 조회 - 리뷰 카드에 보여줄 것')
+	@ApiDocs.findReviewsById('리뷰 id로 리뷰 상세 조회')
 	async findReviewsById(@Param('reviewCardId') id: string) {
 		return await this.reviewsService.findReviewsById(+id);
 	}

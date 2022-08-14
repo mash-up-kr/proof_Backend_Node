@@ -25,27 +25,32 @@ export class ReviewsService {
 		}
 	}
 
-	// { totalPageCount: number; reviewList: ReviewCardResponseDto[] }
-	async findReviewsOfDrink(userId: number, drinkId: number, page = 1, length = 4): Promise<any> {
+	async findReviewsOfDrink(
+		userId: number,
+		drinkId: number,
+		page = 1,
+		length = 1,
+	): Promise<{ totalPageCount: number; reviewList: ReviewCardResponseDto[] }> {
 		try {
-			const queryBuilder = this.reviewRepository.createQueryBuilder('review');
-
-			const count = await queryBuilder.getCount();
-			const totalPageCount = Math.ceil(count / length);
-			const reviewsOfDrink = await queryBuilder
+			const queryBuilder = this.reviewRepository
+				.createQueryBuilder('review')
 				.leftJoinAndSelect('review.reviewed_drink', 'drink')
 				.leftJoinAndSelect('drink.category', 'category')
 				.where('review.reviewer_id = :id', { id: userId })
-				.orderBy('review.cratedAt', 'DESC')
+				.where('review.reviewed_drink_id = :id', { id: drinkId });
+
+			const count = await queryBuilder.getCount();
+			const totalPageCount = Math.ceil(count / length);
+
+			const reviewsOfDrink = await queryBuilder
+				.orderBy('review.createdAt', 'DESC')
 				.skip((page - 1) * length)
 				.take(length)
 				.getMany();
 
 			return {
 				totalPageCount: totalPageCount,
-				reviewList: reviewsOfDrink.map((review) => {
-					new ReviewCardResponseDto(review);
-				}),
+				reviewList: reviewsOfDrink.map((review) => new ReviewCardResponseDto(review)),
 			};
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
