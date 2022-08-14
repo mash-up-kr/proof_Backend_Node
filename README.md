@@ -114,13 +114,15 @@ But when you need to check this out,
 3. Build image
 
 ```bash
-docker build --tag zuzu-prod-server .
+docker build --tag proof-backend-node-img .
+or
+docker build --platform=linux/amd64 -t proof-backend-node-img .  (if you use MAC m1)
 ```
 
 4. Run the container
 
 ```bash
-docker run -p 3000:3000 -v $(pwd):/app --env-file=./.env.prod zuzu-prod-server
+docker run -p 3000:3000 --env-file=./.env.prod proof-backend-node-img
 ```
 
 ## Support

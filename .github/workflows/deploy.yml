@@ -1,0 +1,70 @@
+name: Deploy to Amazon ECS
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out the repo
+              uses: actions/checkout@v2
+
+            - name: Create env.prod file
+              run: |
+                  touch .env.prod
+                  echo NODE_ENV=prod >> .env.prod
+                  echo PORT=${{secrets.PROD_PORT}} >> .env.prod
+                  echo DATABASE_USER=${{secrets.PROD_DATABASE_USER}} >> .env.prod
+                  echo DATABASE_PASSWORD=${{secrets.PROD_DATABASE_PASSWORD}} >> .env.prod
+                  echo DATABASE_HOST=${{secrets.PROD_DATABASE_HOST}} >> .env.prod
+                  echo DATABASE_PORT=${{secrets.PROD_DATABASE_PORT}} >> .env.prod
+                  echo DATABASE_DB=${{secrets.PROD_DATABASE_DB}} >> .env.prod
+                  echo POSTGRES_USER=${{secrets.PROD_POSTGRES_USER}} >> .env.prod
+                  echo POSTGRES_PASSWORD=${{secrets.PROD_POSTGRES_PASSWORD}} >> .env.prod
+                  echo POSTGRES_DB=${{secrets.PROD_POSTGRES_DB}} >> .env.prod
+                  echo KAKAO_CLIENT_ID=${{secrets.KAKAO_CLIENT_ID}} >> .env.prod
+                  echo KAKAO_CALLBACK_URL=${{secrets.PROD_KAKAO_CALLBACK_URL}} >> .env.prod
+                  echo JWT_ACCESS_TOKEN_SECRET=${{secrets.JWT_ACCESS_TOKEN_SECRET}} >> .env.prod
+                  echo JWT_REFRESH_TOKEN_EXPIRATION_TIME=${{secrets.JWT_REFRESH_TOKEN_EXPIRATION_TIME}} >> .env.prod
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v1
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: ap-northeast-2
+
+            - name: Login to Amazon ECR
+              id: login-ecr
+              uses: aws-actions/amazon-ecr-login@v1
+
+            - name: Build, tag, and push image to Amazon ECR
+              id: build-image
+              env:
+                  ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+                  ECR_REPOSITORY: proof-backend-node-img
+                  IMAGE_TAG: ${{ github.sha }}
+              # Build a docker container and
+              # push it to ECR so that it can be deployed to ECS.
+              run: |
+                  docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . 
+                  docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG 
+                  echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+            - name: Fill in the new image ID in the Amazon ECS task definition
+              id: task-def
+              uses: aws-actions/amazon-ecs-render-task-definition@v1
+              with:
+                  task-definition: task-definition.json
+                  container-name: proof-backend-node-container
+                  image: ${{ steps.build-image.outputs.image }}
+
+            - name: Deploy Amazon ECS task definition
+              uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+              with:
+                  task-definition: ${{ steps.task-def.outputs.task-definition }}
+                  service: proof-ecs-service
+                  cluster: Proof-Ecs-Cluster
+                  wait-for-service-stability: true
