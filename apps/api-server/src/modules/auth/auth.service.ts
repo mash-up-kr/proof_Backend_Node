@@ -28,7 +28,6 @@ export class AuthService {
 	#adminConfig = this.configService.get<AdminConfig>('adminConfig');
 
 	async createKakaoUser(kakaoUserData: KakaoUserDto): Promise<UserResponseDto> {
-		console.log(kakaoUserData);
 		let kakaoUser = await this.usersRepository.findOne({
 			where: { social_id: kakaoUserData.kakaoId },
 			relations: ['profile'],
@@ -62,12 +61,8 @@ export class AuthService {
 
 	async login(user: UserResponseDto): Promise<KakaoLoginResponseDto> {
 		const payload = { id: user.id };
+		const jwtAccessTokenExpire: string = this.jwtAccessTokenExpireByType(user.type);
 
-		const jwtAccessTokenExpire: string =
-			user.type === UserType.Admin
-				? this.#jwtConfig.jwtAccessTokenExpireAdmin
-				: this.#jwtConfig.jwtAccessTokenExpire;
-		console.log(jwtAccessTokenExpire);
 		const accessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
 			expiresIn: jwtAccessTokenExpire,
@@ -86,11 +81,7 @@ export class AuthService {
 
 	async refresh(user: any) {
 		const payload = { id: user.id };
-
-		const jwtAccessTokenExpire: string =
-			user.type === UserType.Admin
-				? this.#jwtConfig.jwtAccessTokenExpireAdmin
-				: this.#jwtConfig.jwtAccessTokenExpire;
+		const jwtAccessTokenExpire: string = this.jwtAccessTokenExpireByType(user.type);
 
 		const newAccessToken = this.jwtService.sign(payload, {
 			secret: this.#jwtConfig.jwtAccessTokenSecret,
@@ -111,5 +102,11 @@ export class AuthService {
 
 	async logout(id: number) {
 		return 'Logout user';
+	}
+
+	private jwtAccessTokenExpireByType(userType: UserType): string {
+		return userType === UserType.Admin
+			? this.#jwtConfig.jwtAccessTokenExpireAdmin
+			: this.#jwtConfig.jwtAccessTokenExpire;
 	}
 }

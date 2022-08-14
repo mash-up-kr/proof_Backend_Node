@@ -46,11 +46,11 @@ jobs:
                   echo DATABASE_PORT=${{ job.services.postgresql.ports[5432] }} >> .env.test
                   echo DATABASE_DB=${{secrets.DATABASE_DB}} >> .env.test
                   echo ADMIN_EMAIL=${{secrets.ADMIN_EMAIL}} >> .env.test
-                  echo JWT_ACCESS_TOKEN_SECRET: ${{secrets.JWT_ACCESS_TOKEN_SECRET}} >> .env.test
-                  echo JWT_ACCESS_TOKEN_EXPIRATION_TIME: ${{secrets.JWT_ACCESS_TOKEN_EXPIRATION_TIME}} >> .env.test
-                  echo JWT_ACCESS_TOKEN_EXPIRATION_TIME_ADMIN: ${{secrets.JWT_ACCESS_TOKEN_EXPIRATION_TIME_ADMIN}} >> .env.test
-                  echo JWT_REFRESH_TOKEN_SECRET: ${{secrets.JWT_REFRESH_TOKEN_SECRET}} >> .env.test
-                  echo JWT_REFRESH_TOKEN_EXPIRATION_TIME: ${{secrets.JWT_REFRESH_TOKEN_EXPIRATION_TIME}} >> .env.test
+                  echo JWT_ACCESS_TOKEN_SECRET=${{secrets.JWT_ACCESS_TOKEN_SECRET}} >> .env.test
+                  echo JWT_ACCESS_TOKEN_EXPIRATION_TIME=${{secrets.JWT_ACCESS_TOKEN_EXPIRATION_TIME}} >> .env.test
+                  echo JWT_ACCESS_TOKEN_EXPIRATION_TIME_ADMIN=${{secrets.JWT_ACCESS_TOKEN_EXPIRATION_TIME_ADMIN}} >> .env.test
+                  echo JWT_REFRESH_TOKEN_SECRET=${{secrets.JWT_REFRESH_TOKEN_SECRET}} >> .env.test
+                  echo JWT_REFRESH_TOKEN_EXPIRATION_TIME=${{secrets.JWT_REFRESH_TOKEN_EXPIRATION_TIME}} >> .env.test
             - name: Install packages
               run: pnpm install --frozen-lockfile
             - name: Run e2e test

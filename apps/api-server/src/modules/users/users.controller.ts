@@ -4,7 +4,6 @@ import { ApiTags } from '@nestjs/swagger';
 import { AuthUser } from '@src/decorators/auth.decorator';
 import { JwtAuthGuard } from '@src/modules/auth/guards/jwt-auth.guard';
 import { UpdateUserRequestDto } from './dto/update-user-request.dto';
-import { UserResponseDto } from './dto/user-response.dto';
 import { ApiDocs } from './users.docs';
 import { UsersService } from './users.service';
 
@@ -17,8 +16,7 @@ export class UsersController {
 	@Get()
 	@ApiDocs.getUser('사용자 정보 반환')
 	async getUser(@AuthUser() userData) {
-		const user: UserResponseDto = await this.usersSerivce.getUser(userData.id);
-		return { user };
+		return await this.usersSerivce.getUser(userData.id);
 	}
 
 	@Put()
