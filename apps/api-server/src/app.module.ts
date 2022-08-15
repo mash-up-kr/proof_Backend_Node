@@ -1,5 +1,8 @@
 import { Module } from '@nestjs/common';
 
+import * as winston from 'winston';
+import { utilities as nestWinstonModuleUtilities, WinstonModule } from 'nest-winston';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
@@ -11,7 +14,6 @@ import { ReviewsModule } from './modules/reviews/reviews.module';
 import { UsersModule } from './modules/users/users.module';
 import { UsersProfileModule } from './modules/users-profile/users-profile.module';
 import { WorldcupModule } from './modules/worldcup/worldcup.module';
-
 @Module({
 	imports: [
 		ConfigModule,
@@ -23,6 +25,17 @@ import { WorldcupModule } from './modules/worldcup/worldcup.module';
 		UsersProfileModule,
 		WorldcupModule,
 		ReviewsModule,
+		WinstonModule.forRoot({
+			transports: [
+				new winston.transports.Console({
+					level: process.env.NODE_ENV === 'prod' ? 'info' : 'debug',
+					format: winston.format.combine(
+						winston.format.timestamp(),
+						nestWinstonModuleUtilities.format.nestLike('proof-api-server', { prettyPrint: true }),
+					),
+				}),
+			],
+		}),
 	],
 	controllers: [AppController],
 	providers: [AppService],
