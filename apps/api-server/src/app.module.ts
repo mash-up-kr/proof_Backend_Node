@@ -1,7 +1,5 @@
-import { Module } from '@nestjs/common';
-
-import * as winston from 'winston';
-import { utilities as nestWinstonModuleUtilities, WinstonModule } from 'nest-winston';
+import { Logger, Module } from '@nestjs/common';
+import { APP_INTERCEPTOR } from '@nestjs/core';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -14,6 +12,8 @@ import { ReviewsModule } from './modules/reviews/reviews.module';
 import { UsersModule } from './modules/users/users.module';
 import { UsersProfileModule } from './modules/users-profile/users-profile.module';
 import { WorldcupModule } from './modules/worldcup/worldcup.module';
+import { LoggingInterceptor } from './interceptors/logging.interceptor';
+
 @Module({
 	imports: [
 		ConfigModule,
@@ -25,19 +25,8 @@ import { WorldcupModule } from './modules/worldcup/worldcup.module';
 		UsersProfileModule,
 		WorldcupModule,
 		ReviewsModule,
-		WinstonModule.forRoot({
-			transports: [
-				new winston.transports.Console({
-					level: process.env.NODE_ENV === 'prod' ? 'info' : 'debug',
-					format: winston.format.combine(
-						winston.format.timestamp(),
-						nestWinstonModuleUtilities.format.nestLike('proof-api-server', { prettyPrint: true }),
-					),
-				}),
-			],
-		}),
 	],
 	controllers: [AppController],
-	providers: [AppService],
+	providers: [AppService, Logger, { provide: APP_INTERCEPTOR, useClass: LoggingInterceptor }],
 })
 export class AppModule {}
