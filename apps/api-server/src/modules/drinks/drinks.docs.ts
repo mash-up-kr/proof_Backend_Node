@@ -1,6 +1,5 @@
 import { applyDecorators } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiQuery, ApiResponse } from '@nestjs/swagger';
-import { Drink } from '@src/entities/drinks.entity';
 
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { Category } from '@src/types/drinks-category.types';
@@ -57,7 +56,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 		return applyDecorators(
 			ApiOperation({
 				summary,
-				description: 'Home 나의 아카이브 술 저장소에 나타날 사용자가 리뷰한 술들 조회',
+				description: '홈 - 나의 아카이브 - 리뷰한 술 상세 목록',
 			}),
 			ApiResponse({
 				status: 200,
