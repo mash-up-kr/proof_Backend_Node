@@ -28,8 +28,13 @@ jobs:
                   echo POSTGRES_DB=${{secrets.PROD_POSTGRES_DB}} >> .env.prod
                   echo KAKAO_CLIENT_ID=${{secrets.KAKAO_CLIENT_ID}} >> .env.prod
                   echo KAKAO_CALLBACK_URL=${{secrets.PROD_KAKAO_CALLBACK_URL}} >> .env.prod
+                  echo ADMIN_EMAIL=${{secrets.ADMIN_EMAIL}} >> .env.prod
                   echo JWT_ACCESS_TOKEN_SECRET=${{secrets.JWT_ACCESS_TOKEN_SECRET}} >> .env.prod
+                  echo JWT_ACCESS_TOKEN_EXPIRATION_TIME=${{secrets.JWT_ACCESS_TOKEN_EXPIRATION_TIME}} >> .env.prod
+                  echo JWT_ACCESS_TOKEN_EXPIRATION_TIME_ADMIN=${{secrets.JWT_ACCESS_TOKEN_EXPIRATION_TIME_ADMIN}} >> .env.prod
+                  echo JWT_REFRESH_TOKEN_SECRET=${{secrets.JWT_REFRESH_TOKEN_SECRET}} >> .env.pod
                   echo JWT_REFRESH_TOKEN_EXPIRATION_TIME=${{secrets.JWT_REFRESH_TOKEN_EXPIRATION_TIME}} >> .env.prod
+
             - name: Configure AWS credentials
               uses: aws-actions/configure-aws-credentials@v1
               with:
