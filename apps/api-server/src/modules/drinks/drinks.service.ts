@@ -83,7 +83,6 @@ export class DrinksService {
 			const userReviewedDrinks = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(['drink', 'category.name'])
-
 				.leftJoin('drink.category', 'category')
 				.leftJoin('drink.reviews', 'review')
 				.where('review.reviewer_id = :id', { id: userId })
