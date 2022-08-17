@@ -22,7 +22,6 @@ export class DrinksEvaluationService {
 			.getRawOne();
 
 		const reviewResult = reviewResultQuery.review_result;
-
 		const result = new DrinksEvaluationReseponseDto();
 
 		// max key 구하기
@@ -31,21 +30,10 @@ export class DrinksEvaluationService {
 		result.companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
 		result.mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
 		if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0)
-			result.spot = this.findMaxValuesKey(reviewResult.spot) as string;
+			result.spot = (this.findMaxValuesKey(reviewResult.spot) as string) + '차';
 
 		// 각 개수 구하기
-		const isHeavyResult = this.quantifyDrinksExpression(reviewResult.is_heavy);
-		result.is_heavy.Light = isHeavyResult.group1;
-		result.is_heavy.Heavy = isHeavyResult.group2;
-		const isBitterResult = this.quantifyDrinksExpression(reviewResult.is_bitter);
-		result.is_bitter.Sweet = isBitterResult.group1;
-		result.is_bitter.Bitter = isBitterResult.group2;
-		const isStrongResult = this.quantifyDrinksExpression(reviewResult.is_strong);
-		result.is_strong.Mild = isStrongResult.group1;
-		result.is_strong.Strong = isStrongResult.group2;
-		const isBurningResult = this.quantifyDrinksExpression(reviewResult.is_burning);
-		result.is_burning.Smooth = isBurningResult.group1;
-		result.is_burning.Burning = isBurningResult.group2;
+		this.quantifyDrinksExpression(result, reviewResult);
 
 		// taste 상위 세개 (전체 리뷰 개수 필요 - 합)
 		const tasteResult = reviewResult.taste;
@@ -70,15 +58,20 @@ export class DrinksEvaluationService {
 		return maxKey;
 	}
 
-	// test
-	private quantifyDrinksExpression(reviewResultObj: any) {
-		let group1 = 0;
-		let group2 = 0;
-		for (const key in reviewResultObj) {
-			if (Number(key) <= 3) group1 += reviewResultObj[key];
-			else group2 += reviewResultObj[key];
+	private quantifyDrinksExpression(result, reviewResult) {
+		for (let i = 1; i <= 6; i++) {
+			if (i <= 3) {
+				result.is_heavy.Light += reviewResult.is_heavy[String(i)];
+				result.is_bitter.Sweet += reviewResult.is_bitter[String(i)];
+				result.is_strong.Mild += reviewResult.is_strong[String(i)];
+				result.is_burning.Smooth += reviewResult.is_burning[String(i)];
+			} else {
+				result.is_heavy.Heavy += reviewResult.is_heavy[String(i)];
+				result.is_bitter.Bitter += reviewResult.is_bitter[String(i)];
+				result.is_strong.Strong += reviewResult.is_strong[String(i)];
+				result.is_burning.Burning += reviewResult.is_burning[String(i)];
+			}
 		}
-		return { group1, group2 };
 	}
 
 	private findTopTastes(reviewResultObj: any) {
