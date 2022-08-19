@@ -95,7 +95,7 @@ export class DrinksEvaluationService {
 				);
 		}
 		tastes = tastes.sort((a, b) => b.percent - a.percent);
-		tastes = tastes.slice(3);
+		tastes = tastes.slice(0, 3);
 		tastes.map((element) => {
 			element.percent = String(Math.floor((element.percent / reviewNum) * 100)) + '%';
 			return element;
@@ -112,7 +112,7 @@ export class DrinksEvaluationService {
 		sortedPairingResult.sort((a, b) => {
 			return b[1] - a[1];
 		});
-		sortedPairingResult = sortedPairingResult.slice(3);
+		sortedPairingResult = sortedPairingResult.slice(0, 3);
 		for (const item of sortedPairingResult) {
 			pairings.push(item[0]);
 		}
