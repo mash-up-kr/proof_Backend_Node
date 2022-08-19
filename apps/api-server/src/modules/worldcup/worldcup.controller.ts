@@ -18,6 +18,14 @@ export class WorldcupController {
 		return worldcups;
 	}
 
+	@Get('/popular')
+	@ApiDocs.getPopularWorldcup('현재 인기 있는 월드컵 조회')
+	async getPopularWorldcup() {
+		const worldcups = await this.worldcupService.getPopularWorldcup();
+		console.log(worldcups);
+		return worldcups;
+	}
+
 	@Get('/:id')
 	@ApiDocs.getWorldcupById('월드컵 하나의 정보 조회')
 	async getWorldcupById(@Param('id') id: number) {

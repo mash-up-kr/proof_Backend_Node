@@ -21,6 +21,19 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiBearerAuth('Authorization'),
 		);
 	},
+	getPopularWorldcup(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: [WorldcupReseponseDto],
+			}),
+			ApiBearerAuth('Authorization'),
+		);
+	},
 	getWorldcupById(summary: string) {
 		return applyDecorators(
 			ApiOperation({

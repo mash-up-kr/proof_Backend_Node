@@ -1,4 +1,4 @@
-import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import { BadRequestException, ConsoleLogger, Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
@@ -10,6 +10,7 @@ import { Worldcup } from '@src/entities/worldcup.entity';
 import { WorldcupResult } from '@src/entities/worldcup-result.entity';
 import { DrinksService } from '../drinks/drinks.service';
 import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
+import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
 
 @Injectable()
 export class WorldcupService {
@@ -25,6 +26,18 @@ export class WorldcupService {
 	async getWorldcups(): Promise<WorldcupReseponseDto[]> {
 		const worldcups = await this.worldcupRepository.find();
 		return worldcups.map((worldcup) => new WorldcupReseponseDto(worldcup));
+	}
+
+	async getPopularWorldcup(): Promise<WorldcupWithParticipantCountReseponseDto[]> {
+		const worldcups = await this.worldcupResultRepository
+			.createQueryBuilder('worldcupResult')
+			.select('worldcup.*, COUNT(*) as participant_count')
+			.leftJoin('worldcupResult.worldcup', 'worldcup')
+			.groupBy('worldcup.id')
+			.orderBy('participant_count', 'DESC')
+			.getRawMany();
+
+		return worldcups.map((worldcup) => new WorldcupWithParticipantCountReseponseDto(worldcup));
 	}
 
 	async getWorldcupById(id: number): Promise<WorldcupReseponseDto> {
