@@ -46,11 +46,6 @@ export class WorldcupService {
 		});
 
 		await this.worldcupResultRepository.save(worldcupResults);
-
-		const winnerDrinkId = drinkIds[0];
-		const winnerDrink = await this.drinkService.findDrinkById(winnerDrinkId);
-
-		return winnerDrink;
 	}
 
 	/**

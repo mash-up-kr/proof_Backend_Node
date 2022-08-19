@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Param, Post, Query, UseGuards } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { AuthUser } from '@src/decorators/auth.decorator';
 import { User } from '@src/entities/users.entity';
 import { OptionalJwtAuthGuard } from '../auth/guards/optional-jwt-auth.guard';
@@ -34,9 +34,9 @@ export class WorldcupController {
 
 	@Post('/:id')
 	@UseGuards(OptionalJwtAuthGuard)
+	@ApiCreatedResponse({ description: '월드컵 결과 제출 성공' })
 	@ApiDocs.submitWoldcupResult('월드컵 결과 제출하기')
 	async submitWoldcupResult(@AuthUser() user: User, @Param('id') id: number, @Body('drinkIds') drinkIds: number[]) {
-		const worldcupResult = await this.worldcupService.submitWoldcupResult(id, drinkIds, user?.id);
-		return worldcupResult;
+		await this.worldcupService.submitWoldcupResult(id, drinkIds, user?.id);
 	}
 }

@@ -67,11 +67,6 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiBody({
 				type: SubmitWorldcupRequestDto,
 			}),
-			ApiResponse({
-				status: 200,
-				description: '',
-				type: WorldcupReseponseDto,
-			}),
 			ApiBearerAuth('Authorization'),
 		);
 	},
