@@ -56,6 +56,11 @@ export class WorldcupService {
 	}
 
 	async submitWoldcupResult(worldcupId: number, drinkIds: number[], userId?: number) {
+		const worldcup = await this.worldcupRepository.findOneBy({ id: worldcupId });
+		if (!worldcup) {
+			throw new BadRequestException('존재하지 않는 월드컵입니다.');
+		}
+
 		const worldcupResult = await this.worldcupResultRepository.save({ userId, worldcupId });
 
 		const worldcupResultId = worldcupResult.id;
