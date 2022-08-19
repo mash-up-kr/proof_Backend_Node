@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post, Query, UseGuards } from '@nestjs/co
 import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { AuthUser } from '@src/decorators/auth.decorator';
 import { User } from '@src/entities/users.entity';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { OptionalJwtAuthGuard } from '../auth/guards/optional-jwt-auth.guard';
 import { ApiDocs } from './worldcup.docs';
 import { WorldcupService } from './worldcup.service';
@@ -22,7 +23,14 @@ export class WorldcupController {
 	@ApiDocs.getPopularWorldcup('현재 인기 있는 월드컵 조회')
 	async getPopularWorldcup() {
 		const worldcups = await this.worldcupService.getPopularWorldcup();
-		console.log(worldcups);
+		return worldcups;
+	}
+
+	@Get('/user-participated')
+	@UseGuards(JwtAuthGuard)
+	@ApiDocs.getParticipatedWorldcup('내가 참여한 월드컵')
+	async getParticipatedWorldcup(@AuthUser() user: User) {
+		const worldcups = await this.worldcupService.getParticipatedWorldcup(user.id);
 		return worldcups;
 	}
 

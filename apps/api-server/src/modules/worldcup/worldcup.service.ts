@@ -1,7 +1,7 @@
 import { BadRequestException, ConsoleLogger, Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Repository } from 'typeorm';
+import { EntityManager, getManager, Repository } from 'typeorm';
 
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
@@ -65,6 +65,20 @@ export class WorldcupService {
 		});
 
 		await this.worldcupResultItemRepository.save(worldcupResultItems);
+	}
+
+	//@TODO: 현재는 한 월드컵당 하나의 결과만 옴. 같은 월드컵 여러개 대응하게 수정해야함
+	async getParticipatedWorldcup(userId: number) {
+		const worldcups = await this.worldcupResultRepository
+			.createQueryBuilder('worldcupResult')
+			.select('worldcup.*, COUNT(*) as participant_count')
+			.leftJoin('worldcupResult.worldcup', 'worldcup')
+			.where('worldcupResult.user_id = :id', { id: userId })
+			.groupBy('worldcup.id, worldcupResult.id')
+			.orderBy('worldcupResult.createdAt', 'DESC')
+			.getRawMany();
+
+		return worldcups.map((worldcup) => new WorldcupWithParticipantCountReseponseDto(worldcup));
 	}
 
 	/**

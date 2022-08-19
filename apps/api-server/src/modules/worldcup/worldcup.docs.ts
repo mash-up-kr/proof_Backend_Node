@@ -34,6 +34,20 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiBearerAuth('Authorization'),
 		);
 	},
+	getParticipatedWorldcup(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description: '현재는 한 월드컵당 하나의 결과만 옴. 같은 월드컵 여러개 대응하게 수정해야함',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: [WorldcupReseponseDto],
+			}),
+			ApiBearerAuth('Authorization'),
+		);
+	},
 	getWorldcupById(summary: string) {
 		return applyDecorators(
 			ApiOperation({
@@ -70,7 +84,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 		return applyDecorators(
 			ApiOperation({
 				summary,
-				description: '유저의 월드컵 결과 제출',
+				description: '유저의 월드컵 결과 제출. 로그인 없이도 가능',
 			}),
 			ApiParam({
 				name: 'id',
