@@ -1,21 +1,19 @@
 import { BadRequestException, ConsoleLogger, Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { EntityManager, getManager, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
 import { Drink } from '@src/entities/drinks.entity';
 import { Worldcup } from '@src/entities/worldcup.entity';
 import { WorldcupResult } from '@src/entities/worldcup-result.entity';
-import { DrinksService } from '../drinks/drinks.service';
 import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
 
 @Injectable()
 export class WorldcupService {
 	constructor(
-		@Inject(DrinksService) private readonly drinkService: DrinksService,
 		@InjectRepository(Worldcup) private readonly worldcupRepository: Repository<Worldcup>,
 		@InjectRepository(WorldcupResult) private readonly worldcupResultRepository: Repository<WorldcupResult>,
 		@InjectRepository(WorldcupResultItem)
