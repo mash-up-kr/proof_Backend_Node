@@ -17,6 +17,9 @@ export class WorldcupReseponseDto {
 	@ApiProperty({ description: '몇 강으로 진행할지', type: [WorldcupRoundDto] })
 	round: WorldcupRoundDto;
 
+	@ApiProperty({ description: '이 월드컵에 참여한 사람' })
+	participantCount?: number;
+
 	constructor(worldcup) {
 		this.id = worldcup.id;
 		this.title = `${worldcup.situationContent} 날 마시고 싶은 술은?`;
@@ -31,5 +34,6 @@ export class WorldcupReseponseDto {
 			title: worldcup.situationTitle,
 		};
 		this.round = worldcup.round;
+		this.participantCount = worldcup.participantCount;
 	}
 }

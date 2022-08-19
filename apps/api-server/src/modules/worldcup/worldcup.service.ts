@@ -10,6 +10,7 @@ import { Worldcup } from '@src/entities/worldcup.entity';
 import { WorldcupResult } from '@src/entities/worldcup-result.entity';
 import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
+import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
 
 @Injectable()
 export class WorldcupService {
@@ -70,18 +71,32 @@ export class WorldcupService {
 		await this.worldcupResultItemRepository.save(worldcupResultItems);
 	}
 
-	//@TODO: 현재는 한 월드컵당 하나의 결과만 옴. 같은 월드컵 여러개 대응하게 수정해야함
+	//@TODO: 현재는 한 월드컵에 내가 여러번 참여해도 참여자 수가 하나로만 카운트 됌
 	async getParticipatedWorldcup(userId: number) {
-		const worldcups = await this.worldcupResultRepository
-			.createQueryBuilder('worldcupResult')
-			.select('worldcup.*, COUNT(*) as participant_count')
-			.leftJoin('worldcupResult.worldcup', 'worldcup')
-			.where('worldcupResult.user_id = :id', { id: userId })
-			.groupBy('worldcup.id, worldcupResult.id')
-			.orderBy('worldcupResult.createdAt', 'DESC')
+		const worldcupResults = await this.worldcupResultRepository
+			.createQueryBuilder('worldcup_result')
+			.select('worldcup_result.*, COUNT(*) as participant_count')
+			.leftJoinAndSelect('worldcup_result.worldcup', 'worldcup')
+			.where('worldcup_result.user_id = :userId', { userId })
+			.groupBy('worldcup.id, worldcup_result.id')
+			.orderBy('worldcup_result.createdAt', 'DESC')
 			.getRawMany();
 
-		return worldcups.map((worldcup) => new WorldcupWithParticipantCountReseponseDto(worldcup));
+		await Promise.all(
+			worldcupResults.map(async (worldcupResult) => {
+				const winnerDrink = await this.worldcupResultItemRepository
+					.createQueryBuilder('worldcup_result_item')
+					.select('drink_id as id')
+					.leftJoin('worldcup_result_item.worldcupResult', 'worldcup_result')
+					.where('worldcup_result.user_id = :userId', { userId })
+					.andWhere('worldcup_result_id = :worldcupResultId', { worldcupResultId: worldcupResult.id })
+					.andWhere('rank_level = 0')
+					.getRawOne();
+				worldcupResult.winnerDrinkId = winnerDrink.id;
+			}),
+		);
+
+		return worldcupResults.map((worldcupResult) => new UserParticipatedWorldcupResultDto(worldcupResult));
 	}
 
 	/**

@@ -3,7 +3,9 @@ import { ApiBearerAuth, ApiBody, ApiOperation, ApiParam, ApiQuery, ApiResponse }
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { number } from 'joi';
 import { SubmitWorldcupRequestDto } from './dto/submit-worldcup-request.dto';
+import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
+import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
 import { WorldcupController } from './worldcup.controller';
 
 export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
@@ -25,11 +27,12 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 		return applyDecorators(
 			ApiOperation({
 				summary,
+				description: '인기있는 월드컵 조회',
 			}),
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [WorldcupReseponseDto],
+				type: [WorldcupWithParticipantCountReseponseDto],
 			}),
 			ApiBearerAuth('Authorization'),
 		);
@@ -43,7 +46,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [WorldcupReseponseDto],
+				type: [UserParticipatedWorldcupResultDto],
 			}),
 			ApiBearerAuth('Authorization'),
 		);
