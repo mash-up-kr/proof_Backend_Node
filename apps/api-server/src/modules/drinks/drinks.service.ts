@@ -6,12 +6,13 @@ import { Repository } from 'typeorm';
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
 import { DrinkDto } from './dto/drink.dto';
+import { WorldcupResult } from '@src/entities/worldcup-result.entity';
 
 @Injectable()
 export class DrinksService {
 	constructor(
-		@InjectRepository(Drink)
-		private readonly drinkRepository: Repository<Drink>,
+		@InjectRepository(Drink) private readonly drinkRepository: Repository<Drink>,
+		@InjectRepository(WorldcupResult) private readonly worldcupResultRepository: Repository<WorldcupResult>,
 	) {}
 
 	// TODO
@@ -43,7 +44,11 @@ export class DrinksService {
 			if (!drink) {
 				throw new BadRequestException();
 			}
-			return drink;
+
+			const drinkDto = new DrinkDto(drink);
+			drinkDto.worldcupWinCount = await this.worldcupResultRepository.countBy({ drinkId: id, rankLevel: 0 });
+
+			return drinkDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}

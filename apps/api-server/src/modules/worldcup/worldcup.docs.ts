@@ -2,6 +2,7 @@ import { applyDecorators } from '@nestjs/common';
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiParam, ApiQuery, ApiResponse } from '@nestjs/swagger';
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { number } from 'joi';
+import { SubmitWorldcupRequestDto } from './dto/submit-worldcup-request.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
 import { WorldcupController } from './worldcup.controller';
 
@@ -20,7 +21,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiBearerAuth('Authorization'),
 		);
 	},
-	getWolrdcupById(summary: string) {
+	getWorldcupById(summary: string) {
 		return applyDecorators(
 			ApiOperation({
 				summary,
@@ -43,6 +44,28 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiQuery({
 				name: 'roundCount',
 				type: 'number',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: WorldcupReseponseDto,
+			}),
+			ApiBearerAuth('Authorization'),
+		);
+	},
+	submitWoldcupResult(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description: '유저의 월드컵 결과 제출',
+			}),
+			ApiParam({
+				name: 'id',
+				required: true,
+				description: '월드컵 id',
+			}),
+			ApiBody({
+				type: SubmitWorldcupRequestDto,
 			}),
 			ApiResponse({
 				status: 200,
