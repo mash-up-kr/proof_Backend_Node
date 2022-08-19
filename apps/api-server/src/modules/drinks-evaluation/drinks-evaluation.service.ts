@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
-import { Companion, Mood, Time, Weather } from '@src/types/reviews.types';
+import { Companion, Mood, ReviewResultItem, Spot, Time, Weather } from '@src/types/reviews.types';
 import { DrinksEvaluationReseponseDto } from './dto/drinks-evaluation-response.dto';
 import { DrinksEvaluationTasteDto } from './dto/drinks-evaluation-taste.dto';
 
@@ -30,7 +30,7 @@ export class DrinksEvaluationService {
 		result.companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
 		result.mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
 		if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0)
-			result.spot = (this.findMaxValuesKey(reviewResult.spot) as string) + '차';
+			result.spot = (this.findMaxValuesKey(reviewResult.spot) as Spot) + '차';
 
 		// 각 개수 구하기
 		this.quantifyDrinksExpression(result, reviewResult);
@@ -45,13 +45,13 @@ export class DrinksEvaluationService {
 		return result;
 	}
 
-	private findMaxValuesKey(reviewResultObj: any): Weather | Time | Companion | Mood | string {
-		const reviewResulttArr = Object.keys(reviewResultObj) as Weather[] | Time[] | Companion[] | Mood[] | string[];
-		let maxKey: Weather | Time | Companion | Mood | string = reviewResulttArr[0];
+	private findMaxValuesKey(reviewResultObj: any): ReviewResultItem {
+		const reviewResulttArr = Object.keys(reviewResultObj) as ReviewResultItem[];
+		let maxKey: ReviewResultItem = reviewResulttArr[0];
 		let maxVal: number = reviewResultObj[reviewResulttArr[0]];
 		for (const key in reviewResultObj) {
 			if (reviewResultObj[key] > maxVal) {
-				maxKey = key as Weather | Time | Companion | Mood | string;
+				maxKey = key as ReviewResultItem;
 				maxVal = reviewResultObj[key];
 			}
 		}
