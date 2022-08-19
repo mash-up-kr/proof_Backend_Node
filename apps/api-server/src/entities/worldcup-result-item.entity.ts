@@ -26,6 +26,6 @@ export class WorldcupResultItem {
 	worldcupResultId: number;
 
 	@JoinColumn({ name: 'worldcup_result_id' })
-	@ManyToOne(() => WorldcupResult, (worldcupResult) => worldcupResult.items)
+	@ManyToOne(() => WorldcupResult, (worldcupResult) => worldcupResult.items, { onDelete: 'CASCADE' })
 	worldcupResult: WorldcupResult;
 }
