@@ -1,4 +1,5 @@
 export const DEFAULT_DRINK_REVIEW_RESULT = `{
+		"has_review" : false,
 		"weather": {
 			"Rainy": 0,
 			"Snowy": 0, 

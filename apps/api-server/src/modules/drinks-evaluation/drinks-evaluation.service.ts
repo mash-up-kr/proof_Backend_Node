@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
@@ -15,44 +15,51 @@ export class DrinksEvaluationService {
 	) {}
 
 	async findDrinkEvaluation(drinkId: number) {
-		const reviewResultQuery = await this.drinkRepository
-			.createQueryBuilder('drink')
-			.select(`(drink.review_result)::JSONB AS review_result`)
-			.where('drink.id = :id', { id: drinkId })
-			.getRawOne();
+		try {
+			const reviewResultRow = await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select(`(drink.review_result)::JSONB AS review_result`)
+				.where('drink.id = :id', { id: drinkId })
+				.getRawOne();
 
-		const reviewResult = reviewResultQuery.review_result;
-		const result = new DrinksEvaluationReseponseDto();
+			if (!reviewResultRow) throw new BadRequestException('존재하지 않는 술입니다.');
+			if (!reviewResultRow.review_result.has_review) return { result: null };
 
-		// max key 구하기
-		result.weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
-		result.time = this.findMaxValuesKey(reviewResult.time) as Time;
-		result.companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
-		result.mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
-		if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0)
-			result.spot = (this.findMaxValuesKey(reviewResult.spot) as Spot) + '차';
+			const result = new DrinksEvaluationReseponseDto();
+			const reviewResult = reviewResultRow.review_result;
 
-		// 각 개수 구하기
-		this.quantifyDrinksExpression(result, reviewResult);
+			// max key 구하기
+			result.weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
+			result.time = this.findMaxValuesKey(reviewResult.time) as Time;
+			result.companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
+			result.mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
+			if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0)
+				result.spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
 
-		// taste 상위 세개 (전체 리뷰 개수 필요 - 합)
-		const tasteResult = reviewResult.taste;
-		result.taste = this.findTopTastes(tasteResult);
+			// 각 개수 구하기
+			this.quantifyDrinksExpression(result, reviewResult);
 
-		// 안주 최고 3개 (max)
-		const pairingResult = reviewResult.pairing;
-		this.findTopPairings(pairingResult, result.pairing);
-		return result;
+			// taste 상위 세개 (전체 리뷰 개수 필요 - 합)
+			const tasteResult = reviewResult.taste;
+			result.taste = this.findTopTastes(tasteResult);
+
+			// 안주 최고 3개 (max)
+			const pairingResult = reviewResult.pairing;
+			this.findTopPairings(pairingResult, result.pairing);
+			return { result };
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
 	}
 
-	private findMaxValuesKey(reviewResultObj: any): ReviewResultItem {
-		const reviewResulttArr = Object.keys(reviewResultObj) as ReviewResultItem[];
-		let maxKey: ReviewResultItem = reviewResulttArr[0];
-		let maxVal: number = reviewResultObj[reviewResulttArr[0]];
-		for (const key in reviewResultObj) {
-			if (reviewResultObj[key] > maxVal) {
+	private findMaxValuesKey(reviewResultObject: any): ReviewResultItem {
+		const reviewResultKeys = Object.keys(reviewResultObject) as ReviewResultItem[];
+		let maxKey: ReviewResultItem = reviewResultKeys[0];
+		let maxVal: number = reviewResultObject[reviewResultKeys[0]];
+		for (const key in reviewResultObject) {
+			if (reviewResultObject[key] > maxVal) {
 				maxKey = key as ReviewResultItem;
-				maxVal = reviewResultObj[key];
+				maxVal = reviewResultObject[key];
 			}
 		}
 		return maxKey;
@@ -74,42 +81,40 @@ export class DrinksEvaluationService {
 		}
 	}
 
-	private findTopTastes(reviewResultObj: any) {
+	private findTopTastes(reviewResultObject: any) {
 		let reviewNum = 0;
-		let tasteArr = [];
-		for (const key in reviewResultObj) {
-			reviewNum += reviewResultObj[key];
-			if (reviewResultObj[key] > 0)
-				tasteArr.push(
+		let tastes = [];
+		for (const key in reviewResultObject) {
+			reviewNum += reviewResultObject[key];
+			if (reviewResultObject[key] > 0)
+				tastes.push(
 					new DrinksEvaluationTasteDto({
 						taste_name: key,
-						percent: reviewResultObj[key],
+						percent: reviewResultObject[key],
 					}),
 				);
 		}
-		tasteArr = tasteArr.sort((a, b) => a.percent - b.percent);
-		const sliceIndex: number = tasteArr.length >= 3 ? 3 : tasteArr.length;
-		tasteArr = tasteArr.slice(-sliceIndex);
-		tasteArr.map((element) => {
+		tastes = tastes.sort((a, b) => b.percent - a.percent);
+		tastes = tastes.slice(3);
+		tastes.map((element) => {
 			element.percent = String(Math.floor((element.percent / reviewNum) * 100)) + '%';
 			return element;
 		});
-		return tasteArr;
+		return tastes;
 	}
 
-	private findTopPairings(reviewResultObj: any, pairingArr): any {
+	private findTopPairings(reviewResultObject: any, pairings: any): any {
 		let sortedPairingResult = [];
-		for (const key in reviewResultObj) {
-			if (reviewResultObj[key] > 0) sortedPairingResult.push([key, reviewResultObj[key]]);
+		for (const key in reviewResultObject) {
+			if (reviewResultObject[key] > 0) sortedPairingResult.push([key, reviewResultObject[key]]);
 		}
 
 		sortedPairingResult.sort((a, b) => {
-			return a[1] - b[1];
+			return b[1] - a[1];
 		});
-		const sliceIndex: number = sortedPairingResult.length >= 3 ? 3 : sortedPairingResult.length;
-		sortedPairingResult = sortedPairingResult.slice(-sliceIndex);
+		sortedPairingResult = sortedPairingResult.slice(3);
 		for (const item of sortedPairingResult) {
-			pairingArr.push(item[0]);
+			pairings.push(item[0]);
 		}
 	}
 }

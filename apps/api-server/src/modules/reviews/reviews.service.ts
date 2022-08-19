@@ -37,14 +37,15 @@ export class ReviewsService {
 				.getRawOne();
 
 			const reviewResult = reviewResultRow.review_result;
-
+			if (!reviewResult.has_review) reviewResult.has_review = true;
 			for (const key in createReviewDto) {
-				if (reviewResult.hasOwnProperty(key) && key !== 'pairing') {
-					reviewResult[key][createReviewDto[key]] += 1;
-				} else if (reviewResult.hasOwnProperty(key) && key === 'pairing') {
+				if (!reviewResult.hasOwnProperty(key)) continue;
+				else if (key === 'pairing') {
 					createReviewDto[key].forEach((value, index) => {
 						reviewResult[key][value] += 1;
 					});
+				} else {
+					reviewResult[key][createReviewDto[key]] += 1;
 				}
 			}
 

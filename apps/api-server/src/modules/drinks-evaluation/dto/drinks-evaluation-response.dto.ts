@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Companion, Mood, Pairing, Time, Weather } from '@src/types/reviews.types';
+import { Companion, Mood, Pairing, Spot, Time, Weather } from '@src/types/reviews.types';
 import { DrinksEvaluationBitterDto } from './drinks-evaluation-bitter.dto';
 import { DrinksEvaluationBurningDto } from './drinks-evaluation-burning.dto';
 import { DrinksEvaluationStrongDto } from './drinks-evaluation-strong.dto';
@@ -36,10 +36,10 @@ export class DrinksEvaluationReseponseDto {
 	mood: Mood;
 
 	@ApiProperty({
-		example: '1차',
-		description: '가장 많이 답한 이 술을 마셨을 때의 spot (1차, 2차, 3차) (리뷰가 없다면 빈 스트링)',
+		example: '1',
+		description: '가장 많이 답한 이 술을 마셨을 때의 spot (1,2,3) (리뷰가 없다면 빈 스트링)',
 	})
-	spot: string;
+	spot: Spot | '';
 
 	@ApiProperty({
 		description: '가벼워요(Light)/무거워요(Heavy) 각각의 리뷰 개수',
