@@ -9,6 +9,7 @@ import { Drink } from '@src/entities/drinks.entity';
 import { Worldcup } from '@src/entities/worldcup.entity';
 import { WorldcupResult } from '@src/entities/worldcup-result.entity';
 import { DrinksService } from '../drinks/drinks.service';
+import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 
 @Injectable()
 export class WorldcupService {
@@ -16,6 +17,8 @@ export class WorldcupService {
 		@Inject(DrinksService) private readonly drinkService: DrinksService,
 		@InjectRepository(Worldcup) private readonly worldcupRepository: Repository<Worldcup>,
 		@InjectRepository(WorldcupResult) private readonly worldcupResultRepository: Repository<WorldcupResult>,
+		@InjectRepository(WorldcupResultItem)
+		private readonly worldcupResultItemRepository: Repository<WorldcupResultItem>,
 		@InjectRepository(Drink) private readonly drinkRepository: Repository<Drink>,
 	) {}
 
@@ -40,12 +43,15 @@ export class WorldcupService {
 	}
 
 	async submitWoldcupResult(worldcupId: number, drinkIds: number[], userId?: number) {
-		const worldcupResults = drinkIds.map((drinkId, index) => {
+		const worldcupResult = await this.worldcupResultRepository.save({ userId, worldcupId });
+
+		const worldcupResultId = worldcupResult.id;
+		const worldcupResultItems = drinkIds.map((drinkId, index) => {
 			const rankLevel = this.#getRankLevel(index);
-			return { userId, worldcupId, drinkId, rankLevel };
+			return { worldcupResultId, drinkId, rankLevel };
 		});
 
-		await this.worldcupResultRepository.save(worldcupResults);
+		await this.worldcupResultItemRepository.save(worldcupResultItems);
 	}
 
 	/**

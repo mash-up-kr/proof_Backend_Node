@@ -7,6 +7,7 @@ import { Review } from './reviews.entity';
 import { CommonEntity } from './common.entity';
 import { IsNotEmpty, IsNumber } from 'class-validator';
 import { WorldcupResult } from './worldcup-result.entity';
+import { WorldcupResultItem } from './worldcup-result-item.entity';
 
 @Entity()
 export class Drink extends CommonEntity {
@@ -74,6 +75,6 @@ export class Drink extends CommonEntity {
 	})
 	reviews: Review[];
 
-	@OneToMany(() => WorldcupResult, (worldcupResult) => worldcupResult.drink)
-	worldcupResults: WorldcupResult[];
+	@OneToMany(() => WorldcupResultItem, (worldcupResultItem) => worldcupResultItem.drink)
+	worldcupResultItems: WorldcupResultItem[];
 }
