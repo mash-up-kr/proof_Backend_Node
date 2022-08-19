@@ -6,6 +6,7 @@ import { DrinksCategory } from './drinks-category.entity';
 import { Review } from './reviews.entity';
 import { CommonEntity } from './common.entity';
 import { IsNotEmpty, IsNumber } from 'class-validator';
+import { WorldcupResult } from './worldcup-result.entity';
 
 @Entity()
 export class Drink extends CommonEntity {
@@ -72,4 +73,7 @@ export class Drink extends CommonEntity {
 		cascade: true, // user를 통해 review가 추가, 수정, 삭제되고 사용자가 저장되면 추가된 review도 저장된다.
 	})
 	reviews: Review[];
+
+	@OneToMany(() => WorldcupResult, (worldcupResult) => worldcupResult.drink)
+	worldcupResults: WorldcupResult[];
 }
