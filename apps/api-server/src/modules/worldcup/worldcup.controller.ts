@@ -33,6 +33,7 @@ export class WorldcupController {
 	}
 
 	@Post('/:id')
+	@UseGuards(OptionalJwtAuthGuard)
 	@ApiDocs.submitWoldcupResult('월드컵 결과 제출하기')
 	async submitWoldcupResult(@AuthUser() user: User, @Param('id') id: number, @Body('drinkIds') drinkIds: number[]) {
 		const worldcupResult = await this.worldcupService.submitWoldcupResult(id, drinkIds, user?.id);
