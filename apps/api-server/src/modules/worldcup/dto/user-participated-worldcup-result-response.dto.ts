@@ -22,16 +22,12 @@ export class UserParticipatedWorldcupResultDto {
 		this.worldcup = new WorldcupReseponseDto({
 			id: worldcupResult.worldcup_id,
 			title: `${worldcupResult.worldcup_situation_content} 날 마시고 싶은 술은?`,
-			withWho: {
-				code: worldcupResult.worldcup_with_who_code,
-				content: worldcupResult.worldcup_with_who_content,
-				title: worldcupResult.worldcup_with_who_title,
-			},
-			situation: {
-				code: worldcupResult.worldcup_situation_code,
-				content: worldcupResult.worldcup_situation_content,
-				title: worldcupResult.worldcup_situation_title,
-			},
+			withWhoCode: worldcupResult.worldcup_with_who_code,
+			withWhoContent: worldcupResult.worldcup_with_who_content,
+			withWhoTitle: worldcupResult.worldcup_with_who_title,
+			situationCode: worldcupResult.worldcup_situation_code,
+			situationContent: worldcupResult.worldcup_situation_content,
+			situationTitle: worldcupResult.worldcup_situation_title,
 			round: worldcupResult.worldcup_round,
 			participantCount: +worldcupResult.participant_count,
 		});
