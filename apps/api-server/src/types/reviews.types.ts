@@ -30,6 +30,10 @@ export enum Mood { // 혼자서든 그 외든 '어떤 분위기로 마셨나요'
 	Enjoy = 'Enjoy',
 }
 
+export type Spot = '1' | '2' | '3';
+
+export type ReviewResultItem = Weather | Time | Companion | Mood | Spot;
+
 export enum Taste {
 	Fruity = 'Fruity', // 상큼달달한 과일
 	Woody = 'Woody', // 묵직한 나무

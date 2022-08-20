@@ -2,10 +2,11 @@ import { ApiProperty } from '@nestjs/swagger';
 
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany } from 'typeorm';
 
+import { DEFAULT_DRINK_REVIEW_RESULT } from '@src/modules/drinks/dto/drink.constants';
+import { IsNotEmpty, IsNumber } from 'class-validator';
+import { CommonEntity } from './common.entity';
 import { DrinksCategory } from './drinks-category.entity';
 import { Review } from './reviews.entity';
-import { CommonEntity } from './common.entity';
-import { IsNotEmpty, IsNumber } from 'class-validator';
 import { WorldcupResult } from './worldcup-result.entity';
 import { WorldcupResultItem } from './worldcup-result-item.entity';
 
@@ -44,6 +45,12 @@ export class Drink extends CommonEntity {
 		default: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/beer.png',
 	}) // TODO: Change default img url to the real one after DES team give the real img.
 	image_url: string;
+
+	@ApiProperty({
+		description: '술 리뷰에 대한 json 데이터',
+	})
+	@Column({ type: 'jsonb', nullable: false, default: () => `'${DEFAULT_DRINK_REVIEW_RESULT}'::jsonb` })
+	review_result: string;
 
 	@ApiProperty({ example: 1 })
 	@IsNumber()
