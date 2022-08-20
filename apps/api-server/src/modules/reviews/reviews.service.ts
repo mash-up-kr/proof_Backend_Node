@@ -66,30 +66,20 @@ export class ReviewsService {
 	async findReviewsOfDrink(
 		userId: number,
 		drinkId: number,
-		page = 1,
-		length = 1,
-	): Promise<{ totalPageCount: number; drink: DrinkCardResponseDto; reviewList: ReviewItemResponseDto[] }> {
+	): Promise<{ drink: DrinkCardResponseDto; reviewList: ReviewItemResponseDto[] }> {
 		try {
 			const drink = await this.drinksService.findDrinkById(drinkId);
 
-			const queryBuilder = this.reviewRepository
+			const reviewsOfDrink = await this.reviewRepository
 				.createQueryBuilder('review')
 				.select()
 				.leftJoin('review.reviewed_drink', 'drink')
 				.where('review.reviewer_id = :id', { id: userId })
-				.where('review.reviewed_drink_id = :id', { id: drinkId });
-
-			const count = await queryBuilder.getCount();
-			const totalPageCount = Math.ceil(count / length);
-
-			const reviewsOfDrink = await queryBuilder
+				.where('review.reviewed_drink_id = :id', { id: drinkId })
 				.orderBy('review.createdAt', 'DESC')
-				.skip((page - 1) * length)
-				.take(length)
 				.getMany();
 
 			return {
-				totalPageCount: totalPageCount,
 				drink: new DrinkCardResponseDto(drink),
 				reviewList: reviewsOfDrink.map((review) => new ReviewItemResponseDto(review)),
 			};
