@@ -37,7 +37,10 @@ export class DrinksEvaluationService {
 				result.spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
 
 			// 각 개수 구하기
-			this.quantifyDrinksExpression(result, reviewResult);
+			result.is_heavy = reviewResult.is_heavy;
+			result.is_bitter = reviewResult.is_bitter;
+			result.is_strong = reviewResult.is_strong;
+			result.is_burning = reviewResult.is_burning;
 
 			// taste 상위 세개 (전체 리뷰 개수 필요 - 합)
 			const tasteResult = reviewResult.taste;
@@ -63,22 +66,6 @@ export class DrinksEvaluationService {
 			}
 		}
 		return maxKey;
-	}
-
-	private quantifyDrinksExpression(result, reviewResult) {
-		for (let i = 1; i <= 6; i++) {
-			if (i <= 3) {
-				result.is_heavy.Light += reviewResult.is_heavy[String(i)];
-				result.is_bitter.Sweet += reviewResult.is_bitter[String(i)];
-				result.is_strong.Mild += reviewResult.is_strong[String(i)];
-				result.is_burning.Smooth += reviewResult.is_burning[String(i)];
-			} else {
-				result.is_heavy.Heavy += reviewResult.is_heavy[String(i)];
-				result.is_bitter.Bitter += reviewResult.is_bitter[String(i)];
-				result.is_strong.Strong += reviewResult.is_strong[String(i)];
-				result.is_burning.Burning += reviewResult.is_burning[String(i)];
-			}
-		}
 	}
 
 	private findTopTastes(reviewResultObject: any) {

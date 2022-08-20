@@ -34,36 +34,20 @@ export const DEFAULT_DRINK_REVIEW_RESULT = `{
 			"3":0
 		},
 		"is_heavy": {
-			"1":0,
-			"2":0,
-			"3":0,
-			"4":0,
-			"5":0,
-			"6":0
+			"Light":0,
+			"Heavy":0
 		},
 		"is_bitter": {
-			"1":0,
-			"2":0,
-			"3":0,
-			"4":0,
-			"5":0,
-			"6":0
+			"Sweet":0,
+			"Bitter":0
 		},
 		"is_strong": {
-			"1":0,
-			"2":0,
-			"3":0,
-			"4":0,
-			"5":0,
-			"6":0
+			"Mild":0,
+			"Strong":0
 		},
 		"is_burning": {
-			"1":0,
-			"2":0,
-			"3":0,
-			"4":0,
-			"5":0,
-			"6":0
+			"Smooth":0,
+			"Burning":0
 		},
 		"taste": {
 			"Fruity" : 0,

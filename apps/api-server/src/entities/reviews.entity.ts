@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Mood, Pairing, Weather, Time, Companion, Taste } from '@src/types/reviews.types';
+import { Companion, Mood, Pairing, Taste, Time, Weather } from '@src/types/reviews.types';
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 
