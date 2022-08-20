@@ -1,12 +1,13 @@
 import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Repository } from 'typeorm';
+import { Between, Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
 import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
 import { DrinkCardResponseDto } from './dto/drink-card-response.dto';
+import { DrinkDto } from './dto/drink.dto';
 
 @Injectable()
 export class DrinksService {
@@ -36,7 +37,7 @@ export class DrinksService {
 		}
 	}
 
-	public async findDrinkById(id: number): Promise<DrinkCardResponseDto> {
+	public async findDrinkById(id: number): Promise<DrinkDto> {
 		try {
 			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -48,13 +49,14 @@ export class DrinksService {
 				throw new BadRequestException();
 			}
 
-			const drinkCardDto = new DrinkCardResponseDto(drink);
-			drinkCardDto.worldcupWinCount = await this.worldcupResultItemRepository.countBy({
+			const drinkDto = new DrinkDto(drink);
+			drinkDto.worldcupWinCount = await this.worldcupResultItemRepository.countBy({ drinkId: id, rankLevel: 0 });
+			drinkDto.worldcupSemiFinalCount = await this.worldcupResultItemRepository.countBy({
 				drinkId: id,
-				rankLevel: 0,
+				rankLevel: Between(1, 2),
 			});
 
-			return drinkCardDto;
+			return drinkDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}

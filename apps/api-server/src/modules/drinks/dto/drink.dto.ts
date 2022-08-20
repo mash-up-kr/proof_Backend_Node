@@ -45,24 +45,26 @@ export class DrinkDto {
 
 	@ApiProperty({ description: '술 카테고리' })
 	@IsEnum(Category)
-	category: Pick<DrinksCategory, 'name'>;
+	category: string;
 
 	@ApiProperty({ description: '월드컵 우승 횟수' })
 	@IsNumber()
 	worldcupWinCount?: number;
 
+	@ApiProperty({ description: '월드컵 4강 진출 횟수' })
+	@IsNumber()
+	worldcupSemiFinalCount?: number;
+
 	constructor({ ...args }) {
 		this.id = args.id;
-		this.createdAt = args.createdAt;
-		this.updatedAt = args.updatedAt;
-		this.deletedAt = args.deletedAt;
 		this.name = args.name;
 		this.image_url = args.image_url;
 		this.abv = args.abv;
 		this.origin = args.origin;
 		this.description = args.description;
-		this.category = args.category;
+		this.category = args.category.name;
 
 		this.worldcupWinCount = args.worldcupWinCount;
+		this.worldcupSemiFinalCount = args.worldcupSemiFinalCount;
 	}
 }

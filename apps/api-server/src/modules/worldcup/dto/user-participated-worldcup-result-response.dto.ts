@@ -12,9 +12,6 @@ export class UserParticipatedWorldcupResultDto {
 	@ApiProperty({ description: '해당 월드컵에서 1등했던 술' })
 	winnerDrinkId: number;
 
-	@ApiProperty({ description: '이 월드컵에 참여한 사람' })
-	participantCount: number;
-
 	constructor(worldcupResult) {
 		this.id = worldcupResult.id;
 		this.winnerDrinkId = worldcupResult.winnerDrinkId;

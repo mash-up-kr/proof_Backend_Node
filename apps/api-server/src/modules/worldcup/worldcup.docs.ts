@@ -4,6 +4,7 @@ import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { number } from 'joi';
 import { SubmitWorldcupRequestDto } from './dto/submit-worldcup-request.dto';
 import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
+import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
 import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
 import { WorldcupController } from './worldcup.controller';
@@ -41,7 +42,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 		return applyDecorators(
 			ApiOperation({
 				summary,
-				description: '현재는 한 월드컵당 하나의 결과만 옴. 같은 월드컵 여러개 대응하게 수정해야함',
+				description: '내가 참여한 월드컵',
 			}),
 			ApiResponse({
 				status: 200,
@@ -77,8 +78,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			}),
 			ApiResponse({
 				status: 200,
-				description: '',
-				type: WorldcupReseponseDto,
+				type: WorldcupItemReseponseDto,
 			}),
 			ApiBearerAuth('Authorization'),
 		);
