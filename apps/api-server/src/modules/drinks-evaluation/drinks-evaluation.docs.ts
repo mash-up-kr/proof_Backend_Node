@@ -1,5 +1,5 @@
 import { applyDecorators } from '@nestjs/common';
-import { ApiBearerAuth, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { DrinksEvaluationController } from './drinks-evaluation.controller';
@@ -17,7 +17,6 @@ export const ApiDocs: SwaggerMethodDoc<DrinksEvaluationController> = {
 				description: '',
 				type: DrinksEvaluationReseponseDto,
 			}),
-			ApiBearerAuth('Authorization'),
 		);
 	},
 };
