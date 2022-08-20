@@ -30,13 +30,13 @@ export class ReviewsService {
 			});
 			const result = await this.reviewRepository.save(review);
 
-			const reviewResultRow = await this.drinkRepository
+			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(`(drink.review_result)::JSONB AS review_result`)
 				.where('drink.id = :id', { id: drinkId })
 				.getRawOne();
 
-			const reviewResult = reviewResultRow.review_result;
+			const reviewResult = drink.review_result;
 			if (!reviewResult.has_review) reviewResult.has_review = true;
 			for (const key in createReviewDto) {
 				if (!reviewResult.hasOwnProperty(key)) continue;

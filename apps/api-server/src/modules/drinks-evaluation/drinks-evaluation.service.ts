@@ -16,17 +16,17 @@ export class DrinksEvaluationService {
 
 	async findDrinkEvaluation(drinkId: number) {
 		try {
-			const reviewResultRow = await this.drinkRepository
+			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(`(drink.review_result)::JSONB AS review_result`)
 				.where('drink.id = :id', { id: drinkId })
 				.getRawOne();
 
-			if (!reviewResultRow) throw new BadRequestException('존재하지 않는 술입니다.');
-			if (!reviewResultRow.review_result.has_review) return { result: null };
+			if (!drink) throw new BadRequestException('존재하지 않는 술입니다.');
+			if (!drink.review_result.has_review) return { result: null };
 
 			const result = new DrinksEvaluationReseponseDto();
-			const reviewResult = reviewResultRow.review_result;
+			const reviewResult = drink.review_result;
 
 			// max key 구하기
 			result.weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
