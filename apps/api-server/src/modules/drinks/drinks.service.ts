@@ -78,6 +78,23 @@ export class DrinksService {
 		}
 	}
 
+	public async findDrinksToRecommend(): Promise<DrinkDto[]> {
+		try {
+			const drinksToRecommend = await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select('drink.*, category.name as category, COUNT(*) as review_count')
+				.leftJoin('drink.reviews', 'review')
+				.leftJoin('drink.category', 'category')
+				.groupBy('drink.id, category.name')
+				.orderBy('review_count', 'DESC')
+				.limit(5)
+				.getRawMany();
+			return drinksToRecommend.map((drink) => new DrinkDto(drink));
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
+
 	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkDto[]> {
 		try {
 			const userReviewedDrinks = await this.drinkRepository
