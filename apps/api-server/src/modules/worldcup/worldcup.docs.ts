@@ -41,7 +41,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 		return applyDecorators(
 			ApiOperation({
 				summary,
-				description: '현재는 한 월드컵당 하나의 결과만 옴. 같은 월드컵 여러개 대응하게 수정해야함',
+				description: '내가 참여한 월드컵',
 			}),
 			ApiResponse({
 				status: 200,
