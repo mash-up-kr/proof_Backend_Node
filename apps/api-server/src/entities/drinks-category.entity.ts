@@ -1,11 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-import { Column, Entity, OneToMany } from 'typeorm';
 import { IsNotEmpty, IsString } from 'class-validator';
+import { Column, Entity, OneToMany } from 'typeorm';
 
-import { Drink } from './drinks.entity';
 import { Category } from '../types/drinks-category.types';
 import { CommonEntity } from './common.entity';
+import { Drink } from './drinks.entity';
 
 @Entity()
 export class DrinksCategory extends CommonEntity {
@@ -25,8 +25,8 @@ export class DrinksCategory extends CommonEntity {
 	})
 	@IsString()
 	@IsNotEmpty()
-	@Column({ type: 'varchar', nullable: false })
-	image_url: string;
+	@Column({ name: 'image_url', type: 'varchar', nullable: false })
+	imageUrl: string;
 	static Beer: any;
 
 	@ApiProperty({

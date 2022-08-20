@@ -14,13 +14,13 @@ export class CreateReviewResultDto extends PickType(CreateReviewDto, [
 		return value <= 3 ? true : false;
 	};
 
-	is_heavy: string;
+	isHeavy: string;
 
-	is_bitter: string;
+	isBitter: string;
 
-	is_strong: string;
+	isStrong: string;
 
-	is_burning: string;
+	isBurning: string;
 
 	constructor(review) {
 		super(review);
@@ -29,10 +29,10 @@ export class CreateReviewResultDto extends PickType(CreateReviewDto, [
 		this.companion = review.companion;
 		this.mood = review.mood;
 		this.taste = review.taste;
-		this.is_heavy = this.#decideThreshold(review.is_heavy) ? 'Light' : 'Heavy';
-		this.is_bitter = this.#decideThreshold(review.is_bitter) ? 'Sweet' : 'Bitter';
-		this.is_strong = this.#decideThreshold(review.is_strong) ? 'Mild' : 'Strong';
-		this.is_burning = this.#decideThreshold(review.is_burning) ? 'Smooth' : 'Burning';
+		this.isHeavy = this.#decideThreshold(review.isHeavy) ? 'Light' : 'Heavy';
+		this.isBitter = this.#decideThreshold(review.isBitter) ? 'Sweet' : 'Bitter';
+		this.isStrong = this.#decideThreshold(review.isStrong) ? 'Mild' : 'Strong';
+		this.isBurning = this.#decideThreshold(review.isBurning) ? 'Smooth' : 'Burning';
 		if (review.spot) this.spot = review.spot;
 		if (review.pairing) this.pairing = review.pairing;
 	}

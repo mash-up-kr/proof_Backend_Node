@@ -63,8 +63,8 @@ export class Review extends CommonEntity {
 	})
 	@IsNumber()
 	@IsNotEmpty()
-	@Column({ type: 'int', nullable: false })
-	is_heavy: 1 | 2 | 3 | 4 | 5 | 6;
+	@Column({ name: 'is_heavy', type: 'int', nullable: false })
+	isHeavy: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		example: 1,
@@ -72,8 +72,8 @@ export class Review extends CommonEntity {
 	})
 	@IsNumber()
 	@IsNotEmpty()
-	@Column({ type: 'int', nullable: false })
-	is_bitter: 1 | 2 | 3 | 4 | 5 | 6;
+	@Column({ name: 'is_bitter', type: 'int', nullable: false })
+	isBitter: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		example: 1,
@@ -81,8 +81,8 @@ export class Review extends CommonEntity {
 	})
 	@IsNumber()
 	@IsNotEmpty()
-	@Column({ type: 'int', nullable: false })
-	is_strong: 1 | 2 | 3 | 4 | 5 | 6;
+	@Column({ name: 'is_strong', type: 'int', nullable: false })
+	isStrong: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		example: 1,
@@ -90,8 +90,8 @@ export class Review extends CommonEntity {
 	})
 	@IsNumber()
 	@IsNotEmpty()
-	@Column({ type: 'int', nullable: false })
-	is_burning: 1 | 2 | 3 | 4 | 5 | 6;
+	@Column({ name: 'is_burning', type: 'int', nullable: false })
+	isBurning: 1 | 2 | 3 | 4 | 5 | 6;
 
 	@ApiProperty({
 		enum: Taste,
@@ -122,8 +122,8 @@ export class Review extends CommonEntity {
 	@ApiProperty({ example: 1 })
 	@IsNumber()
 	@IsNotEmpty()
-	@Column()
-	reviewer_id: number;
+	@Column({ name: 'reviewer_id' })
+	reviewerId: number;
 
 	@ApiProperty({
 		type: () => User,
@@ -143,14 +143,14 @@ export class Review extends CommonEntity {
 	@ApiProperty({ example: 1 })
 	@IsNumber()
 	@IsNotEmpty()
-	@Column()
-	reviewed_drink_id: number;
+	@Column({ name: 'reviewed_drink_id' })
+	reviewedDrinkId: number;
 
 	@ApiProperty({
 		type: () => Drink,
 		description: 'The drink this review is about',
 	})
-	@ManyToOne(() => Drink, (reviewed_drink: Drink) => reviewed_drink.reviews, {
+	@ManyToOne(() => Drink, (reviewedDrink: Drink) => reviewedDrink.reviews, {
 		onDelete: 'SET NULL', // if drink(reviewed_drink) is deleted, reviewed_drink_id is set to null
 	})
 	@JoinColumn([
@@ -159,5 +159,5 @@ export class Review extends CommonEntity {
 			referencedColumnName: 'id',
 		},
 	])
-	reviewed_drink: Drink;
+	reviewedDrink: Drink;
 }

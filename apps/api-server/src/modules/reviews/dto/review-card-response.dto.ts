@@ -11,7 +11,7 @@ export class ReviewCardResponseDto {
 	userReview: ReviewItemResponseDto;
 
 	constructor(reviewOfDrink) {
-		this.drink = new DrinkCardResponseDto(reviewOfDrink.reviewed_drink);
+		this.drink = new DrinkCardResponseDto(reviewOfDrink.reviewedDrink);
 		this.userReview = new ReviewItemResponseDto(reviewOfDrink);
 	}
 }

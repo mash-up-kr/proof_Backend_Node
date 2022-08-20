@@ -17,11 +17,11 @@ export class WorldcupItemReseponseDto {
 	@ApiProperty({ description: '술 카테고리' })
 	imageUrl: string;
 
-	constructor({ id, name, abv, image_url, category }) {
+	constructor({ id, name, abv, imageUrl, category }) {
 		this.id = id;
 		this.name = name;
 		this.abv = abv;
-		this.imageUrl = image_url;
+		this.imageUrl = imageUrl;
 		this.category = new DrinkCategoryDto(category);
 	}
 }

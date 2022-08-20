@@ -27,8 +27,8 @@ export class User extends CommonEntity {
 
 	@IsNumber()
 	@IsNotEmpty()
-	@Column({ type: 'bigint', nullable: false, unique: true })
-	social_id: number;
+	@Column({ name: 'social_id', type: 'bigint', nullable: false, unique: true })
+	socialId: number;
 
 	@IsString()
 	@IsNotEmpty()

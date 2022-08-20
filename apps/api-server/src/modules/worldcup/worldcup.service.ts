@@ -1,16 +1,16 @@
-import { BadRequestException, ConsoleLogger, Inject, Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
 
+import { Drink } from '@src/entities/drinks.entity';
+import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
+import { WorldcupResult } from '@src/entities/worldcup-result.entity';
+import { Worldcup } from '@src/entities/worldcup.entity';
+import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
-import { Drink } from '@src/entities/drinks.entity';
-import { Worldcup } from '@src/entities/worldcup.entity';
-import { WorldcupResult } from '@src/entities/worldcup-result.entity';
-import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
-import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
 
 @Injectable()
 export class WorldcupService {

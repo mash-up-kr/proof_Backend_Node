@@ -41,7 +41,7 @@ export class DrinkDto {
 
 	@ApiProperty({ description: '술 이미지' })
 	@IsString()
-	image_url: string;
+	imageUrl: string;
 
 	@ApiProperty({ description: '술 카테고리' })
 	@IsEnum(Category)
@@ -57,7 +57,7 @@ export class DrinkDto {
 		this.updatedAt = args.updatedAt;
 		this.deletedAt = args.deletedAt;
 		this.name = args.name;
-		this.image_url = args.image_url;
+		this.imageUrl = args.image_url;
 		this.abv = args.abv;
 		this.origin = args.origin;
 		this.description = args.description;

@@ -9,10 +9,10 @@ export class UserProfilesResponseDto {
 
 	@IsString()
 	@ApiProperty({ description: '프로필사진 url' })
-	readonly image_url: string;
+	readonly imageUrl: string;
 
-	constructor({ id, image_url }) {
+	constructor({ id, imageUrl }) {
 		this.id = id;
-		this.image_url = image_url;
+		this.imageUrl = imageUrl;
 	}
 }
