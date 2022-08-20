@@ -37,7 +37,7 @@ export class DrinksService {
 		}
 	}
 
-	public async findDrinkById(id: number): Promise<DrinkCardResponseDto> {
+	public async findDrinkById(id: number): Promise<DrinkDto> {
 		try {
 			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
