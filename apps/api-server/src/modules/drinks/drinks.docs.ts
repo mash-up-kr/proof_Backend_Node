@@ -4,7 +4,7 @@ import { ApiBearerAuth, ApiOperation, ApiQuery, ApiResponse } from '@nestjs/swag
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { Category } from '@src/types/drinks-category.types';
 import { DrinksController } from './drinks.controller';
-import { DrinkDto } from './dto/drink.dto';
+import { DrinkCardResponseDto } from './dto/drink-card-response.dto';
 
 export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 	findAllDrinks(summary: string) {
@@ -16,7 +16,21 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [DrinkDto],
+				type: [DrinkCardResponseDto],
+			}),
+		);
+	},
+	getRandomDrink(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description:
+					'홈 - 오늘의 랜덤 술 - 랜덤 술 보기와 다른 술 보기 시 무제한으로 새로운 아이템을 볼 수 있음',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: DrinkCardResponseDto,
 			}),
 		);
 	},
@@ -29,7 +43,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: DrinkDto,
+				type: DrinkCardResponseDto,
 			}),
 		);
 	},
@@ -42,13 +56,26 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [DrinkDto],
+				type: [DrinkCardResponseDto],
 			}),
 			ApiQuery({
 				name: 'name',
 				required: true,
 				type: String,
 				enum: Object.values(Category),
+			}),
+		);
+	},
+	findDrinksToRecommend(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description: '홈 - 요즘 사람들은 어떤 술을 마실까: 리뷰 수 많은 순으로 최대 5개',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: [DrinkCardResponseDto],
 			}),
 		);
 	},
@@ -61,7 +88,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [DrinkDto],
+				type: [DrinkCardResponseDto],
 			}),
 			ApiBearerAuth('Authorization'),
 		);
