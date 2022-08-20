@@ -4,6 +4,7 @@ import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { number } from 'joi';
 import { SubmitWorldcupRequestDto } from './dto/submit-worldcup-request.dto';
 import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
+import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
 import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
 import { WorldcupController } from './worldcup.controller';
@@ -77,8 +78,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			}),
 			ApiResponse({
 				status: 200,
-				description: '',
-				type: WorldcupReseponseDto,
+				type: WorldcupItemReseponseDto,
 			}),
 			ApiBearerAuth('Authorization'),
 		);
