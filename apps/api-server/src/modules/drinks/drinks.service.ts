@@ -94,7 +94,7 @@ export class DrinksService {
 				.limit(1)
 				.getOne();
 			return randomDrink;
-    } catch (error) {
+		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
