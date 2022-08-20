@@ -3,6 +3,7 @@ import { Column, Entity } from 'typeorm';
 
 import { WorldcupRoundDto } from '@src/modules/worldcup/dto/worldcup.dto';
 import { CommonEntity } from './common.entity';
+import { WorldcupResult } from './worldcup-result.entity';
 
 @Entity()
 export class Worldcup extends CommonEntity {
@@ -31,4 +32,6 @@ export class Worldcup extends CommonEntity {
 
 	@Column({ type: 'jsonb' })
 	round: WorldcupRoundDto[];
+
+	results: WorldcupResult[];
 }
