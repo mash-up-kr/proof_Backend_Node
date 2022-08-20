@@ -4,6 +4,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
+import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
 import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { DrinkCardResponseDto } from './dto/drink-card-response.dto';

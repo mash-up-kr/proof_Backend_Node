@@ -1,12 +1,12 @@
-import { Controller, Get, Param, BadRequestException, Query, UseGuards } from '@nestjs/common';
+import { BadRequestException, Controller, Get, Param, Query, UseGuards } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 
 import { AuthUser } from '@src/decorators/auth.decorator';
-import { Category } from '@src/types/drinks-category.types';
+import { User } from '@src/entities/users.entity';
 import { JwtAuthGuard } from '@src/modules/auth/guards/jwt-auth.guard';
+import { Category } from '@src/types/drinks-category.types';
 import { ApiDocs } from './drinks.docs';
 import { DrinksService } from './drinks.service';
-import { User } from '@src/entities/users.entity';
 
 @ApiTags('drinks - 술 상세 정보')
 @Controller('drinks')

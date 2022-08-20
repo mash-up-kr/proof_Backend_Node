@@ -29,15 +29,21 @@ export class DrinksEvaluationService {
 			const reviewResult = drink.review_result;
 
 			// max key 구하기
-			result.weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
-			result.time = this.findMaxValuesKey(reviewResult.time) as Time;
-			result.companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
-			result.mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
-			if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0)
-				result.spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
+			const weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
+			const time = this.findMaxValuesKey(reviewResult.time) as Time;
+			const companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
+			const mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
+			result.situation.push(weather, time, companion, mood);
+			if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0) {
+				const spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
+				result.situation.push(spot);
+			}
 
 			// 각 개수 구하기
-			this.quantifyDrinksExpression(result, reviewResult);
+			result.is_heavy = reviewResult.is_heavy;
+			result.is_bitter = reviewResult.is_bitter;
+			result.is_strong = reviewResult.is_strong;
+			result.is_burning = reviewResult.is_burning;
 
 			// taste 상위 세개 (전체 리뷰 개수 필요 - 합)
 			const tasteResult = reviewResult.taste;
@@ -65,22 +71,6 @@ export class DrinksEvaluationService {
 		return maxKey;
 	}
 
-	private quantifyDrinksExpression(result, reviewResult) {
-		for (let i = 1; i <= 6; i++) {
-			if (i <= 3) {
-				result.is_heavy.Light += reviewResult.is_heavy[String(i)];
-				result.is_bitter.Sweet += reviewResult.is_bitter[String(i)];
-				result.is_strong.Mild += reviewResult.is_strong[String(i)];
-				result.is_burning.Smooth += reviewResult.is_burning[String(i)];
-			} else {
-				result.is_heavy.Heavy += reviewResult.is_heavy[String(i)];
-				result.is_bitter.Bitter += reviewResult.is_bitter[String(i)];
-				result.is_strong.Strong += reviewResult.is_strong[String(i)];
-				result.is_burning.Burning += reviewResult.is_burning[String(i)];
-			}
-		}
-	}
-
 	private findTopTastes(reviewResultObject: any) {
 		let reviewNum = 0;
 		let tastes = [];
@@ -99,7 +89,7 @@ export class DrinksEvaluationService {
 		tastes = tastes.sort((a, b) => b.percent - a.percent);
 		tastes = tastes.slice(0, 3);
 		tastes.map((element) => {
-			element.percent = String(Math.floor((element.percent / reviewNum) * 100)) + '%';
+			element.percent = Math.floor((element.percent / reviewNum) * 100);
 			return element;
 		});
 		return tastes;
