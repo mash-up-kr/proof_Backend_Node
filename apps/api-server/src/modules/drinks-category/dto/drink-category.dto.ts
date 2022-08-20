@@ -10,9 +10,9 @@ export class DrinkCategoryDto {
 	@ApiProperty({ description: '카테고리 사진' })
 	imageUrl: string;
 
-	constructor({ id, name, imageUrl }) {
+	constructor({ id, name, image_url }) {
 		this.id = id;
 		this.name = name;
-		this.imageUrl = imageUrl;
+		this.imageUrl = image_url;
 	}
 }

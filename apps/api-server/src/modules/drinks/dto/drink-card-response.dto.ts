@@ -7,7 +7,7 @@ export class DrinkCardResponseDto extends OmitType(DrinkDto, ['description'] as 
 		super();
 		this.id = args.id;
 		this.name = args.name;
-		this.imageUrl = args.image_url;
+		this.imageUrl = args.imageUrl || args.image_url;
 		this.abv = args.abv;
 		this.origin = args.origin;
 		this.category = args.category.name || args.category;
