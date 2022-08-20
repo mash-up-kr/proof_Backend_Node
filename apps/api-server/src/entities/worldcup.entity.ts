@@ -8,6 +8,14 @@ import { WorldcupResult } from './worldcup-result.entity';
 @Entity()
 export class Worldcup extends CommonEntity {
 	@IsString()
+	@Column()
+	title: string;
+
+	@IsString()
+	@Column({ name: 'image_url' })
+	imageUrl: string;
+
+	@IsString()
 	@Column({ name: 'with_who_code', type: 'varchar', nullable: false })
 	withWhoCode: string;
 

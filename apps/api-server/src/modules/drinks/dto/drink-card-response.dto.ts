@@ -2,12 +2,7 @@ import { OmitType } from '@nestjs/swagger';
 
 import { DrinkDto } from './drink.dto';
 
-export class DrinkCardResponseDto extends OmitType(DrinkDto, [
-	'createdAt',
-	'updatedAt',
-	'deletedAt',
-	'description',
-] as const) {
+export class DrinkCardResponseDto extends OmitType(DrinkDto, ['description'] as const) {
 	constructor({ ...args }) {
 		super();
 		this.id = args.id;

@@ -1,5 +1,4 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { DrinkCategoryDto } from '@src/modules/drinks-category/dto/drink-category.dto';
 
 export class WorldcupItemReseponseDto {
 	@ApiProperty({ description: '월드컵 id' })
@@ -12,9 +11,9 @@ export class WorldcupItemReseponseDto {
 	abv: number;
 
 	@ApiProperty({ description: '술 카테고리' })
-	category: DrinkCategoryDto;
+	category: string;
 
-	@ApiProperty({ description: '술 카테고리' })
+	@ApiProperty({ description: '술 이미지' })
 	imageUrl: string;
 
 	constructor({ id, name, abv, imageUrl, category }) {
@@ -22,6 +21,6 @@ export class WorldcupItemReseponseDto {
 		this.name = name;
 		this.abv = abv;
 		this.imageUrl = imageUrl;
-		this.category = new DrinkCategoryDto(category);
+		this.category = category.name;
 	}
 }
