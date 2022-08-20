@@ -48,7 +48,7 @@ export class Drink extends CommonEntity {
 	imageUrl: string;
 
 	@ApiProperty({
-		name: 'review_result',
+		name: 'reviewResult',
 		description: '술 리뷰에 대한 json 데이터',
 	})
 	@Column({ type: 'jsonb', nullable: false, default: () => `'${DEFAULT_DRINK_REVIEW_RESULT}'::jsonb` })
