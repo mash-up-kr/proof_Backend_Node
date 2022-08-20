@@ -32,6 +32,12 @@ export class DrinksController {
 		return await this.drinksService.findDrinksByCategory(name, page, length);
 	}
 
+	@Get('/recommend')
+	@ApiDocs.findDrinksToRecommend('추천 술 상세 정보 조회')
+	public async findDrinksToRecommend() {
+		return await this.drinksService.findDrinksToRecommend();
+	}
+
 	@Get(':id')
 	@ApiDocs.findDrinkById('특정 술 상세 정보 조회')
 	public async findDrinkById(@Param('id') id: number) {
