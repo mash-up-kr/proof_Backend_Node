@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Repository } from 'typeorm';
+import { Between, MoreThan, Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
@@ -48,6 +48,10 @@ export class DrinksService {
 
 			const drinkDto = new DrinkDto(drink);
 			drinkDto.worldcupWinCount = await this.worldcupResultItemRepository.countBy({ drinkId: id, rankLevel: 0 });
+			drinkDto.worldcupSemiFinalCount = await this.worldcupResultItemRepository.countBy({
+				drinkId: id,
+				rankLevel: Between(1, 2),
+			});
 
 			return drinkDto;
 		} catch (error) {

@@ -51,6 +51,10 @@ export class DrinkDto {
 	@IsNumber()
 	worldcupWinCount?: number;
 
+	@ApiProperty({ description: '월드컵 4강 진출 횟수' })
+	@IsNumber()
+	worldcupSemiFinalCount?: number;
+
 	constructor({ ...args }) {
 		this.id = args.id;
 		this.createdAt = args.createdAt;
@@ -64,5 +68,6 @@ export class DrinkDto {
 		this.category = args.category;
 
 		this.worldcupWinCount = args.worldcupWinCount;
+		this.worldcupSemiFinalCount = args.worldcupSemiFinalCount;
 	}
 }
