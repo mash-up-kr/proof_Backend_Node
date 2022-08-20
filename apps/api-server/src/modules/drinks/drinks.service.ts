@@ -78,6 +78,21 @@ export class DrinksService {
 		}
 	}
 
+	public async getRandomDrink(): Promise<DrinkDto> {
+		try {
+			const randomDrink = this.drinkRepository
+				.createQueryBuilder('drink')
+				.select(['drink', 'category.name'])
+				.leftJoin('drink.category', 'category')
+				.orderBy('RANDOM()')
+				.limit(1)
+				.getOne();
+			return randomDrink;
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
+
 	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkDto[]> {
 		try {
 			const userReviewedDrinks = await this.drinkRepository

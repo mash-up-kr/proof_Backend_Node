@@ -20,6 +20,20 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			}),
 		);
 	},
+	getRandomDrink(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description:
+					'홈 - 오늘의 랜덤 술 - 랜덤 술 보기와 다른 술 보기 시 무제한으로 새로운 아이템을 볼 수 있음',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: DrinkDto,
+			}),
+		);
+	},
 	findDrinkById(summary: string) {
 		return applyDecorators(
 			ApiOperation({
