@@ -1,10 +1,10 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { BadRequestException } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
 
+import { Category } from '@src/types/drinks-category.types';
 import { MockDrinksService } from '../../../test/mock/drinks.mock';
 import { DrinksController } from './drinks.controller';
 import { DrinksService } from './drinks.service';
-import { Category } from '@src/types/drinks-category.types';
 
 describe('DrinksController', () => {
 	let controller: DrinksController;
@@ -59,7 +59,7 @@ describe('DrinksController', () => {
 						abv: 0.1,
 						origin: '미국',
 						description: 'description test1',
-						image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
+						imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 					},
 				],
 			});
@@ -86,7 +86,7 @@ describe('DrinksController', () => {
 					abv: 0.1,
 					origin: '미국',
 					description: 'description test1',
-					image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
+					imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 					category: {
 						name: 'Beer',
 					},

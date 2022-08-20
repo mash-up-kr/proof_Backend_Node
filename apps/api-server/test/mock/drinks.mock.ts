@@ -14,7 +14,7 @@ export const mockDrinks = [
 		abv: 0.1,
 		origin: '미국',
 		description: 'description test1',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 		category: {
 			name: 'Beer',
 		},
@@ -28,7 +28,7 @@ export const mockDrinks = [
 		abv: 0.1,
 		origin: '미국',
 		description: 'soju test1',
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/test.png',
 		category: {
 			name: 'Soju',
 		},
