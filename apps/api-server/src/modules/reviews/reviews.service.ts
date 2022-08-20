@@ -7,6 +7,7 @@ import { Drink } from '@src/entities/drinks.entity';
 import { Review } from '@src/entities/reviews.entity';
 import { DrinksService } from '@src/modules/drinks/drinks.service';
 import { DrinkCardResponseDto } from '@src/modules/drinks/dto/drink-card-response.dto';
+import { CreateReviewResultDto } from './dto/create-review-result.dto';
 import { CreateReviewDto } from './dto/create-review.dto';
 import { ReviewCardResponseDto } from './dto/review-card-response.dto';
 import { ReviewItemResponseDto } from './dto/review-item-response.dto';
@@ -39,12 +40,12 @@ export class ReviewsService {
 			const reviewResult = drink.review_result;
 			if (!reviewResult.has_review) reviewResult.has_review = true;
 
-			const { place, ...reviewKeys } = createReviewDto;
-			for (const key in reviewKeys) {
+			const reviewResultDto = new CreateReviewResultDto(createReviewDto);
+			for (const key in reviewResultDto) {
 				if (key !== 'pairing') {
-					reviewResult[key][createReviewDto[key]] += 1;
+					reviewResult[key][reviewResultDto[key]] += 1;
 				} else {
-					createReviewDto[key].forEach((value) => {
+					reviewResultDto[key].forEach((value) => {
 						reviewResult[key][value] += 1;
 					});
 				}
