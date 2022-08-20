@@ -38,14 +38,15 @@ export class ReviewsService {
 
 			const reviewResult = drink.review_result;
 			if (!reviewResult.has_review) reviewResult.has_review = true;
-			for (const key in createReviewDto) {
-				if (!reviewResult.hasOwnProperty(key)) continue;
-				else if (key === 'pairing') {
-					createReviewDto[key].forEach((value, index) => {
+
+			const { place, ...reviewKeys } = createReviewDto;
+			for (const key in reviewKeys) {
+				if (key !== 'pairing') {
+					reviewResult[key][createReviewDto[key]] += 1;
+				} else {
+					createReviewDto[key].forEach((value) => {
 						reviewResult[key][value] += 1;
 					});
-				} else {
-					reviewResult[key][createReviewDto[key]] += 1;
 				}
 			}
 
