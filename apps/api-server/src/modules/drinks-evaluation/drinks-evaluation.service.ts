@@ -84,16 +84,18 @@ export class DrinksEvaluationService {
 	private findTopTastes(reviewResultObject: any) {
 		let reviewNum = 0;
 		let tastes = [];
-		for (const key in reviewResultObject) {
-			reviewNum += reviewResultObject[key];
-			if (reviewResultObject[key] > 0)
+
+		Object.entries(reviewResultObject).forEach(([taste_name, percent]) => {
+			reviewNum += percent as number;
+			if (percent > 0)
 				tastes.push(
 					new DrinksEvaluationTasteDto({
-						taste_name: key,
-						percent: reviewResultObject[key],
+						taste_name,
+						percent,
 					}),
 				);
-		}
+		});
+
 		tastes = tastes.sort((a, b) => b.percent - a.percent);
 		tastes = tastes.slice(0, 3);
 		tastes.map((element) => {
@@ -104,13 +106,10 @@ export class DrinksEvaluationService {
 	}
 
 	private findTopPairings(reviewResultObject: any, pairings: any): any {
-		let sortedPairingResult = [];
-		for (const key in reviewResultObject) {
-			if (reviewResultObject[key] > 0) sortedPairingResult.push([key, reviewResultObject[key]]);
-		}
+		let sortedPairingResult = Object.entries(reviewResultObject).filter(([pairing_name, value]) => value > 0);
 
 		sortedPairingResult.sort((a, b) => {
-			return b[1] - a[1];
+			return (b[1] as number) - (a[1] as number);
 		});
 		sortedPairingResult = sortedPairingResult.slice(0, 3);
 		for (const item of sortedPairingResult) {
