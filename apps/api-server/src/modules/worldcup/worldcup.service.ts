@@ -75,10 +75,14 @@ export class WorldcupService {
 	async getParticipatedWorldcup(userId: number) {
 		const worldcupResults = await this.worldcupResultRepository
 			.createQueryBuilder('worldcup_result')
-			.select('worldcup_result.*, COUNT(*) as participant_count')
+			.select('worldcup_result.*')
+			.leftJoinAndSelect(
+				`(${this.#getWorldcupParticipantCountQuery()})`,
+				'worldcup_group',
+				'worldcup_group.id = worldcup_result.worldcup_id',
+			)
 			.leftJoinAndSelect('worldcup_result.worldcup', 'worldcup')
 			.where('worldcup_result.user_id = :userId', { userId })
-			.groupBy('worldcup.id, worldcup_result.id')
 			.orderBy('worldcup_result.createdAt', 'DESC')
 			.getRawMany();
 
@@ -113,5 +117,13 @@ export class WorldcupService {
 		}
 
 		return this.#getRankLevel(index, rankLevel + 1);
+	}
+
+	#getWorldcupParticipantCountQuery() {
+		return this.worldcupResultRepository
+			.createQueryBuilder('worldcup_result')
+			.select('worldcup_id as id, COUNT(*) as participant_count')
+			.groupBy('worldcup_result.worldcup_id')
+			.getQuery();
 	}
 }
