@@ -52,6 +52,19 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			}),
 		);
 	},
+	findDrinksToRecommend(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description: '추천 술 보기 or 요즘 사람들은 어떤 술을 마실까 - 리뷰 수 많은 순으로 최대 5개',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: [DrinkDto],
+			}),
+		);
+	},
 	findUserReviewedDrinks(summary: string) {
 		return applyDecorators(
 			ApiOperation({

@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { WorldcupConditionDto, WorldcupRoundDto } from './worldcup.dto';
 
-export class WorldcupReseponseDto {
+export class WorldcupWithParticipantCountReseponseDto {
 	@ApiProperty({ description: '월드컵 id' })
 	id: number;
 
@@ -18,22 +18,22 @@ export class WorldcupReseponseDto {
 	round: WorldcupRoundDto;
 
 	@ApiProperty({ description: '이 월드컵에 참여한 사람' })
-	participantCount?: number;
+	participantCount: number;
 
 	constructor(worldcup) {
 		this.id = worldcup.id;
-		this.title = `${worldcup.situationContent} 날 마시고 싶은 술은?`;
+		this.title = `${worldcup.situation_content} 날 마시고 싶은 술은?`;
 		this.withWho = {
-			code: worldcup.withWhoCode,
-			content: worldcup.withWhoContent,
-			title: worldcup.withWhoTitle,
+			code: worldcup.with_who_code,
+			content: worldcup.with_who_content,
+			title: worldcup.with_who_title,
 		};
 		this.situation = {
-			code: worldcup.situationCode,
-			content: worldcup.situationContent,
-			title: worldcup.situationTitle,
+			code: worldcup.situation_code,
+			content: worldcup.situation_content,
+			title: worldcup.situation_title,
 		};
 		this.round = worldcup.round;
-		this.participantCount = worldcup.participantCount;
+		this.participantCount = +worldcup.participant_count;
 	}
 }
