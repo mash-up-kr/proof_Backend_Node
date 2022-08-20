@@ -21,14 +21,16 @@ export class DrinksService {
 		return 'This action adds a new drink';
 	}
 
-	public async findAllDrinks(): Promise<Drink[]> {
+	public async findAllDrinks(): Promise<DrinkDto[]> {
 		try {
-			return await this.drinkRepository
+			const drinks = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
 				.orderBy('drink.createdAt', 'DESC')
 				.getMany();
+
+			return drinks.map((drink) => new DrinkDto(drink));
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -86,19 +88,19 @@ export class DrinksService {
 
 	public async getRandomDrink(): Promise<DrinkDto> {
 		try {
-			const randomDrink = this.drinkRepository
+			const randomDrink = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
 				.orderBy('RANDOM()')
 				.limit(1)
 				.getOne();
-			return randomDrink;
+			return new DrinkDto(randomDrink);
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
-  
+
 	public async findDrinksToRecommend(): Promise<DrinkDto[]> {
 		try {
 			const drinksToRecommend = await this.drinkRepository
@@ -125,7 +127,7 @@ export class DrinksService {
 				.leftJoin('drink.reviews', 'review')
 				.where('review.reviewer_id = :id', { id: userId })
 				.getMany();
-			return userReviewedDrinks;
+			return userReviewedDrinks.map((drink) => new DrinkDto(drink));
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}

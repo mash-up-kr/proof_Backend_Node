@@ -36,8 +36,8 @@ export class DrinksController {
 	@ApiDocs.getRandomDrink('랜덤 술 상세 정보 조회')
 	public async getRandomDrink() {
 		return await this.drinksService.getRandomDrink();
-  	}
-  
+	}
+
 	@Get('/recommend')
 	@ApiDocs.findDrinksToRecommend('추천 술 상세 정보 조회')
 	public async findDrinksToRecommend() {

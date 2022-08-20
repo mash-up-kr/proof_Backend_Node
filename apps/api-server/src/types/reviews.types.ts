@@ -1,6 +1,6 @@
 export enum Weather {
 	Rainy = 'Rainy',
-	Snowy = 'Snowys',
+	Snowy = 'Snowy',
 	Sunny = 'Sunny',
 	Cloudy = 'Cloudy',
 }
@@ -55,4 +55,5 @@ export enum Pairing {
 	Soup = 'Soup', // 국물/스프
 	AppetizersSnacks = 'AppetizersSnacks', // 디저트
 	Pasta = 'Pasta', // 면류
+	Sushi = 'Sushi', // 회,초밥
 }

@@ -26,13 +26,8 @@ export class ReviewsController {
 
 	@Get('/drinks')
 	@ApiDocs.findReviewsOfDrink('술에 대한 유저 리뷰들 조회')
-	async findReviewsOfDrink(
-		@AuthUser() user: User,
-		@Query('drinkId') drinkId: number,
-		@Query('page') page: number,
-		@Query('length') length: number,
-	) {
-		return await this.reviewsService.findReviewsOfDrink(user.id, drinkId, page, length);
+	async findReviewsOfDrink(@AuthUser() user: User, @Query('drinkId') drinkId: number) {
+		return await this.reviewsService.findReviewsOfDrink(user.id, drinkId);
 	}
 
 	@Get('/:reviewCardId')
