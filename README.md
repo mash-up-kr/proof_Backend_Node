@@ -29,33 +29,100 @@
 ## Installation
 
 ```bash
-$ npm install
+$ pnpm install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ npm run start
+$ pnpm run start
 
 # watch mode
-$ npm run start:dev
+$ pnpm run start:dev
 
 # production mode
-$ npm run start:prod
+$ pnpm run start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ pnpm run test
 
 # e2e tests
-$ npm run test:e2e
+$ pnpm run test:e2e
 
 # test coverage
-$ npm run test:cov
+$ pnpm run test:cov
+```
+
+# How to run
+
+Make sure node.js 16 is installed
+
+## Run the application in local
+
+1. Git clone this repo and cd into the directory.
+2. Install dependencies.
+
+```bash
+pnpm install
+```
+
+3. Make sure postgres is running if this app needs it. If not, start postgres container.
+
+```bash
+docker run --name postgres-dev -p 5432:5432 --env-file .env.dev -d postgres:13.7
+```
+
+4. Run.
+
+```bash
+pnpm run start:dev
+```
+
+or
+
+Seed data if you need
+
+```bash
+STAGE=dev pnpm run seed:run && pnpm run start:dev
+```
+
+## Nestjs on Docker for Development
+
+1. Git clone this repo and cd into the directory.
+2. Run with `docker-compose`. docker-compose.integ.yml is intended for development environments.
+   It contains command to seed data.
+
+```bash
+docker-compose -f docker-compose.integ.yml up
+```
+
+## Nestjs on Docker for Production
+
+`.Dockerfile` is Production Dockerfile allows to build a production Docker image of the NestJS application.  
+Amazon ECS uses this Docker image in task definitions to launch containers.  
+DO NOT use for development usages, it may have dependencies with AWS services(ex. RDS).
+
+But when you need to check this out,
+
+1. Make sure all necessary services are available.
+2. Git clone this repo and cd into the directory.
+3. Build image
+
+```bash
+docker build --tag proof-backend-node-img .
+or
+docker build --platform=linux/amd64 -t proof-backend-node-img .  (if you use MAC m1)
+```
+
+4. Run the container
+
+```bash
+docker run -p 3000:3000 --env-file=./.env.prod proof-backend-node-img
 ```
 
 ## Support
@@ -64,9 +131,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+-   Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+-   Website - [https://nestjs.com](https://nestjs.com/)
+-   Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 

@@ -1,0 +1,39 @@
+{
+	"family": "proof-task-def",
+	"taskRoleArn": "arn:aws:iam::119011927775:role/ecsTaskExecutionRole",
+	"executionRoleArn": "arn:aws:iam::119011927775:role/ecsTaskExecutionRole",
+	"networkMode": null,
+	"containerDefinitions": [
+		{
+			"name": "proof-backend-node-container",
+			"image": "proof-backend-node-img",
+			"portMappings": [
+				{
+					"hostPort": 3000,
+					"protocol": "tcp",
+					"containerPort": 3000
+				}
+			],
+			"environmentFiles": [
+				{
+					"value": "arn:aws:s3:::zuzu-resource/proof.env",
+					"type": "s3"
+				}
+			],
+			"memory": 491,
+			"memoryReservation": 491,
+			"logConfiguration": {
+				"logDriver": "awslogs",
+				"secretOptions": null,
+				"options": {
+					"awslogs-group": "/ecs/proof-task-def",
+					"awslogs-region": "ap-northeast-2",
+					"awslogs-stream-prefix": "ecs"
+				}
+			}
+		}
+	],
+	"requiresCompatibilities": ["EC2"],
+	"cpu": "512",
+	"memory": "491"
+}

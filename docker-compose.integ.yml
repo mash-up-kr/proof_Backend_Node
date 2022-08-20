@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+    db:
+        image: postgres:13.7
+        restart: on-failure
+        container_name: postgres-dev
+        ports:
+            - '5432:5432'
+        volumes:
+            - ./data/dev:/var/lib/postgres/data
+        env_file:
+            - ./.env.integ
+    zuzu:
+        build:
+            context: .
+            dockerfile: ./Dockerfile.dev
+        container_name: zuzu-server
+        ports:
+            - '3000:3000'
+        volumes:
+            - ./:/app
+        restart: on-failure
+        env_file:
+            - ./.env.integ
+        command: sh -c "STAGE=integ pnpm run seed:run && pnpm run start:integ"
+        depends_on:
+            - db
