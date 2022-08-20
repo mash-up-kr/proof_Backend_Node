@@ -4,7 +4,7 @@ import { ApiBearerAuth, ApiOperation, ApiQuery, ApiResponse } from '@nestjs/swag
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { Category } from '@src/types/drinks-category.types';
 import { DrinksController } from './drinks.controller';
-import { DrinkDto } from './dto/drink.dto';
+import { DrinkCardResponseDto } from './dto/drink-card-response.dto';
 
 export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 	findAllDrinks(summary: string) {
@@ -16,7 +16,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [DrinkDto],
+				type: [DrinkCardResponseDto],
 			}),
 		);
 	},
@@ -30,7 +30,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: DrinkDto,
+				type: DrinkCardResponseDto,
 			}),
 		);
 	},
@@ -43,7 +43,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: DrinkDto,
+				type: DrinkCardResponseDto,
 			}),
 		);
 	},
@@ -56,7 +56,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [DrinkDto],
+				type: [DrinkCardResponseDto],
 			}),
 			ApiQuery({
 				name: 'name',
@@ -75,7 +75,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [DrinkDto],
+				type: [DrinkCardResponseDto],
 			}),
 		);
 	},
@@ -88,7 +88,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [DrinkDto],
+				type: [DrinkCardResponseDto],
 			}),
 			ApiBearerAuth('Authorization'),
 		);

@@ -5,8 +5,8 @@ import { Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
-import { DrinkDto } from './dto/drink.dto';
 import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
+import { DrinkCardResponseDto } from './dto/drink-card-response.dto';
 
 @Injectable()
 export class DrinksService {
@@ -21,7 +21,7 @@ export class DrinksService {
 		return 'This action adds a new drink';
 	}
 
-	public async findAllDrinks(): Promise<DrinkDto[]> {
+	public async findAllDrinks(): Promise<DrinkCardResponseDto[]> {
 		try {
 			const drinks = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -30,13 +30,13 @@ export class DrinksService {
 				.orderBy('drink.createdAt', 'DESC')
 				.getMany();
 
-			return drinks.map((drink) => new DrinkDto(drink));
+			return drinks.map((drink) => new DrinkCardResponseDto(drink));
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async findDrinkById(id: number): Promise<DrinkDto> {
+	public async findDrinkById(id: number): Promise<DrinkCardResponseDto> {
 		try {
 			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -48,10 +48,13 @@ export class DrinksService {
 				throw new BadRequestException();
 			}
 
-			const drinkDto = new DrinkDto(drink);
-			drinkDto.worldcupWinCount = await this.worldcupResultItemRepository.countBy({ drinkId: id, rankLevel: 0 });
+			const drinkCardDto = new DrinkCardResponseDto(drink);
+			drinkCardDto.worldcupWinCount = await this.worldcupResultItemRepository.countBy({
+				drinkId: id,
+				rankLevel: 0,
+			});
 
-			return drinkDto;
+			return drinkCardDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -61,7 +64,7 @@ export class DrinksService {
 		category: string,
 		page = 0,
 		length = 30,
-	): Promise<{ totalPageCount: number; list: DrinkDto[] }> {
+	): Promise<{ totalPageCount: number; list: DrinkCardResponseDto[] }> {
 		try {
 			let queryBuilder = this.drinkRepository
 				.createQueryBuilder('drink')
@@ -80,13 +83,16 @@ export class DrinksService {
 				.take(length)
 				.getMany();
 
-			return { totalPageCount: totalPageCount, list: drinksByCategory.map((drink) => new DrinkDto(drink)) };
+			return {
+				totalPageCount: totalPageCount,
+				list: drinksByCategory.map((drink) => new DrinkCardResponseDto(drink)),
+			};
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async getRandomDrink(): Promise<DrinkDto> {
+	public async getRandomDrink(): Promise<DrinkCardResponseDto> {
 		try {
 			const randomDrink = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -95,13 +101,13 @@ export class DrinksService {
 				.orderBy('RANDOM()')
 				.limit(1)
 				.getOne();
-			return new DrinkDto(randomDrink);
+			return new DrinkCardResponseDto(randomDrink);
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async findDrinksToRecommend(): Promise<DrinkDto[]> {
+	public async findDrinksToRecommend(): Promise<DrinkCardResponseDto[]> {
 		try {
 			const drinksToRecommend = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -112,13 +118,13 @@ export class DrinksService {
 				.orderBy('review_count', 'DESC')
 				.limit(5)
 				.getRawMany();
-			return drinksToRecommend.map((drink) => new DrinkDto(drink));
+			return drinksToRecommend.map((drink) => new DrinkCardResponseDto(drink));
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkDto[]> {
+	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkCardResponseDto[]> {
 		try {
 			const userReviewedDrinks = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -127,7 +133,7 @@ export class DrinksService {
 				.leftJoin('drink.reviews', 'review')
 				.where('review.reviewer_id = :id', { id: userId })
 				.getMany();
-			return userReviewedDrinks.map((drink) => new DrinkDto(drink));
+			return userReviewedDrinks.map((drink) => new DrinkCardResponseDto(drink));
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
