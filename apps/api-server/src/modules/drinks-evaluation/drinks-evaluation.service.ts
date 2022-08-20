@@ -89,7 +89,7 @@ export class DrinksEvaluationService {
 		tastes = tastes.sort((a, b) => b.percent - a.percent);
 		tastes = tastes.slice(0, 3);
 		tastes.map((element) => {
-			element.percent = String(Math.floor((element.percent / reviewNum) * 100)) + '%';
+			element.percent = Math.floor((element.percent / reviewNum) * 100);
 			return element;
 		});
 		return tastes;
