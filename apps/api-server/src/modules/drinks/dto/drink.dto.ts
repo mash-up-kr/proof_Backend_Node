@@ -58,7 +58,7 @@ export class DrinkDto {
 	constructor({ ...args }) {
 		this.id = args.id;
 		this.name = args.name;
-		this.imageUrl = args.image_url;
+		this.imageUrl = args.image_url || args.imageUrl;
 		this.abv = args.abv;
 		this.origin = args.origin;
 		this.description = args.description;
