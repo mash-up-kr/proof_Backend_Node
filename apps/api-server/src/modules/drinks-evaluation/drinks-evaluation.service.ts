@@ -29,12 +29,15 @@ export class DrinksEvaluationService {
 			const reviewResult = drink.review_result;
 
 			// max key 구하기
-			result.weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
-			result.time = this.findMaxValuesKey(reviewResult.time) as Time;
-			result.companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
-			result.mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
-			if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0)
-				result.spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
+			const weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
+			const time = this.findMaxValuesKey(reviewResult.time) as Time;
+			const companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
+			const mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
+			result.situation.push(weather, time, companion, mood);
+			if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0) {
+				const spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
+				result.situation.push(spot);
+			}
 
 			// 각 개수 구하기
 			result.is_heavy = reviewResult.is_heavy;

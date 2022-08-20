@@ -8,38 +8,11 @@ import { DrinksEvaluationHeavyDto } from './drinks-evalutaion-heavy.dto';
 
 export class DrinksEvaluationReseponseDto {
 	@ApiProperty({
-		enum: Weather,
-		example: Weather.Rainy,
-		description: '가장 많이 답한 이 술을 마셨을 때의 날씨',
+		example: [Weather.Rainy, Time.Noon, Companion.Alone, Mood.Funny, '1'],
+		description:
+			'가장 많이 답한 이 술을 마셨을 때의 상황 (날씨, 시간, 함께 마신 사람, 분위기, spot(1,2,3차)) (spot이 없다면 array길이=4)',
 	})
-	weather: Weather;
-
-	@ApiProperty({
-		enum: Time,
-		example: Time.Noon,
-		description: '가장 많이 답한 이 술을 마셨을 때의 시간',
-	})
-	time: Time;
-
-	@ApiProperty({
-		enum: Companion,
-		example: Companion.Alone,
-		description: '가장 많이 답한 이 술을 같이 마신 사람 유형',
-	})
-	companion: Companion;
-
-	@ApiProperty({
-		enum: Mood,
-		example: Mood.Funny,
-		description: '가장 많이 답한 이 술을 마셨을 때의 분위기',
-	})
-	mood: Mood;
-
-	@ApiProperty({
-		example: '1',
-		description: '가장 많이 답한 이 술을 마셨을 때의 spot (1,2,3) (리뷰가 없다면 빈 스트링)',
-	})
-	spot: Spot | '';
+	situation: (Weather | Time | Companion | Mood | Spot)[];
 
 	@ApiProperty({
 		description: '가벼워요(Light)/무거워요(Heavy) 각각의 리뷰 개수',
@@ -74,12 +47,7 @@ export class DrinksEvaluationReseponseDto {
 	pairing: Pairing[];
 
 	constructor() {
-		this.weather = Weather.Rainy;
-		this.time = Time.Noon;
-		this.companion = Companion.Alone;
-		this.mood = Mood.Funny;
-		this.spot = '';
-
+		this.situation = [];
 		this.is_heavy = new DrinksEvaluationHeavyDto();
 		this.is_bitter = new DrinksEvaluationBitterDto();
 		this.is_strong = new DrinksEvaluationStrongDto();
