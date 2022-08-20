@@ -3,6 +3,7 @@ import { ApiBearerAuth, ApiOperation, ApiResponse } from '@nestjs/swagger';
 
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
 import { DrinksEvaluationController } from './drinks-evaluation.controller';
+import { DrinksEvaluationReseponseDto } from './dto/drinks-evaluation-response.dto';
 
 export const ApiDocs: SwaggerMethodDoc<DrinksEvaluationController> = {
 	findDrinkEvaluation(summary: string) {
@@ -14,7 +15,7 @@ export const ApiDocs: SwaggerMethodDoc<DrinksEvaluationController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				// type: '',
+				type: DrinksEvaluationReseponseDto,
 			}),
 			ApiBearerAuth('Authorization'),
 		);
