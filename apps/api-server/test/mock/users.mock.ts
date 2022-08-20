@@ -7,7 +7,7 @@ export const mockUser = {
 	name: 'test chung',
 	password: '12345',
 	profile: {
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png',
 	},
 };
 

@@ -26,19 +26,18 @@ export class ReviewsService {
 		try {
 			const review = this.reviewRepository.create({
 				...createReviewDto,
-				reviewer_id: userId,
-				reviewed_drink_id: drinkId,
+				reviewerId: userId,
+				reviewedDrinkId: drinkId,
 			});
 			const result = await this.reviewRepository.save(review);
 
 			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select(`(drink.review_result)::JSONB AS review_result`)
 				.where('drink.id = :id', { id: drinkId })
-				.getRawOne();
+				.getOne();
 
-			const reviewResult = drink.review_result;
-			if (!reviewResult.has_review) reviewResult.has_review = true;
+			const reviewResult = drink.reviewResult;
+			if (!reviewResult.hasReview) reviewResult.hasReview = true;
 
 			const reviewResultDto = new CreateReviewResultDto(createReviewDto);
 			for (const key in reviewResultDto) {
@@ -54,7 +53,7 @@ export class ReviewsService {
 			await this.drinkRepository
 				.createQueryBuilder('drink')
 				.update(Drink)
-				.set({ review_result: reviewResult })
+				.set({ reviewResult: reviewResult })
 				.where('drink.id = :id', { id: drinkId })
 				.execute();
 
@@ -74,12 +73,11 @@ export class ReviewsService {
 			const reviewsOfDrink = await this.reviewRepository
 				.createQueryBuilder('review')
 				.select()
-				.leftJoin('review.reviewed_drink', 'drink')
+				.leftJoin('review.reviewedDrink', 'drink')
 				.where('review.reviewer_id = :id', { id: userId })
 				.where('review.reviewed_drink_id = :id', { id: drinkId })
 				.orderBy('review.createdAt', 'DESC')
 				.getMany();
-
 			return {
 				drink: new DrinkCardResponseDto(drink),
 				reviewList: reviewsOfDrink.map((review) => new ReviewItemResponseDto(review)),
@@ -93,7 +91,7 @@ export class ReviewsService {
 		try {
 			const reviewOfDrink = await this.reviewRepository
 				.createQueryBuilder('review')
-				.leftJoinAndSelect('review.reviewed_drink', 'drink')
+				.leftJoinAndSelect('review.reviewedDrink', 'drink')
 				.leftJoinAndSelect('drink.category', 'category')
 				.where('review.id = :id', { id })
 				.getOne();

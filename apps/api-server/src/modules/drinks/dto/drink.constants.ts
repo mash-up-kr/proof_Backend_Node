@@ -1,5 +1,5 @@
 export const DEFAULT_DRINK_REVIEW_RESULT = `{
-		"has_review" : false,
+		"hasReview" : false,
 		"weather": {
 			"Rainy": 0,
 			"Snowy": 0, 
@@ -33,19 +33,19 @@ export const DEFAULT_DRINK_REVIEW_RESULT = `{
 			"2":0,
 			"3":0
 		},
-		"is_heavy": {
+		"isHeavy": {
 			"Light":0,
 			"Heavy":0
 		},
-		"is_bitter": {
+		"isBitter": {
 			"Sweet":0,
 			"Bitter":0
 		},
-		"is_strong": {
+		"isStrong": {
 			"Mild":0,
 			"Strong":0
 		},
-		"is_burning": {
+		"isBurning": {
 			"Smooth":0,
 			"Burning":0
 		},

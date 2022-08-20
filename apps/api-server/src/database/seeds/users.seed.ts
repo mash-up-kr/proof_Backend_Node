@@ -29,14 +29,14 @@ export class CreateInitialUserData implements Seeder {
 				.createQueryBuilder()
 				.select('users_profile')
 				.from(UsersProfile, 'users_profile')
-				.where('users_profile.image_url = :image_url', { image_url: defaultUserProfile })
+				.where('users_profile.image_url = :imageUrl', { imageUrl: defaultUserProfile })
 				.getOne();
 
 			await connection.getRepository(User).save({
 				name: seedUserData.name,
 				nickname: seedUserData.name,
 				email: seedUserData.email,
-				social_id: seedUserData.kakaoId,
+				socialId: seedUserData.kakaoId,
 				type: UserType.Admin,
 				profile: usersProfile,
 			});

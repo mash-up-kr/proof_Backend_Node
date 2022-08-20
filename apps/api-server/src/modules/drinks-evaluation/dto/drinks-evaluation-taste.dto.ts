@@ -7,7 +7,7 @@ export class DrinksEvaluationTasteDto {
 		example: Taste.Fruity,
 		description: '술의 느낌',
 	})
-	taste_name: Taste;
+	tasteName: Taste;
 
 	@ApiProperty({
 		example: 20,
@@ -16,7 +16,7 @@ export class DrinksEvaluationTasteDto {
 	percent: number;
 
 	constructor(tasteObj) {
-		this.taste_name = tasteObj.taste_name;
+		this.tasteName = tasteObj.tasteName;
 		this.percent = tasteObj.percent;
 	}
 }

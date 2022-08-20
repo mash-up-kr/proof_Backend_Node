@@ -17,22 +17,22 @@ export class DrinksEvaluationReseponseDto {
 	@ApiProperty({
 		description: '가벼워요(Light)/무거워요(Heavy) 각각의 리뷰 개수',
 	})
-	is_heavy: DrinksEvaluationHeavyDto;
+	isHeavy: DrinksEvaluationHeavyDto;
 
 	@ApiProperty({
 		description: '달아요(Sweet)/써요(Bitter) 각각의 리뷰 개수',
 	})
-	is_bitter: DrinksEvaluationBitterDto;
+	isBitter: DrinksEvaluationBitterDto;
 
 	@ApiProperty({
 		description: '은은한 술맛(Mild)/찐한 술맛(Strong) 각각의 리뷰 개수',
 	})
-	is_strong: DrinksEvaluationStrongDto;
+	isStrong: DrinksEvaluationStrongDto;
 
 	@ApiProperty({
 		description: '부드러운 목넘김(Smooth)/화끈거리는 목넘김(Burning) 각각의 리뷰 개수',
 	})
-	is_burning: DrinksEvaluationBurningDto;
+	isBurning: DrinksEvaluationBurningDto;
 
 	@ApiProperty({
 		description: '가장 많이 답한 이 술의 느낌들과 각 비율 (최대 3가지)',
@@ -48,10 +48,10 @@ export class DrinksEvaluationReseponseDto {
 
 	constructor() {
 		this.situation = [];
-		this.is_heavy = new DrinksEvaluationHeavyDto();
-		this.is_bitter = new DrinksEvaluationBitterDto();
-		this.is_strong = new DrinksEvaluationStrongDto();
-		this.is_burning = new DrinksEvaluationBurningDto();
+		this.isHeavy = new DrinksEvaluationHeavyDto();
+		this.isBitter = new DrinksEvaluationBitterDto();
+		this.isStrong = new DrinksEvaluationStrongDto();
+		this.isBurning = new DrinksEvaluationBurningDto();
 
 		this.taste = [];
 		this.pairing = [];

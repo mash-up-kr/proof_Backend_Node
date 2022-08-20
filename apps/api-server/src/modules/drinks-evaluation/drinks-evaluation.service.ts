@@ -18,15 +18,14 @@ export class DrinksEvaluationService {
 		try {
 			const drink = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select(`(drink.review_result)::JSONB AS review_result`)
 				.where('drink.id = :id', { id: drinkId })
-				.getRawOne();
+				.getOne();
 
 			if (!drink) throw new BadRequestException('존재하지 않는 술입니다.');
-			if (!drink.review_result.has_review) return { result: null };
+			if (!drink.reviewResult.hasReview) return { result: null };
 
 			const result = new DrinksEvaluationReseponseDto();
-			const reviewResult = drink.review_result;
+			const reviewResult = drink.reviewResult;
 
 			// max key 구하기
 			const weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
@@ -40,10 +39,10 @@ export class DrinksEvaluationService {
 			}
 
 			// 각 개수 구하기
-			result.is_heavy = reviewResult.is_heavy;
-			result.is_bitter = reviewResult.is_bitter;
-			result.is_strong = reviewResult.is_strong;
-			result.is_burning = reviewResult.is_burning;
+			result.isHeavy = reviewResult.isHeavy;
+			result.isBitter = reviewResult.isBitter;
+			result.isStrong = reviewResult.isStrong;
+			result.isBurning = reviewResult.isBurning;
 
 			// taste 상위 세개 (전체 리뷰 개수 필요 - 합)
 			const tasteResult = reviewResult.taste;
@@ -75,12 +74,12 @@ export class DrinksEvaluationService {
 		let reviewNum = 0;
 		let tastes = [];
 
-		Object.entries(reviewResultObject).forEach(([taste_name, percent]) => {
+		Object.entries(reviewResultObject).forEach(([tasteName, percent]) => {
 			reviewNum += percent as number;
 			if (percent > 0)
 				tastes.push(
 					new DrinksEvaluationTasteDto({
-						taste_name,
+						tasteName,
 						percent,
 					}),
 				);
@@ -96,7 +95,7 @@ export class DrinksEvaluationService {
 	}
 
 	private findTopPairings(reviewResultObject: any, pairings: any): any {
-		let sortedPairingResult = Object.entries(reviewResultObject).filter(([pairing_name, value]) => value > 0);
+		let sortedPairingResult = Object.entries(reviewResultObject).filter(([pairingName, value]) => value > 0);
 
 		sortedPairingResult.sort((a, b) => {
 			return (b[1] as number) - (a[1] as number);

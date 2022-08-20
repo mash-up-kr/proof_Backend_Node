@@ -29,7 +29,7 @@ export class AuthService {
 
 	async createKakaoUser(kakaoUserData: KakaoUserDto): Promise<UserResponseDto> {
 		let kakaoUser = await this.usersRepository.findOne({
-			where: { social_id: kakaoUserData.kakaoId },
+			where: { socialId: kakaoUserData.kakaoId },
 			relations: ['profile'],
 		});
 
@@ -41,8 +41,8 @@ export class AuthService {
 			const defaultUserProfile = await this.usersProfileRepository
 				.createQueryBuilder('users_profile')
 				.select(['users_profile.id', 'users_profile.image_url'])
-				.where('users_profile.image_url = :image_url', {
-					image_url: DEFAULT_USER_PROFILE,
+				.where('users_profile.image_url = :imageUrl', {
+					imageUrl: DEFAULT_USER_PROFILE,
 				})
 				.getOne();
 
@@ -50,7 +50,7 @@ export class AuthService {
 				name: kakaoUserData.name,
 				nickname: kakaoUserData.name,
 				email: kakaoUserData.email,
-				social_id: kakaoUserData.kakaoId,
+				socialId: kakaoUserData.kakaoId, //TODO:
 				type: userType,
 				profile: defaultUserProfile,
 			});

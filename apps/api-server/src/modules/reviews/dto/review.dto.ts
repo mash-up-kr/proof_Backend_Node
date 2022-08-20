@@ -19,19 +19,19 @@ export class ReviewDto {
 	@ApiProperty({
 		description: 'The answer of 가벼워요(Light)/무거워요(Heavy) 1~3 부턴 light, 4~6 부턴 heavy',
 	})
-	is_heavy: string;
+	isHeavy: string;
 
 	@ApiProperty({ description: 'The answer of 달아요(Sweet)/써요(Bitter) 1~3 부턴 sweet, 4~6 부턴 bitter' })
-	is_bitter: string;
+	isBitter: string;
 
 	@ApiProperty({ description: 'The answer of 은은한 술맛(Mild)/찐한 술맛(Strong) 1~3 부턴 mild, 4~6 부턴 strong' })
-	is_strong: string;
+	isStrong: string;
 
 	@ApiProperty({
 		description:
 			'The answer of 부드러운 목넘김(Smooth)/화끈거리는 목넘김(Burning) 1~3 부턴 smooth, 4~6 부턴 burning',
 	})
-	is_burning: string;
+	isBurning: string;
 
 	@ApiProperty({ description: 'The answer of 이 술은 어떤 느낌이었나요?' })
 	taste: string;
@@ -42,10 +42,10 @@ export class ReviewDto {
 		this.mood = args.mood;
 		this.weather = args.weather;
 		this.time = args.time;
-		this.is_heavy = args.is_heavy;
-		this.is_bitter = args.is_bitter;
-		this.is_strong = args.is_strong;
-		this.is_burning = args.is_burning;
+		this.isHeavy = args.isHeavy;
+		this.isBitter = args.isBitter;
+		this.isStrong = args.isStrong;
+		this.isBurning = args.isBurning;
 		this.taste = args.taste;
 	}
 }
