@@ -6,6 +6,7 @@ import { UserType } from '@src/types/users.types';
 import { CommonEntity } from './common.entity';
 import { Review } from './reviews.entity';
 import { UsersProfile } from './users-profile.entity';
+import { WorldcupResult } from './worldcup-result.entity';
 
 @Entity()
 export class User extends CommonEntity {
@@ -45,4 +46,6 @@ export class User extends CommonEntity {
 
 	@ManyToOne(() => UsersProfile, (userProfile) => userProfile.users, { nullable: false })
 	profile: UsersProfile;
+
+	worldcupResults: WorldcupResult[];
 }

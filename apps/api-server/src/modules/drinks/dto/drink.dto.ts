@@ -47,6 +47,10 @@ export class DrinkDto {
 	@IsEnum(Category)
 	category: Pick<DrinksCategory, 'name'>;
 
+	@ApiProperty({ description: '월드컵 우승 횟수' })
+	@IsNumber()
+	worldcupWinCount?: number;
+
 	constructor({ ...args }) {
 		this.id = args.id;
 		this.createdAt = args.createdAt;
@@ -58,5 +62,7 @@ export class DrinkDto {
 		this.origin = args.origin;
 		this.description = args.description;
 		this.category = args.category;
+
+		this.worldcupWinCount = args.worldcupWinCount;
 	}
 }

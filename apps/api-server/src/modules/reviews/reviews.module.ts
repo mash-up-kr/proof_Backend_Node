@@ -7,11 +7,11 @@ import { ReviewsController } from './reviews.controller';
 import { Review } from '@src/entities/reviews.entity';
 import { User } from '@src/entities/users.entity';
 import { Drink } from '@src/entities/drinks.entity';
-import { DrinksService } from '../drinks/drinks.service';
+import { DrinksModule } from '../drinks/drinks.module';
 
 @Module({
-	imports: [TypeOrmModule.forFeature([Review, User, Drink])],
+	imports: [DrinksModule, TypeOrmModule.forFeature([Review, User, Drink])],
 	controllers: [ReviewsController],
-	providers: [ReviewsService, DrinksService],
+	providers: [ReviewsService],
 })
 export class ReviewsModule {}

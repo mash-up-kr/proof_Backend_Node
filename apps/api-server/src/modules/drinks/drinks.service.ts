@@ -6,12 +6,14 @@ import { Repository } from 'typeorm';
 import { Drink } from '@src/entities/drinks.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
 import { DrinkDto } from './dto/drink.dto';
+import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 
 @Injectable()
 export class DrinksService {
 	constructor(
-		@InjectRepository(Drink)
-		private readonly drinkRepository: Repository<Drink>,
+		@InjectRepository(Drink) private readonly drinkRepository: Repository<Drink>,
+		@InjectRepository(WorldcupResultItem)
+		private readonly worldcupResultItemRepository: Repository<WorldcupResultItem>,
 	) {}
 
 	// TODO
@@ -43,7 +45,11 @@ export class DrinksService {
 			if (!drink) {
 				throw new BadRequestException();
 			}
-			return drink;
+
+			const drinkDto = new DrinkDto(drink);
+			drinkDto.worldcupWinCount = await this.worldcupResultItemRepository.countBy({ drinkId: id, rankLevel: 0 });
+
+			return drinkDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -88,6 +94,23 @@ export class DrinksService {
 				.limit(1)
 				.getOne();
 			return randomDrink;
+    } catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
+  
+	public async findDrinksToRecommend(): Promise<DrinkDto[]> {
+		try {
+			const drinksToRecommend = await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select('drink.*, category.name as category, COUNT(*) as review_count')
+				.leftJoin('drink.reviews', 'review')
+				.leftJoin('drink.category', 'category')
+				.groupBy('drink.id, category.name')
+				.orderBy('review_count', 'DESC')
+				.limit(5)
+				.getRawMany();
+			return drinksToRecommend.map((drink) => new DrinkDto(drink));
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
