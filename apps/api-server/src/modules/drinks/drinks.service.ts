@@ -75,7 +75,6 @@ export class DrinksService {
 		page = 0,
 		length = 30,
 	): Promise<{ totalPageCount: number; list: DrinkCardResponseDto[] }> {
-		// TODO: main situation 추가해야함.
 		try {
 			let queryBuilder = this.drinkRepository
 				.createQueryBuilder('drink')
@@ -96,7 +95,11 @@ export class DrinksService {
 
 			return {
 				totalPageCount: totalPageCount,
-				list: drinksByCategory.map((drink) => new DrinkCardResponseDto(drink)),
+				list: drinksByCategory.map((drink) => {
+					const drinkDto = new DrinkCardResponseDto(drink);
+					drinkDto.situation = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+					return drinkDto;
+				}),
 			};
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
@@ -104,7 +107,6 @@ export class DrinksService {
 	}
 
 	public async getRandomDrink(): Promise<DrinkCardResponseDto> {
-		// TODO: main situation 추가해야함.
 		try {
 			const randomDrink = await this.drinkRepository
 				.createQueryBuilder('drink')
@@ -130,7 +132,11 @@ export class DrinksService {
 				.orderBy('review_count', 'DESC')
 				.limit(5)
 				.getRawMany();
-			return drinksToRecommend.map((drink) => new DrinkCardResponseDto(drink));
+			return drinksToRecommend.map((drink) => {
+				const drinkDto = new DrinkCardResponseDto(drink);
+				drinkDto.situation = this.drinksEvaluationService.findMainSituations(drink.review_result);
+				return drinkDto;
+			});
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
