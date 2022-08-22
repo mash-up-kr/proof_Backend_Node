@@ -7,7 +7,7 @@ export class DrinkCardResponseDto extends OmitType(DrinkDto, ['description'] as 
 		description:
 			'가장 많이 답한 이 술을 마셨을 때의 상황 (날씨, 시간, 함께 마신 사람, 분위기, spot(1,2,3차)) (spot이 없다면 array길이=4)',
 	})
-	situation?: string[];
+	tags?: string[];
 
 	constructor({ ...args }) {
 		super();
@@ -18,6 +18,6 @@ export class DrinkCardResponseDto extends OmitType(DrinkDto, ['description'] as 
 		this.origin = args.origin;
 		this.category = args.category.name || args.category;
 
-		this.situation = args.situation;
+		this.tags = args.tags;
 	}
 }

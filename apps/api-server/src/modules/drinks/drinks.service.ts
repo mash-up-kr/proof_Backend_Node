@@ -35,7 +35,7 @@ export class DrinksService {
 
 			const drinksDto = drinks.map((drink) => {
 				const drinkDto = new DrinkCardResponseDto(drink);
-				drinkDto.situation = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
 				return drinkDto;
 			});
 
@@ -97,7 +97,7 @@ export class DrinksService {
 				totalPageCount: totalPageCount,
 				list: drinksByCategory.map((drink) => {
 					const drinkDto = new DrinkCardResponseDto(drink);
-					drinkDto.situation = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+					drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
 					return drinkDto;
 				}),
 			};
@@ -134,7 +134,7 @@ export class DrinksService {
 				.getRawMany();
 			return drinksToRecommend.map((drink) => {
 				const drinkDto = new DrinkCardResponseDto(drink);
-				drinkDto.situation = this.drinksEvaluationService.findMainSituations(drink.review_result);
+				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.review_result);
 				return drinkDto;
 			});
 		} catch (error) {
