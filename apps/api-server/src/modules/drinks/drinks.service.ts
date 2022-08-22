@@ -8,10 +8,12 @@ import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
 import { DrinkCardResponseDto } from './dto/drink-card-response.dto';
 import { DrinkDto } from './dto/drink.dto';
+import { DrinksEvaluationService } from '@src/modules/drinks-evaluation/drinks-evaluation.service';
 
 @Injectable()
 export class DrinksService {
 	constructor(
+		private readonly drinksEvaluationService: DrinksEvaluationService,
 		@InjectRepository(Drink) private readonly drinkRepository: Repository<Drink>,
 		@InjectRepository(WorldcupResultItem)
 		private readonly worldcupResultItemRepository: Repository<WorldcupResultItem>,
@@ -31,7 +33,13 @@ export class DrinksService {
 				.orderBy('drink.createdAt', 'DESC')
 				.getMany();
 
-			return drinks.map((drink) => new DrinkCardResponseDto(drink));
+			const drinksDto = drinks.map((drink) => {
+				const drinkDto = new DrinkCardResponseDto(drink);
+				drinkDto.situation = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+				return drinkDto;
+			});
+
+			return drinksDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -67,6 +75,7 @@ export class DrinksService {
 		page = 0,
 		length = 30,
 	): Promise<{ totalPageCount: number; list: DrinkCardResponseDto[] }> {
+		// TODO: main situation 추가해야함.
 		try {
 			let queryBuilder = this.drinkRepository
 				.createQueryBuilder('drink')
@@ -95,6 +104,7 @@ export class DrinksService {
 	}
 
 	public async getRandomDrink(): Promise<DrinkCardResponseDto> {
+		// TODO: main situation 추가해야함.
 		try {
 			const randomDrink = await this.drinkRepository
 				.createQueryBuilder('drink')

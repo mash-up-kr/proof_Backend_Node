@@ -6,6 +6,7 @@ import { Drink } from '@src/entities/drinks.entity';
 import { Companion, Mood, ReviewResultItem, Spot, Time, Weather } from '@src/types/reviews.types';
 import { DrinksEvaluationReseponseDto } from './dto/drinks-evaluation-response.dto';
 import { DrinksEvaluationTasteDto } from './dto/drinks-evaluation-taste.dto';
+import { DrinkReviewResultDto } from '../drinks/dto/drink-review-result.dto';
 
 @Injectable()
 export class DrinksEvaluationService {
@@ -28,15 +29,7 @@ export class DrinksEvaluationService {
 			const reviewResult = drink.reviewResult;
 
 			// max key 구하기
-			const weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
-			const time = this.findMaxValuesKey(reviewResult.time) as Time;
-			const companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
-			const mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
-			result.situation.push(weather, time, companion, mood);
-			if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0) {
-				const spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
-				result.situation.push(spot);
-			}
+			result.situation = this.findMainSituations(reviewResult);
 
 			// 각 개수 구하기
 			result.isHeavy = reviewResult.isHeavy;
@@ -104,5 +97,26 @@ export class DrinksEvaluationService {
 		for (const item of sortedPairingResult) {
 			pairings.push(item[0]);
 		}
+	}
+
+	findMainSituations(reviewResult: DrinkReviewResultDto): (Weather | Time | Companion | Mood | Spot)[] {
+		const result = [];
+
+		if (!reviewResult.hasReview) {
+			return result;
+		}
+
+		const weather = this.findMaxValuesKey(reviewResult.weather) as Weather;
+		const time = this.findMaxValuesKey(reviewResult.time) as Time;
+		const companion = this.findMaxValuesKey(reviewResult.companion) as Companion;
+		const mood = this.findMaxValuesKey(reviewResult.mood) as Mood;
+
+		result.push(weather, time, companion, mood);
+
+		if (reviewResult.spot['1'] !== 0 || reviewResult.spot['2'] !== 0 || reviewResult.spot['3'] !== 0) {
+			const spot = this.findMaxValuesKey(reviewResult.spot) as Spot;
+			result.push(spot);
+		}
+		return result;
 	}
 }
