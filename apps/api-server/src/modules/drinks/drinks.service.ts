@@ -126,12 +126,12 @@ export class DrinksService {
 			const drinksToRecommend = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(
-					'drink.*, drink.review_result as "reviewResult", category.name as category, COUNT(*) as review_count',
+					'drink.*, drink.review_result as "reviewResult", category.name as category, COUNT(*) as "reviewCount"',
 				)
 				.leftJoin('drink.reviews', 'review')
 				.leftJoin('drink.category', 'category')
 				.groupBy('drink.id, category.name')
-				.orderBy('review_count', 'DESC')
+				.orderBy('"reviewCount"', 'DESC')
 				.limit(5)
 				.getRawMany();
 			return drinksToRecommend.map((drink) => {
