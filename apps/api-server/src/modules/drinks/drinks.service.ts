@@ -8,10 +8,12 @@ import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
 import { DrinkCardResponseDto } from './dto/drink-card-response.dto';
 import { DrinkDto } from './dto/drink.dto';
+import { DrinksEvaluationService } from '@src/modules/drinks-evaluation/drinks-evaluation.service';
 
 @Injectable()
 export class DrinksService {
 	constructor(
+		private readonly drinksEvaluationService: DrinksEvaluationService,
 		@InjectRepository(Drink) private readonly drinkRepository: Repository<Drink>,
 		@InjectRepository(WorldcupResultItem)
 		private readonly worldcupResultItemRepository: Repository<WorldcupResultItem>,
@@ -31,7 +33,13 @@ export class DrinksService {
 				.orderBy('drink.createdAt', 'DESC')
 				.getMany();
 
-			return drinks.map((drink) => new DrinkCardResponseDto(drink));
+			const drinksDto = drinks.map((drink) => {
+				const drinkDto = new DrinkCardResponseDto(drink);
+				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+				return drinkDto;
+			});
+
+			return drinksDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -87,7 +95,11 @@ export class DrinksService {
 
 			return {
 				totalPageCount: totalPageCount,
-				list: drinksByCategory.map((drink) => new DrinkCardResponseDto(drink)),
+				list: drinksByCategory.map((drink) => {
+					const drinkDto = new DrinkCardResponseDto(drink);
+					drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+					return drinkDto;
+				}),
 			};
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
@@ -113,14 +125,20 @@ export class DrinksService {
 		try {
 			const drinksToRecommend = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select('drink.*, category.name as category, COUNT(*) as review_count')
+				.select(
+					'drink.*, drink.review_result as "reviewResult", category.name as category, COUNT(*) as "reviewCount"',
+				)
 				.leftJoin('drink.reviews', 'review')
 				.leftJoin('drink.category', 'category')
 				.groupBy('drink.id, category.name')
-				.orderBy('review_count', 'DESC')
+				.orderBy('"reviewCount"', 'DESC')
 				.limit(5)
 				.getRawMany();
-			return drinksToRecommend.map((drink) => new DrinkCardResponseDto(drink));
+			return drinksToRecommend.map((drink) => {
+				const drinkDto = new DrinkCardResponseDto(drink);
+				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+				return drinkDto;
+			});
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
