@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { BadRequestException, ConsoleLogger, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
@@ -39,6 +39,7 @@ export class WorldcupService {
 
 			result[worldcup.withWhoCode].push({
 				wolrdcupId: worldcup.id,
+				title: worldcup.title,
 				situation: {
 					code: worldcup.situationCode,
 					title: worldcup.situationTitle,
@@ -96,7 +97,6 @@ export class WorldcupService {
 		await this.worldcupResultItemRepository.save(worldcupResultItems);
 	}
 
-	//@TODO: 현재는 한 월드컵에 내가 여러번 참여해도 참여자 수가 하나로만 카운트 됌
 	async getParticipatedWorldcup(userId: number) {
 		const worldcupResults = await this.worldcupResultRepository
 			.createQueryBuilder('worldcup_result')

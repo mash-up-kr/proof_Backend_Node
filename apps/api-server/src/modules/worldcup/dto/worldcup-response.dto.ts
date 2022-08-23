@@ -26,7 +26,7 @@ export class WorldcupReseponseDto {
 	constructor(worldcup) {
 		this.id = worldcup.id;
 		this.title = worldcup.title;
-		this.imageUrl = worldcup.image_url;
+		this.imageUrl = worldcup.imageUrl;
 		this.withWho = {
 			code: worldcup.withWhoCode,
 			content: worldcup.withWhoContent,

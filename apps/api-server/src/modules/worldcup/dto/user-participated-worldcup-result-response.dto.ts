@@ -19,6 +19,7 @@ export class UserParticipatedWorldcupResultDto {
 		this.worldcup = new WorldcupReseponseDto({
 			id: worldcupResult.worldcup_id,
 			title: `${worldcupResult.worldcup_situation_content} 날 마시고 싶은 술은?`,
+			imageUrl: worldcupResult.worldcup_image_url,
 			withWhoCode: worldcupResult.worldcup_with_who_code,
 			withWhoContent: worldcupResult.worldcup_with_who_content,
 			withWhoTitle: worldcupResult.worldcup_with_who_title,

@@ -5,6 +5,9 @@ class WorldcupBySituation {
 	@ApiProperty({ description: '월드컵 id' })
 	worldcupId: number;
 
+	@ApiProperty({ description: '월드컵 제목' })
+	title: string;
+
 	@ApiProperty({ description: 'situation 데이터' })
 	situation: WorldcupConditionDto;
 }
