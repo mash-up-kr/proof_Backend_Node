@@ -11,6 +11,8 @@ import { UserParticipatedWorldcupResultDto } from './dto/user-participated-world
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
 import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
+import { unknownObject } from '@src/types/common.types';
+import { WorldcupByWithWhoResponseDto } from './dto/worldcup-by-with-who-response.dto';
 
 @Injectable()
 export class WorldcupService {
@@ -25,6 +27,29 @@ export class WorldcupService {
 	async getWorldcups(): Promise<WorldcupReseponseDto[]> {
 		const worldcups = await this.worldcupRepository.find();
 		return worldcups.map((worldcup) => new WorldcupReseponseDto(worldcup));
+	}
+
+	async getWorldcupsByWithWho(): Promise<WorldcupByWithWhoResponseDto> {
+		const worldcups = await this.worldcupRepository.find();
+
+		const worldcupByWithWho = worldcups.reduce((result: unknownObject, worldcup: any) => {
+			if (!result.hasOwnProperty(worldcup.withWhoCode)) {
+				result[worldcup.withWhoCode] = [];
+			}
+
+			result[worldcup.withWhoCode].push({
+				wolrdcupId: worldcup.id,
+				situation: {
+					code: worldcup.situationCode,
+					title: worldcup.situationTitle,
+					content: worldcup.situationContent,
+				},
+			});
+
+			return result;
+		}, {}) as WorldcupByWithWhoResponseDto;
+
+		return worldcupByWithWho;
 	}
 
 	async getPopularWorldcup(): Promise<WorldcupWithParticipantCountReseponseDto[]> {
