@@ -125,7 +125,9 @@ export class DrinksService {
 		try {
 			const drinksToRecommend = await this.drinkRepository
 				.createQueryBuilder('drink')
-				.select('drink.*, category.name as category, COUNT(*) as review_count')
+				.select(
+					'drink.*, drink.review_result as "reviewResult", category.name as category, COUNT(*) as review_count',
+				)
 				.leftJoin('drink.reviews', 'review')
 				.leftJoin('drink.category', 'category')
 				.groupBy('drink.id, category.name')
@@ -134,7 +136,7 @@ export class DrinksService {
 				.getRawMany();
 			return drinksToRecommend.map((drink) => {
 				const drinkDto = new DrinkCardResponseDto(drink);
-				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.review_result);
+				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
 				return drinkDto;
 			});
 		} catch (error) {
