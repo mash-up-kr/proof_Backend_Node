@@ -7,6 +7,9 @@ export type NodeEnv = 'dev' | 'integ' | 'test' | 'prod';
 export type AppConfig = {
 	env: NodeEnv;
 	listeningPort: number;
+	cors: {
+		origin: string[] | true; // TODO: Change to false after origins are fixed.
+	};
 };
 
 export type DatabaseConfig = {
@@ -33,6 +36,9 @@ export const appConfig = (): { appConfig: AppConfig } => ({
 	appConfig: {
 		env: process.env.NODE_ENV as NodeEnv,
 		listeningPort: +process.env.PORT || 3000,
+		cors: {
+			origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : true, // TODO: Change to false after origins are fixed.
+		},
 	},
 });
 
