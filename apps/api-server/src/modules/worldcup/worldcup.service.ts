@@ -10,7 +10,6 @@ import { Worldcup } from '@src/entities/worldcup.entity';
 import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
-import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
 import { unknownObject } from '@src/types/common.types';
 import { WorldcupByWithWhoResponseDto } from './dto/worldcup-by-with-who-response.dto';
 
@@ -53,16 +52,29 @@ export class WorldcupService {
 		return worldcupByWithWho;
 	}
 
-	async getPopularWorldcup(): Promise<WorldcupWithParticipantCountReseponseDto[]> {
+	async getPopularWorldcup(): Promise<WorldcupReseponseDto[]> {
 		const worldcups = await this.worldcupResultRepository
 			.createQueryBuilder('worldcupResult')
-			.select('worldcup.*, COUNT(*) as participant_count')
+			.select(
+				`
+				worldcup.id,
+				worldcup.title,
+				worldcup.image_url as "imageUrl",
+				worldcup.with_who_code as "withWhoCode",
+				worldcup.with_who_content as "withWhoContent",
+				worldcup.with_who_title as "withWhoTitle",
+				worldcup.situation_code as "situationCode",
+				worldcup.situation_content as "situationContent",
+				worldcup.situation_title as "situationTitle",
+				worldcup.round,
+				COUNT(*) as "participantCount"`,
+			)
 			.leftJoin('worldcupResult.worldcup', 'worldcup')
 			.groupBy('worldcup.id')
-			.orderBy('participant_count', 'DESC')
+			.orderBy('"participantCount"', 'DESC')
 			.getRawMany();
 
-		return worldcups.map((worldcup) => new WorldcupWithParticipantCountReseponseDto(worldcup));
+		return worldcups.map((worldcup) => new WorldcupReseponseDto(worldcup));
 	}
 
 	async getWorldcupById(id: number): Promise<WorldcupReseponseDto> {
@@ -100,7 +112,21 @@ export class WorldcupService {
 	async getParticipatedWorldcup(userId: number) {
 		const worldcupResults = await this.worldcupResultRepository
 			.createQueryBuilder('worldcup_result')
-			.select('worldcup_result.*')
+			.select(
+				`
+				worldcup.id as "worldcupId",
+				worldcup.title as "worldcupTitle",
+				worldcup.image_url as "worldcupImageUrl",
+				worldcup.with_who_code as "worldcupWithWhoCode",
+				worldcup.with_who_content as "worldcupWithWhoContent",
+				worldcup.with_who_title as "worldcupWithWhoTitle",
+				worldcup.situation_code as "worldcupSituationCode",
+				worldcup.situation_content as "worldcupSituationContent",
+				worldcup.situation_title as "worldcupSituationTitle",
+				worldcup.round as "worldcupRound",
+				"participantCount"
+			`,
+			)
 			.leftJoinAndSelect(
 				`(${this.#getWorldcupParticipantCountQuery()})`,
 				'worldcup_group',
@@ -147,7 +173,7 @@ export class WorldcupService {
 	#getWorldcupParticipantCountQuery() {
 		return this.worldcupResultRepository
 			.createQueryBuilder('worldcup_result')
-			.select('worldcup_id as id, COUNT(*) as participant_count')
+			.select('worldcup_id as id, COUNT(*) as "participantCount"')
 			.groupBy('worldcup_result.worldcup_id')
 			.getQuery();
 	}
