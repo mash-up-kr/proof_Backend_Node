@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { BadRequestException, ConsoleLogger, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repository } from 'typeorm';
@@ -10,7 +10,8 @@ import { Worldcup } from '@src/entities/worldcup.entity';
 import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
-import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
+import { unknownObject } from '@src/types/common.types';
+import { WorldcupByWithWhoResponseDto } from './dto/worldcup-by-with-who-response.dto';
 
 @Injectable()
 export class WorldcupService {
@@ -27,16 +28,53 @@ export class WorldcupService {
 		return worldcups.map((worldcup) => new WorldcupReseponseDto(worldcup));
 	}
 
-	async getPopularWorldcup(): Promise<WorldcupWithParticipantCountReseponseDto[]> {
+	async getWorldcupsByWithWho(): Promise<WorldcupByWithWhoResponseDto> {
+		const worldcups = await this.worldcupRepository.find();
+
+		const worldcupByWithWho = worldcups.reduce((result: unknownObject, worldcup: any) => {
+			if (!result.hasOwnProperty(worldcup.withWhoCode)) {
+				result[worldcup.withWhoCode] = [];
+			}
+
+			result[worldcup.withWhoCode].push({
+				wolrdcupId: worldcup.id,
+				title: worldcup.title,
+				situation: {
+					code: worldcup.situationCode,
+					title: worldcup.situationTitle,
+					content: worldcup.situationContent,
+				},
+			});
+
+			return result;
+		}, {}) as WorldcupByWithWhoResponseDto;
+
+		return worldcupByWithWho;
+	}
+
+	async getPopularWorldcup(): Promise<WorldcupReseponseDto[]> {
 		const worldcups = await this.worldcupResultRepository
 			.createQueryBuilder('worldcupResult')
-			.select('worldcup.*, COUNT(*) as participant_count')
+			.select(
+				`
+				worldcup.id,
+				worldcup.title,
+				worldcup.image_url as "imageUrl",
+				worldcup.with_who_code as "withWhoCode",
+				worldcup.with_who_content as "withWhoContent",
+				worldcup.with_who_title as "withWhoTitle",
+				worldcup.situation_code as "situationCode",
+				worldcup.situation_content as "situationContent",
+				worldcup.situation_title as "situationTitle",
+				worldcup.round,
+				COUNT(*) as "participantCount"`,
+			)
 			.leftJoin('worldcupResult.worldcup', 'worldcup')
 			.groupBy('worldcup.id')
-			.orderBy('participant_count', 'DESC')
+			.orderBy('"participantCount"', 'DESC')
 			.getRawMany();
 
-		return worldcups.map((worldcup) => new WorldcupWithParticipantCountReseponseDto(worldcup));
+		return worldcups.map((worldcup) => new WorldcupReseponseDto(worldcup));
 	}
 
 	async getWorldcupById(id: number): Promise<WorldcupReseponseDto> {
@@ -71,11 +109,24 @@ export class WorldcupService {
 		await this.worldcupResultItemRepository.save(worldcupResultItems);
 	}
 
-	//@TODO: 현재는 한 월드컵에 내가 여러번 참여해도 참여자 수가 하나로만 카운트 됌
 	async getParticipatedWorldcup(userId: number) {
 		const worldcupResults = await this.worldcupResultRepository
 			.createQueryBuilder('worldcup_result')
-			.select('worldcup_result.*')
+			.select(
+				`
+				worldcup.id as "worldcupId",
+				worldcup.title as "worldcupTitle",
+				worldcup.image_url as "worldcupImageUrl",
+				worldcup.with_who_code as "worldcupWithWhoCode",
+				worldcup.with_who_content as "worldcupWithWhoContent",
+				worldcup.with_who_title as "worldcupWithWhoTitle",
+				worldcup.situation_code as "worldcupSituationCode",
+				worldcup.situation_content as "worldcupSituationContent",
+				worldcup.situation_title as "worldcupSituationTitle",
+				worldcup.round as "worldcupRound",
+				"participantCount"
+			`,
+			)
 			.leftJoinAndSelect(
 				`(${this.#getWorldcupParticipantCountQuery()})`,
 				'worldcup_group',
@@ -122,7 +173,7 @@ export class WorldcupService {
 	#getWorldcupParticipantCountQuery() {
 		return this.worldcupResultRepository
 			.createQueryBuilder('worldcup_result')
-			.select('worldcup_id as id, COUNT(*) as participant_count')
+			.select('worldcup_id as id, COUNT(*) as "participantCount"')
 			.groupBy('worldcup_result.worldcup_id')
 			.getQuery();
 	}
