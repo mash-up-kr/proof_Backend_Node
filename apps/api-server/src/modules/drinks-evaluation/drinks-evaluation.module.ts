@@ -8,5 +8,6 @@ import { DrinksEvaluationService } from './drinks-evaluation.service';
 	imports: [TypeOrmModule.forFeature([Drink])],
 	controllers: [DrinksEvaluationController],
 	providers: [DrinksEvaluationService],
+	exports: [DrinksEvaluationService],
 })
 export class DrinksEvaluationModule {}

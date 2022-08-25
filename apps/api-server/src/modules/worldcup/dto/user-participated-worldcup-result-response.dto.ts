@@ -17,16 +17,17 @@ export class UserParticipatedWorldcupResultDto {
 		this.winnerDrinkId = worldcupResult.winnerDrinkId;
 
 		this.worldcup = new WorldcupReseponseDto({
-			id: worldcupResult.worldcup_id,
-			title: `${worldcupResult.worldcup_situation_content} 날 마시고 싶은 술은?`,
-			withWhoCode: worldcupResult.worldcup_with_who_code,
-			withWhoContent: worldcupResult.worldcup_with_who_content,
-			withWhoTitle: worldcupResult.worldcup_with_who_title,
-			situationCode: worldcupResult.worldcup_situation_code,
-			situationContent: worldcupResult.worldcup_situation_content,
-			situationTitle: worldcupResult.worldcup_situation_title,
-			round: worldcupResult.worldcup_round,
-			participantCount: +worldcupResult.participant_count,
+			id: worldcupResult.worldcupId,
+			title: worldcupResult.worldcupTitle,
+			imageUrl: worldcupResult.worldcupImageUrl,
+			withWhoCode: worldcupResult.worldcupWithWhoCode,
+			withWhoContent: worldcupResult.worldcupWithWhoContent,
+			withWhoTitle: worldcupResult.worldcupWithWhoTitle,
+			situationCode: worldcupResult.worldcupSituationCode,
+			situationContent: worldcupResult.worldcupSituationContent,
+			situationTitle: worldcupResult.worldcupSituationTitle,
+			round: worldcupResult.worldcupRound,
+			participantCount: +worldcupResult.participantCount,
 		});
 	}
 }

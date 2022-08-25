@@ -1,12 +1,11 @@
 import { applyDecorators } from '@nestjs/common';
 import { ApiBearerAuth, ApiBody, ApiOperation, ApiParam, ApiQuery, ApiResponse } from '@nestjs/swagger';
 import { SwaggerMethodDoc } from '@src/swagger/swagger-method-doc-type';
-import { number } from 'joi';
 import { SubmitWorldcupRequestDto } from './dto/submit-worldcup-request.dto';
 import { UserParticipatedWorldcupResultDto } from './dto/user-participated-worldcup-result-response.dto';
+import { WorldcupByWithWhoResponseDto } from './dto/worldcup-by-with-who-response.dto';
 import { WorldcupItemReseponseDto } from './dto/worldcup-item-response.dto';
 import { WorldcupReseponseDto } from './dto/worldcup-response.dto';
-import { WorldcupWithParticipantCountReseponseDto } from './dto/worldcup-with-participant-count-response.dto';
 import { WorldcupController } from './worldcup.controller';
 
 export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
@@ -24,6 +23,20 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiBearerAuth('Authorization'),
 		);
 	},
+	getWorldcupsByWithWho(summary: string) {
+		return applyDecorators(
+			ApiOperation({
+				summary,
+				description: '전체 월드컵 조회 - withWho별로 월드컵 데이터 묶어서 반환',
+			}),
+			ApiResponse({
+				status: 200,
+				description: '',
+				type: WorldcupByWithWhoResponseDto,
+			}),
+			ApiBearerAuth('Authorization'),
+		);
+	},
 	getPopularWorldcup(summary: string) {
 		return applyDecorators(
 			ApiOperation({
@@ -33,7 +46,7 @@ export const ApiDocs: SwaggerMethodDoc<WorldcupController> = {
 			ApiResponse({
 				status: 200,
 				description: '',
-				type: [WorldcupWithParticipantCountReseponseDto],
+				type: [WorldcupReseponseDto],
 			}),
 			ApiBearerAuth('Authorization'),
 		);

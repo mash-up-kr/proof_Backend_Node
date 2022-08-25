@@ -19,6 +19,13 @@ export class WorldcupController {
 		return worldcups;
 	}
 
+	@Get('/with-who')
+	@ApiDocs.getWorldcupsByWithWho('전체 월드컵 조회 - withWho별로 월드컵 데이터 묶어서 반환')
+	async getWorldcupsByWithWho() {
+		const worldcups = await this.worldcupService.getWorldcupsByWithWho();
+		return worldcups;
+	}
+
 	@Get('/popular')
 	@ApiDocs.getPopularWorldcup('현재 인기 있는 월드컵 조회')
 	async getPopularWorldcup() {

@@ -1,8 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEnum, IsNumber, IsString } from 'class-validator';
-import { CreateDateColumn, DeleteDateColumn, UpdateDateColumn } from 'typeorm';
 
-import { DrinksCategory } from '@src/entities/drinks-category.entity';
+import { IsEnum, IsNumber, IsString } from 'class-validator';
+
 import { Category } from '@src/types/drinks-category.types';
 
 export class DrinkDto {
@@ -10,23 +9,13 @@ export class DrinkDto {
 	@IsNumber()
 	id: number;
 
-	@ApiProperty({ description: 'Create Date' })
-	@CreateDateColumn({
-		type: 'timestamptz' /* timestamp with time zone. */,
-	})
-	createdAt: Date;
-
-	@ApiProperty({ description: 'Update Date' })
-	@UpdateDateColumn({ type: 'timestamptz' })
-	updatedAt: Date;
-
-	@ApiProperty({ description: 'Delete Date' })
-	@DeleteDateColumn({ type: 'timestamptz' })
-	deletedAt?: Date | null;
-
 	@ApiProperty({ description: '술 이름' })
 	@IsString()
 	name: string;
+
+	@ApiProperty({ description: '술 이미지' })
+	@IsString()
+	imageUrl: string;
 
 	@ApiProperty({ description: '술 도수' })
 	abv: number;
@@ -38,10 +27,6 @@ export class DrinkDto {
 	@ApiProperty({ description: '술 설명' })
 	@IsString()
 	description: string;
-
-	@ApiProperty({ description: '술 이미지' })
-	@IsString()
-	imageUrl: string;
 
 	@ApiProperty({ description: '술 카테고리' })
 	@IsEnum(Category)
@@ -58,7 +43,7 @@ export class DrinkDto {
 	constructor({ ...args }) {
 		this.id = args.id;
 		this.name = args.name;
-		this.imageUrl = args.image_url;
+		this.imageUrl = args.image_url || args.imageUrl;
 		this.abv = args.abv;
 		this.origin = args.origin;
 		this.description = args.description;

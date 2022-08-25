@@ -9,7 +9,7 @@
 			"image": "proof-backend-node-img",
 			"portMappings": [
 				{
-					"hostPort": 3000,
+					"hostPort": 0,
 					"protocol": "tcp",
 					"containerPort": 3000
 				}
