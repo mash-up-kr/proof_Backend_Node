@@ -1,4 +1,5 @@
-import { Module } from '@nestjs/common';
+import { Logger, Module } from '@nestjs/common';
+import { APP_INTERCEPTOR } from '@nestjs/core';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -12,6 +13,7 @@ import { ReviewsModule } from './modules/reviews/reviews.module';
 import { UsersProfileModule } from './modules/users-profile/users-profile.module';
 import { UsersModule } from './modules/users/users.module';
 import { WorldcupModule } from './modules/worldcup/worldcup.module';
+import { LoggingInterceptor } from './interceptors/logging.interceptor';
 
 @Module({
 	imports: [
@@ -27,6 +29,6 @@ import { WorldcupModule } from './modules/worldcup/worldcup.module';
 		DrinksEvaluationModule,
 	],
 	controllers: [AppController],
-	providers: [AppService],
+	providers: [AppService, Logger, { provide: APP_INTERCEPTOR, useClass: LoggingInterceptor }],
 })
 export class AppModule {}
