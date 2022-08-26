@@ -24,6 +24,7 @@ COPY --from=builder --chown=node:node /app/package.json ./
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
 
+WORKDIR /app/dist/apps/api-server/
 EXPOSE 3000
 
-CMD [ "node", "dist/main" ]
+CMD [ "node", "main.js" ]

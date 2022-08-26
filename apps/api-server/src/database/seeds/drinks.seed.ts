@@ -1,12 +1,12 @@
-import { Factory, Seeder } from 'typeorm-seeding';
-import { Connection } from 'typeorm';
+import * as fastcsv from 'fast-csv';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as fastcsv from 'fast-csv';
+import { Connection } from 'typeorm';
+import { Factory, Seeder } from 'typeorm-seeding';
 
-import { Drink } from '../../entities/drinks.entity';
-import { DrinksCategory } from '../../entities/drinks-category.entity';
 import { DrinkData } from '@src/modules/drinks/drinks.types';
+import { DrinksCategory } from '../../entities/drinks-category.entity';
+import { Drink } from '../../entities/drinks.entity';
 
 export default class DrinkSeed implements Seeder {
 	public async run(Factory: Factory, connection: Connection): Promise<void> {
@@ -31,7 +31,7 @@ export default class DrinkSeed implements Seeder {
 						abv: parseFloat(data.abv),
 						origin: data.origin,
 						description: data.description,
-						image_url: data.image_url,
+						imageUrl: data.image_url,
 						category: category[data.category],
 					},
 				);
@@ -41,7 +41,7 @@ export default class DrinkSeed implements Seeder {
 					abv: parseFloat(data.abv),
 					origin: data.origin,
 					description: data.description,
-					image_url: data.image_url,
+					imageUrl: data.image_url,
 					category: category[data.category],
 				});
 			}

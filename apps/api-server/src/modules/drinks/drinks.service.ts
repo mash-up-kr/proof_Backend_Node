@@ -1,17 +1,22 @@
 import { BadRequestException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Repository } from 'typeorm';
+import { Between, Repository } from 'typeorm';
 
 import { Drink } from '@src/entities/drinks.entity';
+import { WorldcupResultItem } from '@src/entities/worldcup-result-item.entity';
 import { CreateDrinkDto } from './dto/create-drink.dto';
+import { DrinkCardResponseDto } from './dto/drink-card-response.dto';
 import { DrinkDto } from './dto/drink.dto';
+import { DrinksEvaluationService } from '@src/modules/drinks-evaluation/drinks-evaluation.service';
 
 @Injectable()
 export class DrinksService {
 	constructor(
-		@InjectRepository(Drink)
-		private readonly drinkRepository: Repository<Drink>,
+		private readonly drinksEvaluationService: DrinksEvaluationService,
+		@InjectRepository(Drink) private readonly drinkRepository: Repository<Drink>,
+		@InjectRepository(WorldcupResultItem)
+		private readonly worldcupResultItemRepository: Repository<WorldcupResultItem>,
 	) {}
 
 	// TODO
@@ -19,14 +24,22 @@ export class DrinksService {
 		return 'This action adds a new drink';
 	}
 
-	public async findAllDrinks(): Promise<Drink[]> {
+	public async findAllDrinks(): Promise<DrinkCardResponseDto[]> {
 		try {
-			return await this.drinkRepository
+			const drinks = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(['drink', 'category.name'])
 				.leftJoin('drink.category', 'category')
 				.orderBy('drink.createdAt', 'DESC')
 				.getMany();
+
+			const drinksDto = drinks.map((drink) => {
+				const drinkDto = new DrinkCardResponseDto(drink);
+				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+				return drinkDto;
+			});
+
+			return drinksDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -43,7 +56,15 @@ export class DrinksService {
 			if (!drink) {
 				throw new BadRequestException();
 			}
-			return drink;
+
+			const drinkDto = new DrinkDto(drink);
+			drinkDto.worldcupWinCount = await this.worldcupResultItemRepository.countBy({ drinkId: id, rankLevel: 0 });
+			drinkDto.worldcupSemiFinalCount = await this.worldcupResultItemRepository.countBy({
+				drinkId: id,
+				rankLevel: Between(1, 2),
+			});
+
+			return drinkDto;
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
@@ -53,7 +74,7 @@ export class DrinksService {
 		category: string,
 		page = 0,
 		length = 30,
-	): Promise<{ totalPageCount: number; list: DrinkDto[] }> {
+	): Promise<{ totalPageCount: number; list: DrinkCardResponseDto[] }> {
 		try {
 			let queryBuilder = this.drinkRepository
 				.createQueryBuilder('drink')
@@ -72,23 +93,67 @@ export class DrinksService {
 				.take(length)
 				.getMany();
 
-			return { totalPageCount: totalPageCount, list: drinksByCategory.map((drink) => new DrinkDto(drink)) };
+			return {
+				totalPageCount: totalPageCount,
+				list: drinksByCategory.map((drink) => {
+					const drinkDto = new DrinkCardResponseDto(drink);
+					drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+					return drinkDto;
+				}),
+			};
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}
 	}
 
-	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkDto[]> {
+	public async getRandomDrink(): Promise<DrinkCardResponseDto> {
+		try {
+			const randomDrink = await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select(['drink', 'category.name'])
+				.leftJoin('drink.category', 'category')
+				.orderBy('RANDOM()')
+				.limit(1)
+				.getOne();
+			return new DrinkCardResponseDto(randomDrink);
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
+
+	public async findDrinksToRecommend(): Promise<DrinkCardResponseDto[]> {
+		try {
+			const drinksToRecommend = await this.drinkRepository
+				.createQueryBuilder('drink')
+				.select(
+					'drink.*, drink.review_result as "reviewResult", category.name as category, COUNT(*) as "reviewCount"',
+				)
+				.leftJoin('drink.reviews', 'review')
+				.leftJoin('drink.category', 'category')
+				.groupBy('drink.id, category.name')
+				.orderBy('"reviewCount"', 'DESC')
+				.limit(5)
+				.getRawMany();
+			return drinksToRecommend.map((drink) => {
+				const drinkDto = new DrinkCardResponseDto(drink);
+				drinkDto.tags = this.drinksEvaluationService.findMainSituations(drink.reviewResult);
+				return drinkDto;
+			});
+		} catch (error) {
+			throw new InternalServerErrorException(error.message, error);
+		}
+	}
+
+	public async findReviewedDrinksbyUser(userId: number): Promise<DrinkCardResponseDto[]> {
 		try {
 			const userReviewedDrinks = await this.drinkRepository
 				.createQueryBuilder('drink')
 				.select(['drink', 'category.name'])
-
 				.leftJoin('drink.category', 'category')
 				.leftJoin('drink.reviews', 'review')
 				.where('review.reviewer_id = :id', { id: userId })
 				.getMany();
-			return userReviewedDrinks;
+			return userReviewedDrinks.map((drink) => new DrinkCardResponseDto(drink));
 		} catch (error) {
 			throw new InternalServerErrorException(error.message, error);
 		}

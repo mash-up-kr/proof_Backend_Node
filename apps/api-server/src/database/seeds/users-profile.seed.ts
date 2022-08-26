@@ -5,25 +5,25 @@ import { UsersProfile } from '../../entities/users-profile.entity';
 
 const usersProfileData = [
 	{
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_beer.png',
 	},
 	{
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_whisky.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_whisky.png',
 	},
 	{
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_wine.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_wine.png',
 	},
 	{
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_cocktail.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_cocktail.png',
 	},
 	{
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_trad.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_trad.png',
 	},
 	{
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_soju.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_soju.png',
 	},
 	{
-		image_url: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png',
+		imageUrl: 'https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks-category/category_etc.png',
 	},
 ];
 export default class UsersProfileSeed implements Seeder {
@@ -36,11 +36,11 @@ export default class UsersProfileSeed implements Seeder {
 
 		for (const profile of usersProfileData) {
 			const isProfileExist = currentUserProfiles.find(
-				(currentUserProfile) => currentUserProfile.image_url === profile.image_url,
+				(currentUserProfile) => currentUserProfile.imageUrl === profile.imageUrl,
 			);
 
 			if (isProfileExist) {
-				await connection.getRepository(UsersProfile).update({ image_url: profile.image_url }, profile);
+				await connection.getRepository(UsersProfile).update({ imageUrl: profile.imageUrl }, profile);
 			} else {
 				await connection.getRepository(UsersProfile).save(profile);
 			}

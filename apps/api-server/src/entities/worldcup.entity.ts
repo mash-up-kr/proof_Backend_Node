@@ -3,9 +3,18 @@ import { Column, Entity } from 'typeorm';
 
 import { WorldcupRoundDto } from '@src/modules/worldcup/dto/worldcup.dto';
 import { CommonEntity } from './common.entity';
+import { WorldcupResult } from './worldcup-result.entity';
 
 @Entity()
 export class Worldcup extends CommonEntity {
+	@IsString()
+	@Column()
+	title: string;
+
+	@IsString()
+	@Column({ name: 'image_url' })
+	imageUrl: string;
+
 	@IsString()
 	@Column({ name: 'with_who_code', type: 'varchar', nullable: false })
 	withWhoCode: string;
@@ -31,4 +40,6 @@ export class Worldcup extends CommonEntity {
 
 	@Column({ type: 'jsonb' })
 	round: WorldcupRoundDto[];
+
+	results: WorldcupResult[];
 }
