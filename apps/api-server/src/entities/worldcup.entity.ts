@@ -40,6 +40,4 @@ export class Worldcup extends CommonEntity {
 
 	@Column({ type: 'jsonb' })
 	round: WorldcupRoundDto[];
-
-	results: WorldcupResult[];
 }

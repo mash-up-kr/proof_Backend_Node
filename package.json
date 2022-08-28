@@ -107,7 +107,8 @@
 			"<rootDir>/apps/"
 		],
 		"moduleNameMapper": {
-			"@src/(.*)": "<rootDir>/apps/api-server/src/$1"
+			"@src/(.*)": "<rootDir>/apps/api-server/src/$1",
+			"@api-server/(.*)": "<rootDir>/apps/api-server/$1"
 		}
 	}
 }

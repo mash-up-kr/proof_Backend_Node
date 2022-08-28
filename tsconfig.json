@@ -18,7 +18,8 @@
 		"forceConsistentCasingInFileNames": false,
 		"noFallthroughCasesInSwitch": false,
 		"paths": {
-			"@src/*": ["./apps/api-server/src/*"]
+			"@src/*": ["./apps/api-server/src/*"],
+			"@api-server/*": ["./apps/api-server/*"]
 		}
 	}
 }
