@@ -21,8 +21,7 @@ export class User extends CommonEntity {
 	nickname: string;
 
 	@IsEmail()
-	@IsNotEmpty()
-	@Column({ type: 'varchar', nullable: false })
+	@Column({ type: 'varchar', nullable: true })
 	email: string;
 
 	@IsNumber()
