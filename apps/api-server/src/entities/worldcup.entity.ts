@@ -1,11 +1,12 @@
 import { IsString } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, Unique } from 'typeorm';
 
 import { WorldcupRoundDto } from '@src/modules/worldcup/dto/worldcup.dto';
 import { CommonEntity } from './common.entity';
 import { WorldcupResult } from './worldcup-result.entity';
 
 @Entity()
+@Unique('wolrdcup_unique_keys', ['withWhoCode', 'situationCode'])
 export class Worldcup extends CommonEntity {
 	@IsString()
 	@Column()

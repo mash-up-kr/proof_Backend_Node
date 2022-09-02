@@ -408,6 +408,6 @@ export default class WorldcupSeed implements Seeder {
 			},
 		];
 
-		await connection.createQueryBuilder().insert().into(Worldcup).values(insertValues).execute();
+		await connection.createQueryBuilder().insert().into(Worldcup).values(insertValues).orIgnore().execute();
 	}
 }
