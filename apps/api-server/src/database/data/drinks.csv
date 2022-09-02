@@ -139,7 +139,7 @@ IPA입문자에게 추천하는 맥주",https://zuzu-resource.s3.ap-northeast-2.
 하노이 프리미엄,Hanoi Premium,Beer,베트남,4.9%,"라거타입이지만 무게감 있는 맥주로 가벼운 목넘김과 함께 묵직하고 터프한 뒷맛이 오래 남습니다. 
 
 지난 16년 오바마 전미 대통령이 베트남 내한 당시 서민 식당을 찾아 이른바 ‘분짜외교’로 화제를 모았습니다, 당시 분짜와 함께 마신 맥주가 바로 <하노이프리미엄> 대통령이 선택한 베트남의 유명맥주입니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/hanoi_beer.png
-앙코르Beer,Angkor,Beer,캄보디아,5%,"벨기에 “몽드 셀렉션” 2회 수상하며 품질과 맛이 보장된 캄보디아의 국민맥주 입니다.
+앙코르 맥주,Angkor,Beer,캄보디아,5%,"벨기에 “몽드 셀렉션” 2회 수상하며 품질과 맛이 보장된 캄보디아의 국민맥주 입니다.
 풍부한 홉의 향과 밝은 골드칼라를 가지고 있으며 홉에 쌉쌉함이 풍부하게 느껴지며 부드러운 목넘김이 즐거움을 주는 맛을 가지고 있습니다. 링크라우 방식으로 개봉이 편리합니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/angkor.png
 제주 슬라이스,Jeju Slice,Beer,한국,4.1%,"제주 슬라이스는 패션 프루트를 넣어 과일의 상큼한 향과 맛이 풍부하며 부드럽고 가벼운 질감이 특징인 에일입니다.
 기분 좋은 탄산감까지 더해져 언제나 경쾌하게 즐길 수 있습니다.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/jeju_slice.png
@@ -171,7 +171,7 @@ Pleasantly sweet and fizzy, it is like a stroll through the greenest of gardens 
 사워한 맛때문에 이름 붙여진 이 사이다는 설탕을 추가하지 않아 클래식한 느낌의 약간 드라이한 맛이 납니다.
 
 It will set your mind wandering to warm summer evenings when the garden is overflowing with juicy, ripe apples and a hedgehog scurries about in the bushes.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/hoggys-apple-paradise.png
-노르디스크 캠핑Beer,Nordisk Camping Beer,Beer,한국,5.3%,"오랜 역사를 가진 덴마크 아웃도어 브랜드 Nordisk 
+노르디스크 캠핑맥주,Nordisk Camping Beer,Beer,한국,5.3%,"오랜 역사를 가진 덴마크 아웃도어 브랜드 Nordisk 
 삶의 질을 향상시킬 자연속에서의 시간 고귀한 자연을 누리세요.",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/nordisk_camping_beer.png
 백양 BYC 비엔나 라거,Baekyang BYC Vienna Lager,Beer,한국,5.2%,아버지의 순백 메리야스로 추억되는 백양 BYC가 오비맥주와 만나 양털같이 부드러운 거품과 고소한 향이 가득한 비엔라 라거로 탄생했습니다. 오늘저녁 나를 위한 '행복 한잔' 어떠세요?,https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/baekyang_byc_vienna_lager.png
 슈퍼스타즈 페일에일,SUPER STARS PALE ALE,Beer,한국,4.7%,"슈퍼스타즈 쌉쌀함을 즐겨라 
@@ -393,7 +393,7 @@ Day 시리즈의 마지막인 90일을 통해 숙성된 시간을 즐겨보세�
 더블 드라이 호핑 하여 폭발적인 홉 향과 열대과일 등의 풍미 가득",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/chuncheon_ipa.png
 353 라거,353 Lager,Beer,한국,5%,"2019 한국 주류대상 라거부문 대상
 은은한 과일의 향, 라거 본연의 청량감과 함께 깊은 풍미와 산뜻한 피니시",https://zuzu-resource.s3.ap-northeast-2.amazonaws.com/drinks/353_lager.png
-하노이 Beer,Hanoi Beer,Beer,베트남,4.6%,"하노이 맥주 맥주는 연간 생산량이 HABECO 제품의 총 생산량의 70 %를 차지합니다. 
+하노이 맥주,Hanoi Beer,Beer,베트남,4.6%,"하노이 맥주 맥주는 연간 생산량이 HABECO 제품의 총 생산량의 70 %를 차지합니다. 
 밝은 노란색 색상, 쫀쫀한 거품, 매끄러운 쓴맛, 부드럽고 감칠맛 나는 맥주로 베트남 북부의 지방 및 도시 시장에서 안정적인 위치를 차지합니다.
 
 베트남은 동남아 국가 중 맥주 소비가 2위일 정도로 맥주를 많이 마시는 나라입니다.
@@ -920,7 +920,7 @@ KGB 레몬,"KGB Lemon, 5%",Etc,뉴질랜드,5%,"맥주로 알려졌지만, KGB�
 부담 없고 깔끔한 맛을 즐기고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Jeju_Geomeong_Ale_w400.jpg
 오드 괴즈 틸퀸 아렌시아,"Oude Gueze Tilquin a L'Ancienne, 7%",Beer,벨기에,7%,"상큼한 레몬 풍미가 느껴지며 텁텁한 맛과 쓴 맛도 스쳐 지나간다. 
 과일 향과 꽃의 향기도 느낄 수 있어 화사함을 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Oude_Gueze_Tilquin_a_L'Ancienne_w400.jpg
-시원한청풍Soju,"C1 Soju, 17.2%",Soju,한국,17.20%,"시원 소주'로 이름을 변경하였고, 다시 '시원한 청풍'으로 재변경 했다. 하지만 사람들에게는 예전 이름인 '시원 소주'로 더 많이 불리고 있다.
+시원한청풍소주,"C1 Soju, 17.2%",Soju,한국,17.20%,"시원 소주'로 이름을 변경하였고, 다시 '시원한 청풍'으로 재변경 했다. 하지만 사람들에게는 예전 이름인 '시원 소주'로 더 많이 불리고 있다.
 이름처럼 시원하고 묵직한 알콜 향이 풍긴다.
 강하고 시원한 술을 좋아하는 사람들에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/c1soju_w400.jpg
 참이슬 후레시,"Chamisul Fresh Soju , 16.9%",Soju,한국,16.90%,"국가대표 소주라고 해도 이견이 없을만큼 유명한 소주.
@@ -940,20 +940,20 @@ KGB 레몬,"KGB Lemon, 5%",Etc,뉴질랜드,5%,"맥주로 알려졌지만, KGB�
 버니니 클래식,"Bernini Classic, 4.5%",Wine,남아프리카공화국,4.50%,상당한 인지도를 가지고 있는 스파클링 와인이다. 가볍게 탄산감이 일어나며 단맛이 강하다. 부담스럽지 않아 강한 술을 못 마시는 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Bernini_Classic_w400.jpg
 T7 까베르네 소비뇽,"T7 Cabernet Sauvignon, 13%",Wine,칠레,13%,이마트 트레이더스의 단독 라벨을 붙인 레드와인이다. 드라이하면서 산미가 강한 편이고 텁텁하고 씁쓸한 뒷맛이 있다. 드라이한 저렴한 와인을 찾는 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/T7_Cabernet_Sauvignon_w400.jpg
 그란 띠에라 비노 블랑코,"Gran Tierra vino blanco, 10.5%",Wine,스페인,10.50%,바디감이 있고 산도가 강한 편이다. 세미 스위트라고 명시되어 있듯이 단맛이 느껴진다. 과일이랑 같이 먹기 좋은 와인이다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Gran_Tierra_vino_blanco_w400.jpg
-느린마을 Traditional,"Slow City Makgeolli, 6%",Traditional,한국,6%,"인공감미료인 아스파탐을 사용하지 않고 쌀, 누룩, 물만으로 빚은 막걸리다.
+느린마을 막걸리,"Slow City Makgeolli, 6%",Traditional,한국,6%,"인공감미료인 아스파탐을 사용하지 않고 쌀, 누룩, 물만으로 빚은 막걸리다.
 단맛과 산미가 좋다.
 숙성 될 수록 맛이 달라지는 것이 특징이다.
 느린마을 양조장에서 봄, 여름, 가을, 겨울 막걸리를 나누어 마셔볼 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/slowbrew_makgeulli_w400.jpg
 과천미주,"Gwacheon Mijoo, 9%",Traditional,한국,9%,"우리쌀 무첨가 무감미료 맑은 탁주이다. 쌉쌀한 맥주도 좋지만 달큰한 미주도 좋다, 라는 의미를 담고 있다.
 달달하고 부드러운 맛이 특징이다.
 친환경 녹색주의를 표방하는 양조장, 과천도가에서 만든 제품이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Gwacheon_Mijoo_w400.jpg
-관악산 생Traditional,"Gwanaksan Draft Makgeolli, 6%",Traditional,한국,6%,"우리쌀 무첨가 무감미료의 탁주이다. 
+관악산 생막걸리,"Gwanaksan Draft Makgeolli, 6%",Traditional,한국,6%,"우리쌀 무첨가 무감미료의 탁주이다. 
 각기 다른 개성을 가진 막걸리와 함께 편하게 마실 수 있는 막걸리를 지향하며, 그에 알맞게 가볍고 부드러운 맛이 특징이다. 
 친환경 녹색주의를 표방하는 양조장, 과천도가에서 만든 제품이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Gwanak_Mountain_Makgeolli_w400.jpg
-국순당 생Traditional,"Guksundang Draft Makgeolli, 6%",Traditional,한국,6%,"2번의 쌀 발효 이후, 3번의 유산균 발효를 적용한 5단 발효 제법을 활용한 막걸리이다.
+국순당 생막걸리,"Guksundang Draft Makgeolli, 6%",Traditional,한국,6%,"2번의 쌀 발효 이후, 3번의 유산균 발효를 적용한 5단 발효 제법을 활용한 막걸리이다.
 과실 향미가 있으며, 첫 맛에 약간 단 맛이 느껴지고 끝 맛은 막걸리 특유의 씁쓸한 맛이 난다.
 음주와 건강을 함께 챙기고 싶은 분들께 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Guksundang_Makgeolli_w400.jpg
-소백산 Traditional,"Sobaeksan Makgeolli, 6%",Traditional,한국,6%,"노무현 대통령 시절 청와대 만찬주로 사용됐던 술이다.
+소백산 막걸리,"Sobaeksan Makgeolli, 6%",Traditional,한국,6%,"노무현 대통령 시절 청와대 만찬주로 사용됐던 술이다.
 많이 달지 않고 드라이한 풍미가 있으며, 쌀의 달짝지근하고 구수한 풍미가 끝맛에 느껴진다.
 부드럽고 순한 맛으로, 막걸리를 입문하려는 사람에게 추천하기 좋은 술이다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Sobaeksan_Makgeolli_w400.jpg
 대잎 동동주,"Bamboo Leaf Dongdongju, 6%",Traditional,한국,6%,"담양에서 맛 볼 수 있는 동동주이다.
@@ -1010,22 +1010,22 @@ T7 까베르네 소비뇽,"T7 Cabernet Sauvignon, 13%",Wine,칠레,13%,이마트
 15년 숙성 매취순,"Matchsoon, 16%",Etc,한국,16%,"최상급 청매실로 15년 숙성기간을 거쳐 만들어진 담금주. 화이트 와인과 블렌딩하여 화이트와인의 맛과 함께, 매실 향의 달콤함, 숙성에 의한 씁씁한 맛을 느낄 수 있는 술이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Matchsoon_w400.jpg
 산사춘,"sansachun, 13%",Etc,한국,13%,"산사나무 열매로 만든 술이다. 산사나무 열매는 섬장 건강, 혈액순환, 노화방지에 효과를 가진다고 알려져 있다. 꽃향기와 함께 새콤달콤한 맛을 느낄 수 있으며, 목넘김이 부드럽다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/sansachun_w400.jpg
 서울의 밤,"Seoul Night, 25%",Etc,한국,25%,"황매실을 원료로, 노간주나무 열매로 향을 낸 증류주이다. 매실 향을 함께 느낄 수 있으며, 달지 않고 목넘김이 부드럽다. 토닉워터와 함께 칵테일로도 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Seoul_Night_w400.jpg
-꿀Traditional,"Honey Makgeolli, 6%",Traditional,한국,6%,"함유된 벌꿀의 향과 맛이 단맛을 풍부하게 해준다. 그렇지만 지나치게 단 맛은 아니며, 천연 탄산이 강하다. 꿀 특유의 단맛을 좋아하는 사람에게 추천하는 제품이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Honey_Makgeolli_w400.jpg
-호랑이 생 Traditional,"Horangi Draft Makjeolli, 6%",Traditional,한국,6%,"합성감미료를 첨가하지 않고, 생 발효를 통해 맛을 낸 프리미엄 막걸리이다. 부드러운 바디감을 가지고 있으며 맛과 향이 풍부하고 목 넘김이 뛰어나다. 효모가 살아있어 8주 동안 숙성도에 따라 다양한 맛을 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Horangi_Draft_Makjeolli_w400.jpg
-심술6 Traditional,"Simsool6 Makjeolli, 6%",Traditional,한국,6%,심술 6은 인기 과실주 심술의 막걸리 버전이다. 포천쌀로 빚어 목 넘김이 부드럽고 상쾌한 탄산과 입맛을 돋우는 단맛이 특징이다. 특히 잘 익은 막걸리에서만 느낄 수 있는 은은한 과실향을 느끼고 싶은 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Simsool6_Makjeolli_w400.jpg
-인생Traditional,"Insaeng Makgeolli, 5%",Traditional,한국,5%,달콤하고 상큼한 맛을 느낄 수 있으며 뒷맛이 깔끔하여 목넘김이 편하다. 다른 막걸리들보다 걸쭉하지 않고 도수가 낮아 가볍게 즐기기 좋다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Insaeng_Makgeolli_w400.jpg
+꿀 막걸리,"Honey Makgeolli, 6%",Traditional,한국,6%,"함유된 벌꿀의 향과 맛이 단맛을 풍부하게 해준다. 그렇지만 지나치게 단 맛은 아니며, 천연 탄산이 강하다. 꿀 특유의 단맛을 좋아하는 사람에게 추천하는 제품이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Honey_Makgeolli_w400.jpg
+호랑이 생 막걸리,"Horangi Draft Makjeolli, 6%",Traditional,한국,6%,"합성감미료를 첨가하지 않고, 생 발효를 통해 맛을 낸 프리미엄 막걸리이다. 부드러운 바디감을 가지고 있으며 맛과 향이 풍부하고 목 넘김이 뛰어나다. 효모가 살아있어 8주 동안 숙성도에 따라 다양한 맛을 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Horangi_Draft_Makjeolli_w400.jpg
+심술6 막걸리,"Simsool6 Makjeolli, 6%",Traditional,한국,6%,심술 6은 인기 과실주 심술의 막걸리 버전이다. 포천쌀로 빚어 목 넘김이 부드럽고 상쾌한 탄산과 입맛을 돋우는 단맛이 특징이다. 특히 잘 익은 막걸리에서만 느낄 수 있는 은은한 과실향을 느끼고 싶은 사람에게 추천한다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Simsool6_Makjeolli_w400.jpg
+인생 막걸리,"Insaeng Makgeolli, 5%",Traditional,한국,5%,달콤하고 상큼한 맛을 느낄 수 있으며 뒷맛이 깔끔하여 목넘김이 편하다. 다른 막걸리들보다 걸쭉하지 않고 도수가 낮아 가볍게 즐기기 좋다.,https://d1sqi8cd60mbpv.cloudfront.net/w400/Insaeng_Makgeolli_w400.jpg
 화요41,"Hwayo 41, 41%",Soju,한국,41%,지하 150m 천연 암반수와 100,https://d1sqi8cd60mbpv.cloudfront.net/w400/Hwayo_41_w400.jpg
 이이치코,"Iichiko, 25%",Soju,일본,25%,"일본에서 서민들의 나폴레옹이라고 불리는 대표적인 보리소주이다. 색이 투명하고 은은한 향수 냄새가 느껴질 정도로 부드럽다. 25도라 혓바닥 끝을 살짝 쏘는 정도의 순한 맛인데, 뒷맛이 쓰다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Iichiko_w400.jpg
 일품 진로,"Ilpoom Jinro, 25%",Soju,한국,25%,순 쌀 100,https://d1sqi8cd60mbpv.cloudfront.net/w400/Ilpoom_Jinro_w400.jpg
-안동Soju 일품21,"Andong_Soju_Ilpoom_21, 21%",Soju,한국,21%,"뒤끝이 깨끗한 전통 증류식 쌀 소주의 참맛을 느낄 수 있다. 안동소주 특유의 그윽한 향이 나며, 술을 입에 넣으면 크림과 같은 순하고 부드러움이 느껴지며 목넘김이 좋다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Andong_Soju_Ilpoom_w400.jpg
+안동소주 일품21,"Andong_Soju_Ilpoom_21, 21%",Soju,한국,21%,"뒤끝이 깨끗한 전통 증류식 쌀 소주의 참맛을 느낄 수 있다. 안동소주 특유의 그윽한 향이 나며, 술을 입에 넣으면 크림과 같은 순하고 부드러움이 느껴지며 목넘김이 좋다. ",https://d1sqi8cd60mbpv.cloudfront.net/w400/Andong_Soju_Ilpoom_w400.jpg
 폰타나프레다 모스카토 다스티 2018,"Fontananfredda Moscato D'sti 2018, 5%",Wine,이탈리아,5%,"달고 탄산이 많은 스파클링 와인이다. 화려한 황금색 밀짚 빛깔을 띠며 잘 익은 배, 복숭아, 꿀, 레몬, 오렌지향을 지니고 있다. 모스카토 포도 자체의 맛과 향이 잘 표현되어 디저트 와인으로 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Fontananfredda_Moscato_D'sti_2018_w400.jpg
 심술 10,"Simsool 10, 10%",Etc,한국,10%,자몽과 깔라만시의 과실을 원료로 빚은 새콤달콤한 스파클링 라이스 와인이다. 쌀을 기본으로 빚어 목 넘김이 부드러우며 인공감미료를 사용하지 않아 과일 본연의 달콤함을 느낄 수 있다. 상큼한 열대과일의 맛과 향을 만끽하고 싶은 사람에게 추천한다. ,https://d1sqi8cd60mbpv.cloudfront.net/w400/Simsool_10_w400.jpg
-느린마을 늘봄 Traditional,"Slow Town Always Spring Makgeolli, 6%",Traditional,한국,6%,"느린마을 막걸리 중 가장 산뜻하고 신선함을 느낄 수 있다. 인공감미료를 전혀 사용하지 않았으며, 장기간 보관이 가능하다. 국내산 쌀 함량을 2배가량 늘려 쌀의 부드러우면서도 묵직한 맛이 느껴진다. 갓 빚은 막걸리의 상큼한 맛이 탄산미를 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Slow_Town_Always_Spring_Makgeolli_w400.jpg
+느린마을 늘봄 막걸리,"Slow Town Always Spring Makgeolli, 6%",Traditional,한국,6%,"느린마을 막걸리 중 가장 산뜻하고 신선함을 느낄 수 있다. 인공감미료를 전혀 사용하지 않았으며, 장기간 보관이 가능하다. 국내산 쌀 함량을 2배가량 늘려 쌀의 부드러우면서도 묵직한 맛이 느껴진다. 갓 빚은 막걸리의 상큼한 맛이 탄산미를 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Slow_Town_Always_Spring_Makgeolli_w400.jpg
 우도 땅콩 전통주,"Udo Peanut Makgeolli, 6%",Traditional,한국,6%,"제주 우도 특산품인 땅콩으로 만든 막걸리이다. 인공향을 첨가하지 않은 은은한 단맛과 땅콩의 고소함이 특징이다.
 보관기간이 길면 산미가 늘어나 다른 느낌으로 즐길 수 있다. 자연스러운 풍미를 느끼고 싶은 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Udo_Peanut_Makgeolli_w400.jpg
 청하,"Chungha, 13%",Etc,한국,13%,"가장 대중적인 청주 중 하나이다. 쓴맛과 알코올 향이 적고 약한 단맛과 신맛이 도는 술이다. 도수가 낮아 목넘김이 부드럽다.
 부담없이 깔끔한 맛을 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Chungha_w400.jpg
-버니니 Wine 스프리처 딸기맛,"BERNINI Wine Spritzer Strawberry, 5.2%",Cocktail,스페인,5.20%,"버니니 와인 스프리처는 버니니의 캔 버전으로 간편하게 마실 수 있는 술이다. 
+버니니 와인 스프리처 딸기맛,"BERNINI Wine Spritzer Strawberry, 5.2%",Cocktail,스페인,5.20%,"버니니 와인 스프리처는 버니니의 캔 버전으로 간편하게 마실 수 있는 술이다. 
 딸기향이 첨가되었지만 부담스럽지 않은 단맛을 즐길 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/BERNINI_Wine_Spritzer_Strawberry_w400.jpg
 바르슈타이너 프리미엄 베롬,"Warsteiner Premium Verum, 4.8%",Beer,독일,4.80%,"""맥주의 여왕"" 혹은 ""미스 독일""이라고 불리는 독일의 유명 맥주 회사 바르슈타이너의 대표격인 필스너 맥주이다.
 밸런스가 좋은 맥주로 단맛과 부드러움, 호프의 향, 쌉쌀한 여운까지 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Warsteiner_Premium_Verum_w400.jpg
@@ -1033,7 +1033,7 @@ T7 까베르네 소비뇽,"T7 Cabernet Sauvignon, 13%",Wine,칠레,13%,이마트
 모히토의 맛을 기대한다면 실망할 수도 있으나, 모히토향 맥주라는 독특함을 원한다면 시도해볼만 하다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Desperados_Mojitoe_Mint&Lime_w400.jpg
 유성 골든 에일,"Yuseong Golden Ale, 4.5%",Beer,한국,4.50%,"대전 유성구의 지역 수제맥주이다. 수제맥주의 인기에 힘입어 유성구와 바이젠하우스의 협약으로 출시되었다.
 에일과 라거의 중간 형태인 골든에일이다. 시트러스한 상쾌함과 몰트의 고소함을 동시에 느낄 수 있다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Yuseong_Golden_Ale_w400.jpg
-장홍삼 장수Traditional,"Jang Red Ginseng Jangsu Makgeolli, 6%",Traditional,한국,6%,"전통 6년근 홍삼을 발효시킨 막걸리이다. 홍삼전문기업과 장수막걸리의 협약으로 개발된 제품이다.
+장홍삼 장수막걸리,"Jang Red Ginseng Jangsu Makgeolli, 6%",Traditional,한국,6%,"전통 6년근 홍삼을 발효시킨 막걸리이다. 홍삼전문기업과 장수막걸리의 협약으로 개발된 제품이다.
 홍삼향과 탄산이 조화로우며, 산미와 청량감이 있어 목넘김 좋은 깔끔한 막걸리이다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Jang_Red_Ginseng_Jangsu_Makgeolli_w400.jpg
 청하 드라이,"Chungha Dry, 13.5%",Etc,한국,13.50%,"오리지널 청하의 담백한 맛이 강화된 청주이다. 단맛은 줄이고 도수를 높였다. 장기간 저온발효를 거쳐 향도 맛도 좀 더 진한 편이다.
 은은한 단맛의 깔끔한 청주를 원하는 사람에게 추천한다.",https://d1sqi8cd60mbpv.cloudfront.net/w400/Chungha_Dry_w400.jpg
