@@ -147,7 +147,7 @@ export class WorldcupService {
 					.andWhere('worldcup_result_id = :worldcupResultId', { worldcupResultId: worldcupResult.id })
 					.andWhere('rank_level = 0')
 					.getRawOne();
-				worldcupResult.winnerDrinkId = winnerDrink.id;
+				worldcupResult.winnerDrinkId = winnerDrink?.id;
 			}),
 		);
 
